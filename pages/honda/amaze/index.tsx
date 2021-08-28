@@ -439,7 +439,7 @@ function Homee({ joy }) {
 
   return (
     <div>
-      {/* <Nav />
+      <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />
 
@@ -506,7 +506,7 @@ function Homee({ joy }) {
             <div className="text-3xl font-bold mt-12">Similar Cars123</div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* {typeof window !== "undefined" && (
         <DynamicSimilarCar SimilarCars={SimilarCars} />
