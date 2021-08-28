@@ -503,7 +503,7 @@ function Homee({ joy }) {
 
               <LatestArticles OnlyName={OnlyName} articles={articles} />
             </div>
-            <div className="text-3xl font-bold mt-12">Similar Cars</div>
+            <div className="text-3xl font-bold mt-12">Similar Cars123</div>
           </div>
         </div>
       </div>
