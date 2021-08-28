@@ -297,18 +297,22 @@ function Compare({ OnlyName }) {
       ) : null}
       {typeof window !== "undefined" ? (
         <div>
-          {JSON.parse(localStorage.getItem("comparre")).length >= 2 ? (
-            <Link
-              href={`/compare/${compareName
-                .toString()
-                .toLowerCase()
-                .replaceAll(" ", "")
-                .replaceAll(",", "vs")}`}
-            >
-              <button className="bg-red-300 text-white p-2 rounded-lg">
-                Start Comparision
-              </button>
-            </Link>
+          {JSON.parse(localStorage.getItem("comparre")) ? (
+            <div>
+              {JSON.parse(localStorage.getItem("comparre")).length >= 2 ? (
+                <Link
+                  href={`/compare/${compareName
+                    .toString()
+                    .toLowerCase()
+                    .replaceAll(" ", "")
+                    .replaceAll(",", "vs")}`}
+                >
+                  <button className="bg-red-300 text-white p-2 rounded-lg">
+                    Start Comparision
+                  </button>
+                </Link>
+              ) : null}
+            </div>
           ) : null}
         </div>
       ) : null}
