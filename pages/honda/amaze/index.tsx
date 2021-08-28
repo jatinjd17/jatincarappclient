@@ -27,6 +27,8 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import PopularAlternativeCarComparision from "../../../Components/FrontPage/popularAlternativeCarComparision";
+import PopularCarsFrontPage from "../../../Components/FrontPage/popularcarsfrontpage";
 
 const DynamicSimilarCar = dynamic(
   () => import("../../../Components/SpecificCar/SimilarCars"),
@@ -36,6 +38,43 @@ const DynamicSimilarCar = dynamic(
 );
 
 function Homee({ joy }) {
+  const PopularCars = {
+    car1: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+      "Harrier",
+      "₹ 14.30 Lakh Onwards",
+    ],
+    car2: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+      "Hector",
+      "₹ 13.18 Lakh onwards0",
+    ],
+    car3: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+      "Creta",
+      "Rs.10.16 Lakh onwards",
+    ],
+    car4: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+      "Creta",
+      "Rs.10.16 Lakh onwards",
+    ],
+    car5: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+      "Creta",
+      "Rs.10.16 Lakh onwards",
+    ],
+    car6: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+      "Creta",
+      "Rs.10.16 Lakh onwards",
+    ],
+    car: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+      "Creta",
+      "Rs.10.16 Lakh onwards",
+    ],
+  };
   const CompanyName = "Honda";
   const CarPrice = "₹ 6.34 Lakh";
   const TopPic =
@@ -475,106 +514,7 @@ function Homee({ joy }) {
 
       {/* <SimilarCarss SimilarCars={SimilarCars} /> */}
 
-      {typeof window !== "undefined" && (
-        <div className="mx-64 md:mx-2">
-          <Carousel responsive={responsive}>
-            <div className="m-8  border-2 shadow-lg">
-              {/* sm:m-1 sm:mt-5 */}
-              <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
-                  <div>
-                    <img src={SimilarCars.car1[0]} alt="nnn" />
-                  </div>
-                  <div className="text-center text-xl font-bold">
-                    {SimilarCars.car1[1]}
-                  </div>
-                  <div className="flex flex-row">
-                    <div className="text-md font-bold">
-                      {SimilarCars.car1[2]}
-                    </div>
-                    <div className="text-md text-gray-500 ml-2 mt-0">
-                      Onwards
-                    </div>
-                  </div>
-
-                  <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
-                </div>
-              </Link>
-            </div>
-            <div className="m-8  border-2 shadow-lg">
-              <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
-                  <div>
-                    <img src={SimilarCars.car2[0]} alt="nnn" />
-                  </div>
-                  <div className="text-center text-xl font-bold">
-                    {SimilarCars.car2[1]}
-                  </div>
-                  <div className="flex flex-row">
-                    <div className="text-md font-bold">
-                      {SimilarCars.car2[2]}
-                    </div>
-                    <div className="text-md text-gray-500 ml-2 mt-0">
-                      Onwards
-                    </div>
-                  </div>
-
-                  <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
-                </div>
-              </Link>
-            </div>
-            {SimilarCars.car3 ? (
-              <div className="m-8  border-2 shadow-lg">
-                <Link href="/maruti/xl6">
-                  <div className="grid grid-cols-1 bg-gray-200">
-                    <div>
-                      <img src={SimilarCars.car3[0]} alt="nnn" />
-                    </div>
-                    <div className="text-center text-xl font-bold">
-                      {SimilarCars.car3[1]}
-                    </div>
-                    <div className="flex flex-row">
-                      <div className="text-md font-bold">
-                        {SimilarCars.car3[2]}
-                      </div>
-                      <div className="text-md text-gray-500 ml-2 mt-0">
-                        Onwards
-                      </div>
-                    </div>
-
-                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
-                  </div>
-                </Link>
-              </div>
-            ) : null}
-
-            {SimilarCars.car4 ? (
-              <div className="m-8 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
-                  <div className="grid grid-cols-1 bg-gray-200">
-                    <div>
-                      <img src={SimilarCars.car4[0]} alt="nnn" />
-                    </div>
-                    <div className="text-center text-xl font-bold">
-                      {SimilarCars.car4[1]}
-                    </div>
-                    <div className="flex flex-row">
-                      <div className="text-md font-bold">
-                        {SimilarCars.car4[2]}
-                      </div>
-                      <div className="text-md text-gray-500 ml-2 mt-0">
-                        Onwards
-                      </div>
-                    </div>
-
-                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
-                  </div>
-                </Link>
-              </div>
-            ) : null}
-          </Carousel>
-        </div>
-      )}
+      <PopularCarsFrontPage PopularCars={PopularCars} />
 
       <MoreCars CompanyName={CompanyName} ThatBrandCars={ThatBrandCars} />
 
