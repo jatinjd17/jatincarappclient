@@ -53,6 +53,8 @@ function SearchBar2NavBar() {
                     {filteredData.slice(0, 15).map((value, key) => {
                       return (
                         <a
+                          rel="noreferrer"
+                          key={value.link}
                           className="dataItem"
                           href={value.link}
                           target="_blank"
