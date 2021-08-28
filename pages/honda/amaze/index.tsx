@@ -469,8 +469,6 @@ function Homee({ joy }) {
               Show All Specifications
             </div>
 
-            <Compare OnlyName={OnlyName} />
-
             <Varients
               SpecificationsFeatures={joy}
               VarientPetrol={VarientPetrol}

@@ -9,14 +9,9 @@ function StartingBox({ CarName, TopPic, CarPrice, OnlyName }) {
         <div className="text-black font-bold text-6xl ml-14 mt-10 md:hidden">
           {CarName}
         </div>
-        {/* <div className=" w-full mt-5 font-bold text-center rounded-md text-2xl">
-          <Compare
-            Carname={CarName}
-            OnlyName={OnlyName}
-            TopPic={TopPic}
-            CarPrice={CarPrice}
-          />
-        </div> */}
+        <div className=" w-full mt-5 font-bold text-center rounded-md text-2xl">
+          <Compare OnlyName={OnlyName} />
+        </div>
       </div>
 
       <div className="border-2 rounded-md mt-24 ml-24 sm:ml-1 sm:mr-1 md:mt-5 mr-20  md:mr-2">
