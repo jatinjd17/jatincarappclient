@@ -146,6 +146,150 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 </Link>
               </div>
             ) : null}
+            {ThatBrandCars.car5 ? (
+              <div className="m-8 border-2 shadow-lg">
+                <Link href="/maruti/xl6">
+                  <div className="grid grid-cols-1 bg-gray-200">
+                    <div>
+                      <img src={ThatBrandCars.car5[0]} alt="nnn" />
+                    </div>
+                    <div className="text-center text-xl font-bold">
+                      {ThatBrandCars.car5[1]}
+                    </div>
+                    <div className="flex flex-row">
+                      <div className="text-md font-bold">
+                        {ThatBrandCars.car5[2]}
+                      </div>
+                      <div className="text-md text-gray-500 ml-2 mt-0">
+                        Onwards
+                      </div>
+                    </div>
+
+                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                  </div>
+                </Link>
+              </div>
+            ) : null}
+            {ThatBrandCars.car6 ? (
+              <div className="m-8 border-2 shadow-lg">
+                <Link href="/maruti/xl6">
+                  <div className="grid grid-cols-1 bg-gray-200">
+                    <div>
+                      <img src={ThatBrandCars.car6[0]} alt="nnn" />
+                    </div>
+                    <div className="text-center text-xl font-bold">
+                      {ThatBrandCars.car6[1]}
+                    </div>
+                    <div className="flex flex-row">
+                      <div className="text-md font-bold">
+                        {ThatBrandCars.car6[2]}
+                      </div>
+                      <div className="text-md text-gray-500 ml-2 mt-0">
+                        Onwards
+                      </div>
+                    </div>
+
+                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                  </div>
+                </Link>
+              </div>
+            ) : null}
+            {ThatBrandCars.car7 ? (
+              <div className="m-8 border-2 shadow-lg">
+                <Link href="/maruti/xl6">
+                  <div className="grid grid-cols-1 bg-gray-200">
+                    <div>
+                      <img src={ThatBrandCars.car7[0]} alt="nnn" />
+                    </div>
+                    <div className="text-center text-xl font-bold">
+                      {ThatBrandCars.car7[1]}
+                    </div>
+                    <div className="flex flex-row">
+                      <div className="text-md font-bold">
+                        {ThatBrandCars.car7[2]}
+                      </div>
+                      <div className="text-md text-gray-500 ml-2 mt-0">
+                        Onwards
+                      </div>
+                    </div>
+
+                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                  </div>
+                </Link>
+              </div>
+            ) : null}
+            {ThatBrandCars.car8 ? (
+              <div className="m-8 border-2 shadow-lg">
+                <Link href="/maruti/xl6">
+                  <div className="grid grid-cols-1 bg-gray-200">
+                    <div>
+                      <img src={ThatBrandCars.car8[0]} alt="nnn" />
+                    </div>
+                    <div className="text-center text-xl font-bold">
+                      {ThatBrandCars.car8[1]}
+                    </div>
+                    <div className="flex flex-row">
+                      <div className="text-md font-bold">
+                        {ThatBrandCars.car8[2]}
+                      </div>
+                      <div className="text-md text-gray-500 ml-2 mt-0">
+                        Onwards
+                      </div>
+                    </div>
+
+                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                  </div>
+                </Link>
+              </div>
+            ) : null}
+            {ThatBrandCars.car9 ? (
+              <div className="m-8 border-2 shadow-lg">
+                <Link href="/maruti/xl6">
+                  <div className="grid grid-cols-1 bg-gray-200">
+                    <div>
+                      <img src={ThatBrandCars.car9[0]} alt="nnn" />
+                    </div>
+                    <div className="text-center text-xl font-bold">
+                      {ThatBrandCars.car9[1]}
+                    </div>
+                    <div className="flex flex-row">
+                      <div className="text-md font-bold">
+                        {ThatBrandCars.car9[2]}
+                      </div>
+                      <div className="text-md text-gray-500 ml-2 mt-0">
+                        Onwards
+                      </div>
+                    </div>
+
+                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                  </div>
+                </Link>
+              </div>
+            ) : null}
+            {ThatBrandCars.car10 ? (
+              <div className="m-8 border-2 shadow-lg">
+                <Link href="/maruti/xl6">
+                  <div className="grid grid-cols-1 bg-gray-200">
+                    <div>
+                      <img src={ThatBrandCars.car10[0]} alt="nnn" />
+                    </div>
+                    <div className="text-center text-xl font-bold">
+                      {ThatBrandCars.car10[1]}
+                    </div>
+                    <div className="flex flex-row">
+                      <div className="text-md font-bold">
+                        {ThatBrandCars.car10[2]}
+                      </div>
+                      <div className="text-md text-gray-500 ml-2 mt-0">
+                        Onwards
+                      </div>
+                    </div>
+
+                    <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                  </div>
+                </Link>
+              </div>
+            ) : null}
           </Carousel>
         </div>
       </div>

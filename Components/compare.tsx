@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import CancelIcon from "@material-ui/icons/Cancel";
 
-function Compare({ Carname, OnlyName, TopPic, CarPrice }) {
+function Compare({ OnlyName }) {
   const [compareName, setCompareName] = useState([]);
   const [comparePic, setComparePic] = useState([]);
   const onClickHandle = {};

@@ -29,6 +29,7 @@ import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import PopularAlternativeCarComparision from "../../../Components/FrontPage/popularAlternativeCarComparision";
 import PopularCarsFrontPage from "../../../Components/FrontPage/popularcarsfrontpage";
+import Compare from "../../../Components/compare";
 
 const DynamicSimilarCar = dynamic(
   () => import("../../../Components/SpecificCar/SimilarCars"),
@@ -467,6 +468,8 @@ function Homee({ joy }) {
             <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1">
               Show All Specifications
             </div>
+
+            <Compare OnlyName={OnlyName} />
 
             <Varients
               SpecificationsFeatures={joy}
