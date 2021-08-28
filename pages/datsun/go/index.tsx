@@ -94,6 +94,8 @@ function Homee() {
     ],
   };
 
+  const VarientDiesel = {};
+
   const Mileage = {
     mileage1: ["Petrol (796 cc)", "Manual", "22.05 kmpl"],
     mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
@@ -532,7 +534,12 @@ function Homee() {
         <SideBar isToggleName={isToggleName} handleactive={handleactive} />
 
         <div className="col-span-10 sm:col-span-10 2xl:ml-40 md:ml-0">
-          <StartingBox CarName={CarName} TopPic={TopPic} CarPrice={CarPrice} />
+          <StartingBox
+            CarName={CarName}
+            OnlyName={OnlyName}
+            TopPic={TopPic}
+            CarPrice={CarPrice}
+          />
 
           <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
@@ -551,6 +558,8 @@ function Homee() {
             <Varients
               SpecificationsFeatures={SpecificationsFeatures}
               VarientPetrol={VarientPetrol}
+              VarientDiesel={VarientDiesel}
+              VarientCNG={VarientCNG}
             />
 
             <CarMileage OnlyName={OnlyName} Mileage={Mileage} />
