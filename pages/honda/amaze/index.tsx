@@ -447,12 +447,12 @@ function Homee({ joy }) {
         <SideBar isToggleName={isToggleName} handleactive={handleactive} />
 
         <div className="col-span-10 sm:col-span-10 2xl:ml-40 md:ml-0">
-          {/* <StartingBox
+          <StartingBox
             OnlyName={OnlyName}
             CarName={CarName}
             TopPic={TopPic}
             CarPrice={CarPrice}
-          /> */}
+          />
 
           <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
@@ -512,19 +512,15 @@ function Homee({ joy }) {
         <DynamicSimilarCar SimilarCars={SimilarCars} />
       )} */}
 
-      {/* <SimilarCarss SimilarCars={SimilarCars} /> */}
+      <SimilarCarss SimilarCars={SimilarCars} />
 
-      <div>sssssssssssssssssssssssssss</div>
-
-      <PopularCarsFrontPage PopularCars={PopularCars} />
-
-      {/* <MoreCars CompanyName={CompanyName} ThatBrandCars={ThatBrandCars} />
+      <MoreCars CompanyName={CompanyName} ThatBrandCars={ThatBrandCars} />
 
       <UpcommingCars
         CompanyName={CompanyName}
         UpcommingCarBrand={UpcommingCarBrand}
       />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
