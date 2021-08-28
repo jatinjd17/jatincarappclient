@@ -1,0 +1,75 @@
+<div className="grid grid-cols-2">
+              <div className="text-3xl font-bold">Key Specifications</div>
+              <div className="text-3xl font-bold ml-14 sm:ml-1">
+                Kushaq Safety & Features
+              </div>
+            </div>
+
+            <div>
+              <div className="grid grid-cols-10 mt-6 md:grid-cols-5 sm:mr-1">
+                <div className="grid grid-cols-3 w-auto col-span-5  gap-1">
+                  <div className="bg-gray-400 rounded-md text-xl p-2">
+                    <span className="font-bold text-xl flex flex-row">
+                      <div className="h-7 w-7">
+                        <img src="https://img.icons8.com/dotty/80/000000/money.png" />
+                      </div>
+                      <div className="ml-2">Price</div>
+                    </span>{" "}
+                    <div className="text-base">₹ 10.51 Lakh onwards</div>
+                  </div>
+                  <div className="bg-gray-400 rounded-md text-xl p-2">
+                    <span className="font-bold text-xl flex flex-row">
+                      <div className="h-7 w-7">
+                        <img src="https://img.icons8.com/ios/50/000000/odometer.png" />
+                      </div>
+                      <div className="ml-2">Mileage</div>
+                    </span>
+                    <div className="text-base">15.78 to 17.88 kmpl</div>
+                  </div>
+                  <div className="bg-gray-400 rounded-md text-xl p-2">
+                    <span className="font-bold text-xl flex flex-row">
+                      <div className="h-7 w-7">
+                        <img src="https://img.icons8.com/ios/50/000000/engine.png" />
+                      </div>
+                      <div className="ml-2">Engine</div>
+                    </span>
+                    <div className="text-base">999 to 1498 cc</div>
+                  </div>
+                  <div className="bg-gray-400 rounded-md text-xl p-2">
+                    <span className="font-bold text-xl flex flex-row">
+                      <div className="h-7 w-7">
+                        <img src="https://img.icons8.com/ios/50/000000/gear-stick.png" />
+                      </div>
+                      Transmission
+                    </span>
+                    <span className="text-base">
+                      Manual, Automatic (Torque Converter) & Automatic (Dual
+                      Clutch)
+                    </span>
+                  </div>
+                  <div className="bg-gray-400 rounded-md text-xl p-2">
+                    <span className="font-bold text-xl flex flex-row">
+                      <div>
+                        <img src="https://img.icons8.com/material-sharp/24/000000/fuel-gas.png" />
+                      </div>
+                      <div className="ml-2">Fuel Type</div>
+                    </span>{" "}
+                    <div className="text-base">Petrol</div>
+                  </div>
+                  <div className="bg-gray-400 rounded-md text-xl p-2">
+                    <span className="font-bold text-xl flex flex-row">
+                      <div className="mt-3">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/waiting-room--v2.png" />
+                      </div>
+                      <div className="ml-2">Seating Capacity</div>
+                    </span>{" "}
+                    <div className="text-base">5 Seater</div>
+                  </div>
+                </div>
+                <div className=" col-span-5 bg-gray-200 mx-12 p-7 rounded-xl">
+                  <div className="mb-6">Multi Collision Brake</div>
+                  <div className="mb-6">Electric Sunroof</div>
+                  <div className="mb-6">Airbags</div>
+                </div>
+              </div>
+            </div>

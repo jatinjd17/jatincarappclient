@@ -1,0 +1,51 @@
+car1: [
+      "https://i.ibb.co/C63SXxn/Kwid.jpg",
+      "Renault Kwid",
+      "₹ 3.32 Lakh onwards",
+    ],
+    car2: [
+      "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
+      "Datsun redi-go",
+      "₹ 3.80 Lakh onwards0",
+    ],
+    car3: [
+      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201911/0G6A5935_1.png?LkCz.7ZUenqnJF.SOBjEMulD..iElUYe&size=770:433",
+      "S-presso",
+      "₹ 3.77 Lakh onwards",
+    ],
+    car4: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbWFsSvTTFc7n__WfN3PJOWp9iBEqMvmFzg&usqp=CAU",
+      "Celario",
+      "₹4.66 Lakhs onwards",
+    ],
+    car5: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
+      "i10 Nios",
+      "₹5.24 lakhs onwards",
+    ],
+    car6: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7460/1596180579378/front-left-side-47.jpg",
+      "Santro",
+      "₹ 4.74 Lakh onwards",
+    ],
+
+    car1: [
+      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201911/0G6A5935_1.png?LkCz.7ZUenqnJF.SOBjEMulD..iElUYe&size=770:433",
+      "S-presso",
+      "₹ 3.77 Lakh onwards",
+    ],
+    car2: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbWFsSvTTFc7n__WfN3PJOWp9iBEqMvmFzg&usqp=CAU",
+      "Celario",
+      "₹4.66 Lakhs onwards",
+    ],
+    car3: [
+      "https://www.shivamautozone.com/wp-content/uploads/2019/01/SUPERIOR-WHITE.png",
+      "Wagon R",
+      "₹ 4.79 Lakh onwards",
+    ],
+    car4: [
+      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/8378/1614747593719/front-left-side-47.jpg",
+      "Swift",
+      " ₹ 5.81 Lakh onwards",
+    ],
