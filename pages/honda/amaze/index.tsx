@@ -28,6 +28,13 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 
+const DynamicSimilarCar = dynamic(
+  () => import("../../../Components/SpecificCar/SimilarCars"),
+  {
+    ssr: false,
+  }
+);
+
 function Homee({ joy }) {
   const CompanyName = "Honda";
   const CarPrice = "₹ 6.34 Lakh";
@@ -462,7 +469,11 @@ function Homee({ joy }) {
         </div>
       </div>
 
-      <SimilarCarss SimilarCars={SimilarCars} />
+      {typeof window !== "undefined" && (
+        <DynamicSimilarCar SimilarCars={SimilarCars} />
+      )}
+
+      {/* <SimilarCarss SimilarCars={SimilarCars} /> */}
 
       <MoreCars CompanyName={CompanyName} ThatBrandCars={ThatBrandCars} />
 
