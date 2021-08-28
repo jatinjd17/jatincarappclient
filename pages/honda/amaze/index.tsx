@@ -447,12 +447,12 @@ function Homee({ joy }) {
         <SideBar isToggleName={isToggleName} handleactive={handleactive} />
 
         <div className="col-span-10 sm:col-span-10 2xl:ml-40 md:ml-0">
-          <StartingBox
+          {/* <StartingBox
             OnlyName={OnlyName}
             CarName={CarName}
             TopPic={TopPic}
             CarPrice={CarPrice}
-          />
+          /> */}
 
           <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
