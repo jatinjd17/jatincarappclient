@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 23.79 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/cw/ec/29580/Hyundai-Kona-Electric-Right-Front-Three-Quarter-162185.jpg?wm=0&q=85";
+  const TopPic = "https://i.ibb.co/y4GqxvP/kona.jpg";
   const CarName = "Hyundai Kona Electric";
   const OnlyName = "Kona Electric";
 

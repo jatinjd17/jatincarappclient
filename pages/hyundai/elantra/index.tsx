@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 17.86 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/41138/elantra-exterior-right-front-three-quarter-3.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/v1T0WfH/elantra.png";
   const CarName = "Hyundai Elantra";
   const OnlyName = "Elantra";
 

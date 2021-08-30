@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 9.28 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/tXvStDN/verna.jpg";
   const CarName = "Hyundai Verna";
   const OnlyName = "Verna";
 

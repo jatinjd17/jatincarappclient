@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 6.99 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/35455/venue-exterior-right-front-three-quarter-2.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/MGYtt3g/venue.png";
   const CarName = "Hyundai Venue";
   const OnlyName = "Venue";
 

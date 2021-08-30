@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 5.28 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/fvt5DQc/nios.png";
   const CarName = "Hyundai i10 Nios";
   const OnlyName = "i10 Nios";
 

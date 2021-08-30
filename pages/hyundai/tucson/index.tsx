@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 22.69 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/39082/tucson-exterior-right-front-three-quarter.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/kBk5WDP/tucson.jpg";
   const CarName = "Hyundai Tucson";
   const OnlyName = "Tucson";
 
