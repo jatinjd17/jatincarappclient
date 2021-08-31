@@ -381,7 +381,7 @@ function Homee({ joy }) {
 
         <div className="col-span-10 sm:col-span-10 2xl:ml-40 md:ml-0">
           <StartingBox
-            OnlyName={OnlyName}
+            OnlyName="Spresso"
             CarName={CarName}
             TopPic={TopPic}
             CarPrice={CarPrice}

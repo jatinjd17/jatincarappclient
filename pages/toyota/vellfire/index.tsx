@@ -33,8 +33,8 @@ function Homee({ joy }) {
   const CompanyName = "Toyota";
   const CarPrice = "₹ 89.89 Lakh";
   const TopPic = Vellfire;
-  const CarName = "Toyota Fortuner";
-  const OnlyName = "Fortuner";
+  const CarName = "Toyota Vellfire";
+  const OnlyName = "Vellfire";
 
   const KeySpecification = [
     "₹ 89.89 Lakh onwards",

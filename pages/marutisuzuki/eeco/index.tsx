@@ -27,102 +27,97 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
-import { City4 } from "../../../CarPicsUrl/CarPics";
+import { Eeco } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
-  const CompanyName = "Honda";
-  const CarPrice = "₹ 9.33 Lakh";
-  const TopPic = City4;
-  const CarName = "Honda City 4th Gen";
-  const OnlyName = "City 4th Gen";
+  const CompanyName = "MarutiSuzuki";
+  const CarPrice = "₹ 4.08 Lakh";
+  const TopPic = Eeco;
+  const CarName = "Maruti Eeco";
+  const OnlyName = "Eeco";
 
   const KeySpecification = [
-    "₹ 9.33 Lakh onwards",
-    "17.4 kmpl",
-    "1497 cc",
+    "₹ 4.08 Lakh onwards",
+    "16.11 to 30.47 km/kg",
+    "1197 cc",
     "Manual",
     "Petrol",
-    "5 Seater",
-    "4,440 mm L x 1,695 mm W x 1,495 mm H",
+    "5-7 Seater",
+    "3,675 mm L x 1,475 mm W x 1,800-1,825 mm H",
   ];
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "ABS with EBD",
-    "rear parking sensors.",
-    " ABS (antilock Brake System) with EBD (Electrical Brake Force Distribution)",
-    "front ventilated disc brakes",
-    "rear windshield with defogger",
-    "Engine Immobilizer.",
-  ];
+  const SafetyFeatures = ["Driver Airbag", "Seat Belts", "Speed Alert"];
 
   const VarientPetrol = {
-    varient1: [
-      "SV Petrol",
-      "1497 cc, Manual, Petrol, 17.4 kmpl",
-      "₹ 9.33 Lakh",
-    ],
-    varient2: [
-      "V Petrol",
-      "1497 cc, Manual, Petrol, 17.4 kmpl",
-      "₹ 10.03 Lakh",
+    varient1: ["5 STR", "1196 cc, Manual, Petrol, 16.11 kmpl", "Rs.5.97 Lakh*"],
+    varient2: ["7 STR", "1196 cc, Manual, Petrol, 16.11 kmpl", "Rs.6.69 Lakh*"],
+    varient3: [
+      "5 STR WITH A/C+HTR",
+      "1196 cc, Manual, Petrol, 16.11 kmpl",
+      "Rs.7.32 Lakh*",
     ],
   };
 
   const VarientDiesel = {};
 
-  const VarientCNG = {};
+  const VarientCNG = {
+    varient1: [
+      "7 STR WITH A/C+HTR CNG",
+      "1196 cc, Manual, CNG, 30.47 km/kg",
+      "Rs.7.57 Lakh*",
+    ],
+  };
 
   const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+    mileage1: ["Petrol (1196 cc)", "Manual", "16.11 kmpl"],
+    mileage2: ["CNG (1196 cc)", "Manual", "30.47 km/kg"],
   };
 
   const LatestUpdate = [
-    "Latest Update: Honda has rejigged the variant lineup of the fourth-gen City and has slashed its prices. Honda City Variants: The sedan is now available in only two variants: SV and V. Honda City Price: These two variants are priced at Rs 9.30 lakh and Rs 10 lakh respectively (ex-showroom, Delhi). Honda City Powertrain: The City is only available with the 1.5-litre petrol engine (119PS/145Nm) mated to a 5-speed manual now. Honda is no longer offering the older generation model with the CVT automatic option. The claimed fuel efficiency figure of the petrol-manual variants stands at 17.4kmpl. Honda City Features: Honda is offering the fourth-gen City with auto AC, touchscreen infotainment system, height-adjustable driver’s seat and power-folding ORVMs. With the loss of the higher-spec variants, the older City will no longer feature a sunroof, leather interior, and LED headlamps. Honda City Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Honda City Rivals: The fourth-gen City goes up against the Maruti Suzuki Ciaz, Skoda Rapid, Volkswagen Vento, Toyota Yaris and Hyundai Verna.",
+    "Latest Update: Maruti has hiked the prices of the Eeco uniformly by Rs 11,000. Maruti Eeco Price: The MPV is priced between Rs 4.08 lakh and Rs 5.29 lakh (ex-showroom Delhi). Maruti Eeco Variants: The Eeco is available in four variants: 5-seater standard, 5-seater AC, 5-seater AC CNG, and 7-seater standard. Maruti Eeco Seating Capacity: The Eeco can seat up to seven people. Maruti Eeco Powertrain: It is available with a 1.2-litre naturally aspirated petrol engine (73PS/98Nm), paired to a 5-speed MT. The same engine with a CNG kit produces 63PS/85Nm. The petrol version has a fuel efficiency figure of 16.11kmpl, whereas the CNG variant offers 20.88km/kg. Maruti Eeco Features: Feature highlights include manual AC. Maruti Eeco Safety: It gets a driver airbag, ABS with EBD, front seatbelt reminder, speed alert, and rear parking sensors as standard. Maruti Eeco Rivals: The Eeco doesn’t have any real competitors in the Indian market. The Datsun GO+ is the only vehicle, in a similar price bracket, with the same seating capacity.",
   ];
 
   const ProsCons = {
     pros: [
-      "The City’s interior space and build quality is good. In fact, it is comparable with even some D-segment sedans",
-      "At 510 litres, the City’s boot is among the most spacious in the segment. It’s also the same as the Ciaz’s.",
-      "Good resale value",
+      "Sliding rear doors make ingress/egress easier for rear row passengers.",
+      "Reliable 1.2-litre petrol engine. Available with a factory-fit CNG kit as well.",
+      "Accommodating 540-litre boot.",
     ],
     cons: [
-      "Noisy diesel engine ",
-      "Expensive as compared to competition",
-      "Stiff low speed ride quality",
+      "74PS/101Nm power/torque output is low for a people-mover. Engine feels strained with a full passenger load.",
+      "Basic safety features like ABS or airbags aren’t available even as an option.",
+      "Lacks in Modern features",
     ],
   };
 
   const Colorss = {
-    color1: ["White Orchid Pearl", "bg-blue-600"],
-    color2: ["Lunar Silver Metallic", "bg-gray-400"],
-    color3: ["Modern Steel Metallic", "bg-white"],
-    color4: ["Golden Brown Metallic", "bg-brown-600"],
-    color5: ["Radiant Red Metallic", "bg-gray-800"],
+    color1: ["Cerulean Blue", "bg-blue-600"],
+    color2: ["Metallic Silky Silver", "bg-gray-400"],
+    color3: ["Solid White", "bg-white"],
+    color4: ["Metallic Glistening Grey", "bg-gray-600"],
+    color5: ["Pearl Midnight Black", "bg-gray-800"],
   };
 
   const ComparisionCar = {
     comparisioncar1: [
-      "Rs.9.28 Lakh Onwards",
-      "17.7 - 25.0 kmpl",
-      "998 cc - 1497 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,440 mm L x 1,729 mm W x 1,475 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/7729/1616055133475/front-left-side-47.jpg?tr=w-456",
+      "₹ 5.50 Lakh onwards",
+      "18.2 - 20.0 kmpl",
+      "999 cc",
+      "Manual, Automatic",
+      "Petrol",
+      "7 Seater",
+      "3,990 mm L x 1,739 mm W x 1,643 mm H",
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Triber/7418/1580113966019/front-left-side-47.jpg?tr=w-456",
     ],
     comparisioncar2: [
-      "₹ 10.00 Lakh onwards",
-      "16.35 to 17.69 kmpl",
-      "999 cc",
-      "Manual & Automatic (Torque Converter)",
+      "₹ 7.34 Lakh onwards",
+      "21.96 kmpl",
+      "1197 cc",
+      "Manual, Automatic",
       "Petrol",
       "5 Seater",
-      "4,390 mm L x 1,699 mm W x 1,467 mm H",
-      "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
+      "3,995 mm L x 1,745 mm W x 1,510 mm H",
+      "https://images.financialexpress.com/2019/06/19-1.jpg",
     ],
   };
 
@@ -139,23 +134,23 @@ function Homee({ joy }) {
     ],
     feature3: [
       "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
+      "1 Airbags",
       "",
     ],
   };
 
   const faqs = {
     question1: [
-      "What is the on road price of City?",
-      "The on-road price of City in Delhi starts at ‎₹ 10.37 Lakh and goes upto ‎₹ 11.13 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+      "What is the on road price of Eeco?",
+      "The on-road price of Eeco in Delhi starts at ‎₹ 4.61 Lakh and goes upto ‎₹ 6.04 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
     ],
     question2: [
-      "Which car is better between City and All New City?",
-      "City price starts at ₹ 9.33 Lakh ex-showroom and It comes with 1497 cc engine. Whereas All New City price starts at ₹ 11.19 Lakh ex-showroom and It comes with 1498 cc engine.",
+      "Which car is better between Eeco and Alto?",
+      "Eeco price starts at ₹ 4.08 Lakh ex-showroom and It comes with 1196 cc engine. Whereas Alto price starts at ₹ 3.00 Lakh ex-showroom and It comes with 796 cc engine. Compare the two models to identify the best car for you.",
     ],
     question3: [
-      "What is the mileage of Honda City?",
-      "The Honda City mileage is 17.4 kmpl.",
+      "What is the mileage of Maruti Suzuki Eeco?",
+      "The Maruti Suzuki Eeco mileage is 16.11 - 30.47 km/kg.",
     ],
   };
 
@@ -176,70 +171,75 @@ function Homee({ joy }) {
 
   const SimilarCars = {
     car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
-      "Vento",
-      "₹ 10.00 Lakh Onwards",
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Triber/7418/1580113966019/front-left-side-47.jpg?tr=w-456",
+      "Triber",
+      " ₹ 5.50 Lakh onwards",
     ],
     car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85",
-      "Verna",
-      "₹ 9.28 Lakh*",
+      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20190606121831_Toyota-Glanza-silver.jpg&h=795&w=1200&c=0",
+      "Toyota Glanza",
+      "₹ 7.34 Lakh onwards0",
     ],
     car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47562/skoda-rapid-tsi-right-front-three-quarter0.jpeg?q=85",
-      "Rapid",
-      "₹ 7.80 Lakh*",
+      "https://imgd.aeplcdn.com/1200x900/n/cw/ec/40530/i20-exterior-right-front-three-quarter-5.jpeg?q=85",
+      "Hyundai i20",
+      "₹ 6.91 Lakh onwards",
+    ],
+    car4: [
+      "https://imgd.aeplcdn.com/0x0/n/cw/ec/32597/tata-altroz-right-front-three-quarter20.jpeg",
+      "Altroz",
+      "₹5.80 Lakhs onwards",
+    ],
+    car5: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
+      "i10 Nios",
+      "₹5.24 lakhs onwards",
+    ],
+    car6: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7460/1596180579378/front-left-side-47.jpg",
+      "Santro",
+      "₹ 4.74 Lakh onwards",
     ],
   };
 
   const ThatBrandCars = {
     car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Amaze",
-      "₹ 6.34 Lakh onwards",
+      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201911/0G6A5935_1.png?LkCz.7ZUenqnJF.SOBjEMulD..iElUYe&size=770:433",
+      "S-presso",
+      "₹ 3.77 Lakh onwards",
     ],
     car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-      "City",
-      "₹ 11.19 Lakh onwards",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbWFsSvTTFc7n__WfN3PJOWp9iBEqMvmFzg&usqp=CAU",
+      "Celario",
+      "₹4.66 Lakhs onwards",
     ],
     car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
-      "WRV",
-      "₹ 8.90 Lakh onwards",
+      "https://www.shivamautozone.com/wp-content/uploads/2019/01/SUPERIOR-WHITE.png",
+      "Wagon R",
+      "₹ 4.79 Lakh onwards",
     ],
     car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
-      "Jazz",
-      "₹ 7.75 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
-      "City 4th Gen",
-      "₹ 9.33 Lakh onwards",
+      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/8378/1614747593719/front-left-side-47.jpg",
+      "Swift",
+      " ₹ 5.81 Lakh onwards",
     ],
   };
 
   const UpcommingCarBrand = {
     car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
-      "Amaze Facelift 2021",
-      "₹ 6.35 - 10.10 Lakh",
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+      "Celario 2021",
+      "Rs.4.50 Lakh",
     ],
     car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+      "Maruti Solio",
+      "Rs.6.00 Lakh",
     ],
     car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
-      "HRV",
-      "₹ 12.00 - 16.00 Lakh",
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+      "Alto 2021",
+      "Rs.3.00 Lakh",
     ],
   };
 
@@ -408,7 +408,7 @@ function Homee({ joy }) {
 }
 
 Homee.getInitialProps = () => {
-  return OneCarAllSpecs("city4").then((data) => {
+  return OneCarAllSpecs("eeco").then((data) => {
     return { joy: data.carspecs };
   });
 };

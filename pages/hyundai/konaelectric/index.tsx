@@ -453,7 +453,7 @@ function Homee({ joy }) {
 }
 
 Homee.getInitialProps = () => {
-  return OneCarAllSpecs("konaelecrtic").then((data) => {
+  return OneCarAllSpecs("konaelectric").then((data) => {
     return { joy: data.carspecs };
   });
 };

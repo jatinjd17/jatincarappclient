@@ -25,7 +25,7 @@ function IndexMaruti() {
   const ThatBrandCars = {
     car1: [Spresso, "S-presso", "₹ 3.77 Lakh onwards"],
     car2: [Celerio, "Celerio", "₹4.66 Lakhs onwards"],
-    car3: [WaganR, "Wagon R", "₹ 4.79 Lakh onwards"],
+    car3: [WaganR, "WaganR", "₹ 4.79 Lakh onwards"],
     car4: [Swift, "Swift", " ₹ 5.81 Lakh onwards"],
     car5: [Baleno, "Baleno", " ₹ 5.97 Lakh onwards"],
     car6: [Ertiga, "Ertiga", " ₹ 7.78 Lakh onwards"],

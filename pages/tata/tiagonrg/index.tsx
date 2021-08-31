@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
-import { Tiago } from "../../../CarPicsUrl/CarPics";
+import { Tiago, TiagoNRG } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Tata";
   const CarPrice = "₹ 6.57 Lakh";
-  const TopPic = Tiago;
+  const TopPic = TiagoNRG;
   const CarName = "Tata TiagoNRG";
   const OnlyName = "TiagoNRG";
 
