@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Eeco } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 4.08 Lakh";
-  const TopPic =
-    "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Eeco/7346/1581669301115/front-left-side-47.jpg?tr=w-456";
+  const TopPic = Eeco;
   const CarName = "Maruti Eeco";
   const OnlyName = "Eeco";
 

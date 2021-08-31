@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Magnite } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Nissan";
   const CarPrice = "₹ 5.59 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/45795/magnite-exterior-right-front-three-quarter-3.jpeg?q=85";
+  const TopPic = Magnite;
   const CarName = "Nissan Magnite";
   const OnlyName = "Magnite";
 

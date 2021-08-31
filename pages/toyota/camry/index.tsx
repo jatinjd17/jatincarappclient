@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Camry } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Toyota";
   const CarPrice = "₹ 40.61 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/cw/ec/37561/Toyota-Camry-Right-Front-Three-Quarter-146683.jpg?wm=0&q=85";
+  const TopPic = Camry;
   const CarName = "Toyota Camry";
   const OnlyName = "Camry";
 

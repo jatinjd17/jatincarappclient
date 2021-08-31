@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Ecosport } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Ford";
   const CarPrice = "₹ 8.19 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85";
+  const TopPic = Ecosport;
   const CarName = "Ford EcoSport";
   const OnlyName = "EcoSport";
 

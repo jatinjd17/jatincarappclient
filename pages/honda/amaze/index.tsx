@@ -30,6 +30,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import PopularAlternativeCarComparision from "../../../Components/FrontPage/popularAlternativeCarComparision";
 import PopularCarsFrontPage from "../../../Components/FrontPage/popularcarsfrontpage";
 import Compare from "../../../Components/compare";
+import { Amaze } from "../../../CarPicsUrl/CarPics";
 
 const DynamicSimilarCar = dynamic(
   () => import("../../../Components/SpecificCar/SimilarCars"),
@@ -78,8 +79,7 @@ function Homee({ joy }) {
   };
   const CompanyName = "Honda";
   const CarPrice = "₹ 6.34 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85";
+  const TopPic = Amaze;
   const CarName = "Honda Amaze";
   const OnlyName = "Amaze";
 

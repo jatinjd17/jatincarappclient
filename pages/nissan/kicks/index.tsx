@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Kicks } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Nissan";
   const CarPrice = "₹ 9.50 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/cw/ec/32596/Nissan-Kicks-Right-Front-Three-Quarter-159680.jpg?wm=0&q=85";
+  const TopPic = Kicks;
   const CarName = "Nissan Kicks";
   const OnlyName = "Kicks";
 

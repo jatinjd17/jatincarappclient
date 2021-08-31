@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { CelerioX } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 5.12 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/1280x720/cw/ec/31393/Maruti-Suzuki-Celerio-X-Right-Front-Three-Quarter-153971.jpg?wm=0&q=85";
+  const TopPic = CelerioX;
   const CarName = "Maruti Suzuki Celerio X";
   const OnlyName = "Celerio X";
 

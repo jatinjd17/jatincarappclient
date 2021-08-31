@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Ertiga } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 7.78 Lakh onwards";
-  const TopPic =
-    "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FGalleries%2F20180420105800_2018-Suzuki-Ertiga-fronw.jpg&h=578&w=872&c=1";
+  const TopPic = Ertiga;
   const CarName = "Maruti Ertiga";
   const OnlyName = "Ertiga";
 

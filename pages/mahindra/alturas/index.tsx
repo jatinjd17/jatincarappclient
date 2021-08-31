@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Alturas } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 28.77 Lakh";
-  const TopPic = "https://i.ibb.co/qB2hDMC/alturas.png";
+  const TopPic = Alturas;
   const CarName = "Mahindra Alturas G4";
   const OnlyName = "Alturas G4";
 

@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { i20 } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 6.91 Lakh";
-  const TopPic = "https://i.ibb.co/4JwFLqv/i20.png";
+  const TopPic = i20;
   const CarName = "Hyundai i20";
   const OnlyName = "i20";
 

@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Ignis } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 4.95 Lakh";
-  const TopPic =
-    "https://static.autox.com/uploads/2020/08/maruti-suzuki-ignis-bs6-500x261.jpg";
+  const TopPic = Ignis;
   const CarName = "Maruti Ignis";
   const OnlyName = "Ignis";
 

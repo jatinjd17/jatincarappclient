@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Superb } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Skoda";
   const CarPrice = "₹ 32.02 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/39039/superb-exterior-right-front-three-quarter-2.jpeg?q=85";
+  const TopPic = Superb;
   const CarName = "Skoda Superb";
   const OnlyName = "Superb";
 

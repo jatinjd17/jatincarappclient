@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Baleno } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 5.97 Lakh";
-  const TopPic =
-    "https://live.staticflickr.com/7840/45954179625_28f5d35cbf_b.jpg";
+  const TopPic = Baleno;
   const CarName = "Maruti Baleno";
   const OnlyName = "Baleno";
 

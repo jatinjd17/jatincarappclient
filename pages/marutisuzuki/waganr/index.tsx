@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { WaganR } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 4.79 Lakh";
-  const TopPic =
-    "https://www.shivamautozone.com/wp-content/uploads/2019/01/SUPERIOR-WHITE.png";
+  const TopPic = WaganR;
   const CarName = "Maruti WaganR";
   const OnlyName = "WaganR";
 

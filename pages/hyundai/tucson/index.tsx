@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Tucson } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 22.69 Lakh";
-  const TopPic = "https://i.ibb.co/kBk5WDP/tucson.jpg";
+  const TopPic = Tucson;
   const CarName = "Hyundai Tucson";
   const OnlyName = "Tucson";
 

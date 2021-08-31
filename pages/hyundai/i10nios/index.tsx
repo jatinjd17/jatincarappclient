@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Nios } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 5.28 Lakh";
-  const TopPic = "https://i.ibb.co/fvt5DQc/nios.png";
+  const TopPic = Nios;
   const CarName = "Hyundai i10 Nios";
   const OnlyName = "i10 Nios";
 

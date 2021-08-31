@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Elantra } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 17.86 Lakh";
-  const TopPic = "https://i.ibb.co/v1T0WfH/elantra.png";
+  const TopPic = Elantra;
   const CarName = "Hyundai Elantra";
   const OnlyName = "Elantra";
 

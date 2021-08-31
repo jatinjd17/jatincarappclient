@@ -1,19 +1,13 @@
 import React from "react";
+import { GTR, Kicks, Magnite } from "../../CarPicsUrl/CarPics";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
 
 function IndexNissa() {
   const CompanyName = "Nissan";
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/20361/Nissan-GTR-Right-Front-Three-Quarter-84895.jpg?v=201711021421&q=85",
-      "GTR",
-      "₹ 2.12 Crore",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/32596/Nissan-Kicks-Right-Front-Three-Quarter-159680.jpg?wm=0&q=85",
-      "Kicks",
-      "Rs.9.50 Lakh*",
-    ],
+    car1: [Magnite, "Magnite", "Rs.5.59 Lakh*"],
+    car2: [Kicks, "Kicks", "Rs.9.50 Lakh*"],
+    car3: [GTR, "GTR", "₹ 2.12 Crore"],
   };
   return (
     <div>

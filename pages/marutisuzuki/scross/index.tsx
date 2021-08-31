@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Scross } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 8.39 Lakh onwards";
-  const TopPic =
-    "https://static.autox.com/uploads/2020/07/S-Cross-BS6-500x261.jpg";
+  const TopPic = Scross;
   const CarName = "Maruti Scross";
   const OnlyName = "Scross";
 

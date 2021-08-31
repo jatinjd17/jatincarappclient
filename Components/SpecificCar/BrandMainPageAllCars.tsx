@@ -50,14 +50,14 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
         <div className="ml-60 sm:ml-1 md:ml-36 text-4xl mt-4 font-semibold ">
           All <b> {CompanyName} </b>Cars
         </div>
-        <div className=" ml-56 mr-56 md:ml-2 md:mr-2 md:mx-1 grid grid-cols-3 sm:grid-cols-2">
-          <div className="m-8 md:m-1 border-2 shadow-lg">
+        <div className=" ml-56 mr-56 md:ml-2 md:mr-2 md:mx-1 grid grid-cols-3 sm:grid-cols-2 ">
+          <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl ">
             <Link
               href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car1[1]
                 .toLowerCase()
                 .replace(/ /g, "")}`}
             >
-              <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+              <div className="grid grid-cols-1 bg-gray-200 ">
                 <div>
                   <img src={ThatBrandCars.car1[0]} alt="nnn" />
                 </div>
@@ -76,13 +76,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
             </Link>
           </div>
           {ThatBrandCars.car2 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl ">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car2[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car2[0]} alt="nnn" />
                   </div>
@@ -105,13 +105,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car3 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car3[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car3[0]} alt="nnn" />
                   </div>
@@ -134,13 +134,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car4 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car4[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car4[0]} alt="nnn" />
                   </div>
@@ -163,13 +163,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car5 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car5[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car5[0]} alt="nnn" />
                   </div>
@@ -192,13 +192,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car6 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car6[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car6[0]} alt="nnn" />
                   </div>
@@ -221,13 +221,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car7 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car7[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car7[0]} alt="nnn" />
                   </div>
@@ -250,13 +250,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car8 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car8[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car8[0]} alt="nnn" />
                   </div>
@@ -279,13 +279,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car9 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car9[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car9[0]} alt="nnn" />
                   </div>
@@ -308,13 +308,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car10 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car10[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car10[0]} alt="nnn" />
                   </div>
@@ -337,13 +337,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car11 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car11[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car11[0]} alt="nnn" />
                   </div>
@@ -366,13 +366,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car12 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car12[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car12[0]} alt="nnn" />
                   </div>
@@ -395,13 +395,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car13 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car13[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car13[0]} alt="nnn" />
                   </div>
@@ -424,13 +424,13 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
           ) : null}
 
           {ThatBrandCars.car14 ? (
-            <div className="m-8 md:m-1 border-2 shadow-lg">
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
               <Link
                 href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car14[1]
                   .toLowerCase()
                   .replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 shadow-lg hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img src={ThatBrandCars.car14[0]} alt="nnn" />
                   </div>

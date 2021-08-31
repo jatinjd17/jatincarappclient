@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Triber } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Renault";
   const CarPrice = "₹ 5.49 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/39276/triber-exterior-right-front-three-quarter-168563.jpeg?q=85";
+  const TopPic = Triber;
   const CarName = "Renault Triber";
   const OnlyName = "Triber";
 

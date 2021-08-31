@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
-import Alcazar from "../../../public/alcazer.jpg";
+import { alcazer } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 16.30 Lakh";
-  const TopPic = "https://i.ibb.co/LgLfYDW/alcazer.jpg";
+  const TopPic = alcazer;
   const CarName = "Hyundai Alcazar";
   const OnlyName = "Alcazar";
 

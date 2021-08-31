@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Verna } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 9.28 Lakh";
-  const TopPic = "https://i.ibb.co/tXvStDN/verna.jpg";
+  const TopPic = Verna;
   const CarName = "Hyundai Verna";
   const OnlyName = "Verna";
 

@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { HectorPlus } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MG";
   const CarPrice = "₹ 13.63 Lakh";
-  const TopPic =
-    "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Hector-Plus/7909/1594206680276/front-left-side-47.jpg?tr=w-456";
+  const TopPic = HectorPlus;
   const CarName = "MG Hector Plus";
   const OnlyName = "Hector Plus";
 

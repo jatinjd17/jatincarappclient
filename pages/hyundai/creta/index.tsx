@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Creta } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 10.15 Lakh";
-  const TopPic = "https://i.ibb.co/L1YVw00/creta.png";
+  const TopPic = Creta;
   const CarName = "Hyundai Creta";
   const OnlyName = "Creta";
 

@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Kiger } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Renault";
   const CarPrice = "₹ 5.64 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/44407/kiger-exterior-right-front-three-quarter-12.jpeg?q=85";
+  const TopPic = Kiger;
   const CarName = "Renault Kiger";
   const OnlyName = "Kiger";
 

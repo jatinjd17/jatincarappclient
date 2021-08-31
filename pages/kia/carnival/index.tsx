@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Carnival } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Kia";
   const CarPrice = "₹ 24.95 Lakh ";
-  const TopPic = "https://i.ibb.co/tx5CFry/carnival.webp";
+  const TopPic = Carnival;
   const CarName = "Kia Carnival";
   const OnlyName = "Carnival";
 

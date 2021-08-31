@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Seltos } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Kia";
   const CarPrice = "₹ 9.96 Lakh";
-  const TopPic = "https://i.ibb.co/P5Nc7h7/seltos.webp";
+  const TopPic = Seltos;
   const CarName = "Kia Seltos";
   const OnlyName = "Seltos";
 

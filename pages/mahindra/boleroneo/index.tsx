@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { BoleroNeo } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 8.48 Lakh";
-  const TopPic = "https://i.ibb.co/f8FyrwJ/bolero-neo.webp";
+  const TopPic = BoleroNeo;
   const CarName = "Mahindra Bolero Neo";
   const OnlyName = "Bolero Neo";
 

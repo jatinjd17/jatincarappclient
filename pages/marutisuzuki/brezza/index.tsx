@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Brezza } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 7.51 Lakh";
-  const TopPic =
-    "https://media.zigcdn.com/media/model/2020/Feb/front-1-4-left-190291530_600x400.jpg";
+  const TopPic = Brezza;
   const CarName = "Maruti Vitara Brezza";
   const OnlyName = "Brezza";
 

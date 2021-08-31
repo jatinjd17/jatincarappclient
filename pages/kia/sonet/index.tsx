@@ -28,12 +28,13 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { getOneBlog } from "../../../actions/cat";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Sonet } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   console.log(joy);
   const CompanyName = "Kia";
   const CarPrice = "₹ 6.79 Lakh";
-  const TopPic = "https://i.ibb.co/SJNLc97/sonet.webp";
+  const TopPic = Sonet;
   const CarName = "Kia Sonet";
   const OnlyName = "Sonet";
 

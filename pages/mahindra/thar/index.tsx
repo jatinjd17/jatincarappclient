@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Thar } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 12.78 Lakh";
-  const TopPic = "https://i.ibb.co/znxvGDC/thar.webp";
+  const TopPic = Thar;
   const CarName = "Mahindra Thar";
   const OnlyName = "Thar";
 

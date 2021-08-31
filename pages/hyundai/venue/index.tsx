@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Venue } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 6.99 Lakh";
-  const TopPic = "https://i.ibb.co/MGYtt3g/venue.png";
+  const TopPic = Venue;
   const CarName = "Hyundai Venue";
   const OnlyName = "Venue";
 

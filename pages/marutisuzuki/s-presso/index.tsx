@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Spresso } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 3.77 Lakh";
-  const TopPic =
-    "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Future-S/6166/1569405133474/front-left-side-47.jpg?tr=w-456";
+  const TopPic = Spresso;
   const CarName = "Maruti S-Presso";
   const OnlyName = "S-Presso";
 

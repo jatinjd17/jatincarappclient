@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Xl6 } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 9.92 Lakh onwards";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/cw/ec/41043/Maruti-Suzuki-XL6-Exterior-165499.jpg?wm=0&q=85";
+  const TopPic = Xl6;
   const CarName = "Maruti XL6";
   const OnlyName = "XL6";
 

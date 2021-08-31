@@ -27,58 +27,43 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
-import { Duster } from "../../../CarPicsUrl/CarPics";
+import { Tiago } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
-  const CompanyName = "Renault";
-  const CarPrice = "₹ 9.84 Lakh";
-  const TopPic = Duster;
-  const CarName = "Renault Duster";
-  const OnlyName = "Duster";
+  const CompanyName = "Tata";
+  const CarPrice = "₹ 6.57 Lakh";
+  const TopPic = Tiago;
+  const CarName = "Tata TiagoNRG";
+  const OnlyName = "TiagoNRG";
 
   const KeySpecification = [
-    "₹ 9.84 Lakh onwards",
-    "14.19 to 16.5 kmpl",
-    "1330 to 1498 cc",
-    "Manual & Automatic (CVT)",
+    "₹ 5.00 Lakh onwards",
+    "20.09 kmpl",
+    "1199 cc",
+    "Manual & AMT",
     "Petrol",
     "4 Seater",
-    "4,384 mm L x 1,813 mm W x 1,669 mm H",
+    "3,765 mm L x 1,677 mm W x 1,535 mm H",
   ];
 
   const SafetyFeatures = [
-    "ABS (Anti-Lock Braking System)",
-    "EBD (Electronic BrakeForce Distribution)",
-    "brake assist",
+    "dual front airbags",
+    "Antilock Braking System (ABS)",
+    "Electronic Brake Distribution (EBD)",
+    "Corner Stability Control (CSC)",
+    "rear parking sensors",
   ];
 
   const VarientPetrol = {
-    varient1: ["RXS", "1330 cc, Manual, Petrol, 16.42 kmpl", "Rs.9.86 Lakh*"],
-    varient2: ["RXZ", "1330 cc, Manual, Petrol, 16.42 kmpl", "Rs.10.46 Lakh*"],
-    varient3: [
-      "RXE Turbo",
-      "1330 cc, Manual, Petrol, 16.42 kmpl",
-      "Rs.11.27 Lakh*",
+    varient1: [
+      "1.2L Petrol MT",
+      "1199  cc, Manual, Petrol, 20.09 kmpl",
+      "Rs.6.57 Lakh*",
     ],
-    varient4: [
-      "RXS Turbo",
-      "1330 cc, Manual, Petrol, 16.42 kmpl",
-      "Rs.12.05 Lakh*",
-    ],
-    varient5: [
-      "RXZ Turbo",
-      "1330 cc, Manual, Petrol, 16.42 kmpl",
-      "Rs.12.65 Lakh*",
-    ],
-    varient6: [
-      "RXS Turbo CVT",
-      "1330 cc, Automatic, Petrol, 16.42 kmpl",
-      "Rs.13.65 Lakh*",
-    ],
-    varient7: [
-      "RXZ Turbo CVT",
-      "1330 cc, Automatic, Petrol, 16.42 kmpl",
-      "Rs.14.25 Lakh*",
+    varient2: [
+      "1.2L Petrol AMT",
+      "1199  cc, Manual, Petrol, 20.09 kmpl",
+      "Rs.7.09 Lakh*",
     ],
   };
 
@@ -87,57 +72,54 @@ function Homee({ joy }) {
   const VarientCNG = {};
 
   const Mileage = {
-    mileage1: ["Petrol (1330 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
+    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
     mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
   };
 
   const LatestUpdate = [
-    "Latest Update: The Duster is carrying discounts of up to Rs 65,000 this July. Renault Duster Price: The compact SUV retails between Rs 9.86 lakh and Rs 14.25 lakh (ex-showroom Delhi). Renault Duster Variants: While the standard Duster is sold in two variants (RXS and RXZ), the Duster Turbo is available in three (RXE, RXS, and RXZ). Renault Duster Seating Capacity: The Renault Duster can accommodate up to five people. Renault Duster Powertrains: The Duster gets two engine options: a 1.5-litre petrol unit (106PS/142Nm), mated to a 5-speed MT and a 1.3-litre turbo-petrol motor (156PS/254Nm), paired with a 6-speed MT and an optional 7-step CVT. Renault Duster Features: The Duster is equipped with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a 6-speaker Arkamys sound system, and auto climate control with rear AC vents. It also comes with projector headlamps with DRLs, engine idle-stop/start, and cabin pre-cooling (with the key fob). Renault Duster Safety: Standard safety features include dual front airbags, ABS with EBD, rear parking sensors, and front seat belt reminders. ESP and hill start assist are available in the higher variants. Renault Duster Rivals: The Duster competes with the Skoda Kushaq, Hyundai Creta, Kia Seltos, Nissan Kicks, Maruti Suzuki S-Cross, and Volkswagen Taigun. If you are looking for a similarly priced alternative, you can also consider the Mahindra Scorpio.",
+    "Tata Motors has introduced the BS6 compliant Tiago NRG in the country. The model is offered in a single variant, and is available exclusively with a 1.2-litre petrol engine. Exterior highlights of the BS6 Tata Tiago NRG include faux silver coloured skid plates at the front and rear, plastic body-cladding all around, 15-inch styled steel wheels, black cladding on the boot lid, a rear view camera, and black coloured elements such as the roof rails, ORVMs, B-pillars, C-pillars, and roof. The model is available in four colours that include Foresta Green, Snow White, Fire Red, and Cloudy Grey. Inside, the new Tata Tiago NRG comes equipped with features like a seven-inch touchscreen infotainment system with Apple CarPlay and Android Auto, a digital instrument console, manual AC, a three-spoke steering wheel, centre console with a piano-black insert, an engine start-stop button, charcoal black interior theme, new fabric seats, and auto-folding ORVMs with welcome function. The updated Tata Tiago NRG is powered by a BS6 1.2-litre, three-cylinder, Revotron petrol engine that is tuned to produce a maximum power output of 84bhp and 113Nm of torque. This motor is paired to a five-speed manual unit or an AMT unit. The model also boasts of a ground clearance of 181mm, which is 11mm more than the regular Tiago.",
   ];
 
   const ProsCons = {
     pros: [
-      "Most powerful SUV in the segment",
-      "Convenience of a CVT automatic.available as an option",
-      "Gets new convenience features along with the engine upgrade",
+      "Probably the best looking hatchback of the lot",
+      "Build quality is impressive",
+      "4-stars in Global NCAP speaks highly about safety",
     ],
     cons: [
-      "New turbo-petrol engine costs up to Rs 2 lakh more over the regular Duster",
-      "Cabin quality is not on par with the competition",
-      "Ergonomic issues start to spoil the experience over time.",
+      "3-pot Engine is not the most refined in the segment ",
+      "AMT transmission is slow to shift",
+      "Plastic starts to rattle in some models",
     ],
   };
 
   const Colorss = {
-    color1: ["Caspian Blue", "bg-blue-600"],
-    color2: ["Mahogany Brown", "bg-brown-800"],
-    color3: ["Cayenne Orange", "bg-red-700"],
-    color4: ["Moonlight Silver", "bg-gray-300"],
-    color5: ["Slate Grey", "bg-gray-800"],
-    color6: ["Outback Bronze", "bg-gray-800"],
-    color7: ["Pearl White", "bg-white-800"],
+    color1: ["Foresta Green", "bg-red-600"],
+    color2: ["Snow White", "bg-white-400"],
+    color3: ["Fire Red", "bg-gray-500"],
+    color4: ["Cloudy Grey", "bg-blue-600"],
   };
 
   const ComparisionCar = {
     comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
+      "₹ 5.81 Lakh onwards",
+      "23.2 kmpl",
+      "1197 cc",
+      "Manual, Automatic",
+      "Petrol",
       "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+      "length of 3845, width of 1735 and a wheelbase of 2450",
+      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
     ],
     comparisioncar2: [
-      "₹ 13.63 Lakh onwards",
-      "16.6 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "6-7 Seater",
-      "4,720 mm L x 1,835 mm W x 1,760 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
+      "₹ 7.34 Lakh onwards",
+      "21.96 kmpl",
+      "1197 cc",
+      "Manual, Automatic",
+      "Petrol",
+      "5 Seater",
+      "3,995 mm L x 1,745 mm W x 1,510 mm H",
+      "https://images.financialexpress.com/2019/06/19-1.jpg",
     ],
   };
 
@@ -161,16 +143,16 @@ function Homee({ joy }) {
 
   const faqs = {
     question1: [
-      "What is the on road price of Duster?",
-      "The on-road price of Duster in Delhi starts at ‎₹ 11.08 Lakh and goes upto ‎₹ 16.58 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+      "What is the on road price of Tiago?",
+      "The on-road price of Tiago in Delhi starts at ‎₹ 5.56 Lakh and goes upto ‎₹ 7.97 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
     ],
     question2: [
-      "Which car is better between Duster and Kicks?",
-      "Duster price starts at ₹ 9.84 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Kicks price starts at ₹ 9.50 Lakh ex-showroom and It comes with 1498 cc engine. Compare the two models to identify the best car for you.",
+      "Which car is better between Tiago and Tiago NRG?",
+      "Tiago price starts at ₹ 5.00 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Tiago NRG price starts at ₹ 6.57 Lakh ex-showroom and It comes with 1199 cc engine.",
     ],
     question3: [
-      "What is price of Duster top model?",
-      "Top model of Duster is RXZ 1.3 Turbo Petrol CVT and the ex-showroom for Duster RXZ 1.3 Turbo Petrol CVT is ₹ 14.25 Lakh.",
+      "What is the mileage of Tata Tiago?",
+      "The Tata Tiago mileage is 19.8 - 23.84 kmpl.",
     ],
   };
 
@@ -191,60 +173,100 @@ function Homee({ joy }) {
 
   const SimilarCars = {
     car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-      "Harrier",
-      "₹ 14.30 Lakh Onwards",
+      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/8378/1614747593719/front-left-side-47.jpg",
+      "Swift",
+      " ₹ 5.81 Lakh onwards",
     ],
     car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
-      "Hector Plus",
-      "₹ 13.63 Lakh onwards0",
+      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20190606121831_Toyota-Glanza-silver.jpg&h=795&w=1200&c=0",
+      "Toyota Glanza",
+      "₹ 7.34 Lakh onwards0",
     ],
     car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
-      "Creta",
-      "Rs.10.16 Lakh onwards",
+      "https://imgd.aeplcdn.com/1200x900/n/cw/ec/40530/i20-exterior-right-front-three-quarter-5.jpeg?q=85",
+      "Hyundai i20",
+      "₹ 6.91 Lakh onwards",
+    ],
+    car4: [
+      "https://imgd.aeplcdn.com/0x0/n/cw/ec/32597/tata-altroz-right-front-three-quarter20.jpeg",
+      "Altroz",
+      "₹5.80 Lakhs onwards",
+    ],
+    car5: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
+      "i10 Nios",
+      "₹5.24 lakhs onwards",
+    ],
+    car6: [
+      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7460/1596180579378/front-left-side-47.jpg",
+      "Santro",
+      "₹ 4.74 Lakh onwards",
     ],
   };
 
   const ThatBrandCars = {
     car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/48543/kwid-exterior-right-front-three-quarter-17.jpeg?q=85",
-      "Kwid",
-      "₹ 3.31 Lakh",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41645/tata-nexon-right-front-three-quarter3.jpeg?q=85",
+      "Nexon",
+      "₹ 7.20 Lakh onwards",
     ],
     car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/39276/triber-exterior-right-front-three-quarter-168563.jpeg?q=85",
-      "Triber",
-      "₹ 5.49 Lakh",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32597/tata-altroz-right-front-three-quarter20.jpeg?q=85",
+      "Altroz",
+      "₹ 5.80 Lakh onwards",
     ],
     car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44407/kiger-exterior-right-front-three-quarter-12.jpeg?q=85",
-      "Kiger",
-      "₹ 5.64 Lakh",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40027/safari-exterior-right-front-three-quarter-2.jpeg?q=85",
+      "Safari",
+      "₹ 14.99 Lakh onwards",
     ],
     car4: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Duster/7704/1598257607089/front-left-side-47.jpg?tr=w-456",
-      "Duster",
-      "₹ 9.84 Lakh",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+      "Harrier",
+      "₹ 14.30 Lakh onwards",
+    ],
+    car5: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/39345/tiago-exterior-right-front-three-quarter-6.jpeg?q=85",
+      "Tiago",
+      "₹ 5.00 Lakh onwards",
+    ],
+    car6: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41160/tata-tigor-right-front-three-quarter3.jpeg?q=85",
+      "Tigor",
+      "₹ 5.60 Lakh onwards",
+    ],
+    car7: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42611/tata-nexon-ev-right-front-three-quarter6.jpeg?q=85",
+      "Nexon EV",
+      "₹ 13.99 Lakh onwards",
+    ],
+    car8: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40451/tata-tigor-ev-exterior-1.jpeg?q=85",
+      "Tigor EV",
+      "₹ 10.58 Lakh onwards",
+    ],
+    car9: [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/99113/tiago-nrg-bs6-exterior-right-front-three-quarter.jpeg?isig=0&q=85",
+      "Tiago NRG",
+      "₹ 6.57 Lakh onwards",
     ],
   };
 
   const UpcommingCarBrand = {
     car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Zoe/6278/1581400662093/front-left-side-47.jpg?tr=w-456",
-      "Renault Zoe",
-      "Rs.8.00 Lakh*",
+      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+      "HBX",
+      "₹ 5.00 - 8.00 Lakh",
     ],
     car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Kwid-EV/6214/1555414583232/front-left-side-47.jpg?tr=w-456",
-      "Renault K-ZE",
-      "Rs.10.00 Lakh*",
+      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+      "Tiago EV",
+      "₹ 5.00 - 7.00 Lakh",
     ],
     car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Arkana/6573/front-left-side-47.jpg?tr=w-456",
-      "Renault Arkana",
-      "Rs.10.00 Lakh",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+      "Altroz EV",
+      "₹ 12.00 - 15.00 Lakh",
     ],
   };
 
@@ -357,6 +379,7 @@ function Homee({ joy }) {
             <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1">
               Show All Specifications
             </div>
+
             <Varients
               SpecificationsFeatures={joy}
               VarientPetrol={VarientPetrol}
@@ -410,11 +433,9 @@ function Homee({ joy }) {
     </div>
   );
 }
-
 Homee.getInitialProps = () => {
-  return OneCarAllSpecs("duster").then((data) => {
+  return OneCarAllSpecs("tiago").then((data) => {
     return { joy: data.carspecs };
   });
 };
-
 export default Homee;

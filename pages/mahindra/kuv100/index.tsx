@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Kuv100 } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 6.10 Lakh";
-  const TopPic = "https://i.ibb.co/rxrpTCb/mahindra.png";
+  const TopPic = Kuv100;
   const CarName = "Mahindra KUV 100 NXT";
   const OnlyName = "KUV 100 NXT";
 

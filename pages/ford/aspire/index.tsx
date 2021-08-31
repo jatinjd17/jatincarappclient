@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Aspire } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Ford";
   const CarPrice = "₹ 7.28 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/35583/aspire-exterior-right-front-three-quarter-2.jpeg?q=85";
+  const TopPic = Aspire;
   const CarName = "Ford Aspire";
   const OnlyName = "Aspire";
 

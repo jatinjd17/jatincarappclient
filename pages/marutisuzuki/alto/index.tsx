@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Alto } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
   const CarPrice = "₹ 4.16 Lakh";
-  const TopPic = "https://i.ibb.co/1dp14nG/Alto800.jpg";
+  const TopPic = Alto;
   const CarName = "Maruti Alto 800";
   const OnlyName = "Alto 800";
 

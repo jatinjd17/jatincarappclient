@@ -27,12 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { GTR } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Nissan";
   const CarPrice = "₹ 2.12 Crore";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/cw/ec/20361/Nissan-GTR-Right-Front-Three-Quarter-84895.jpg?v=201711021421&q=85";
+  const TopPic = GTR;
   const CarName = "Nissan GTR";
   const OnlyName = "GTR";
 

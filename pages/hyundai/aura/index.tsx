@@ -27,11 +27,12 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
+import { Aura } from "../../../CarPicsUrl/CarPics";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
   const CarPrice = "₹ 6.00 Lakh";
-  const TopPic = "https://i.ibb.co/JQvngRS/aura.png";
+  const TopPic = Aura;
   const CarName = "Hyundai Aura";
   const OnlyName = "Aura";
 
