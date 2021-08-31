@@ -33,8 +33,7 @@ function Homee({ joy }) {
   console.log(joy);
   const CompanyName = "Kia";
   const CarPrice = "₹ 6.79 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/41523/sonet-exterior-right-front-three-quarter-110.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/SJNLc97/sonet.webp";
   const CarName = "Kia Sonet";
   const OnlyName = "Sonet";
 

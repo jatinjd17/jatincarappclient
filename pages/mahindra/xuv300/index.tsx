@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 7.96 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/26918/xuv300-exterior-right-front-three-quarter-148706.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/0yNZPp2/xuv300.png";
   const CarName = "Mahindra XUV 300";
   const OnlyName = "XUV 300";
 

@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 12.78 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/40087/thar-exterior-right-front-three-quarter-11.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/znxvGDC/thar.webp";
   const CarName = "Mahindra Thar";
   const OnlyName = "Thar";
 

@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 12.66 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/31883/scorpio-exterior-right-front-three-quarter-2.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/rsXJVdx/scorpio.png";
   const CarName = "Mahindra Scorpio";
   const OnlyName = "Scorpio";
 

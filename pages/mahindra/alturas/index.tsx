@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 28.77 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/33266/alturas-g4-exterior-right-front-three-quarter-2.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/qB2hDMC/alturas.png";
   const CarName = "Mahindra Alturas G4";
   const OnlyName = "Alturas G4";
 

@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Kia";
   const CarPrice = "₹ 9.96 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/33372/seltos-exterior-right-front-three-quarter-3.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/P5Nc7h7/seltos.webp";
   const CarName = "Kia Seltos";
   const OnlyName = "Seltos";
 

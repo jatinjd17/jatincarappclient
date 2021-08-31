@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 8.64 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/45933/mahindra-bolero-right-front-three-quarter1.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/mRnRdDg/mahindra-bolero.webp";
   const CarName = "Mahindra Bolero";
   const OnlyName = "Bolero";
 

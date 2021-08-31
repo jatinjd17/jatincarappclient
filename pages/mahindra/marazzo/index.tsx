@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 12.30 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/49114/marazzo-exterior-right-front-three-quarter-4.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/RYvTKB2/marazzo.png";
   const CarName = "Mahindra Marazzo";
   const OnlyName = "Marazzo";
 

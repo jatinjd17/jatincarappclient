@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Kia";
   const CarPrice = "₹ 24.95 Lakh ";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/41205/kia-carnival-right-front-three-quarter8.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/tx5CFry/carnival.webp";
   const CarName = "Kia Carnival";
   const OnlyName = "Carnival";
 

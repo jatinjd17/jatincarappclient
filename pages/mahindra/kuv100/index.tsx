@@ -31,8 +31,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
   const CarPrice = "₹ 6.10 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/21497/kuv100-nxt-exterior-right-front-three-quarter-64047.jpeg?q=85";
+  const TopPic = "https://i.ibb.co/rxrpTCb/mahindra.png";
   const CarName = "Mahindra KUV 100 NXT";
   const OnlyName = "KUV 100 NXT";
 
