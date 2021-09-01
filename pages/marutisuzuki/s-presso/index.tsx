@@ -395,6 +395,7 @@ function Homee({ joy }) {
 
   return (
     <div>
+      {head()}
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />
