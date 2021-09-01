@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Aspire } from "../../../CarPicsUrl/CarPics";
+import Meta from "../../../Components/metaSEO";
+import { TAspire } from "../../../CarPicsUrl/Thumbnails";
 
 function Homee({ joy }) {
   const CompanyName = "Ford";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Aspire;
   const CarName = "Ford Aspire";
   const OnlyName = "Aspire";
+  const ThumPic = TAspire;
 
   const KeySpecification = [
     "₹ 7.28 Lakh onwards",
@@ -326,6 +329,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="aspire"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />
