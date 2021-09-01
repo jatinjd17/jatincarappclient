@@ -395,7 +395,13 @@ function Homee({ joy }) {
 
   return (
     <div>
-      {head()}
+      <Head>
+        <title>
+          {CompanyName} | {OnlyName}
+        </title>
+        <meta name="description" content={CarName} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />
