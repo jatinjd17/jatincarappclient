@@ -18,8 +18,8 @@ const Meta = ({
         ""
       )}`}
     />
-    <meta property="og:title" content={`${CompanyName}| ${OnlyName}`} />
-    <meta property="og:description" content={LatestUpdate[0]} />
+    <meta property="og:title" content={`${CompanyName} | ${OnlyName}`} />
+    <meta property="og:description" content={LatestUpdate} />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
