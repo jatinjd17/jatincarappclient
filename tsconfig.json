@@ -21,7 +21,8 @@
     "components/paymentStripe/PaymentForm.js",
     "components/paymentStripe/paypal.js",
     "Components/SpecificCar/Mileage.tsx",
-    "pages/marutisuzuki/alto/index.tsx"
+    "pages/marutisuzuki/alto/index.tsx",
+    "pages/_app.js"
   ],
   "exclude": ["node_modules"]
 }
