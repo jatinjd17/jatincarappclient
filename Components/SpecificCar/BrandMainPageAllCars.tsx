@@ -58,8 +58,8 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 .replace(/ /g, "")}`}
             >
               <div className="grid grid-cols-1 bg-gray-200 ">
-                <div>
-                  <img src={ThatBrandCars.car1[0]} alt="nnn" />
+                <div className="">
+                  <img className="w-72" src={ThatBrandCars.car1[0]} alt="nnn" />
                 </div>
                 <div className="text-center text-xl font-bold">
                   {ThatBrandCars.car1[1]}
@@ -84,7 +84,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car2[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car2[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car2[1]}
@@ -113,7 +117,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car3[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car3[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car3[1]}
@@ -142,7 +150,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car4[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car4[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car4[1]}
@@ -171,7 +183,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car5[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car5[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car5[1]}
@@ -200,7 +216,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car6[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car6[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car6[1]}
@@ -229,7 +249,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car7[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car7[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car7[1]}
@@ -258,7 +282,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car8[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car8[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car8[1]}
@@ -287,7 +315,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car9[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car9[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car9[1]}
@@ -316,7 +348,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car10[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car10[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car10[1]}
@@ -345,7 +381,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car11[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car11[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car11[1]}
@@ -374,7 +414,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car12[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car12[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car12[1]}
@@ -403,7 +447,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car13[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car13[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car13[1]}
@@ -432,7 +480,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
               >
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
-                    <img src={ThatBrandCars.car14[0]} alt="nnn" />
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car14[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {ThatBrandCars.car14[1]}
@@ -440,6 +492,134 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                   <div className="flex flex-row">
                     <div className="text-md font-bold">
                       {ThatBrandCars.car14[2]}
+                    </div>
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
+                      Onwards
+                    </div> */}
+                  </div>
+
+                  <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                </div>
+              </Link>
+            </div>
+          ) : null}
+          {ThatBrandCars.car15 ? (
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
+              <Link
+                href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car15[1]
+                  .toLowerCase()
+                  .replace(/ /g, "")}`}
+              >
+                <div className="grid grid-cols-1 bg-gray-200 ">
+                  <div>
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car15[0]}
+                      alt="nnn"
+                    />
+                  </div>
+                  <div className="text-center text-xl font-bold">
+                    {ThatBrandCars.car15[1]}
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="text-md font-bold">
+                      {ThatBrandCars.car15[2]}
+                    </div>
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
+                      Onwards
+                    </div> */}
+                  </div>
+
+                  <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                </div>
+              </Link>
+            </div>
+          ) : null}
+          {ThatBrandCars.car16 ? (
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
+              <Link
+                href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car16[1]
+                  .toLowerCase()
+                  .replace(/ /g, "")}`}
+              >
+                <div className="grid grid-cols-1 bg-gray-200 ">
+                  <div>
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car16[0]}
+                      alt="nnn"
+                    />
+                  </div>
+                  <div className="text-center text-xl font-bold">
+                    {ThatBrandCars.car16[1]}
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="text-md font-bold">
+                      {ThatBrandCars.car16[2]}
+                    </div>
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
+                      Onwards
+                    </div> */}
+                  </div>
+
+                  <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                </div>
+              </Link>
+            </div>
+          ) : null}
+          {ThatBrandCars.car17 ? (
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
+              <Link
+                href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car17[1]
+                  .toLowerCase()
+                  .replace(/ /g, "")}`}
+              >
+                <div className="grid grid-cols-1 bg-gray-200 ">
+                  <div>
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car17[0]}
+                      alt="nnn"
+                    />
+                  </div>
+                  <div className="text-center text-xl font-bold">
+                    {ThatBrandCars.car17[1]}
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="text-md font-bold">
+                      {ThatBrandCars.car17[2]}
+                    </div>
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
+                      Onwards
+                    </div> */}
+                  </div>
+
+                  <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+                </div>
+              </Link>
+            </div>
+          ) : null}
+          {ThatBrandCars.car18 ? (
+            <div className="m-8 md:m-1 border-2 shadow-lg bg-gray-200 hover:shadow-2xl">
+              <Link
+                href={`/${CompanyName.toLowerCase()}/${ThatBrandCars.car18[1]
+                  .toLowerCase()
+                  .replace(/ /g, "")}`}
+              >
+                <div className="grid grid-cols-1 bg-gray-200 ">
+                  <div>
+                    <img
+                      className="w-72"
+                      src={ThatBrandCars.car18[0]}
+                      alt="nnn"
+                    />
+                  </div>
+                  <div className="text-center text-xl font-bold">
+                    {ThatBrandCars.car18[1]}
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="text-md font-bold">
+                      {ThatBrandCars.car18[2]}
                     </div>
                     {/* <div className="text-md text-gray-500 ml-2 mt-0">
                       Onwards

@@ -28,6 +28,26 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Spresso } from "../../../CarPicsUrl/CarPics";
+import {
+  TAlto,
+  TBaleno,
+  TBrezza,
+  TCelerio,
+  TCelerioX,
+  TCiaz,
+  TDzire,
+  TEeco,
+  TErtiga,
+  TIgnis,
+  TKwid,
+  TNios,
+  TSantro,
+  TScross,
+  TSpresso,
+  TSwift,
+  TWaganr,
+  TXL6,
+} from "../../../CarPicsUrl/Thumbnails";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
@@ -155,7 +175,7 @@ function Homee({ joy }) {
       "Petrol",
       "4 Seater",
       "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
-      "https://i.ibb.co/C63SXxn/Kwid.jpg",
+      TKwid,
     ],
     comparisioncar2: [
       "₹ 3.80 Lakh onwards",
@@ -218,59 +238,35 @@ function Homee({ joy }) {
   };
 
   const SimilarCars = {
-    car1: [
-      "https://i.ibb.co/C63SXxn/Kwid.jpg",
-      "Renault Kwid",
-      "₹ 3.32 Lakh onwards",
-    ],
-    car2: [
-      "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
-      "Datsun redi-go",
-      "₹ 3.80 Lakh onwards0",
-    ],
-    car3: [
-      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201911/0G6A5935_1.png?LkCz.7ZUenqnJF.SOBjEMulD..iElUYe&size=770:433",
-      "S-presso",
-      "₹ 3.77 Lakh onwards",
-    ],
-    car4: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbWFsSvTTFc7n__WfN3PJOWp9iBEqMvmFzg&usqp=CAU",
-      "Celario",
-      "₹4.66 Lakhs onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "i10 Nios",
-      "₹5.24 lakhs onwards",
-    ],
-    car6: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7460/1596180579378/front-left-side-47.jpg",
-      "Santro",
-      "₹ 4.74 Lakh onwards",
-    ],
+    car1: [TKwid, "Renault Kwid", "₹ 3.32 Lakh onwards"],
+    // car2: [
+    //   "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
+    //   "Datsun redi-go",
+    //   "₹ 3.80 Lakh onwards0",
+    // ],
+    car2: [TSpresso, "S-presso", "₹ 3.77 Lakh onwards"],
+    car3: [TCelerio, "Celario", "₹4.66 Lakhs onwards"],
+    car4: [TNios, "i10 Nios", "₹5.24 lakhs onwards"],
+    car5: [TSantro, "Santro", "₹ 4.74 Lakh onwards"],
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201911/0G6A5935_1.png?LkCz.7ZUenqnJF.SOBjEMulD..iElUYe&size=770:433",
-      "S-presso",
-      "₹ 3.77 Lakh onwards",
-    ],
-    car2: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbWFsSvTTFc7n__WfN3PJOWp9iBEqMvmFzg&usqp=CAU",
-      "Celario",
-      "₹4.66 Lakhs onwards",
-    ],
-    car3: [
-      "https://www.shivamautozone.com/wp-content/uploads/2019/01/SUPERIOR-WHITE.png",
-      "Wagon R",
-      "₹ 4.79 Lakh onwards",
-    ],
-    car4: [
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/8378/1614747593719/front-left-side-47.jpg",
-      "Swift",
-      " ₹ 5.81 Lakh onwards",
-    ],
+    car1: [TSpresso, "S-presso", "₹ 3.77 Lakh onwards"],
+    car2: [TCelerio, "Celario", "₹4.66 Lakhs onwards"],
+    car3: [TWaganr, "Wagon R", "₹ 4.79 Lakh onwards"],
+    car4: [TSwift, "Swift", " ₹ 5.81 Lakh onwards"],
+    car5: [TBaleno, "Baleno", " ₹ 5.97 Lakh onwards"],
+    car6: [TErtiga, "Ertiga", " ₹ 7.78 Lakh onwards"],
+    car7: [TBrezza, "Brezza", " ₹ 7.51 Lakh onwards"],
+    car8: [TAlto, "Alto", " ₹ 3.00 Lakh onwards"],
+
+    car9: [TDzire, "Dzire", " ₹ 5.98 Lakh onwards"],
+    car10: [TXL6, "XL6", " ₹ 9.92 Lakh onwards"],
+    car11: [TIgnis, "Ignis", " ₹ 4.95 Lakh onwards"],
+    car12: [TEeco, "Eeco", " ₹ 4.08 Lakh onwards"],
+    car13: [TCiaz, "Ciaz", " ₹ 8.51 Lakh onwards"],
+    car14: [TScross, "SCross", " ₹ 8.39 Lakh onwards"],
+    car15: [TCelerioX, "CelerioX", " ₹ 5.12 Lakh onwards"],
   };
 
   const UpcommingCarBrand = {
@@ -423,7 +419,7 @@ function Homee({ joy }) {
               <AllSPecifications SpecificationsFeatures={joy} />
 
               <AlternativeCarComparision
-                TopPic={TopPic}
+                TopPic={TSpresso}
                 KeySpecification={KeySpecification}
                 ComparisionCar={ComparisionCar}
               />

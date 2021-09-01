@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import CancelIcon from "@material-ui/icons/Cancel";
+import DriveEtaIcon from "@material-ui/icons/DriveEta";
 
 function Compare({ OnlyName }) {
   const [compareName, setCompareName] = useState([]);
@@ -118,11 +119,11 @@ function Compare({ OnlyName }) {
     <div>
       {typeof window !== "undefined" ? (
         <div>
-          <div>
+          <div className="sm:text-center sm:w-screen">
             {localStorage.getItem("comparre") ? (
               <button
                 onClick={() => handleactive(OnlyName)}
-                className={`p-3 border-2 rounded-lg ${
+                className={`p-3 border-2 rounded-lg  ${
                   isCarNameAvailable(OnlyName) ? "bg-gray-500" : ""
                 }`}
               >
@@ -134,7 +135,7 @@ function Compare({ OnlyName }) {
       ) : null}
       {/* JSON.parse(localStorage.getItem("comparre")).length */}
       {typeof window !== "undefined" ? (
-        <div>
+        <div className="sm:mt-2">
           {localStorage.getItem("comparre") ? (
             <div>
               {JSON.parse(localStorage.getItem("comparre")).length === 1 ? (
@@ -145,7 +146,8 @@ function Compare({ OnlyName }) {
                   /> */}
                   <div className="flex flex-row p-2 border-2 w-auto">
                     <div className="w-14">
-                      <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" />
+                      <DriveEtaIcon />
+                      {/* <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" /> */}
                     </div>
                     <div>
                       <button
@@ -165,18 +167,20 @@ function Compare({ OnlyName }) {
                 </div>
               ) : null}
               {JSON.parse(localStorage.getItem("comparre")).length === 2 ? (
-                <div className="p-3 border-2 rounded-lg">
+                <div className="p-3 border-2 rounded-lg sm:w-screen sm:p-0 sm:items-center ">
                   {/* <img
                     src={JSON.parse(localStorage.getItem("comparrePic"))[1]}
                     alt="pic"
                   /> */}
-                  <div className="flex flex-row">
-                    <div className="flex flex-row p-2 border-2 w-auto">
-                      <div className="w-14">
-                        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" />
+                  <div className="flex flex-row sm:overflow-x-auto sm:ml-14">
+                    <div className="flex flex-row p-2 border-2 w-auto sm:p-0">
+                      <div className="w-14 sm:w-8">
+                        <DriveEtaIcon />
+                        {/* <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" /> */}
                       </div>
-                      <div>
+                      <div className="sm:text-sm">
                         <button
+                          className="sm:mt-2"
                           onClick={() =>
                             handleactive(
                               JSON.parse(localStorage.getItem("comparre"))[0]
@@ -191,12 +195,14 @@ function Compare({ OnlyName }) {
                       </div>
                     </div>
                     <div className="pt-2 px-2">Vs</div>
-                    <div className="flex flex-row p-2 border-2 w-auto">
-                      <div className="w-14">
-                        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" />
+                    <div className="flex flex-row p-2 border-2 w-auto sm:p-0">
+                      <div className="w-14 sm:w-8">
+                        <DriveEtaIcon />
+                        {/* <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" /> */}
                       </div>
-                      <div>
+                      <div className="sm:text-sm">
                         <button
+                          className="sm:mt-2"
                           onClick={() =>
                             handleactive(
                               JSON.parse(localStorage.getItem("comparre"))[1]
@@ -218,18 +224,20 @@ function Compare({ OnlyName }) {
                 </div>
               ) : null}
               {JSON.parse(localStorage.getItem("comparre")).length === 3 ? (
-                <div className="p-3 border-2 rounded-lg">
+                <div className="p-3 xl:p-2 md:w-screen border-2  rounded-lg sm:w-screen sm:p-0 overflow-x-auto">
                   {/* <img
                     src={JSON.parse(localStorage.getItem("comparrePic"))[2]}
                     alt="pic"
                   /> */}
-                  <div className="flex flex-row">
-                    <div className="flex flex-row p-2 border-2 w-auto">
-                      <div className="w-14">
-                        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" />
+                  <div className="flex flex-row sm:overflow-x-auto">
+                    <div className="flex flex-row p-2 border-2 w-auto sm:p-0">
+                      <div className="w-14 sm:w-8">
+                        <DriveEtaIcon />
+                        {/* <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" /> */}
                       </div>
-                      <div>
+                      <div className="sm:text-sm">
                         <button
+                          className="sm:mt-2"
                           onClick={() =>
                             handleactive(
                               JSON.parse(localStorage.getItem("comparre"))[0]
@@ -239,17 +247,19 @@ function Compare({ OnlyName }) {
                           {JSON.parse(localStorage.getItem("comparre"))[0]}
                         </button>
                       </div>
-                      <div className="ml-2 -mt-0.5">
+                      <div className="ml-2 -mt-0.5 sm:ml-1">
                         <CancelIcon />
                       </div>
                     </div>
-                    <div className="pt-2 px-2">Vs</div>
-                    <div className="flex flex-row p-2 border-2 w-auto">
-                      <div className="w-14">
-                        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" />
+                    <div className="pt-2 px-2 sm:text-sm">Vs</div>
+                    <div className="flex flex-row p-2 border-2 w-auto sm:p-0">
+                      <div className="w-14 sm:w-8">
+                        <DriveEtaIcon />
+                        {/* <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" /> */}
                       </div>
-                      <div>
+                      <div className="sm:text-sm">
                         <button
+                          className="sm:mt-2"
                           onClick={() =>
                             handleactive(
                               JSON.parse(localStorage.getItem("comparre"))[1]
@@ -259,17 +269,19 @@ function Compare({ OnlyName }) {
                           {JSON.parse(localStorage.getItem("comparre"))[1]}
                         </button>
                       </div>
-                      <div className="ml-2 -mt-0.5">
+                      <div className="ml-2 -mt-0.5 sm:ml-1">
                         <CancelIcon />
                       </div>
                     </div>
-                    <div className="pt-2 px-2">Vs</div>
-                    <div className="flex flex-row p-2 border-2 w-auto">
-                      <div className="w-14">
-                        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" />
+                    <div className="pt-2 px-2 sm:text-sm">Vs</div>
+                    <div className="flex flex-row p-2 border-2 w-auto sm:p-0">
+                      <div className="w-14 sm:w-8">
+                        <DriveEtaIcon />
+                        {/* <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85" /> */}
                       </div>
-                      <div>
+                      <div className="sm:text-sm">
                         <button
+                          className="sm:mt-2"
                           onClick={() =>
                             handleactive(
                               JSON.parse(localStorage.getItem("comparre"))[2]
@@ -279,7 +291,7 @@ function Compare({ OnlyName }) {
                           {JSON.parse(localStorage.getItem("comparre"))[2]}
                         </button>
                       </div>
-                      <div className="ml-2 -mt-0.5">
+                      <div className="ml-2 -mt-0.5 sm:ml-1">
                         <CancelIcon />
                       </div>
                     </div>
@@ -307,7 +319,7 @@ function Compare({ OnlyName }) {
                     .replaceAll(" ", "")
                     .replaceAll(",", "vs")}`}
                 >
-                  <button className="bg-red-300 text-white p-2 rounded-lg">
+                  <button className="bg-red-300 text-white p-2 rounded-lg sm:w-screen sm:text-center sm:mt-2">
                     Start Comparision
                   </button>
                 </Link>
