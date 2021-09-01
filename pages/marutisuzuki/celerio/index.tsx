@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Celerio } from "../../../CarPicsUrl/CarPics";
+import { TCelerio } from "../../../CarPicsUrl/Thumbnails";
+import Head from "next/head";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
@@ -368,6 +370,35 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Head>
+        <title>
+          {CompanyName} | {OnlyName}
+        </title>
+        <meta name="description" content={LatestUpdate[0]} />
+        <link
+          rel="canonical"
+          href={`https://jatincarappclient.vercel.app/${CompanyName.toLowerCase()}/${OnlyName.toLowerCase().replace(
+            / /g,
+            ""
+          )}`}
+        />
+        <meta property="og:title" content={`${CompanyName}| ${OnlyName}`} />
+        <meta property="og:description" content={LatestUpdate[0]} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://jatincarappclient.vercel.app/${CompanyName.toLowerCase()}/${OnlyName.toLowerCase().replace(
+            / /g,
+            ""
+          )}`}
+        />
+        <meta property="og:site_name" content={`${CompanyName}`} />
+
+        <meta property="og:image" content={TCelerio} />
+        <meta property="og:image:secure_url" content={TCelerio} />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="fb:app_id" content={`32423423`} />
+      </Head>
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

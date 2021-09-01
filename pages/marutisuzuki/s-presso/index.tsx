@@ -399,17 +399,23 @@ function Homee({ joy }) {
         <title>
           {CompanyName} | {OnlyName}
         </title>
-        <meta name="description" content={CarName} />
+        <meta name="description" content={LatestUpdate[0]} />
         <link
           rel="canonical"
-          href={`https://jatincarappclient.vercel.app/marutisuzuki/s-presso`}
+          href={`https://jatincarappclient.vercel.app/${CompanyName.toLowerCase()}/${OnlyName.toLowerCase().replace(
+            / /g,
+            ""
+          )}`}
         />
         <meta property="og:title" content={`${CompanyName}| ${OnlyName}`} />
-        <meta property="og:description" content={CarPrice} />
-        <meta property="og:type" content="webiste" />
+        <meta property="og:description" content={LatestUpdate[0]} />
+        <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://jatincarappclient.vercel.app/marutisuzuki/s-presso`}
+          content={`https://jatincarappclient.vercel.app/${CompanyName.toLowerCase()}/${OnlyName.toLowerCase().replace(
+            / /g,
+            ""
+          )}`}
         />
         <meta property="og:site_name" content={`${CompanyName}`} />
 
