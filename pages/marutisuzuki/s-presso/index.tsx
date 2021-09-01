@@ -1,4 +1,5 @@
 // import Link from "next/link";
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import Carousel from "react-multi-carousel";
@@ -55,6 +56,32 @@ function Homee({ joy }) {
   const TopPic = Spresso;
   const CarName = "Maruti S-Presso";
   const OnlyName = "S-Presso";
+
+  const head = () => (
+    <Head>
+      <title>
+        {CompanyName} | {OnlyName}
+      </title>
+      <meta name="description" content={CarName} />
+      <link
+        rel="canonical"
+        href={`https://jatincarappclient.vercel.app/marutisuzuki/s-presso`}
+      />
+      <meta property="og:title" content={`${CompanyName}| ${OnlyName}`} />
+      <meta property="og:description" content={CarPrice} />
+      <meta property="og:type" content="webiste" />
+      <meta
+        property="og:url"
+        content={`https://jatincarappclient.vercel.app/marutisuzuki/s-presso`}
+      />
+      <meta property="og:site_name" content={`${CompanyName}`} />
+
+      <meta property="og:image" content={TSpresso} />
+      <meta property="og:image:secure_url" content={TSpresso} />
+      <meta property="og:image:type" content="image/jpg" />
+      <meta property="fb:app_id" content={`32423423`} />
+    </Head>
+  );
 
   const KeySpecification = [
     "₹ 3.77 Lakh onwards",

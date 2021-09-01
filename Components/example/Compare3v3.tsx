@@ -33,7 +33,7 @@ function AllSPecifications({ SpecificationsFeatures }) {
 
       <div className=" sticky top-0 z-50">
         <div className=" grid grid-cols-3 mr-0 gap-3 sm:gap-0 bg-gray-100 shadow-2xl">
-          <div className="flex flex-row sm:flex-col w-72 lg:w-40 sm:w-24 h-20 ml-16 md:ml-14  sm:ml-3 border-2 p-3 sm:p-0 bg-gray-200">
+          <div className="flex flex-row sm:flex-col w-72 lg:w-40 sm:w-24 h-20 ml-16 md:ml-14  sm:ml-3 border-2 p-3 sm:p-0 bg-gray-200 overflow-auto">
             <div className="h-auto w-24 md:w-20 sm:w-12 sm:self-center">
               <img src={SpecificationsFeatures.Car1.CarInfo.TopPic[0]} />
             </div>
@@ -46,7 +46,7 @@ function AllSPecifications({ SpecificationsFeatures }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-row sm:flex-col w-72 lg:w-40 sm:w-24 h-20 md:ml-11  sm:ml-3 border-2 p-3 sm:p-0 bg-gray-200">
+          <div className="flex flex-row sm:flex-col w-72 lg:w-40 sm:w-24 h-20 md:ml-11  sm:ml-3 border-2 p-3 sm:p-0 bg-gray-200 overflow-auto">
             <div className="h-auto w-24 md:w-20 sm:w-12 sm:self-center">
               <img src={SpecificationsFeatures.Car2.CarInfo.TopPic[0]} />
             </div>
@@ -59,7 +59,7 @@ function AllSPecifications({ SpecificationsFeatures }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-row sm:flex-col w-72 lg:w-40 sm:w-24 h-20 -ml-12 md:ml-12  sm:ml-3 border-2 p-3 sm:p-0 bg-gray-200">
+          <div className="flex flex-row sm:flex-col w-72 lg:w-40 sm:w-24 h-20 -ml-12 md:ml-12  sm:ml-3 border-2 p-3 sm:p-0 bg-gray-200 overflow-auto">
             <div className="h-auto w-24 md:w-20 sm:w-12 sm:self-center">
               <img src={SpecificationsFeatures.Car3.CarInfo.TopPic[0]} />
             </div>
