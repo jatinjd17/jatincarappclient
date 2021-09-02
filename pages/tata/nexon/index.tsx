@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Nexon } from "../../../CarPicsUrl/CarPics";
+import { TNexon } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Tata";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Nexon;
   const CarName = "Tata Nexon";
   const OnlyName = "Nexon";
+  const ThumPic = TNexon;
 
   const KeySpecification = [
     "₹ 7.28 Lakh onwards",
@@ -531,6 +534,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="nexon"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

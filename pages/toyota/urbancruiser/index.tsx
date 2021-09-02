@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { UrbanCruiser } from "../../../CarPicsUrl/CarPics";
+import { TUrbanCruiser } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Toyota";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = UrbanCruiser;
   const CarName = "Toyota Urban Cruiser";
   const OnlyName = "Urban Cruiser";
+  const ThumPic = TUrbanCruiser;
 
   const KeySpecification = [
     "₹ 8.63 Lakh onwards",
@@ -354,6 +357,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="urbancruiser"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

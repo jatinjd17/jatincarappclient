@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Kwid } from "../../../CarPicsUrl/CarPics";
+import { TKwid } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Renault";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Kwid;
   const CarName = "Renault Kwid";
   const OnlyName = "Kwid";
+  const ThumPic = TKwid;
 
   const KeySpecification = [
     "₹ 3.31 Lakh onwards",
@@ -369,6 +372,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="kwid"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

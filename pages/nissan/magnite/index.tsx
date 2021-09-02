@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Magnite } from "../../../CarPicsUrl/CarPics";
+import { TMagnite } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Nissan";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Magnite;
   const CarName = "Nissan Magnite";
   const OnlyName = "Magnite";
+  const ThumPic = TMagnite;
 
   const KeySpecification = [
     "₹ 5.59 Lakh onwards",
@@ -390,6 +393,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="magnite"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

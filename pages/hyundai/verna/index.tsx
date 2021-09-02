@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Verna } from "../../../CarPicsUrl/CarPics";
+import { TVerna } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Verna;
   const CarName = "Hyundai Verna";
   const OnlyName = "Verna";
+  const ThumPic = TVerna;
 
   const KeySpecification = [
     "₹ 9.28 Lakh onwards",
@@ -410,6 +413,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="verna"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

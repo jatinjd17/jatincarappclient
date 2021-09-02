@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { HectorPlus } from "../../../CarPicsUrl/CarPics";
+import { THectorPlus } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "MG";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = HectorPlus;
   const CarName = "MG Hector Plus";
   const OnlyName = "Hector Plus";
+  const ThumPic = THectorPlus;
 
   const KeySpecification = [
     "₹ 13.63 Lakh onwards",
@@ -381,6 +384,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="hectorplus"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

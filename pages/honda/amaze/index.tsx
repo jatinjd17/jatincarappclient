@@ -31,6 +31,8 @@ import PopularAlternativeCarComparision from "../../../Components/FrontPage/popu
 import PopularCarsFrontPage from "../../../Components/FrontPage/popularcarsfrontpage";
 import Compare from "../../../Components/compare";
 import { Amaze } from "../../../CarPicsUrl/CarPics";
+import Meta from "../../../Components/metaSEO";
+import { TAmaze } from "../../../CarPicsUrl/Thumbnails";
 
 const DynamicSimilarCar = dynamic(
   () => import("../../../Components/SpecificCar/SimilarCars"),
@@ -40,6 +42,7 @@ const DynamicSimilarCar = dynamic(
 );
 
 function Homee({ joy }) {
+  const ThumPic = TAmaze;
   const PopularCars = {
     car1: [
       "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
@@ -440,6 +443,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="amaze"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

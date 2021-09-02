@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Alturas } from "../../../CarPicsUrl/CarPics";
+import Meta from "../../../Components/metaSEO";
+import { TAlturas } from "../../../CarPicsUrl/Thumbnails";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Alturas;
   const CarName = "Mahindra Alturas G4";
   const OnlyName = "Alturas G4";
+  const ThumPic = TAlturas;
 
   const KeySpecification = [
     "₹ 28.77 Lakh onwards",
@@ -360,6 +363,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="alturas"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

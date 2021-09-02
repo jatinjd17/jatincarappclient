@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Seltos } from "../../../CarPicsUrl/CarPics";
+import { TSeltos } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Kia";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Seltos;
   const CarName = "Kia Seltos";
   const OnlyName = "Seltos";
+  const ThumPic = TSeltos;
 
   const KeySpecification = [
     "₹ 9.96 Lakh onwards",
@@ -380,6 +383,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="seltos"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

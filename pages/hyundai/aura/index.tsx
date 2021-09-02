@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Aura } from "../../../CarPicsUrl/CarPics";
+import { TAura } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Aura;
   const CarName = "Hyundai Aura";
   const OnlyName = "Aura";
+  const ThumPic = TAura;
 
   const KeySpecification = [
     "₹ 6.00 Lakh onwards",
@@ -407,6 +410,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="aura"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Santro } from "../../../CarPicsUrl/CarPics";
+import { TSantro } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Santro;
   const CarName = "Hyundai Santro";
   const OnlyName = "Santro";
+  const ThumPic = TSantro;
 
   const KeySpecification = [
     "₹ 4.77 Lakh onwards",
@@ -404,6 +407,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="santro"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

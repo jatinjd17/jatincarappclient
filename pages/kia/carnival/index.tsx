@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Carnival } from "../../../CarPicsUrl/CarPics";
+import { TCarnival } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Kia";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Carnival;
   const CarName = "Kia Carnival";
   const OnlyName = "Carnival";
+  const ThumPic = TCarnival;
 
   const KeySpecification = [
     "₹ 24.95 Lakh onwards",
@@ -332,6 +335,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="carnival"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

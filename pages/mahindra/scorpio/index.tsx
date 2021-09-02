@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Scorpio } from "../../../CarPicsUrl/CarPics";
+import { TScorpio } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Scorpio;
   const CarName = "Mahindra Scorpio";
   const OnlyName = "Scorpio";
+  const ThumPic = TScorpio;
 
   const KeySpecification = [
     "₹ 12.66 Lakh onwards",
@@ -360,6 +363,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="scorpio"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

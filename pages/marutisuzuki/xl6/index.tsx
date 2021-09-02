@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Xl6 } from "../../../CarPicsUrl/CarPics";
+import { TXL6 } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Xl6;
   const CarName = "Maruti XL6";
   const OnlyName = "XL6";
+  const ThumPic = TXL6;
 
   const KeySpecification = [
     "₹ 9.92 Lakh onwards",
@@ -332,6 +335,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="xl6"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

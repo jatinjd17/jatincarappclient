@@ -29,6 +29,8 @@ import MobileSideBar from "../../../Components/MobileSideBar";
 import { getOneBlog } from "../../../actions/cat";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Sonet } from "../../../CarPicsUrl/CarPics";
+import { TSonet } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   console.log(joy);
@@ -37,6 +39,7 @@ function Homee({ joy }) {
   const TopPic = Sonet;
   const CarName = "Kia Sonet";
   const OnlyName = "Sonet";
+  const ThumPic = TSonet;
 
   const KeySpecification = [
     "₹ 6.79 Lakh onwards",
@@ -457,6 +460,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="sonet"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

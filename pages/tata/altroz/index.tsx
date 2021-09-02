@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Altroz } from "../../../CarPicsUrl/CarPics";
+import { TAltroz } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Tata";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Altroz;
   const CarName = "Tata Altroz";
   const OnlyName = "Altroz";
+  const ThumPic = TAltroz;
 
   const KeySpecification = [
     "₹ 5.80 Lakh onwards",
@@ -436,6 +439,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="altroz"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Gloster } from "../../../CarPicsUrl/CarPics";
+import { TGloster } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "MG";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Gloster;
   const CarName = "MG Gloster";
   const OnlyName = "Gloster";
+  const ThumPic = TGloster;
 
   const KeySpecification = [
     "₹ 29.98 Lakh onwards",
@@ -326,6 +329,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="gloster"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Xuv500 } from "../../../CarPicsUrl/CarPics";
+import { TXUV500 } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Xuv500;
   const CarName = "Mahindra XUV 500";
   const OnlyName = "XUV 500";
+  const ThumPic = TXUV500;
 
   const KeySpecification = [
     "₹ 14.27 Lakh onwards",
@@ -370,6 +373,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="xuv500"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

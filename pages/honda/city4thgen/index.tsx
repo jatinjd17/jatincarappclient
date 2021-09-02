@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { City4 } from "../../../CarPicsUrl/CarPics";
+import Meta from "../../../Components/metaSEO";
+import { TCity4 } from "../../../CarPicsUrl/Thumbnails";
 
 function Homee({ joy }) {
   const CompanyName = "Honda";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = City4;
   const CarName = "Honda City 4th Gen";
   const OnlyName = "City 4th Gen";
+  const ThumPic = TCity4;
 
   const KeySpecification = [
     "₹ 9.33 Lakh onwards",
@@ -324,6 +327,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="city4thgen"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

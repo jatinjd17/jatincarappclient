@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Safari } from "../../../CarPicsUrl/CarPics";
+import { TSafari } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Tata";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Safari;
   const CarName = "Tata Safari";
   const OnlyName = "Safari";
+  const ThumPic = TSafari;
 
   const KeySpecification = [
     "₹ 14.99 Lakh onwards",
@@ -382,6 +385,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="safari"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

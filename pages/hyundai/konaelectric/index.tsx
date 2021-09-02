@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { KonaEV } from "../../../CarPicsUrl/CarPics";
+import Meta from "../../../Components/metaSEO";
+import { TKona } from "../../../CarPicsUrl/Thumbnails";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = KonaEV;
   const CarName = "Hyundai Kona Electric";
   const OnlyName = "Kona Electric";
+  const ThumPic = TKona;
 
   const KeySpecification = [
     "₹ 23.79 Lakh onwards",
@@ -369,6 +372,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="konaelectric"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

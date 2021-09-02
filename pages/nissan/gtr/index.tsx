@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { GTR } from "../../../CarPicsUrl/CarPics";
+import { TGTR } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Nissan";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = GTR;
   const CarName = "Nissan GTR";
   const OnlyName = "GTR";
+  const ThumPic = TGTR;
 
   const KeySpecification = [
     "₹ 2.12 Crore",
@@ -307,6 +310,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="gtr"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

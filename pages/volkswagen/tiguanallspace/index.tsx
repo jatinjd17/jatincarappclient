@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Tiguan } from "../../../CarPicsUrl/CarPics";
+import { TTiguan } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Volkswagen";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Tiguan;
   const CarName = "Volkswagen Tiguan";
   const OnlyName = "Tiguan";
+  const ThumPic = TTiguan;
 
   const KeySpecification = [
     "₹ ₹ 34.19 Lakh onwards",
@@ -306,6 +309,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="tiguanallspace"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

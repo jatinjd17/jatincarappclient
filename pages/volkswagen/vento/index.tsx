@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Vento } from "../../../CarPicsUrl/CarPics";
+import { TVento } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Volkswagen";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Vento;
   const CarName = "Volkswagen Vento";
   const OnlyName = "Vento";
+  const ThumPic = TVento;
 
   const KeySpecification = [
     "₹ 10.00 Lakh onwards",
@@ -322,6 +325,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="vento"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

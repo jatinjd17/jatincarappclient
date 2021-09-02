@@ -30,6 +30,7 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Baleno } from "../../../CarPicsUrl/CarPics";
 import { TBaleno } from "../../../CarPicsUrl/Thumbnails";
 import Head from "next/head";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "MarutiSuzuki";
@@ -37,6 +38,7 @@ function Homee({ joy }) {
   const TopPic = Baleno;
   const CarName = "Maruti Baleno";
   const OnlyName = "Baleno";
+  const ThumPic = TBaleno;
 
   const KeySpecification = [
     "₹ ₹ 5.97 Lakh onwards",
@@ -356,35 +358,13 @@ function Homee({ joy }) {
 
   return (
     <div>
-      <Head>
-        <title>
-          {CompanyName} | {OnlyName}
-        </title>
-        <meta name="description" content={LatestUpdate[0]} />
-        <link
-          rel="canonical"
-          href={`https://jatincarappclient.vercel.app/${CompanyName.toLowerCase()}/${OnlyName.toLowerCase().replace(
-            / /g,
-            ""
-          )}`}
-        />
-        <meta property="og:title" content={`${CompanyName}| ${OnlyName}`} />
-        <meta property="og:description" content={LatestUpdate[0]} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`https://jatincarappclient.vercel.app/${CompanyName.toLowerCase()}/${OnlyName.toLowerCase().replace(
-            / /g,
-            ""
-          )}`}
-        />
-        <meta property="og:site_name" content={`${CompanyName}`} />
-
-        <meta property="og:image" content={TBaleno} />
-        <meta property="og:image:secure_url" content={TBaleno} />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta property="fb:app_id" content={`32423423`} />
-      </Head>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="baleno"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

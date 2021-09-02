@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { BoleroNeo } from "../../../CarPicsUrl/CarPics";
+import { TBoleroNeo } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Mahindra";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = BoleroNeo;
   const CarName = "Mahindra Bolero Neo";
   const OnlyName = "Bolero Neo";
+  const ThumPic = TBoleroNeo;
 
   const KeySpecification = [
     "₹ 8.48 Lakh onwards",
@@ -371,6 +374,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="boleroneo"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

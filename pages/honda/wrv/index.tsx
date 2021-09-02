@@ -29,6 +29,8 @@ import MobileSideBar from "../../../Components/MobileSideBar";
 import PopularCarsFrontPage from "../../../Components/FrontPage/popularcarsfrontpage";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Wrv } from "../../../CarPicsUrl/CarPics";
+import { TWRV } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Honda";
@@ -36,6 +38,7 @@ function Homee({ joy }) {
   const TopPic = Wrv;
   const CarName = "Honda WR-V";
   const OnlyName = "WR-V";
+  const ThumPic = TWRV;
 
   const KeySpecification = [
     "₹ 8.90 Lakh onwards",
@@ -344,6 +347,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="wrv"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

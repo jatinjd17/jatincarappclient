@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Superb } from "../../../CarPicsUrl/CarPics";
+import { TSuperb } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Skoda";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = Superb;
   const CarName = "Skoda Superb";
   const OnlyName = "Superb";
+  const ThumPic = TSuperb;
 
   const KeySpecification = [
     "₹ 32.02 Lakh onwards",
@@ -315,6 +318,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="superb"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />

@@ -28,6 +28,8 @@ import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { alcazer } from "../../../CarPicsUrl/CarPics";
+import { TAlcazar } from "../../../CarPicsUrl/Thumbnails";
+import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
   const CompanyName = "Hyundai";
@@ -35,6 +37,7 @@ function Homee({ joy }) {
   const TopPic = alcazer;
   const CarName = "Hyundai Alcazar";
   const OnlyName = "Alcazar";
+  const ThumPic = TAlcazar;
 
   const KeySpecification = [
     "₹ 16.30 Lakh onwards",
@@ -459,6 +462,13 @@ function Homee({ joy }) {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName={OnlyName}
+        LatestUpdate={LatestUpdate[0]}
+        ImageUrl={ThumPic}
+        LinkCarName="alcazar"
+      />
       <Nav />
 
       <MobileSideBar isToggleName={isToggleName} handleactive={handleactive} />
