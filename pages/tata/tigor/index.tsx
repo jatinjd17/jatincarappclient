@@ -32,158 +32,193 @@ import { TTigor } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "₹ 5.65 Lakh";
-  const TopPic = Tigor;
-  const CarName = "Tata Tigor";
-  const OnlyName = "Tigor";
-  const ThumPic = TTigor;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 5.65 Lakh onwards",
-    "20.3 kmpl",
-    "1199 cc",
-    "Manual & AMT",
-    "Petrol",
-    "4 Seater",
-    "3993 mm in length, 1677 mm in width and 1532 mm in height",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "Antilock Braking System (ABS)",
-    "Electronic Brake Distribution (EBD)",
-    "Corner Stability Control (CSC)",
-    "rear parking sensors",
-    "Seat Belt Warning",
-    "4 Star (Global NCAP)",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["XE", "1199  cc, Manual, Petrol, 20.3 kmpl", "Rs.5.64 Lakh*"],
-    varient2: ["XM", "1199  cc, Manual, Petrol, 20.3 kmpl", "Rs.6.24 Lakh*"],
-    varient3: ["XZ", "1199 cc, Manual, Petrol, 20.3 kmpl", "Rs.6.65 Lakh*"],
-    varient4: [
-      "XMA AMT",
-      "1199 cc, Automatic, Petrol, 20.3 kmpl",
-      "Rs.6.79 Lakh*",
-    ],
-    varient5: [
-      "XZ Plus",
-      "1199  cc, Manual, Petrol, 20.3 kmpl",
-      "Rs.7.26 Lakh*",
-    ],
-    varient6: [
-      "XZA Plus AMT",
-      "1199 cc, Automatic, Petrol, 20.3 kmpl",
-      "Rs.7.81 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The prices of the Tigor have shot up uniformly by Rs 10,400. Tata Tigor Price: Tata retails the sub-4m sedan between Rs 5.59 lakh and Rs 7.73 lakh (ex-showroom Delhi). Tata Tigor Variants: It comes in a total of six variants: XE, XM, XZ, XZ+, XMA, and XZA+. Tata Tigor Powertrain: Tata has equipped the Tigor with a 1.2-litre 3-cylinder petrol engine (86PS/113Nm), mated to a 5-speed manual or AMT gearbox. Tata Tigor Features: It gets push button start/stop, keyless entry, auto AC, 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, and a digital instrument cluster. Tata Tigor Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Tata Tigor Rivals: The Tigor rivals the Maruti Suzuki Dzire, Hyundai Aura, Ford Aspire, and Honda Amaze.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Probably the best looking sub-4m sedan",
-      "Most affordable sedan of the lot",
-      "Loaded with convenience features",
-    ],
-    cons: [
-      "Engine refinement not on par with rivals",
-      "Cabin space is less when compared to rivals",
-      "No diesel engine option",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Deep Red", "bg-red-600"],
-    color2: ["Pearlescent White", "bg-white-400"],
-    color3: ["Pure Silver", "bg-gray-500"],
-    color4: ["Arizona Blue", "bg-blue-600"],
-    color5: ["Daytona Grey", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.34 Lakh Onwards",
-      "18.3 to 24.7 kmpl",
-      "1199 to 1498 cc",
-      "Manual & Automatic CVT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 6.00 Lakh onwards",
-      "20 to 28 kmpl",
-      "998 to 1197 cc",
-      "Manual & Automatic AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,680 mm W x 1,520 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Tigor?",
-      "The on-road price of Tigor in Delhi starts at ‎₹ 6.32 Lakh and goes upto ‎₹ 8.81 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Tigor and Aura?",
-      "Tigor price starts at ₹ 5.65 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Aura price starts at ₹ 6.00 Lakh ex-showroom and It comes with 1197 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Tata Tigor?",
-      "The Tata Tigor mileage is 20.3 - 20.3 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Tata";
+  // const CarPrice = "₹ 5.65 Lakh";
+  // const TopPic = Tigor;
+  // const CarName = "Tata Tigor";
+  // const OnlyName = "Tigor";
+  // const ThumPic = TTigor;
+
+  // const KeySpecification = [
+  //   "₹ 5.65 Lakh onwards",
+  //   "20.3 kmpl",
+  //   "1199 cc",
+  //   "Manual & AMT",
+  //   "Petrol",
+  //   "4 Seater",
+  //   "3993 mm in length, 1677 mm in width and 1532 mm in height",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "Antilock Braking System (ABS)",
+  //   "Electronic Brake Distribution (EBD)",
+  //   "Corner Stability Control (CSC)",
+  //   "rear parking sensors",
+  //   "Seat Belt Warning",
+  //   "4 Star (Global NCAP)",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["XE", "1199  cc, Manual, Petrol, 20.3 kmpl", "Rs.5.64 Lakh*"],
+  //   varient2: ["XM", "1199  cc, Manual, Petrol, 20.3 kmpl", "Rs.6.24 Lakh*"],
+  //   varient3: ["XZ", "1199 cc, Manual, Petrol, 20.3 kmpl", "Rs.6.65 Lakh*"],
+  //   varient4: [
+  //     "XMA AMT",
+  //     "1199 cc, Automatic, Petrol, 20.3 kmpl",
+  //     "Rs.6.79 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "XZ Plus",
+  //     "1199  cc, Manual, Petrol, 20.3 kmpl",
+  //     "Rs.7.26 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "XZA Plus AMT",
+  //     "1199 cc, Automatic, Petrol, 20.3 kmpl",
+  //     "Rs.7.81 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The prices of the Tigor have shot up uniformly by Rs 10,400. Tata Tigor Price: Tata retails the sub-4m sedan between Rs 5.59 lakh and Rs 7.73 lakh (ex-showroom Delhi). Tata Tigor Variants: It comes in a total of six variants: XE, XM, XZ, XZ+, XMA, and XZA+. Tata Tigor Powertrain: Tata has equipped the Tigor with a 1.2-litre 3-cylinder petrol engine (86PS/113Nm), mated to a 5-speed manual or AMT gearbox. Tata Tigor Features: It gets push button start/stop, keyless entry, auto AC, 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, and a digital instrument cluster. Tata Tigor Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Tata Tigor Rivals: The Tigor rivals the Maruti Suzuki Dzire, Hyundai Aura, Ford Aspire, and Honda Amaze.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Probably the best looking sub-4m sedan",
+  //     "Most affordable sedan of the lot",
+  //     "Loaded with convenience features",
+  //   ],
+  //   cons: [
+  //     "Engine refinement not on par with rivals",
+  //     "Cabin space is less when compared to rivals",
+  //     "No diesel engine option",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Deep Red", "bg-red-600"],
+  //   color2: ["Pearlescent White", "bg-white-400"],
+  //   color3: ["Pure Silver", "bg-gray-500"],
+  //   color4: ["Arizona Blue", "bg-blue-600"],
+  //   color5: ["Daytona Grey", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.34 Lakh Onwards",
+  //     "18.3 to 24.7 kmpl",
+  //     "1199 to 1498 cc",
+  //     "Manual & Automatic CVT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 6.00 Lakh onwards",
+  //     "20 to 28 kmpl",
+  //     "998 to 1197 cc",
+  //     "Manual & Automatic AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,680 mm W x 1,520 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Tigor?",
+  //     "The on-road price of Tigor in Delhi starts at ‎₹ 6.32 Lakh and goes upto ‎₹ 8.81 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Tigor and Aura?",
+  //     "Tigor price starts at ₹ 5.65 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Aura price starts at ₹ 6.00 Lakh ex-showroom and It comes with 1197 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Tata Tigor?",
+  //     "The Tata Tigor mileage is 20.3 - 20.3 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -256,23 +291,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

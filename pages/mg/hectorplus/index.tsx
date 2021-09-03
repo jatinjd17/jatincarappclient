@@ -32,222 +32,257 @@ import { THectorPlus } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MG";
-  const CarPrice = "₹ 13.63 Lakh";
-  const TopPic = HectorPlus;
-  const CarName = "MG Hector Plus";
-  const OnlyName = "Hector Plus";
-  const ThumPic = THectorPlus;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 13.63 Lakh onwards",
-    "16.6 kmpl",
-    "1451 to 1956 cc",
-    "Manual, Automatic (Dual Clutch)",
-    "Petrol, Diesel & Hybrid (Electric + Petrol)",
-    "6-7 Seater",
-    "4,720 mm L x 1,835 mm W x 1,760 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    " ISOFIX Child Seat Anchors.",
-    "Usage of High Strength Steel in Body.",
-    "Electronic Stability Program (ESP)",
-    "Hot Stamped B Pillar.",
-    "ABS + EBD + Brake Assist.",
-    "3 Point Seatbelts for All Passengers.",
-    "Thick Door Panels.",
-    "Rear Parking Sensors.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Style MT 7 STR",
-      "1451 cc, Manual, Petrol, 11.67 kmpl",
-      "Rs.13.96 Lakh*",
-    ],
-    varient2: [
-      "Super Hybrid MT 7 STR",
-      "1451 cc, Manual, Petrol, 11.67 kmpl",
-      "Rs.15.46 Lakh*",
-    ],
-    varient3: [
-      "Smart CVT",
-      "1451 cc, Manual, Petrol, 11.67 kmpl",
-      "Rs.17.83 Lakh*",
-    ],
-    varient4: [
-      "Smart AT",
-      "1451 cc, Automatic, Petrol, 11.67 kmpl",
-      "Rs.17.83 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient5: [
-      "Sharp Hybrid MT",
-      "1451 cc, Manual, Petrol, 14.02 kmpl",
-      "Rs.18.46 Lakh*",
-    ],
-    varient6: [
-      "Sharp CVT",
-      "1451 cc, Automatic, Petrol, 11.67 kmpl",
-      "Rs.19.49 Lakh*",
-    ],
-    varient7: [
-      "Sharp AT",
-      "1451 cc, Manual, Petrol, 11.67 kmpl",
-      "Rs.19.49 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientDiesel = {
-    varient1: [
-      "Style Diesel MT 7 STR",
-      "1956 cc, Manual, Diesel, 16.56 kmpl",
-      "Rs.15.38 Lakh*",
-    ],
+  const VarientCNG = joy.VarientCNG;
 
-    varient2: [
-      "Super Diesel MT 7 STR",
-      "1956 cc, Manual, Diesel, 16.56 kmpl",
-      "Rs.16.48 Lakh*",
-    ],
-    varient3: [
-      "Super Diesel MT",
-      "1956 cc, Manual, Diesel, 16.56 kmpl",
-      "Rs.16.72 Lakh*",
-    ],
+  const Mileage = joy.Mileage;
 
-    varient4: [
-      "Smart Diesel MT 7 STR",
-      "1956 cc, Automatic, Diesel, 16.56 kmpl",
-      "Rs.18.34 Lakh*",
-    ],
+  const LatestUpdate = joy.LatestUpdate;
 
-    varient5: [
-      "Smart Diesel MT",
-      "1956 cc, Manual, Diesel, 16.56 kmpl",
-      "Rs.18.44 Lakh*",
-    ],
+  const ProsCons = joy.ProsCons;
 
-    varient6: [
-      "Select Diesel MT 7 STR",
-      "1956 cc, Automatic, Diesel, 16.56 kmpl",
-      "Rs.19.20 Lakh*",
-    ],
+  const Colorss = joy.Colorss;
 
-    varient7: [
-      "Sharp Diesel MT",
-      "1956 cc, Manual, Diesel, 16.56 kmpl",
-      "Rs.19.94 Lakh*",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const VarientCNG = {};
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const faqs = joy.faqs;
 
-  const LatestUpdate = [
-    "Latest Update: MG has increased the prices of the Hector Plus by up to Rs 38,000. MG Hector Plus Price: The Hector Plus is priced from Rs 13.63 lakh to Rs 19.61 lakh (ex-showroom except for Kerala). MG Hector Plus Variants: While the 6-seater Hector Plus is available in three variants (Super, Smart, and Sharp), MG offers the 7-seater Hector Plus in four (Style, Super, Smart, and Select). MG Hector Plus Powertrains: MG has provided the SUV with both petrol and diesel engines. The 1.5-litre turbo-petrol unit, generating 143PS and 250Nm, gets the standard 6-speed MT and an optional 6-speed DCT or the new 8-speed CVT gearbox. The DCT and CVT options, however, are limited to the 6-seater variants. MG has also provided the turbo-petrol engine with the option of a 48V mild-hybrid system, with only a 6-speed MT. The 2.0-litre diesel engine, paired with a 6-speed manual gearbox, produces 170PS and 350Nm. MG Hector Plus Features: The Hector Plus now gets 18-inch dual-tone alloy wheels, a wireless phone charger, and ventilated front seats (from the 5-seater Hector). Features like the panoramic sunroof, rain-sensing wipers, powered tailgate, 8-colour ambient lighting, and 10.4-inch touchscreen infotainment system (with Android Auto and Apple CarPlay) have been retained. MG Hector Plus Safety: Standard safety features include electronic stability program (ESP), front and rear parking sensors, hill hold control, ISOFIX child seat anchors, ABS with EBD and brake assist, dual front airbags, and traction control. The top-spec variant gets up to six airbags. MG Hector Plus Rivals: It rivals the Toyota Innova Crysta, Mahindra XUV500, Tata Safari, Mahindra XUV700, and the Hyundai Alcazar.",
-  ];
+  const articles = joy.articles;
 
-  const ProsCons = {
-    pros: [
-      "Looks better than the Hector",
-      "Second row captain seats are premium and comfortable.",
-      "Brown upholstery helps make the cabin feel more upmarket",
-      "Ride quality is well suited to Indian roads",
-    ],
-    cons: [
-      "New Chitchat function is not finished well",
-      "Boot space with third row up is small",
-      "Access to the third row is a challenge",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const Colorss = {
-    color1: ["Burgundy Red", "bg-red-800"],
-    color2: ["Starry Black", "bg-gray-900"],
-    color3: ["Aurora Silver", "bg-gray-600"],
-    color4: ["Candy White With Starry Black", "bg-white"],
-    color5: ["Starry Sky Blue", "bg-blue-800"],
-    color6: ["Glaze Red", "bg-red-400"],
-    color7: ["Candy White", "bg-red-400"],
-    color8: ["Glaze Red With Starry Black", "bg-red-400"],
-  };
+  // const CompanyName = "MG";
+  // const CarPrice = "₹ 13.63 Lakh";
+  // const TopPic = HectorPlus;
+  // const CarName = "MG Hector Plus";
+  // const OnlyName = "Hector Plus";
+  // const ThumPic = THectorPlus;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 13.63 Lakh onwards",
+  //   "16.6 kmpl",
+  //   "1451 to 1956 cc",
+  //   "Manual, Automatic (Dual Clutch)",
+  //   "Petrol, Diesel & Hybrid (Electric + Petrol)",
+  //   "6-7 Seater",
+  //   "4,720 mm L x 1,835 mm W x 1,760 mm H",
+  // ];
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   " ISOFIX Child Seat Anchors.",
+  //   "Usage of High Strength Steel in Body.",
+  //   "Electronic Stability Program (ESP)",
+  //   "Hot Stamped B Pillar.",
+  //   "ABS + EBD + Brake Assist.",
+  //   "3 Point Seatbelts for All Passengers.",
+  //   "Thick Door Panels.",
+  //   "Rear Parking Sensors.",
+  // ];
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Hector Plus?",
-      "The on-road price of Hector Plus in Delhi starts at ‎₹ 15.89 Lakh and goes upto ‎₹ 23.34 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Hector Plus and Alcazar?",
-      "Hector Plus price starts at ₹ 13.63 Lakh ex-showroom and It comes with 1451 cc engine. Whereas Alcazar price starts at ₹ 16.30 Lakh ex-showroom and It comes with 1999 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Hector Plus top model?",
-      "Top model of Hector Plus is Sharp 2.0 Diesel Turbo MT 6-STR Dual Tone and the ex-showroom for Hector Plus Sharp 2.0 Diesel Turbo MT 6-STR Dual Tone is ₹ 19.81 Lakh.",
-    ],
-  };
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Style MT 7 STR",
+  //     "1451 cc, Manual, Petrol, 11.67 kmpl",
+  //     "Rs.13.96 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "Super Hybrid MT 7 STR",
+  //     "1451 cc, Manual, Petrol, 11.67 kmpl",
+  //     "Rs.15.46 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "Smart CVT",
+  //     "1451 cc, Manual, Petrol, 11.67 kmpl",
+  //     "Rs.17.83 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "Smart AT",
+  //     "1451 cc, Automatic, Petrol, 11.67 kmpl",
+  //     "Rs.17.83 Lakh*",
+  //   ],
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  //   varient5: [
+  //     "Sharp Hybrid MT",
+  //     "1451 cc, Manual, Petrol, 14.02 kmpl",
+  //     "Rs.18.46 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "Sharp CVT",
+  //     "1451 cc, Automatic, Petrol, 11.67 kmpl",
+  //     "Rs.19.49 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "Sharp AT",
+  //     "1451 cc, Manual, Petrol, 11.67 kmpl",
+  //     "Rs.19.49 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "Style Diesel MT 7 STR",
+  //     "1956 cc, Manual, Diesel, 16.56 kmpl",
+  //     "Rs.15.38 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "Super Diesel MT 7 STR",
+  //     "1956 cc, Manual, Diesel, 16.56 kmpl",
+  //     "Rs.16.48 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "Super Diesel MT",
+  //     "1956 cc, Manual, Diesel, 16.56 kmpl",
+  //     "Rs.16.72 Lakh*",
+  //   ],
+
+  //   varient4: [
+  //     "Smart Diesel MT 7 STR",
+  //     "1956 cc, Automatic, Diesel, 16.56 kmpl",
+  //     "Rs.18.34 Lakh*",
+  //   ],
+
+  //   varient5: [
+  //     "Smart Diesel MT",
+  //     "1956 cc, Manual, Diesel, 16.56 kmpl",
+  //     "Rs.18.44 Lakh*",
+  //   ],
+
+  //   varient6: [
+  //     "Select Diesel MT 7 STR",
+  //     "1956 cc, Automatic, Diesel, 16.56 kmpl",
+  //     "Rs.19.20 Lakh*",
+  //   ],
+
+  //   varient7: [
+  //     "Sharp Diesel MT",
+  //     "1956 cc, Manual, Diesel, 16.56 kmpl",
+  //     "Rs.19.94 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: MG has increased the prices of the Hector Plus by up to Rs 38,000. MG Hector Plus Price: The Hector Plus is priced from Rs 13.63 lakh to Rs 19.61 lakh (ex-showroom except for Kerala). MG Hector Plus Variants: While the 6-seater Hector Plus is available in three variants (Super, Smart, and Sharp), MG offers the 7-seater Hector Plus in four (Style, Super, Smart, and Select). MG Hector Plus Powertrains: MG has provided the SUV with both petrol and diesel engines. The 1.5-litre turbo-petrol unit, generating 143PS and 250Nm, gets the standard 6-speed MT and an optional 6-speed DCT or the new 8-speed CVT gearbox. The DCT and CVT options, however, are limited to the 6-seater variants. MG has also provided the turbo-petrol engine with the option of a 48V mild-hybrid system, with only a 6-speed MT. The 2.0-litre diesel engine, paired with a 6-speed manual gearbox, produces 170PS and 350Nm. MG Hector Plus Features: The Hector Plus now gets 18-inch dual-tone alloy wheels, a wireless phone charger, and ventilated front seats (from the 5-seater Hector). Features like the panoramic sunroof, rain-sensing wipers, powered tailgate, 8-colour ambient lighting, and 10.4-inch touchscreen infotainment system (with Android Auto and Apple CarPlay) have been retained. MG Hector Plus Safety: Standard safety features include electronic stability program (ESP), front and rear parking sensors, hill hold control, ISOFIX child seat anchors, ABS with EBD and brake assist, dual front airbags, and traction control. The top-spec variant gets up to six airbags. MG Hector Plus Rivals: It rivals the Toyota Innova Crysta, Mahindra XUV500, Tata Safari, Mahindra XUV700, and the Hyundai Alcazar.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Looks better than the Hector",
+  //     "Second row captain seats are premium and comfortable.",
+  //     "Brown upholstery helps make the cabin feel more upmarket",
+  //     "Ride quality is well suited to Indian roads",
+  //   ],
+  //   cons: [
+  //     "New Chitchat function is not finished well",
+  //     "Boot space with third row up is small",
+  //     "Access to the third row is a challenge",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Burgundy Red", "bg-red-800"],
+  //   color2: ["Starry Black", "bg-gray-900"],
+  //   color3: ["Aurora Silver", "bg-gray-600"],
+  //   color4: ["Candy White With Starry Black", "bg-white"],
+  //   color5: ["Starry Sky Blue", "bg-blue-800"],
+  //   color6: ["Glaze Red", "bg-red-400"],
+  //   color7: ["Candy White", "bg-red-400"],
+  //   color8: ["Glaze Red With Starry Black", "bg-red-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Hector Plus?",
+  //     "The on-road price of Hector Plus in Delhi starts at ‎₹ 15.89 Lakh and goes upto ‎₹ 23.34 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Hector Plus and Alcazar?",
+  //     "Hector Plus price starts at ₹ 13.63 Lakh ex-showroom and It comes with 1451 cc engine. Whereas Alcazar price starts at ₹ 16.30 Lakh ex-showroom and It comes with 1999 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Hector Plus top model?",
+  //     "Top model of Hector Plus is Sharp 2.0 Diesel Turbo MT 6-STR Dual Tone and the ex-showroom for Hector Plus Sharp 2.0 Diesel Turbo MT 6-STR Dual Tone is ₹ 19.81 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -285,23 +320,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51940/zs-petrol-exterior-left-front-three-quarter.jpeg?q=85",
-      "ZS Petrol",
-      "₹ 10.00 - 17.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47333/mg-baojun-510-right-front-three-quarter0.jpeg?q=85",
-      "MG Baojun 510",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45347/mg-g10-left-side-view0.jpeg?q=85",
-      "G10",
-      "₹ 24.00 - 30.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51940/zs-petrol-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "ZS Petrol",
+  //     "₹ 10.00 - 17.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47333/mg-baojun-510-right-front-three-quarter0.jpeg?q=85",
+  //     "MG Baojun 510",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45347/mg-g10-left-side-view0.jpeg?q=85",
+  //     "G10",
+  //     "₹ 24.00 - 30.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -32,147 +32,182 @@ import { TBoleroNeo } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "₹ 8.48 Lakh";
-  const TopPic = BoleroNeo;
-  const CarName = "Mahindra Bolero Neo";
-  const OnlyName = "Bolero Neo";
-  const ThumPic = TBoleroNeo;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 8.48 Lakh onwards",
-    "17.29 kmpl",
-    "1493 cc",
-    "Manual",
-    "Diesel",
-    "7 Seater",
-    "3,995 mm L x 1,795 mm W x 1,817 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual airbags, ISOFIX child mounts",
-    "ABS with EBD",
-    "cornering braking control and engine immobilizer",
+  const SafetyFeatures = joy.SafetyFeatures;
 
-    "Rear parking sensors",
+  const VarientPetrol = joy.VarientPetrol;
 
-    "Seatbelt reminders for the driver and front passenger",
+  const VarientDiesel = joy.VarientDiesel;
 
-    "A speed warning system (at 80kmph and 120kmph)",
+  const VarientCNG = joy.VarientCNG;
 
-    "A manual override for the central locking system",
-  ];
+  const Mileage = joy.Mileage;
 
-  const VarientPetrol = {};
+  const LatestUpdate = joy.LatestUpdate;
 
-  const VarientDiesel = {
-    varient1: ["N4", "1493 cc, Manual, Diesel, 17.29 kmpl", "Rs.8.48 Lakh*"],
-    varient2: ["N8", "1493 cc, Manual, Diesel, 17.29 kmpl", "Rs.9.47 Lakh*"],
-    varient3: ["N10", "1493 cc, Manual, Diesel, 17.29 kmpl", "Rs.9.99 Lakh*"],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const VarientCNG = {};
+  const Colorss = joy.Colorss;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const LatestUpdate = [
-    "Latest Update: Mahindra has launched the Bolero Neo. Mahindra Bolero Neo Price: It is priced from Rs 8.48 lakh (ex-showroom) onwards. Mahindra Bolero Neo Variants: The Bolero Neo is offered in four variants: N4, N8, N10, and N10(O). Mahindra Bolero Neo Seating Capacity: It is a 5-seater SUV with twin jump seats in the third row. Mahindra Bolero Neo Engine and Transmission: While it gets the same 1.5-litre diesel engine as the pre-facelift TUV300 (albeit now BS6-compliant), it makes the same 100PS but puts out 20Nm of more torque (260Nm). This unit is mated to a 5-speed manual gearbox. The top-spec N10(O) variant also gets a mechanical locking differential. Mahindra Bolero Neo Features: The Bolero Neo is equipped with a 7-inch touchscreen infotainment system, cruise control, a height-adjustable driver seat, keyless entry, and an instrument cluster borrowed from the Thar. Mahindra Bolero Neo Safety: Passenger safety is taken care of by dual airbags, ABS with EBD, rear parking sensors with reverse assist, and ISOFIX child mounts. Mahindra Bolero Neo Rivals: The Bolero Neo is a rugged alternative to other monocoque SUVs like the the Nissan Magnite, Kia Sonet, Renault Kiger, Toyota Urban Cruiser, Maruti Suzuki Vitara Brezza, Hyundai Venue, Tata Nexon, Mahindra XUV300, and Ford EcoSport.",
-  ];
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ProsCons = {
-    pros: [
-      "High sitting position and good visibility.",
-      "Torquey engine and easy city drive.",
-      "High ground clearance.",
-    ],
-    cons: [
-      "Ride quality is a bit stiff",
-      "Missing some key features like rear camera and Android Auto / Apple CarPlay",
-      "Cabin quality is average.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const Colorss = {
-    color1: ["Diamond White", "bg-blue-600"],
-    color2: ["Rocky Beige", "bg-gray-400"],
-    color3: ["Highway Red", "bg-gray-400"],
-    color4: ["Napoli Black", "bg-gray-400"],
-    color5: ["Majestic Silver", "bg-gray-400"],
-  };
+  const articles = joy.articles;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 8.19 Lakh onwards",
-      "14.7 to 21.7 kmpl",
-      "1496 to 1498 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,998 mm L x 1,765 mm W x 1,647 mm H",
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
-    ],
-    comparisioncar2: [
-      "₹ 6.92 Lakh Onwards",
-      "17.52 to 23.4 kmpl",
-      "998 to 1493 cc",
-      "Clutchless Manual & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,770 mm W x 1,590 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "₹ 8.48 Lakh";
+  // const TopPic = BoleroNeo;
+  // const CarName = "Mahindra Bolero Neo";
+  // const OnlyName = "Bolero Neo";
+  // const ThumPic = TBoleroNeo;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Bolero Neo?",
-      "The on-road price of Bolero Neo in Delhi starts at ‎₹ 9.8 Lakh and goes upto ‎₹ 11.51 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Bolero Neo and Bolero?",
-      "Bolero Neo price starts at ₹ 8.48 Lakh ex-showroom and It comes with 1493 cc engine. Whereas Bolero price starts at ₹ 8.64 Lakh ex-showroom and It comes with 1493 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Mahindra Bolero Neo?",
-      "The Mahindra Bolero Neo mileage is 17.29 kmpl.",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 8.48 Lakh onwards",
+  //   "17.29 kmpl",
+  //   "1493 cc",
+  //   "Manual",
+  //   "Diesel",
+  //   "7 Seater",
+  //   "3,995 mm L x 1,795 mm W x 1,817 mm H",
+  // ];
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "dual airbags, ISOFIX child mounts",
+  //   "ABS with EBD",
+  //   "cornering braking control and engine immobilizer",
+
+  //   "Rear parking sensors",
+
+  //   "Seatbelt reminders for the driver and front passenger",
+
+  //   "A speed warning system (at 80kmph and 120kmph)",
+
+  //   "A manual override for the central locking system",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: ["N4", "1493 cc, Manual, Diesel, 17.29 kmpl", "Rs.8.48 Lakh*"],
+  //   varient2: ["N8", "1493 cc, Manual, Diesel, 17.29 kmpl", "Rs.9.47 Lakh*"],
+  //   varient3: ["N10", "1493 cc, Manual, Diesel, 17.29 kmpl", "Rs.9.99 Lakh*"],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Mahindra has launched the Bolero Neo. Mahindra Bolero Neo Price: It is priced from Rs 8.48 lakh (ex-showroom) onwards. Mahindra Bolero Neo Variants: The Bolero Neo is offered in four variants: N4, N8, N10, and N10(O). Mahindra Bolero Neo Seating Capacity: It is a 5-seater SUV with twin jump seats in the third row. Mahindra Bolero Neo Engine and Transmission: While it gets the same 1.5-litre diesel engine as the pre-facelift TUV300 (albeit now BS6-compliant), it makes the same 100PS but puts out 20Nm of more torque (260Nm). This unit is mated to a 5-speed manual gearbox. The top-spec N10(O) variant also gets a mechanical locking differential. Mahindra Bolero Neo Features: The Bolero Neo is equipped with a 7-inch touchscreen infotainment system, cruise control, a height-adjustable driver seat, keyless entry, and an instrument cluster borrowed from the Thar. Mahindra Bolero Neo Safety: Passenger safety is taken care of by dual airbags, ABS with EBD, rear parking sensors with reverse assist, and ISOFIX child mounts. Mahindra Bolero Neo Rivals: The Bolero Neo is a rugged alternative to other monocoque SUVs like the the Nissan Magnite, Kia Sonet, Renault Kiger, Toyota Urban Cruiser, Maruti Suzuki Vitara Brezza, Hyundai Venue, Tata Nexon, Mahindra XUV300, and Ford EcoSport.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "High sitting position and good visibility.",
+  //     "Torquey engine and easy city drive.",
+  //     "High ground clearance.",
+  //   ],
+  //   cons: [
+  //     "Ride quality is a bit stiff",
+  //     "Missing some key features like rear camera and Android Auto / Apple CarPlay",
+  //     "Cabin quality is average.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Diamond White", "bg-blue-600"],
+  //   color2: ["Rocky Beige", "bg-gray-400"],
+  //   color3: ["Highway Red", "bg-gray-400"],
+  //   color4: ["Napoli Black", "bg-gray-400"],
+  //   color5: ["Majestic Silver", "bg-gray-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 8.19 Lakh onwards",
+  //     "14.7 to 21.7 kmpl",
+  //     "1496 to 1498 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,998 mm L x 1,765 mm W x 1,647 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 6.92 Lakh Onwards",
+  //     "17.52 to 23.4 kmpl",
+  //     "998 to 1493 cc",
+  //     "Clutchless Manual & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,770 mm W x 1,590 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Bolero Neo?",
+  //     "The on-road price of Bolero Neo in Delhi starts at ‎₹ 9.8 Lakh and goes upto ‎₹ 11.51 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Bolero Neo and Bolero?",
+  //     "Bolero Neo price starts at ₹ 8.48 Lakh ex-showroom and It comes with 1493 cc engine. Whereas Bolero price starts at ₹ 8.64 Lakh ex-showroom and It comes with 1493 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Mahindra Bolero Neo?",
+  //     "The Mahindra Bolero Neo mileage is 17.29 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -255,43 +290,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -32,161 +32,196 @@ import { TNexonEV } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "₹ 13.99 Lakh";
-  const TopPic = NexonEV;
-  const CarName = "Tata Nexon EV";
-  const OnlyName = "Nexon EV";
-  const ThumPic = TNexonEV;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 13.99 Lakh onwards",
-    "312 km/Fullcharge",
-    "127bhp and 245Nm of torque",
-    "Automatic",
-    "Electric",
-    "5 Seater",
-    "3,993 mm L x 1,811 mm W x 1,606 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Dual Airbags",
-    "ABS With EBD & Corner Stability Control.",
-    "Reinforced Body Structure.",
-    "Liquid Cooled Battery Pack Rated IP67.",
-    "ISOFIX.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "XM",
-      "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
-      "Rs.13.99 Lakh*",
-    ],
-    varient2: [
-      "XZ Plus",
-      "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
-      "Rs.15.56 Lakh*",
-    ],
-    varient3: [
-      "XZ Plus Dark Edition",
-      "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
-      "Rs.15.99 Lakh*",
-    ],
-    varient4: [
-      "XZ Plus LUX",
-      "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
-      "Rs.16.56 Lakh*",
-    ],
-    varient5: [
-      "XZ Plus Lux Dark Edition",
-      "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
-      "Rs.16.85 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Tata will launch the Nexon BS6 facelift on January 22. Variants and Prices: The Nexon is available in eight variants: XE, XM, XMA, XT, XT+, XZ, XZ+, and XZA+ with some combinations offering a dual-tone roof and automatic transmission. Tata Motors also offers the Nexon in the special edition KRAZ trim. However, the features on offer remain the same. Tata’s sub-4m SUV is priced between Rs 6.73 lakh and Rs 11.4 lakh (ex-showroom Delhi). Powertrain: It is offered with either a 1.2-litre turbocharged petrol engine or a 1.5-litre turbocharged diesel engine. While the petrol engine produces 110PS/170Nm, the output figures of the diesel engine stand at 110PS and 260Nm respectively. Tata offers both these engines with either a 6-speed manual transmission or a 6-speed AMT. Meanwhile, the Nexon EV will use Tata’s new Ziptron technology. It will get a 30.2kWh battery pack and will offer a claimed range of over 300km. The Nexon EV will support fast-charging and will be offered with an 8-year standard warranty. What’s more, it will come with an IP67 waterproof battery pack. Features: It gets a 6.5-inch touchscreen infotainment system by Harman-Kardon with an 8-speaker setup. Projector headlamps and LED DRLs are also a part of the kit. The Tata SUV also gets rear AC vents and multiple drive modes (Eco, City and Sport). Tata offers the Nexon with safety features such as dual front airbags, ISOFIX child seat mounts, ABS with EBD, and corner stability control. Rivals: The Nexon rivals the likes of Maruti Suzuki Vitara Brezza, Ford EcoSport, Ford Freestyle, Honda WR-V, Mahindra TUV300, and Mahindra XUV300. It will also take on the upcoming Renault HBC and the Kia QYI. ",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Silent and smooth to drive",
-      "Sharp and handsome styling",
-      "Well-loaded with features",
-    ],
-    cons: [
-      "Limited range with heavy highway usage",
-      "More expensive than petrol/diesel Nexon",
-      "Fast charging network is unreliable",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Glacier White", "bg-white-800"],
-    color2: ["Moonlight Silver", "bg-gray-700"],
-    color3: ["Signature Bluesilver", "bg-blue-600"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 21.00 Lakh Onwards",
-      "419 km/full charge",
-      "140.8bhp@3500rpm",
-      "Automatic",
-      "Electric",
-      "5 Seater",
-      "4,314 mm L x 1,809 mm W x 1,620-1,644 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/39348/zs-ev-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 23.79 Lakh onwards",
-      "415 km/FullCharge",
-      "134.14bhp & 395 Nm Torque",
-      "Automatic",
-      "Electric",
-      "5 Seater",
-      "4180 mm L x 1800 mm W x 1,570 mm H",
-      "https://imgd.aeplcdn.com/664x374/cw/ec/29580/Hyundai-Kona-Electric-Right-Front-Three-Quarter-162185.jpg?wm=0&q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Nexon EV?",
-      "The on-road price of Nexon EV in Delhi starts at ‎₹ 14.89 Lakh and goes upto ‎₹ 17.93 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance ",
-    ],
-    question2: [
-      "Which car is better between Nexon EV and ZS EV?",
-      "Nexon EV price starts at ₹ 13.99 Lakh ex-showroom and It comes with cc engine. Whereas ZS EV price starts at ₹ 21.00 Lakh ex-showroom and It comes with cc engine",
-    ],
-    question3: [
-      "What are the offers available on Tata Nexon EV for August?",
-      "There are 1 Tata Nexon EV offer in Delhi for the month of August.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Tata";
+  // const CarPrice = "₹ 13.99 Lakh";
+  // const TopPic = NexonEV;
+  // const CarName = "Tata Nexon EV";
+  // const OnlyName = "Nexon EV";
+  // const ThumPic = TNexonEV;
+
+  // const KeySpecification = [
+  //   "₹ 13.99 Lakh onwards",
+  //   "312 km/Fullcharge",
+  //   "127bhp and 245Nm of torque",
+  //   "Automatic",
+  //   "Electric",
+  //   "5 Seater",
+  //   "3,993 mm L x 1,811 mm W x 1,606 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Dual Airbags",
+  //   "ABS With EBD & Corner Stability Control.",
+  //   "Reinforced Body Structure.",
+  //   "Liquid Cooled Battery Pack Rated IP67.",
+  //   "ISOFIX.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "XM",
+  //     "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
+  //     "Rs.13.99 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "XZ Plus",
+  //     "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
+  //     "Rs.15.56 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "XZ Plus Dark Edition",
+  //     "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
+  //     "Rs.15.99 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "XZ Plus LUX",
+  //     "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
+  //     "Rs.16.56 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "XZ Plus Lux Dark Edition",
+  //     "127bhp and 245Nm of torque, Automatic, Electric, 312 km/Fullcharge",
+  //     "Rs.16.85 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Tata will launch the Nexon BS6 facelift on January 22. Variants and Prices: The Nexon is available in eight variants: XE, XM, XMA, XT, XT+, XZ, XZ+, and XZA+ with some combinations offering a dual-tone roof and automatic transmission. Tata Motors also offers the Nexon in the special edition KRAZ trim. However, the features on offer remain the same. Tata’s sub-4m SUV is priced between Rs 6.73 lakh and Rs 11.4 lakh (ex-showroom Delhi). Powertrain: It is offered with either a 1.2-litre turbocharged petrol engine or a 1.5-litre turbocharged diesel engine. While the petrol engine produces 110PS/170Nm, the output figures of the diesel engine stand at 110PS and 260Nm respectively. Tata offers both these engines with either a 6-speed manual transmission or a 6-speed AMT. Meanwhile, the Nexon EV will use Tata’s new Ziptron technology. It will get a 30.2kWh battery pack and will offer a claimed range of over 300km. The Nexon EV will support fast-charging and will be offered with an 8-year standard warranty. What’s more, it will come with an IP67 waterproof battery pack. Features: It gets a 6.5-inch touchscreen infotainment system by Harman-Kardon with an 8-speaker setup. Projector headlamps and LED DRLs are also a part of the kit. The Tata SUV also gets rear AC vents and multiple drive modes (Eco, City and Sport). Tata offers the Nexon with safety features such as dual front airbags, ISOFIX child seat mounts, ABS with EBD, and corner stability control. Rivals: The Nexon rivals the likes of Maruti Suzuki Vitara Brezza, Ford EcoSport, Ford Freestyle, Honda WR-V, Mahindra TUV300, and Mahindra XUV300. It will also take on the upcoming Renault HBC and the Kia QYI. ",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Silent and smooth to drive",
+  //     "Sharp and handsome styling",
+  //     "Well-loaded with features",
+  //   ],
+  //   cons: [
+  //     "Limited range with heavy highway usage",
+  //     "More expensive than petrol/diesel Nexon",
+  //     "Fast charging network is unreliable",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Glacier White", "bg-white-800"],
+  //   color2: ["Moonlight Silver", "bg-gray-700"],
+  //   color3: ["Signature Bluesilver", "bg-blue-600"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 21.00 Lakh Onwards",
+  //     "419 km/full charge",
+  //     "140.8bhp@3500rpm",
+  //     "Automatic",
+  //     "Electric",
+  //     "5 Seater",
+  //     "4,314 mm L x 1,809 mm W x 1,620-1,644 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/39348/zs-ev-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 23.79 Lakh onwards",
+  //     "415 km/FullCharge",
+  //     "134.14bhp & 395 Nm Torque",
+  //     "Automatic",
+  //     "Electric",
+  //     "5 Seater",
+  //     "4180 mm L x 1800 mm W x 1,570 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/29580/Hyundai-Kona-Electric-Right-Front-Three-Quarter-162185.jpg?wm=0&q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Nexon EV?",
+  //     "The on-road price of Nexon EV in Delhi starts at ‎₹ 14.89 Lakh and goes upto ‎₹ 17.93 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance ",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Nexon EV and ZS EV?",
+  //     "Nexon EV price starts at ₹ 13.99 Lakh ex-showroom and It comes with cc engine. Whereas ZS EV price starts at ₹ 21.00 Lakh ex-showroom and It comes with cc engine",
+  //   ],
+  //   question3: [
+  //     "What are the offers available on Tata Nexon EV for August?",
+  //     "There are 1 Tata Nexon EV offer in Delhi for the month of August.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -269,23 +304,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -30,244 +30,311 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Jazz } from "../../../CarPicsUrl/CarPics";
 import { TJazz } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  AmazeBasicInfoCard,
+  City4BasicInfoCard,
+  CityBasicInfoCard,
+  JazzBasicInfoCard,
+  WRVBasicInfoCard,
+} from "../../../AllCarBasicInfo/honda";
+import { SwiftBasicInfoCard } from "../../../AllCarBasicInfo/marutisuzuki";
+import { GlanzaBasicInfoCard } from "../../../AllCarBasicInfo/toyota";
+import {
+  i20BasicInfoCard,
+  NiosBasicInfoCard,
+  SantroBasicInfoCard,
+} from "../../../AllCarBasicInfo/hyundai";
+import { AltrozBasicInfoCard } from "../../../AllCarBasicInfo/tata";
 
 function Homee({ joy }) {
-  const CompanyName = "Honda";
-  const CarPrice = "₹ 7.75 Lakh";
-  const TopPic = Jazz;
-  const CarName = "Honda Jazz";
-  const OnlyName = "Jazz";
-  const ThumPic = TJazz;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 7.75 Lakh onwards",
-    "16.6 to 17.1 kmpl",
-    "1199 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol",
-    "5 Seater",
-    "3989 mm L x 1694 mm W x 1544 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "ABS with EBD.",
-    "Dual Front SRS Airbags (Driver and Passenger)",
-    "Rear Parking Camera.",
-    "ACETM Body Structure.",
-    "Driver Side Window One Touch up/down with Pinch Guard.",
-    "Immobilizer Anti-Theft System/Impact Mitigating Headrests.",
-    "Rear Parking Sensors.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["V", "1199 cc, Manual, Petrol, 16.6 kmpl", "Rs.7.65 Lakh*"],
-    varient2: ["VX", "1199 cc, Manual, Petrol, 16.6 kmpl", "Rs.8.34 Lakh*"],
-    varient3: [
-      "V CVT",
-      "1199 cc, Automatic AMT, Petrol, 17.1 kmpl",
-      "Rs.8.74 Lakh*",
-    ],
-    varient4: ["ZX", "1199 cc, Manual, Petrol, 16.6 kmpl", "Rs.8.98 Lakh*"],
-    varient5: [
-      "VX CVT",
-      "1199 cc, Automatic, Petrol, 17.1 kmpl",
-      "Rs.9.34 Lakh*",
-    ],
-    varient6: [
-      "ZX CVT",
-      "1199 cc, Automatic, Petrol, 17.1 kmpl",
-      "Rs.9.89 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The prices of the Jazz have been increased by up to Rs 11,000. Honda Jazz Price: It is priced from Rs 7.65 lakh to Rs 9.89 lakh (ex-showroom Delhi). Honda Jazz Variants: Honda sells the Jazz in three trims: V, VX, and ZX. Honda Jazz Engine and Transmission: The Jazz gets a 1.2-litre petrol engine (90PS/110Nm), mated to either a 5-speed manual or a 7-step CVT gearbox. Their claimed fuel efficiency figures stand at 16.6kmpl and 17.1kmpl respectively. Honda Jazz Features: It gets a sunroof, cruise control, LED headlamps and fog lamps, and paddle shifters (CVT variants only). Honda has also equipped the Jazz with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, auto AC, and 15-inch alloy wheels. Honda Jazz Safety: Standard safety features on offer include dual front airbags, rear parking sensors, and ABS with EBD. Honda Jazz Rivals: It rivals the Tata Altroz, Hyundai i20, Maruti Suzuki Baleno, Toyota Glanza, and Volkswagen Polo.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Spacious and user-friendly cabin",
-      "Easy to drive, with an optional petrol CVT",
-      "Versatile and practical package",
-    ],
-    cons: [
-      "No diesel option",
-      "Lacks some equipment",
-      "Expensive amongst rivals",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
-    color2: ["Lunar Silver Metallic", "bg-gray-400"],
-    color3: ["Modern Steel Metallic", "bg-white"],
-    color4: ["Golden Brown Metallic", "bg-brown-600"],
-    color5: ["Radiant Red Metallic", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Jazz?",
-      "The on-road price of Jazz in Delhi starts at ‎₹ 8.57 Lakh and goes upto ‎₹ 11.01 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Jazz and WR-V?",
-      "Jazz price starts at ₹ 7.75 Lakh ex-showroom and It comes with 1199 cc engine. Whereas WR-V price starts at ₹ 8.90 Lakh ex-showroom and It comes with 1199 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Honda Jazz?",
-      "The Honda Jazz mileage is 16.6 - 17.1 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
 
   const SimilarCars = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/8378/1614747593719/front-left-side-47.jpg",
-      "Swift",
-      " ₹ 5.81 Lakh onwards",
-    ],
-    car2: [
-      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20190606121831_Toyota-Glanza-silver.jpg&h=795&w=1200&c=0",
-      "Toyota Glanza",
-      "₹ 7.34 Lakh onwards0",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/1200x900/n/cw/ec/40530/i20-exterior-right-front-three-quarter-5.jpeg?q=85",
-      "Hyundai i20",
-      "₹ 6.91 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/0x0/n/cw/ec/32597/tata-altroz-right-front-three-quarter20.jpeg",
-      "Altroz",
-      "₹5.80 Lakhs onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "i10 Nios",
-      "₹5.24 lakhs onwards",
-    ],
-    car6: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7460/1596180579378/front-left-side-47.jpg",
-      "Santro",
-      "₹ 4.74 Lakh onwards",
-    ],
+    car1: SwiftBasicInfoCard,
+    car2: GlanzaBasicInfoCard,
+    car3: i20BasicInfoCard,
+    car4: AltrozBasicInfoCard,
+    car5: NiosBasicInfoCard,
+    car6: SantroBasicInfoCard,
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Amaze",
-      "₹ 6.34 Lakh onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-      "City",
-      "₹ 11.19 Lakh onwards",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
-      "WRV",
-      "₹ 8.90 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
-      "Jazz",
-      "₹ 7.75 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
-      "City 4th Gen",
-      "₹ 9.33 Lakh onwards",
-    ],
+    car1: AmazeBasicInfoCard,
+    car2: CityBasicInfoCard,
+    car3: WRVBasicInfoCard,
+    car4: JazzBasicInfoCard,
+    car5: City4BasicInfoCard,
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
-      "Amaze Facelift 2021",
-      "₹ 6.35 - 10.10 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
-      "HRV",
-      "₹ 12.00 - 16.00 Lakh",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Honda";
+  // const CarPrice = "₹ 7.75 Lakh";
+  // const TopPic = Jazz;
+  // const CarName = "Honda Jazz";
+  // const OnlyName = "Jazz";
+  // const ThumPic = TJazz;
+
+  // const KeySpecification = [
+  //   "₹ 7.75 Lakh onwards",
+  //   "16.6 to 17.1 kmpl",
+  //   "1199 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3989 mm L x 1694 mm W x 1544 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "ABS with EBD.",
+  //   "Dual Front SRS Airbags (Driver and Passenger)",
+  //   "Rear Parking Camera.",
+  //   "ACETM Body Structure.",
+  //   "Driver Side Window One Touch up/down with Pinch Guard.",
+  //   "Immobilizer Anti-Theft System/Impact Mitigating Headrests.",
+  //   "Rear Parking Sensors.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["V", "1199 cc, Manual, Petrol, 16.6 kmpl", "Rs.7.65 Lakh*"],
+  //   varient2: ["VX", "1199 cc, Manual, Petrol, 16.6 kmpl", "Rs.8.34 Lakh*"],
+  //   varient3: [
+  //     "V CVT",
+  //     "1199 cc, Automatic AMT, Petrol, 17.1 kmpl",
+  //     "Rs.8.74 Lakh*",
+  //   ],
+  //   varient4: ["ZX", "1199 cc, Manual, Petrol, 16.6 kmpl", "Rs.8.98 Lakh*"],
+  //   varient5: [
+  //     "VX CVT",
+  //     "1199 cc, Automatic, Petrol, 17.1 kmpl",
+  //     "Rs.9.34 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "ZX CVT",
+  //     "1199 cc, Automatic, Petrol, 17.1 kmpl",
+  //     "Rs.9.89 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The prices of the Jazz have been increased by up to Rs 11,000. Honda Jazz Price: It is priced from Rs 7.65 lakh to Rs 9.89 lakh (ex-showroom Delhi). Honda Jazz Variants: Honda sells the Jazz in three trims: V, VX, and ZX. Honda Jazz Engine and Transmission: The Jazz gets a 1.2-litre petrol engine (90PS/110Nm), mated to either a 5-speed manual or a 7-step CVT gearbox. Their claimed fuel efficiency figures stand at 16.6kmpl and 17.1kmpl respectively. Honda Jazz Features: It gets a sunroof, cruise control, LED headlamps and fog lamps, and paddle shifters (CVT variants only). Honda has also equipped the Jazz with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, auto AC, and 15-inch alloy wheels. Honda Jazz Safety: Standard safety features on offer include dual front airbags, rear parking sensors, and ABS with EBD. Honda Jazz Rivals: It rivals the Tata Altroz, Hyundai i20, Maruti Suzuki Baleno, Toyota Glanza, and Volkswagen Polo.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Spacious and user-friendly cabin",
+  //     "Easy to drive, with an optional petrol CVT",
+  //     "Versatile and practical package",
+  //   ],
+  //   cons: [
+  //     "No diesel option",
+  //     "Lacks some equipment",
+  //     "Expensive amongst rivals",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
+  //   color2: ["Lunar Silver Metallic", "bg-gray-400"],
+  //   color3: ["Modern Steel Metallic", "bg-white"],
+  //   color4: ["Golden Brown Metallic", "bg-brown-600"],
+  //   color5: ["Radiant Red Metallic", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Jazz?",
+  //     "The on-road price of Jazz in Delhi starts at ‎₹ 8.57 Lakh and goes upto ‎₹ 11.01 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Jazz and WR-V?",
+  //     "Jazz price starts at ₹ 7.75 Lakh ex-showroom and It comes with 1199 cc engine. Whereas WR-V price starts at ₹ 8.90 Lakh ex-showroom and It comes with 1199 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Honda Jazz?",
+  //     "The Honda Jazz mileage is 16.6 - 17.1 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
+
+  // const SimilarCars = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/8378/1614747593719/front-left-side-47.jpg",
+  //     "Swift",
+  //     " ₹ 5.81 Lakh onwards",
+  //   ],
+  //   car2: [
+  //     "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20190606121831_Toyota-Glanza-silver.jpg&h=795&w=1200&c=0",
+  //     "Toyota Glanza",
+  //     "₹ 7.34 Lakh onwards0",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/1200x900/n/cw/ec/40530/i20-exterior-right-front-three-quarter-5.jpeg?q=85",
+  //     "Hyundai i20",
+  //     "₹ 6.91 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/0x0/n/cw/ec/32597/tata-altroz-right-front-three-quarter20.jpeg",
+  //     "Altroz",
+  //     "₹5.80 Lakhs onwards",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "i10 Nios",
+  //     "₹5.24 lakhs onwards",
+  //   ],
+  //   car6: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7460/1596180579378/front-left-side-47.jpg",
+  //     "Santro",
+  //     "₹ 4.74 Lakh onwards",
+  //   ],
+  // };
+
+  // const ThatBrandCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Amaze",
+  //     "₹ 6.34 Lakh onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City",
+  //     "₹ 11.19 Lakh onwards",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "WRV",
+  //     "₹ 8.90 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "Jazz",
+  //     "₹ 7.75 Lakh onwards",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City 4th Gen",
+  //     "₹ 9.33 Lakh onwards",
+  //   ],
+  // };
+
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
+  //     "Amaze Facelift 2021",
+  //     "₹ 6.35 - 10.10 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
+  //     "HRV",
+  //     "₹ 12.00 - 16.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

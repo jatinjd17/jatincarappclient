@@ -32,193 +32,228 @@ import { TSafari } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "₹ 14.99 Lakh";
-  const TopPic = Safari;
-  const CarName = "Tata Safari";
-  const OnlyName = "Safari";
-  const ThumPic = TSafari;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 14.99 Lakh onwards",
-    "14.08 to 16.14 kmpl",
-    "1956 cc",
-    "Manual & Automatic (Torque Converter)",
-    "Diesel",
-    "7 Seater",
-    "4,661 mm L x 1,894 mm W x 1,786 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "6 airbags",
-    "ABS with EBD and CSC",
-    "reverse parking sensors",
-    "ISOFIX",
-    "driver and co-driver seatbelt reminder",
-    "high-speed alert system",
-    "impact sensing auto door unlock.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {};
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: ["XE", "1956  cc, Manual, Diesel, 16.14 kmpl", "Rs.14.99 Lakh*"],
-    varient2: ["XM", "1956  cc, Manual, Diesel, 16.14 kmpl", "Rs.16.36 Lakh*"],
-    varient3: ["XT", "1956 cc, Manual, Diesel, 16.14 kmpl", "Rs.17.61 Lakh*"],
-    varient4: [
-      "XT Plus",
-      "1956 cc, Manual, Diesel, Rs.18.61 Lakh*",
-      "Rs.17.81 Lakh*",
-    ],
-    varient5: ["XZ", "1956  cc, Manual, Diesel, 16.14 kmpl", "Rs.19.51 Lakh*"],
-    varient6: [
-      "XZ Plus",
-      "1956 cc, Manual, Diesel, 16.14 kmpl",
-      "Rs.20.35 Lakh*",
-    ],
-    varient7: [
-      "XZ Plus 6 Str",
-      "1956 cc, Manual, Diesel, 16.14 kmpl",
-      "Rs.20.37 Lakh*",
-    ],
-    varient8: [
-      "XZ Plus Adventure Edition",
-      "1956 cc, Manual, Diesel, 16.14 kmpl",
-      "Rs.20.56 Lakh*",
-    ],
-    varient9: [
-      "XZ Plus 6 Str Adventure Edition",
-      "1956 cc, Manual, Diesel, 16.14 kmpl",
-      "Rs.20.58 Lakh*",
-    ],
-    varient10: [
-      "XZA AT",
-      "1956 cc, Automatic, Diesel, 14.08 kmpl",
-      "Rs.20.76 Lakh*",
-    ],
-    varient11: [
-      "XZA Plus AT",
-      "1956 cc, Automatic, Diesel, 14.08 kmpl",
-      "Rs.21.61 Lakh*",
-    ],
-    varient12: [
-      "XZA Plus 6 Str AT",
-      "1956 cc, Automatic, Diesel, 14.08 kmpl",
-      "Rs.21.65 Lakh*",
-    ],
-    varient13: [
-      "XZA Plus Adventure Edition AT",
-      "1956 cc, Automatic, Diesel, 14.08 kmpl",
-      "Rs.21.81 Lakh*",
-    ],
-    varient14: [
-      "XZA Plus 6Str Adventure Edition AT",
-      "1956 cc, Automatic, Diesel, 14.08 kmpl",
-      "Rs.21.86 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Tata has rolled out the 10,000th Safari from its Pune facility. Tata Safari Price: The SUV is priced from Rs 14.99 lakh to Rs 21.81 lakh (ex-showroom). Tata Safari Variants: It is sold in six trims: XE, XM, XT, XT+, XZ, and XZ+. Tata Safari Seating Capacity: The Safari is available in both 6- and 7-seater configurations. The former gets the choice of captain seats in the top-spec variant. Tata Safari Engine and Transmission: It is powered by the Harrier’s 2.0-litre diesel engine (170PS/350Nm), paired with a 6-speed manual and an optional 6-speed automatic. Going forward, Tata could also provide the SUV with a 1.5-litre turbo-petrol unit and an AWD.  Tata Safari Features: The Safari gets an 8.8-inch touchscreen infotainment system, iRA connected car tech, a 9-speaker JBL sound system, a panoramic sunroof, and a 6-way powered driver seat. It also gets cruise control, auto AC with the second and third-row vents, mood lighting, tyre pressure monitoring, and premium leatherette upholstery (for the dual-tone cabin). Tata Safari Safety: The new Safari gets disc brakes all around, an electronic parking brake with auto hold, traction control, up to six airbags, rollover mitigation, and corner stability control. Tata Safari Rivals: It rivals the Mahindra XUV500, MG Hector Plus, Hyundai Alcazar, and the Mahindra XUV700.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Comfortable and spacious seating for 7",
-      "Impressive ride comfort",
-      "Cabin feels premium",
-    ],
-    cons: [
-      "Missing some modern day features",
-      "White upholstery gets dirty easily",
-      "Captain seats are narrow",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Royal Blue", "bg-blue-800"],
-    color2: ["Daytona Grey", "bg-gray-700"],
-    color3: ["Orcus White", "bg-white-600"],
-    color4: ["Tropical Mist", "bg-blue-200"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Safari?",
-      "The on-road price of Safari in Delhi starts at ‎₹ 18.06 Lakh and goes upto ‎₹ 26.34 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Safari and Harrier?",
-      "Safari price starts at ₹ 14.99 Lakh ex-showroom and It comes with 1956 cc engine. Whereas Harrier price starts at ₹ 14.39 Lakh ex-showroom and It comes with 1956 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Tata Safari?",
-      "The Tata Safari mileage is 14.08 - 16.14 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Tata";
+  // const CarPrice = "₹ 14.99 Lakh";
+  // const TopPic = Safari;
+  // const CarName = "Tata Safari";
+  // const OnlyName = "Safari";
+  // const ThumPic = TSafari;
+
+  // const KeySpecification = [
+  //   "₹ 14.99 Lakh onwards",
+  //   "14.08 to 16.14 kmpl",
+  //   "1956 cc",
+  //   "Manual & Automatic (Torque Converter)",
+  //   "Diesel",
+  //   "7 Seater",
+  //   "4,661 mm L x 1,894 mm W x 1,786 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "6 airbags",
+  //   "ABS with EBD and CSC",
+  //   "reverse parking sensors",
+  //   "ISOFIX",
+  //   "driver and co-driver seatbelt reminder",
+  //   "high-speed alert system",
+  //   "impact sensing auto door unlock.",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: ["XE", "1956  cc, Manual, Diesel, 16.14 kmpl", "Rs.14.99 Lakh*"],
+  //   varient2: ["XM", "1956  cc, Manual, Diesel, 16.14 kmpl", "Rs.16.36 Lakh*"],
+  //   varient3: ["XT", "1956 cc, Manual, Diesel, 16.14 kmpl", "Rs.17.61 Lakh*"],
+  //   varient4: [
+  //     "XT Plus",
+  //     "1956 cc, Manual, Diesel, Rs.18.61 Lakh*",
+  //     "Rs.17.81 Lakh*",
+  //   ],
+  //   varient5: ["XZ", "1956  cc, Manual, Diesel, 16.14 kmpl", "Rs.19.51 Lakh*"],
+  //   varient6: [
+  //     "XZ Plus",
+  //     "1956 cc, Manual, Diesel, 16.14 kmpl",
+  //     "Rs.20.35 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "XZ Plus 6 Str",
+  //     "1956 cc, Manual, Diesel, 16.14 kmpl",
+  //     "Rs.20.37 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "XZ Plus Adventure Edition",
+  //     "1956 cc, Manual, Diesel, 16.14 kmpl",
+  //     "Rs.20.56 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "XZ Plus 6 Str Adventure Edition",
+  //     "1956 cc, Manual, Diesel, 16.14 kmpl",
+  //     "Rs.20.58 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "XZA AT",
+  //     "1956 cc, Automatic, Diesel, 14.08 kmpl",
+  //     "Rs.20.76 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "XZA Plus AT",
+  //     "1956 cc, Automatic, Diesel, 14.08 kmpl",
+  //     "Rs.21.61 Lakh*",
+  //   ],
+  //   varient12: [
+  //     "XZA Plus 6 Str AT",
+  //     "1956 cc, Automatic, Diesel, 14.08 kmpl",
+  //     "Rs.21.65 Lakh*",
+  //   ],
+  //   varient13: [
+  //     "XZA Plus Adventure Edition AT",
+  //     "1956 cc, Automatic, Diesel, 14.08 kmpl",
+  //     "Rs.21.81 Lakh*",
+  //   ],
+  //   varient14: [
+  //     "XZA Plus 6Str Adventure Edition AT",
+  //     "1956 cc, Automatic, Diesel, 14.08 kmpl",
+  //     "Rs.21.86 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Tata has rolled out the 10,000th Safari from its Pune facility. Tata Safari Price: The SUV is priced from Rs 14.99 lakh to Rs 21.81 lakh (ex-showroom). Tata Safari Variants: It is sold in six trims: XE, XM, XT, XT+, XZ, and XZ+. Tata Safari Seating Capacity: The Safari is available in both 6- and 7-seater configurations. The former gets the choice of captain seats in the top-spec variant. Tata Safari Engine and Transmission: It is powered by the Harrier’s 2.0-litre diesel engine (170PS/350Nm), paired with a 6-speed manual and an optional 6-speed automatic. Going forward, Tata could also provide the SUV with a 1.5-litre turbo-petrol unit and an AWD.  Tata Safari Features: The Safari gets an 8.8-inch touchscreen infotainment system, iRA connected car tech, a 9-speaker JBL sound system, a panoramic sunroof, and a 6-way powered driver seat. It also gets cruise control, auto AC with the second and third-row vents, mood lighting, tyre pressure monitoring, and premium leatherette upholstery (for the dual-tone cabin). Tata Safari Safety: The new Safari gets disc brakes all around, an electronic parking brake with auto hold, traction control, up to six airbags, rollover mitigation, and corner stability control. Tata Safari Rivals: It rivals the Mahindra XUV500, MG Hector Plus, Hyundai Alcazar, and the Mahindra XUV700.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Comfortable and spacious seating for 7",
+  //     "Impressive ride comfort",
+  //     "Cabin feels premium",
+  //   ],
+  //   cons: [
+  //     "Missing some modern day features",
+  //     "White upholstery gets dirty easily",
+  //     "Captain seats are narrow",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Royal Blue", "bg-blue-800"],
+  //   color2: ["Daytona Grey", "bg-gray-700"],
+  //   color3: ["Orcus White", "bg-white-600"],
+  //   color4: ["Tropical Mist", "bg-blue-200"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Safari?",
+  //     "The on-road price of Safari in Delhi starts at ‎₹ 18.06 Lakh and goes upto ‎₹ 26.34 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Safari and Harrier?",
+  //     "Safari price starts at ₹ 14.99 Lakh ex-showroom and It comes with 1956 cc engine. Whereas Harrier price starts at ₹ 14.39 Lakh ex-showroom and It comes with 1956 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Tata Safari?",
+  //     "The Tata Safari mileage is 14.08 - 16.14 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -286,23 +321,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

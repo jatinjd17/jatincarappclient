@@ -32,151 +32,186 @@ import { TZSEV } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MG";
-  const CarPrice = "₹ 21.00 Lakh";
-  const TopPic = ZSEV;
-  const CarName = "MG ZS EV";
-  const OnlyName = "ZS EV";
-  const ThumPic = TZSEV;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 21.00 Lakh onwards",
-    "419 km/full charge",
-    "140.8bhp@3500rpm",
-    "Automatic",
-    "Electric",
-    "5 Seater",
-    "4,314 mm L x 1,809 mm W x 1,620-1,644 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "FRONT AND REAR SEATBELT REMINDER ALERT",
-    "ELECTRIC PARKING BRAKE",
-    "HEATED ORVMS",
-    "THREE POINT SEAT BELT",
-    "TYRE PRESSURE MONITORING SYSTEM",
-    "REVERSE PARKING CAMERA WITH DYNAMIC LINES",
-    "REAR DISC BRAKE",
-    "ABS + EBD",
-    "6 AIRBAGS",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Excite",
-      "140.8bhp@3500rpm, Automatic, Electric, 419 km/full charge",
-      "Rs.20.99 Lakh*",
-    ],
-    varient2: [
-      "Exclusive",
-      "140.8bhp@3500rpm, Automatic, Electric, 419 km/full charge",
-      "Rs.24.18 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Electric", "Automatic", "419 km/full charge"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: MG has launched an updated version of the ZS EV. MG ZS EV Price: The electric SUV is priced between Rs 20.99 lakh and Rs 24.18 lakh (ex-showroom). MG ZS EV Variants: It is offered in two variants: Excite and Exclusive. MG ZS EV Seating Capacity: MG offers the ZS EV in a 5-seater layout. MG ZS EV Powertrains: The ZS EV’s 143PS and 353Nm electric motor is powered by a 44.5kWh lithium-ion battery. Its updated battery pack has a claimed range of 419km. MG ZS EV Charging Time: MG is providing a 7.4kW charger (can be installed at your home or office) that will charge from 0 to 100 percent in six to eight hours. The EV itself comes with a portable charger that can be plugged into a regular 15A power socket. This takes around 18-19 hours to fully charge the car. MG has also installed 50kW DC fast chargers at some of its dealerships. These can charge from 0 to 80 percent in less than 50 minutes. MG ZS EV Features: These include an 8-inch infotainment system with Android Auto and Apple CarPlay, a panoramic sunroof, inbuilt air purifier, cruise control, auto AC, projector headlamps, and connected car tech. MG ZS EV Safety: The ZS EV is offered with six airbags, ABS with EBD, brake assist, electronic stability control (ESC), and hill descent control. MG ZS EV Rivals: It takes on the Hyundai Kona Electric. The Tata Nexon EV, although in a segment lower than the ZS EV, is also an indirect competitor.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Good enough range for daily and weekend trips.",
-      "Many charging options.",
-      "Peppy drivetrain.",
-      "Ride quality is well suited to Indian roads",
-    ],
-    cons: [
-      "Could have had more premium interiors",
-      "No rear air-con vents.",
-      "Looks very conventional.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Currant Red", "bg-red-800"],
-    color2: ["Ferris White", "bg-gray-100"],
-    color3: ["Copenhagen Blue", "bg-blue-600"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 13.99 Lakh Onwards",
-      "312 km/FullCharge",
-      "129 PS and 245 Nm",
-      "Automatic",
-      "Electric",
-      "5 Seater",
-      "3,993 mm L x 1,811 mm W x 1,606 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42611/tata-nexon-ev-right-front-three-quarter6.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "Rs.9.58 - 9.90 Lakh",
-      "213 km/FullCharge",
-      "40.23bhp@4500rpm",
-      "Automatic",
-      "Electric",
-      "5 Seater",
-      "3,993 mm L x 1,677 mm W x 1,537 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tigor-EV/7199/1592632314945/front-left-side-47.jpg?tr=w-456",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of ZS EV?",
-      "The on-road price of ZS EV in Delhi starts at ‎₹ 22.34 Lakh and goes upto ‎₹ 25.67 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between ZS EV and Kona Electric?",
-      "ZS EV price starts at ₹ 21.00 Lakh ex-showroom and It comes with cc engine. Whereas Kona Electric price starts at ₹ 23.79 Lakh ex-showroom and It comes with cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is the charging time required to fully charge the MG ZS EV?",
-      "It takes 16 Hrs to fully charge the MG ZS EV.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MG";
+  // const CarPrice = "₹ 21.00 Lakh";
+  // const TopPic = ZSEV;
+  // const CarName = "MG ZS EV";
+  // const OnlyName = "ZS EV";
+  // const ThumPic = TZSEV;
+
+  // const KeySpecification = [
+  //   "₹ 21.00 Lakh onwards",
+  //   "419 km/full charge",
+  //   "140.8bhp@3500rpm",
+  //   "Automatic",
+  //   "Electric",
+  //   "5 Seater",
+  //   "4,314 mm L x 1,809 mm W x 1,620-1,644 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "FRONT AND REAR SEATBELT REMINDER ALERT",
+  //   "ELECTRIC PARKING BRAKE",
+  //   "HEATED ORVMS",
+  //   "THREE POINT SEAT BELT",
+  //   "TYRE PRESSURE MONITORING SYSTEM",
+  //   "REVERSE PARKING CAMERA WITH DYNAMIC LINES",
+  //   "REAR DISC BRAKE",
+  //   "ABS + EBD",
+  //   "6 AIRBAGS",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Excite",
+  //     "140.8bhp@3500rpm, Automatic, Electric, 419 km/full charge",
+  //     "Rs.20.99 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "Exclusive",
+  //     "140.8bhp@3500rpm, Automatic, Electric, 419 km/full charge",
+  //     "Rs.24.18 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Electric", "Automatic", "419 km/full charge"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: MG has launched an updated version of the ZS EV. MG ZS EV Price: The electric SUV is priced between Rs 20.99 lakh and Rs 24.18 lakh (ex-showroom). MG ZS EV Variants: It is offered in two variants: Excite and Exclusive. MG ZS EV Seating Capacity: MG offers the ZS EV in a 5-seater layout. MG ZS EV Powertrains: The ZS EV’s 143PS and 353Nm electric motor is powered by a 44.5kWh lithium-ion battery. Its updated battery pack has a claimed range of 419km. MG ZS EV Charging Time: MG is providing a 7.4kW charger (can be installed at your home or office) that will charge from 0 to 100 percent in six to eight hours. The EV itself comes with a portable charger that can be plugged into a regular 15A power socket. This takes around 18-19 hours to fully charge the car. MG has also installed 50kW DC fast chargers at some of its dealerships. These can charge from 0 to 80 percent in less than 50 minutes. MG ZS EV Features: These include an 8-inch infotainment system with Android Auto and Apple CarPlay, a panoramic sunroof, inbuilt air purifier, cruise control, auto AC, projector headlamps, and connected car tech. MG ZS EV Safety: The ZS EV is offered with six airbags, ABS with EBD, brake assist, electronic stability control (ESC), and hill descent control. MG ZS EV Rivals: It takes on the Hyundai Kona Electric. The Tata Nexon EV, although in a segment lower than the ZS EV, is also an indirect competitor.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Good enough range for daily and weekend trips.",
+  //     "Many charging options.",
+  //     "Peppy drivetrain.",
+  //     "Ride quality is well suited to Indian roads",
+  //   ],
+  //   cons: [
+  //     "Could have had more premium interiors",
+  //     "No rear air-con vents.",
+  //     "Looks very conventional.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Currant Red", "bg-red-800"],
+  //   color2: ["Ferris White", "bg-gray-100"],
+  //   color3: ["Copenhagen Blue", "bg-blue-600"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 13.99 Lakh Onwards",
+  //     "312 km/FullCharge",
+  //     "129 PS and 245 Nm",
+  //     "Automatic",
+  //     "Electric",
+  //     "5 Seater",
+  //     "3,993 mm L x 1,811 mm W x 1,606 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42611/tata-nexon-ev-right-front-three-quarter6.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "Rs.9.58 - 9.90 Lakh",
+  //     "213 km/FullCharge",
+  //     "40.23bhp@4500rpm",
+  //     "Automatic",
+  //     "Electric",
+  //     "5 Seater",
+  //     "3,993 mm L x 1,677 mm W x 1,537 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tigor-EV/7199/1592632314945/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of ZS EV?",
+  //     "The on-road price of ZS EV in Delhi starts at ‎₹ 22.34 Lakh and goes upto ‎₹ 25.67 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between ZS EV and Kona Electric?",
+  //     "ZS EV price starts at ₹ 21.00 Lakh ex-showroom and It comes with cc engine. Whereas Kona Electric price starts at ₹ 23.79 Lakh ex-showroom and It comes with cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is the charging time required to fully charge the MG ZS EV?",
+  //     "It takes 16 Hrs to fully charge the MG ZS EV.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -214,23 +249,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51940/zs-petrol-exterior-left-front-three-quarter.jpeg?q=85",
-      "ZS Petrol",
-      "₹ 10.00 - 17.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47333/mg-baojun-510-right-front-three-quarter0.jpeg?q=85",
-      "MG Baojun 510",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45347/mg-g10-left-side-view0.jpeg?q=85",
-      "G10",
-      "₹ 24.00 - 30.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51940/zs-petrol-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "ZS Petrol",
+  //     "₹ 10.00 - 17.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47333/mg-baojun-510-right-front-three-quarter0.jpeg?q=85",
+  //     "MG Baojun 510",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45347/mg-g10-left-side-view0.jpeg?q=85",
+  //     "G10",
+  //     "₹ 24.00 - 30.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

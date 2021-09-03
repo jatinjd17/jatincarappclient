@@ -31,240 +31,305 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Wrv } from "../../../CarPicsUrl/CarPics";
 import { TWRV } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  AmazeBasicInfoCard,
+  City4BasicInfoCard,
+  CityBasicInfoCard,
+  JazzBasicInfoCard,
+  WRVBasicInfoCard,
+} from "../../../AllCarBasicInfo/honda";
+import { VenueBasicInfoCard } from "../../../AllCarBasicInfo/hyundai";
+import { NexonBasicInfoCard } from "../../../AllCarBasicInfo/tata";
+import { UrbanCruiserBasicInfoCard } from "../../../AllCarBasicInfo/toyota";
+import { SonetBasicInfoCard } from "../../../AllCarBasicInfo/kia";
+import { Xuv300BasicInfoCard } from "../../../AllCarBasicInfo/mahindra";
+import { MagniteBasicInfoCard } from "../../../AllCarBasicInfo/nissan";
 
 function Homee({ joy }) {
-  const CompanyName = "Honda";
-  const CarPrice = "₹ 8.90 Lakh";
-  const TopPic = Wrv;
-  const CarName = "Honda WR-V";
-  const OnlyName = "WR-V";
-  const ThumPic = TWRV;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 8.90 Lakh onwards",
-    "16.5 to 23.7 kmpl",
-    "1199 to 1498 cc",
-    "Manual",
-    "Petrol & Diesel",
-    "5 Seater",
-    "3,999 mm L x 1,734 mm W x 1,601 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "ABS with EBD.",
-    "Dual Front SRS Airbags (Driver and Passenger)",
-    "Rear Parking Camera.",
-    "ACETM Body Structure.",
-    "Driver Side Window One Touch up/down with Pinch Guard.",
-    "Immobilizer Anti-Theft System/Impact Mitigating Headrests.",
-    "Rear Parking Sensors.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["SV", "1199 cc, Manual, Petrol, 16.5 kmpl", "Rs.8.76 Lakh*"],
-    varient2: ["VX", "1199 cc, Manual, Petrol, 16.5 kmpl", "Rs.9.89 Lakh*"],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: [
-      "SV Diesel",
-      "1199 cc, Automatic AMT, Diesel, 23.7 kmpl",
-      "Rs.10.77 Lakh*",
-    ],
-    varient2: [
-      "VX Diesel",
-      "1199 cc, Manual, Diesel, 23.7 kmpl",
-      "Rs.11.79 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The WR-V has become pricier by up to Rs 92,000. Honda WR-V Price: Honda offers the WR-V in two trims: SV and VX. Honda WR-V Engine and Transmission: It is powered by 1.2-litre petrol (90PS/110Nm) and 1.5-litre diesel (100PS/200Nm) engines. The petrol unit is mated to a 5-speed MT while the diesel motor gets a 6-speed MT. The WR-V does not get an automatic transmission.  Honda WR-V Features: The sub-4m crossover gets LED projector headlamps, fog lamps, and LED elements in the tail lamps. Inside, it sports redesigned leatherette upholstery and a touchscreen infotainment system with Android Auto and Apple CarPlay. It also comes with cruise control, push-button start-stop, and a sunroof. Honda WR-V Safety: Safety features include dual front airbags, ABS with EBD, and rear parking sensors. Honda WR-V Rivals: It takes on the Ford EcoSport, Hyundai Venue, Mahindra XUV300, Kia Sonet, Maruti Suzuki Vitara Brezza, Tata Nexon, Toyota Urban Cruiser, Renault Kiger, and the Nissan Magnite.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "High on cabin space and practicality; large 363 litres boot",
-      "Good visibility and ease of driving",
-      "Both petrol and diesel engines to choose from.",
-    ],
-    cons: [
-      "Misses out on an automatic option.",
-      "The soft suspension is bothersome on windy sections of roads and speeds over 80kmph",
-      "Rear seats lack armrest, dedicated AC vent and USB port",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
-    color2: ["Lunar Silver Metallic", "bg-gray-400"],
-    color3: ["Modern Steel Metallic", "bg-white"],
-    color4: ["Golden Brown Metallic", "bg-brown-600"],
-    color5: ["Radiant Red Metallic", "bg-gray-800"],
-    color6: ["Premium Amber Metallic", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.92 Lakh Onwards",
-      "17.52 to 23.4 kmpl",
-      "998 to 1493 cc",
-      "Clutchless Manual & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,770 mm W x 1,590 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-    ],
-    comparisioncar2: [
-      "₹7.20 Lakh onwards",
-      "16 to 22.4 kmpl",
-      "1199 to 1497 cc",
-      "Manual & AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of WR-V?",
-      "The on-road price of WR-V in Delhi starts at ‎₹ 9.78 Lakh and goes upto ‎₹ 13.89 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between WR-V and Jazz?",
-      "WR-V price starts at ₹ 8.90 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Jazz price starts at ₹ 7.75 Lakh ex-showroom and It comes with 1199 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Honda WR-V?",
-      "The Honda WR-V mileage is 16.5 - 23.7 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
   const SimilarCars = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-      "Venue",
-      "₹ 6.92 Lakh Onwards",
-    ],
-    car2: [
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-      "Nexon",
-      "₹ 7.20 Lakh onwards0",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47016/urban-cruiser-exterior-right-front-three-quarter.jpeg?q=85",
-      "Urban Cruiser",
-      "₹ 8.63 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41523/sonet-exterior-right-front-three-quarter-110.jpeg?q=85",
-      "Sonet",
-      "₹ 6.79 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26918/xuv300-exterior-right-front-three-quarter-148706.jpeg?q=85",
-      "XUV300",
-      "₹ 7.96 Lakh onwards",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45795/magnite-exterior-right-front-three-quarter-3.jpeg?q=85",
-      "Magnite",
-      "₹ 5.59 Lakh onwards",
-    ],
+    car1: VenueBasicInfoCard,
+    car2: NexonBasicInfoCard,
+    car3: UrbanCruiserBasicInfoCard,
+    car4: SonetBasicInfoCard,
+    car5: Xuv300BasicInfoCard,
+    car6: MagniteBasicInfoCard,
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Amaze",
-      "₹ 6.34 Lakh onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-      "City",
-      "₹ 11.19 Lakh onwards",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
-      "WRV",
-      "₹ 8.90 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
-      "Jazz",
-      "₹ 7.75 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
-      "City 4th Gen",
-      "₹ 9.33 Lakh onwards",
-    ],
+    car1: AmazeBasicInfoCard,
+    car2: CityBasicInfoCard,
+    car3: WRVBasicInfoCard,
+    car4: JazzBasicInfoCard,
+    car5: City4BasicInfoCard,
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
-      "Amaze Facelift 2021",
-      "₹ 6.35 - 10.10 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
-      "HRV",
-      "₹ 12.00 - 16.00 Lakh",
-    ],
-  };
+  // const CompanyName = "Honda";
+  // const CarPrice = "₹ 8.90 Lakh";
+  // const TopPic = Wrv;
+  // const CarName = "Honda WR-V";
+  // const OnlyName = "WR-V";
+  // const ThumPic = TWRV;
+
+  // const KeySpecification = [
+  //   "₹ 8.90 Lakh onwards",
+  //   "16.5 to 23.7 kmpl",
+  //   "1199 to 1498 cc",
+  //   "Manual",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "3,999 mm L x 1,734 mm W x 1,601 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "ABS with EBD.",
+  //   "Dual Front SRS Airbags (Driver and Passenger)",
+  //   "Rear Parking Camera.",
+  //   "ACETM Body Structure.",
+  //   "Driver Side Window One Touch up/down with Pinch Guard.",
+  //   "Immobilizer Anti-Theft System/Impact Mitigating Headrests.",
+  //   "Rear Parking Sensors.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["SV", "1199 cc, Manual, Petrol, 16.5 kmpl", "Rs.8.76 Lakh*"],
+  //   varient2: ["VX", "1199 cc, Manual, Petrol, 16.5 kmpl", "Rs.9.89 Lakh*"],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "SV Diesel",
+  //     "1199 cc, Automatic AMT, Diesel, 23.7 kmpl",
+  //     "Rs.10.77 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "VX Diesel",
+  //     "1199 cc, Manual, Diesel, 23.7 kmpl",
+  //     "Rs.11.79 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The WR-V has become pricier by up to Rs 92,000. Honda WR-V Price: Honda offers the WR-V in two trims: SV and VX. Honda WR-V Engine and Transmission: It is powered by 1.2-litre petrol (90PS/110Nm) and 1.5-litre diesel (100PS/200Nm) engines. The petrol unit is mated to a 5-speed MT while the diesel motor gets a 6-speed MT. The WR-V does not get an automatic transmission.  Honda WR-V Features: The sub-4m crossover gets LED projector headlamps, fog lamps, and LED elements in the tail lamps. Inside, it sports redesigned leatherette upholstery and a touchscreen infotainment system with Android Auto and Apple CarPlay. It also comes with cruise control, push-button start-stop, and a sunroof. Honda WR-V Safety: Safety features include dual front airbags, ABS with EBD, and rear parking sensors. Honda WR-V Rivals: It takes on the Ford EcoSport, Hyundai Venue, Mahindra XUV300, Kia Sonet, Maruti Suzuki Vitara Brezza, Tata Nexon, Toyota Urban Cruiser, Renault Kiger, and the Nissan Magnite.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "High on cabin space and practicality; large 363 litres boot",
+  //     "Good visibility and ease of driving",
+  //     "Both petrol and diesel engines to choose from.",
+  //   ],
+  //   cons: [
+  //     "Misses out on an automatic option.",
+  //     "The soft suspension is bothersome on windy sections of roads and speeds over 80kmph",
+  //     "Rear seats lack armrest, dedicated AC vent and USB port",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
+  //   color2: ["Lunar Silver Metallic", "bg-gray-400"],
+  //   color3: ["Modern Steel Metallic", "bg-white"],
+  //   color4: ["Golden Brown Metallic", "bg-brown-600"],
+  //   color5: ["Radiant Red Metallic", "bg-gray-800"],
+  //   color6: ["Premium Amber Metallic", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.92 Lakh Onwards",
+  //     "17.52 to 23.4 kmpl",
+  //     "998 to 1493 cc",
+  //     "Clutchless Manual & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,770 mm W x 1,590 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹7.20 Lakh onwards",
+  //     "16 to 22.4 kmpl",
+  //     "1199 to 1497 cc",
+  //     "Manual & AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
+  //     "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of WR-V?",
+  //     "The on-road price of WR-V in Delhi starts at ‎₹ 9.78 Lakh and goes upto ‎₹ 13.89 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between WR-V and Jazz?",
+  //     "WR-V price starts at ₹ 8.90 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Jazz price starts at ₹ 7.75 Lakh ex-showroom and It comes with 1199 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Honda WR-V?",
+  //     "The Honda WR-V mileage is 16.5 - 23.7 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
+
+  // const SimilarCars = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //     "Venue",
+  //     "₹ 6.92 Lakh Onwards",
+  //   ],
+  //   car2: [
+  //     "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
+  //     "Nexon",
+  //     "₹ 7.20 Lakh onwards0",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47016/urban-cruiser-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "Urban Cruiser",
+  //     "₹ 8.63 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41523/sonet-exterior-right-front-three-quarter-110.jpeg?q=85",
+  //     "Sonet",
+  //     "₹ 6.79 Lakh onwards",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/26918/xuv300-exterior-right-front-three-quarter-148706.jpeg?q=85",
+  //     "XUV300",
+  //     "₹ 7.96 Lakh onwards",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45795/magnite-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //     "Magnite",
+  //     "₹ 5.59 Lakh onwards",
+  //   ],
+  // };
+
+  // const ThatBrandCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Amaze",
+  //     "₹ 6.34 Lakh onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City",
+  //     "₹ 11.19 Lakh onwards",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "WRV",
+  //     "₹ 8.90 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "Jazz",
+  //     "₹ 7.75 Lakh onwards",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City 4th Gen",
+  //     "₹ 9.33 Lakh onwards",
+  //   ],
+  // };
+
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
+  //     "Amaze Facelift 2021",
+  //     "₹ 6.35 - 10.10 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
+  //     "HRV",
+  //     "₹ 12.00 - 16.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -30,254 +30,313 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { City } from "../../../CarPicsUrl/CarPics";
 import { TCity } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  AmazeBasicInfoCard,
+  City4BasicInfoCard,
+  CityBasicInfoCard,
+  JazzBasicInfoCard,
+  WRVBasicInfoCard,
+} from "../../../AllCarBasicInfo/honda";
+import { VentoBasicInfoCard } from "../../../AllCarBasicInfo/volkswagen";
+import { VernaBasicInfoCard } from "../../../AllCarBasicInfo/hyundai";
+import { RapidBasicInfoCard } from "../../../AllCarBasicInfo/skoda";
 
 function Homee({ joy }) {
-  const CompanyName = "Honda";
-  const CarPrice = "₹ 11.19 Lakh";
-  const TopPic = City;
-  const CarName = "Honda City";
-  const OnlyName = "City";
-  const ThumPic = TCity;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 11.19 Lakh onwards",
-    "17.8 to 24.1 kmpl",
-    "1498 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol & Diesel",
-    "5 Seater",
-    "4,549 mm L x 1,748 mm W x 1,489 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Advanced Compatibility Engineering (ACE) Body Structure.",
-    "6 Airbags (Driver, Passenger, 2 Curtain, Driver Side, Front Passenger Side)",
-    "Dr & As Seat Pretensioner with Load Limiter.",
-    "ISOFIX Child Seat Anchorage.",
-    " ABS (antilock Brake System) with EBD (Electrical Brake Force Distribution)",
-    "front ventilated disc brakes",
-    "rear windshield with defogger",
-    "Engine Immobilizer.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["V MT", "1498 cc, Manual, Petrol, 17.8 kmpl", "Rs.6.32 Lakh*"],
-    varient2: [
-      "V CVT",
-      "1498 cc, Automatic, Petrol, 18.4 kmpl",
-      "Rs.7.10 Lakh*",
-    ],
-    varient3: [
-      "VX MT",
-      "1498 cc, Manual AMT, Petrol, 17.8 kmpl",
-      "Rs.7.70 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient5: ["ZX MT", "1498 cc, Manual, Petrol, 17.8 kmpl", "Rs.8.18 Lakh*"],
-    varient6: [
-      "VX CVT",
-      "1498 cc, Automatic, Petrol, 18.4 kmpl",
-      "Rs.8.60 Lakh*",
-    ],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient7: [
-      "ZX CVT",
-      "1498 cc, Automatic, Petrol, 18.4 kmpl",
-      "Rs.9.01 Lakh*",
-    ],
-  };
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientDiesel = {
-    varient1: [
-      "V MT Diesel",
-      "1498 cc, Manual, Diesel, 24.1 kmpl",
-      "Rs.8.00 Lakh*",
-    ],
+  const Mileage = joy.Mileage;
 
-    varient2: [
-      "VX MT Diesel",
-      "1498 cc, Manual, Diesel, 24.1 kmpl",
-      "Rs.8.66 Lakh*",
-    ],
+  const LatestUpdate = joy.LatestUpdate;
 
-    varient3: [
-      "ZX MT Diesel",
-      "1498 cc, Manual, Diesel, 24.1 kmpl",
-      "Rs.9.20 Lakh*",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const VarientCNG = {};
+  const Colorss = joy.Colorss;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const LatestUpdate = [
-    "Latest Update: Honda has hiked the prices of the City uniformly by Rs 17,000. Honda City Price: The fifth-gen City is priced between Rs 11.16 lakh and Rs 15.11 lakh (ex-showroom Delhi). Honda City Variants: It is sold in three variants: V, VX, and ZX. Honda City Engine and Transmission: Honda has equipped the sedan with a set of 1.5-litre petrol (121PS/145Nm) and diesel engines (100PS/200Nm). The petrol variant comes with both 6-speed MT and 7-step CVT, whereas the diesel variant comes with a 6-speed MT. Its claimed mileage figures stand at: Honda City Features: It gets 16-inch diamond-cut alloy wheels, an 8-inch touchscreen infotainment system with Android Auto, Apple CarPlay and Weblink support, and ambient lighting. The fifth-gen City also comes with Amazon Alexa remote control and connected car technology that, among other things, enables remote engine-start and door lock-unlock. Honda City Safety: Safety features on offer include up to six airbags, tyre pressure monitoring system, ABS with EBD, and ISOFIX child seat anchors. Honda City Rivals: It goes up against the Hyundai Verna, Maruti Suzuki Ciaz, Skoda Rapid, VW Vento, and the Toyota Yaris.",
-  ];
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ProsCons = {
-    pros: [
-      "Spacious cabin. Rear-seat kneeroom rivals cars from a segment above.",
-      "Petrol motor + manual gearbox + playful chassis = FUN!",
-      "Brilliant tuning for the CVT automatic makes driving effortless.",
-    ],
-    cons: [
-      "Interior plastic quality could’ve been better.",
-      "Needs more ‘wow’ features: ventilated seats, powered driver’s seat, branded stereo etc.",
-      "No diesel automatic on offer. Cheaper Amaze offers it.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const Colorss = {
-    color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
-    color2: ["Lunar Silver Metallic", "bg-gray-400"],
-    color3: ["Modern Steel Metallic", "bg-white"],
-    color4: ["Golden Brown Metallic", "bg-brown-600"],
-    color5: ["Radiant Red Metallic", "bg-gray-800"],
-  };
-
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.9.28 Lakh Onwards",
-      "17.7 - 25.0 kmpl",
-      "998 cc - 1497 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,440 mm L x 1,729 mm W x 1,475 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/7729/1616055133475/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "₹ 10.00 Lakh onwards",
-      "16.35 to 17.69 kmpl",
-      "999 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Petrol",
-      "5 Seater",
-      "4,390 mm L x 1,699 mm W x 1,467 mm H",
-      "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
-    ],
-  };
-
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
-
-  const faqs = {
-    question1: [
-      "What is the on road price of All New City?",
-      "The on-road price of All New City in Delhi starts at ‎₹ 12.85 Lakh and goes upto ‎₹ 17.69 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between All New City and Verna?",
-      "All New City price starts at ₹ 11.19 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Verna price starts at ₹ 9.28 Lakh ex-showroom and It comes with 1497 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Honda All New City?",
-      "The Honda All New City mileage is 17.8 - 24.1 kmpl.",
-    ],
-  };
-
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
 
   const SimilarCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
-      "Vento",
-      "₹ 10.00 Lakh Onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85",
-      "Verna",
-      "₹ 9.28 Lakh*",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47562/skoda-rapid-tsi-right-front-three-quarter0.jpeg?q=85",
-      "Rapid",
-      "₹ 7.80 Lakh*",
-    ],
+    car1: VentoBasicInfoCard,
+    car2: VernaBasicInfoCard,
+    car3: RapidBasicInfoCard,
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Amaze",
-      "₹ 6.34 Lakh onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-      "City",
-      "₹ 11.19 Lakh onwards",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
-      "WRV",
-      "₹ 8.90 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
-      "Jazz",
-      "₹ 7.75 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
-      "City 4th Gen",
-      "₹ 9.33 Lakh onwards",
-    ],
+    car1: AmazeBasicInfoCard,
+    car2: CityBasicInfoCard,
+    car3: WRVBasicInfoCard,
+    car4: JazzBasicInfoCard,
+    car5: City4BasicInfoCard,
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
-      "Amaze Facelift 2021",
-      "₹ 6.35 - 10.10 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
-      "HRV",
-      "₹ 12.00 - 16.00 Lakh",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Honda";
+  // const CarPrice = "₹ 11.19 Lakh";
+  // const TopPic = City;
+  // const CarName = "Honda City";
+  // const OnlyName = "City";
+  // const ThumPic = TCity;
+
+  // const KeySpecification = [
+  //   "₹ 11.19 Lakh onwards",
+  //   "17.8 to 24.1 kmpl",
+  //   "1498 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "4,549 mm L x 1,748 mm W x 1,489 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Advanced Compatibility Engineering (ACE) Body Structure.",
+  //   "6 Airbags (Driver, Passenger, 2 Curtain, Driver Side, Front Passenger Side)",
+  //   "Dr & As Seat Pretensioner with Load Limiter.",
+  //   "ISOFIX Child Seat Anchorage.",
+  //   " ABS (antilock Brake System) with EBD (Electrical Brake Force Distribution)",
+  //   "front ventilated disc brakes",
+  //   "rear windshield with defogger",
+  //   "Engine Immobilizer.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["V MT", "1498 cc, Manual, Petrol, 17.8 kmpl", "Rs.6.32 Lakh*"],
+  //   varient2: [
+  //     "V CVT",
+  //     "1498 cc, Automatic, Petrol, 18.4 kmpl",
+  //     "Rs.7.10 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "VX MT",
+  //     "1498 cc, Manual AMT, Petrol, 17.8 kmpl",
+  //     "Rs.7.70 Lakh*",
+  //   ],
+
+  //   varient5: ["ZX MT", "1498 cc, Manual, Petrol, 17.8 kmpl", "Rs.8.18 Lakh*"],
+  //   varient6: [
+  //     "VX CVT",
+  //     "1498 cc, Automatic, Petrol, 18.4 kmpl",
+  //     "Rs.8.60 Lakh*",
+  //   ],
+
+  //   varient7: [
+  //     "ZX CVT",
+  //     "1498 cc, Automatic, Petrol, 18.4 kmpl",
+  //     "Rs.9.01 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "V MT Diesel",
+  //     "1498 cc, Manual, Diesel, 24.1 kmpl",
+  //     "Rs.8.00 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "VX MT Diesel",
+  //     "1498 cc, Manual, Diesel, 24.1 kmpl",
+  //     "Rs.8.66 Lakh*",
+  //   ],
+
+  //   varient3: [
+  //     "ZX MT Diesel",
+  //     "1498 cc, Manual, Diesel, 24.1 kmpl",
+  //     "Rs.9.20 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Honda has hiked the prices of the City uniformly by Rs 17,000. Honda City Price: The fifth-gen City is priced between Rs 11.16 lakh and Rs 15.11 lakh (ex-showroom Delhi). Honda City Variants: It is sold in three variants: V, VX, and ZX. Honda City Engine and Transmission: Honda has equipped the sedan with a set of 1.5-litre petrol (121PS/145Nm) and diesel engines (100PS/200Nm). The petrol variant comes with both 6-speed MT and 7-step CVT, whereas the diesel variant comes with a 6-speed MT. Its claimed mileage figures stand at: Honda City Features: It gets 16-inch diamond-cut alloy wheels, an 8-inch touchscreen infotainment system with Android Auto, Apple CarPlay and Weblink support, and ambient lighting. The fifth-gen City also comes with Amazon Alexa remote control and connected car technology that, among other things, enables remote engine-start and door lock-unlock. Honda City Safety: Safety features on offer include up to six airbags, tyre pressure monitoring system, ABS with EBD, and ISOFIX child seat anchors. Honda City Rivals: It goes up against the Hyundai Verna, Maruti Suzuki Ciaz, Skoda Rapid, VW Vento, and the Toyota Yaris.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Spacious cabin. Rear-seat kneeroom rivals cars from a segment above.",
+  //     "Petrol motor + manual gearbox + playful chassis = FUN!",
+  //     "Brilliant tuning for the CVT automatic makes driving effortless.",
+  //   ],
+  //   cons: [
+  //     "Interior plastic quality could’ve been better.",
+  //     "Needs more ‘wow’ features: ventilated seats, powered driver’s seat, branded stereo etc.",
+  //     "No diesel automatic on offer. Cheaper Amaze offers it.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
+  //   color2: ["Lunar Silver Metallic", "bg-gray-400"],
+  //   color3: ["Modern Steel Metallic", "bg-white"],
+  //   color4: ["Golden Brown Metallic", "bg-brown-600"],
+  //   color5: ["Radiant Red Metallic", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.9.28 Lakh Onwards",
+  //     "17.7 - 25.0 kmpl",
+  //     "998 cc - 1497 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,440 mm L x 1,729 mm W x 1,475 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/7729/1616055133475/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 10.00 Lakh onwards",
+  //     "16.35 to 17.69 kmpl",
+  //     "999 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,390 mm L x 1,699 mm W x 1,467 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of All New City?",
+  //     "The on-road price of All New City in Delhi starts at ‎₹ 12.85 Lakh and goes upto ‎₹ 17.69 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between All New City and Verna?",
+  //     "All New City price starts at ₹ 11.19 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Verna price starts at ₹ 9.28 Lakh ex-showroom and It comes with 1497 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Honda All New City?",
+  //     "The Honda All New City mileage is 17.8 - 24.1 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
+
+  // const SimilarCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
+  //     "Vento",
+  //     "₹ 10.00 Lakh Onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85",
+  //     "Verna",
+  //     "₹ 9.28 Lakh*",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47562/skoda-rapid-tsi-right-front-three-quarter0.jpeg?q=85",
+  //     "Rapid",
+  //     "₹ 7.80 Lakh*",
+  //   ],
+  // };
+
+  // const ThatBrandCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Amaze",
+  //     "₹ 6.34 Lakh onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City",
+  //     "₹ 11.19 Lakh onwards",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "WRV",
+  //     "₹ 8.90 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "Jazz",
+  //     "₹ 7.75 Lakh onwards",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City 4th Gen",
+  //     "₹ 9.33 Lakh onwards",
+  //   ],
+  // };
+
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
+  //     "Amaze Facelift 2021",
+  //     "₹ 6.35 - 10.10 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
+  //     "HRV",
+  //     "₹ 12.00 - 16.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

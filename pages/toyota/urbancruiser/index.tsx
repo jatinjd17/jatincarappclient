@@ -32,165 +32,200 @@ import { TUrbanCruiser } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Toyota";
-  const CarPrice = "₹ 8.63 Lakh";
-  const TopPic = UrbanCruiser;
-  const CarName = "Toyota Urban Cruiser";
-  const OnlyName = "Urban Cruiser";
-  const ThumPic = TUrbanCruiser;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 8.63 Lakh onwards",
-    "17.03 to 18.76 kmpl",
-    "1462 cc",
-    "Manual & Automatic (Torque Converter)",
-    "Petrol",
-    "5 Seater",
-    "3,995 mm L x 1,790 mm W x 1,640 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-    "Driver frontal airbag, Front passenger frontal airbag",
-    "Door Ajar Warning.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["Mid", "1462 cc, Manual, Petrol, 17.03 kmpl", "Rs.8.62 Lakh*"],
-    varient2: ["High", "1462 cc, Manual, Petrol, 17.03 kmpl", "Rs.9.37 Lakh*"],
-    varient3: [
-      "Premium",
-      "1462 cc, Manual, Petrol, 17.03 kmpl",
-      "Rs.9.90 Lakh*",
-    ],
-    varient4: [
-      "Mid AT",
-      "1462 cc, Manual, Petrol, 18.76 kmpl",
-      "Rs.9.92 Lakh*",
-    ],
-    varient5: [
-      "High AT",
-      "1462 cc, Automatic, Petrol, 18.76 kmpl",
-      "Rs.10.77 Lakh*",
-    ],
-    varient6: [
-      "Premium AT",
-      "1462 cc, Automatic, Petrol, 18.76 kmpl",
-      "Rs.11.40 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Prices of the Urban Cruiser have been increased by up to Rs 13,000. Toyota Urban Cruiser Price: The Toyota SUV is priced between Rs 8.62 lakh and Rs 11.40 lakh (ex-showroom Delhi). Toyota Urban Cruiser Variants: The Urban Cruiser is available in six variants: Mid, Mid AT, High, High AT, Premium, and Premium AT. Toyota Urban Cruiser Seating Capacity: The SUV has a 5-seater layout. Toyota Urban Cruiser Powertrain: It gets a 1.5-litre petrol engine (paired with either a 5-speed manual or a 4-speed torque converter) that produces 105PS and 138Nm. It is the same engine that powers the Maruti Suzuki Vitara Brezza. The torque converter gearbox is optional across all variants and comes with the mild-hybrid system. Toyota Urban Cruiser Features: The Urban Cruiser packs rain-sensing wipers, auto AC, a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, 16-inch dual-tone alloy wheels, push-button start/stop, and LED headlamps and tail lamps. Toyota Urban Cruiser Safety: Safety features on offer include dual front airbags, ABS with EBD, hill hold control, and ISOFIX child seat anchors. Toyota Urban Cruiser Rivals: It goes up against the Hyundai Venue, Nissan Magnite, Maruti Suzuki Vitara Brezza, Kia Sonet, Mahindra XUV300, Ford EcoSport, Tata Nexon, and Renault Kiger.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Toyota’s after-sales and service reliability ",
-      "Decently spacious and well-built cabin",
-      "Light and easy driving dynamics",
-    ],
-    cons: [
-      "Subtle looking compared to the competition",
-      "No diesel powertrain ",
-      "Not as feature-loaded as rivals",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Suave Silver", "bg-gray-800"],
-    color2: ["Groovy Orange", "bg-red-900"],
-    color3: ["Iconic Grey", "bg-white-900"],
-    color4: ["Spunky Blue", "bg-gray-100"],
-    color5: ["Sunny White", "bg-gray-900"],
-    color6: ["Groovy Orange with Sunny White Roof", "bg-gray-600"],
-    color7: ["Spunky Blue with Sizzling Black Roof", "bg-gray-600"],
-    color8: ["Rustic Brown with Sizzling Black Roof", "bg-gray-100"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.92 Lakh Onwards",
-      "17.52 to 23.4 kmpl",
-      "998 to 1493 cc",
-      "Clutchless Manual & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,770 mm W x 1,590 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-    ],
-    comparisioncar2: [
-      "₹7.20 Lakh onwards",
-      "16 to 22.4 kmpl",
-      "1199 to 1497 cc",
-      "Manual & AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Urban Cruiser?",
-      "The on-road price of Urban Cruiser in Delhi starts at ‎₹ 9.68 Lakh and goes upto ‎₹ 13.19 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Urban Cruiser and Vitara Brezza?",
-      "Urban Cruiser price starts at ₹ 8.63 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Vitara Brezza price starts at ₹ 7.51 Lakh ex-showroom and It comes with 1462 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is the mileage of Toyota Urban Cruiser?",
-      "The Toyota Urban Cruiser mileage is 17.03 - 18.76 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Toyota";
+  // const CarPrice = "₹ 8.63 Lakh";
+  // const TopPic = UrbanCruiser;
+  // const CarName = "Toyota Urban Cruiser";
+  // const OnlyName = "Urban Cruiser";
+  // const ThumPic = TUrbanCruiser;
+
+  // const KeySpecification = [
+  //   "₹ 8.63 Lakh onwards",
+  //   "17.03 to 18.76 kmpl",
+  //   "1462 cc",
+  //   "Manual & Automatic (Torque Converter)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,790 mm W x 1,640 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  //   "Driver frontal airbag, Front passenger frontal airbag",
+  //   "Door Ajar Warning.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["Mid", "1462 cc, Manual, Petrol, 17.03 kmpl", "Rs.8.62 Lakh*"],
+  //   varient2: ["High", "1462 cc, Manual, Petrol, 17.03 kmpl", "Rs.9.37 Lakh*"],
+  //   varient3: [
+  //     "Premium",
+  //     "1462 cc, Manual, Petrol, 17.03 kmpl",
+  //     "Rs.9.90 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "Mid AT",
+  //     "1462 cc, Manual, Petrol, 18.76 kmpl",
+  //     "Rs.9.92 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "High AT",
+  //     "1462 cc, Automatic, Petrol, 18.76 kmpl",
+  //     "Rs.10.77 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "Premium AT",
+  //     "1462 cc, Automatic, Petrol, 18.76 kmpl",
+  //     "Rs.11.40 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Prices of the Urban Cruiser have been increased by up to Rs 13,000. Toyota Urban Cruiser Price: The Toyota SUV is priced between Rs 8.62 lakh and Rs 11.40 lakh (ex-showroom Delhi). Toyota Urban Cruiser Variants: The Urban Cruiser is available in six variants: Mid, Mid AT, High, High AT, Premium, and Premium AT. Toyota Urban Cruiser Seating Capacity: The SUV has a 5-seater layout. Toyota Urban Cruiser Powertrain: It gets a 1.5-litre petrol engine (paired with either a 5-speed manual or a 4-speed torque converter) that produces 105PS and 138Nm. It is the same engine that powers the Maruti Suzuki Vitara Brezza. The torque converter gearbox is optional across all variants and comes with the mild-hybrid system. Toyota Urban Cruiser Features: The Urban Cruiser packs rain-sensing wipers, auto AC, a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, 16-inch dual-tone alloy wheels, push-button start/stop, and LED headlamps and tail lamps. Toyota Urban Cruiser Safety: Safety features on offer include dual front airbags, ABS with EBD, hill hold control, and ISOFIX child seat anchors. Toyota Urban Cruiser Rivals: It goes up against the Hyundai Venue, Nissan Magnite, Maruti Suzuki Vitara Brezza, Kia Sonet, Mahindra XUV300, Ford EcoSport, Tata Nexon, and Renault Kiger.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Toyota’s after-sales and service reliability ",
+  //     "Decently spacious and well-built cabin",
+  //     "Light and easy driving dynamics",
+  //   ],
+  //   cons: [
+  //     "Subtle looking compared to the competition",
+  //     "No diesel powertrain ",
+  //     "Not as feature-loaded as rivals",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Suave Silver", "bg-gray-800"],
+  //   color2: ["Groovy Orange", "bg-red-900"],
+  //   color3: ["Iconic Grey", "bg-white-900"],
+  //   color4: ["Spunky Blue", "bg-gray-100"],
+  //   color5: ["Sunny White", "bg-gray-900"],
+  //   color6: ["Groovy Orange with Sunny White Roof", "bg-gray-600"],
+  //   color7: ["Spunky Blue with Sizzling Black Roof", "bg-gray-600"],
+  //   color8: ["Rustic Brown with Sizzling Black Roof", "bg-gray-100"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.92 Lakh Onwards",
+  //     "17.52 to 23.4 kmpl",
+  //     "998 to 1493 cc",
+  //     "Clutchless Manual & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,770 mm W x 1,590 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹7.20 Lakh onwards",
+  //     "16 to 22.4 kmpl",
+  //     "1199 to 1497 cc",
+  //     "Manual & AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
+  //     "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Urban Cruiser?",
+  //     "The on-road price of Urban Cruiser in Delhi starts at ‎₹ 9.68 Lakh and goes upto ‎₹ 13.19 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Urban Cruiser and Vitara Brezza?",
+  //     "Urban Cruiser price starts at ₹ 8.63 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Vitara Brezza price starts at ₹ 7.51 Lakh ex-showroom and It comes with 1462 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Toyota Urban Cruiser?",
+  //     "The Toyota Urban Cruiser mileage is 17.03 - 18.76 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -263,18 +298,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Hilux",
-      "Rs.18.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
-      "Land Cruiser",
-      "Rs.1.50 Cr*",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Hilux",
+  //     "Rs.18.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
+  //     "Land Cruiser",
+  //     "Rs.1.50 Cr*",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

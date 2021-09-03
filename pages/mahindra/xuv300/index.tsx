@@ -32,229 +32,264 @@ import { TXUV300 } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "₹ 7.96 Lakh";
-  const TopPic = Xuv300;
-  const CarName = "Mahindra XUV 300";
-  const OnlyName = "XUV 300";
-  const ThumPic = TXUV300;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 7.96 Lakh onwards",
-    "17 to 20 kmpl",
-    "1197 to 1497 cc",
-    "Manual & AMT",
-    "Petrol & Diesel",
-    "5 Seater",
-    "3,995 mm L x 1,821 mm W x 1,627 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "5 star rating in Global NCAP",
-    "7 Airbags (Driver, Passenger, 2 Curtain, Driver Knee, Driver Side, Front Passenger Side)",
+  const SafetyFeatures = joy.SafetyFeatures;
 
-    "Rear parking sensors",
+  const VarientPetrol = joy.VarientPetrol;
 
-    "Seatbelt reminders for the driver and front passenger",
+  const VarientDiesel = joy.VarientDiesel;
 
-    "A speed warning system (at 80kmph and 120kmph)",
+  const VarientCNG = joy.VarientCNG;
 
-    "A manual override for the central locking system",
-    "Tyre Pressure Monitoring System (TPMS)",
-  ];
+  const Mileage = joy.Mileage;
 
-  const VarientPetrol = {
-    varient1: ["W4", "1197 cc, Manual, Petrol, 17.0 kmpl", "Rs.7.95 Lakh*"],
+  const LatestUpdate = joy.LatestUpdate;
 
-    varient2: [
-      "W6 Sunroof",
-      "1197 cc, Manual, Petrol, 17.0 kmpl",
-      "Rs.9.91 Lakh*",
-    ],
-    varient3: [
-      "W6 AMT Sunroof",
-      "1197 cc, Automatic, Petrol, 17.0 kmpl",
-      "Rs.10.47 Lakh*",
-    ],
+  const ProsCons = joy.ProsCons;
 
-    varient4: ["W8", "1197 cc, Manual, Petrol, 17.0 kmpl", "Rs.10.53 Lakh*"],
+  const Colorss = joy.Colorss;
 
-    varient5: [
-      "W8 Option",
-      "1197 cc, Manual, Petrol, 17.0 kmpl",
-      "Rs.11.70 Lakh*",
-    ],
+  const ComparisionCar = joy.ComparisionCar;
 
-    varient6: [
-      "W8 Option Dual Tone",
-      "1197 cc, Manual, Petrol, 17.0 kmpl",
-      "Rs.11.85 Lakh*",
-    ],
-    varient7: [
-      "Turbo Sportz",
-      "1197 cc, Manual, Petrol, 17.0 kmpl",
-      "Rs.12.34 Lakh*",
-    ],
-    varient8: [
-      "W8 Option AMT",
-      "1197 cc, Automatic, Petrol, 17.0 kmpl",
-      "Rs.12.36 Lakh*",
-    ],
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-    varient9: [
-      "W8 Option AMT Dual Tone",
-      "1197 cc, Automatic, Petrol, 17.0 kmpl",
-      "Rs.12.51 Lakh*",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const VarientDiesel = {
-    varient1: [
-      "W4 Diesel",
-      "1497 cc, Manual, Diesel, 20.0 kmpl",
-      "Rs.9.00 Lakh*",
-    ],
-    varient2: [
-      "W6 Diesel Sunroof",
-      "1497 cc, Manual, Diesel, 20.0 kmpl",
-      "Rs.10.52 Lakh*",
-    ],
-    varient3: [
-      "W6 AMT Diesel Sunroof",
-      "1497 cc, Automatic, Diesel, 20.0 kmpl",
-      "Rs.11.17 Lakh*",
-    ],
-    varient4: [
-      "W8 Diesel Sunroof",
-      "1497 cc, Manual, Diesel, 20.0 kmpl",
-      "Rs.11.72 Lakh*",
-    ],
-    varient5: [
-      "W8 Option Diesel",
-      "1497 cc, Manual, Diesel, 20.0 kmpl",
-      "Rs.12.51 Lakh*",
-    ],
-    varient6: [
-      "W8 Option Dual Tone Diesel",
-      "1497 cc, Manual, Diesel, 20.0 kmpl",
-      "Rs.12.66 Lakh*",
-    ],
-    varient7: [
-      "W8 AMT Optional Diesel",
-      "1497 cc, Automatic, Diesel, 20.0 kmpl",
-      "Rs.13.18 Lakh*",
-    ],
-    varient8: [
-      "W8 AMT Option Diesel Dual Tone",
-      "1497 cc, Automatic, Diesel, 20.0 kmpl",
-      "Rs.13.33 Lakh*",
-    ],
-  };
+  const articles = joy.articles;
 
-  const VarientCNG = {};
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "₹ 7.96 Lakh";
+  // const TopPic = Xuv300;
+  // const CarName = "Mahindra XUV 300";
+  // const OnlyName = "XUV 300";
+  // const ThumPic = TXUV300;
 
-  const LatestUpdate = [
-    "Latest Update: Mahindra is offering benefits of up to Rs 44,000 on the XUV300 this July. Mahindra XUV300 Price: The XUV300 is priced between Rs 8 lakh and Rs 13.33 lakh (ex-showroom). Mahindra XUV300 Variants: Mahindra retails the sub-4m SUV in four trims: W4, W6, W8, and W8(O). Mahindra XUV300 Seating Capacity: It is offered in a five-seating layout. Mahindra XUV300 Engine and Transmission: It gets 1.2-litre turbo-petrol (110PS/200Nm) and 1.5-litre diesel engines (117PS/300Nm). Both can be paired with either a 6-speed MT or an AMT gearbox. Mahindra XUV300 Features: The SUV gets a sunroof, cruise control, a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, rain-sensing wipers, auto AC, and connected car tech. Mahindra XUV300 Safety: Safety features include up to seven airbags, corner braking control, and front and rear parking sensors. Mahindra XUV300 Rivals: It takes on the Ford EcoSport, Hyundai Venue, Renault Kiger, Tata Nexon, Toyota Urban Cruiser, Nissan Magnite, Kia Sonet, and the Maruti Suzuki Vitara Brezza.",
-  ];
+  // const KeySpecification = [
+  //   "₹ 7.96 Lakh onwards",
+  //   "17 to 20 kmpl",
+  //   "1197 to 1497 cc",
+  //   "Manual & AMT",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,821 mm W x 1,627 mm H",
+  // ];
 
-  const ProsCons = {
-    pros: [
-      "Comfortable even over bad roads.",
-      "Feels premium because of class-leading safety and convenience features.",
-      "Stable and fun to drive because of steering and good grip.",
-    ],
-    cons: [
-      "Premium experience let down by quality issues like poorly fitting panels, mushy switches and flimsy stalks.",
-      "Small boot will be a hassle if it’s the only car in the family.",
-      "Cramped footwell, no space for dead pedal for driver",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "5 star rating in Global NCAP",
+  //   "7 Airbags (Driver, Passenger, 2 Curtain, Driver Knee, Driver Side, Front Passenger Side)",
 
-  const Colorss = {
-    color1: ["Pearl White", "bg-blue-600"],
-    color2: ["Aquamarine", "bg-gray-400"],
-    color3: ["Dual-Tone Red Rage", "bg-gray-400"],
-    color4: ["Dual-Tone Aquamarine", "bg-gray-400"],
-    color5: ["Red Rage", "bg-gray-400"],
-    color6: ["D'Sat Silver", "bg-gray-400"],
-    color7: ["Napoli Black", "bg-gray-400"],
-  };
+  //   "Rear parking sensors",
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 8.19 Lakh onwards",
-      "14.7 to 21.7 kmpl",
-      "1496 to 1498 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,998 mm L x 1,765 mm W x 1,647 mm H",
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
-    ],
-    comparisioncar2: [
-      "₹ 6.92 Lakh Onwards",
-      "17.52 to 23.4 kmpl",
-      "998 to 1493 cc",
-      "Clutchless Manual & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,770 mm W x 1,590 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-    ],
-  };
+  //   "Seatbelt reminders for the driver and front passenger",
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  //   "A speed warning system (at 80kmph and 120kmph)",
 
-  const faqs = {
-    question1: [
-      "What is the on road price of XUV300?",
-      "The on-road price of XUV300 in Delhi starts at ‎₹ 8.97 Lakh and goes upto ‎₹ 15.91 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between XUV300 and Nexon?",
-      "XUV300 price starts at ₹ 7.96 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Nexon price starts at ₹ 7.29 Lakh ex-showroom and It comes with 1199 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Mahindra XUV300?",
-      "The Mahindra XUV300 mileage is 17 - 20 kmpl.",
-    ],
-  };
+  //   "A manual override for the central locking system",
+  //   "Tyre Pressure Monitoring System (TPMS)",
+  // ];
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const VarientPetrol = {
+  //   varient1: ["W4", "1197 cc, Manual, Petrol, 17.0 kmpl", "Rs.7.95 Lakh*"],
+
+  //   varient2: [
+  //     "W6 Sunroof",
+  //     "1197 cc, Manual, Petrol, 17.0 kmpl",
+  //     "Rs.9.91 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "W6 AMT Sunroof",
+  //     "1197 cc, Automatic, Petrol, 17.0 kmpl",
+  //     "Rs.10.47 Lakh*",
+  //   ],
+
+  //   varient4: ["W8", "1197 cc, Manual, Petrol, 17.0 kmpl", "Rs.10.53 Lakh*"],
+
+  //   varient5: [
+  //     "W8 Option",
+  //     "1197 cc, Manual, Petrol, 17.0 kmpl",
+  //     "Rs.11.70 Lakh*",
+  //   ],
+
+  //   varient6: [
+  //     "W8 Option Dual Tone",
+  //     "1197 cc, Manual, Petrol, 17.0 kmpl",
+  //     "Rs.11.85 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "Turbo Sportz",
+  //     "1197 cc, Manual, Petrol, 17.0 kmpl",
+  //     "Rs.12.34 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "W8 Option AMT",
+  //     "1197 cc, Automatic, Petrol, 17.0 kmpl",
+  //     "Rs.12.36 Lakh*",
+  //   ],
+
+  //   varient9: [
+  //     "W8 Option AMT Dual Tone",
+  //     "1197 cc, Automatic, Petrol, 17.0 kmpl",
+  //     "Rs.12.51 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "W4 Diesel",
+  //     "1497 cc, Manual, Diesel, 20.0 kmpl",
+  //     "Rs.9.00 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "W6 Diesel Sunroof",
+  //     "1497 cc, Manual, Diesel, 20.0 kmpl",
+  //     "Rs.10.52 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "W6 AMT Diesel Sunroof",
+  //     "1497 cc, Automatic, Diesel, 20.0 kmpl",
+  //     "Rs.11.17 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "W8 Diesel Sunroof",
+  //     "1497 cc, Manual, Diesel, 20.0 kmpl",
+  //     "Rs.11.72 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "W8 Option Diesel",
+  //     "1497 cc, Manual, Diesel, 20.0 kmpl",
+  //     "Rs.12.51 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "W8 Option Dual Tone Diesel",
+  //     "1497 cc, Manual, Diesel, 20.0 kmpl",
+  //     "Rs.12.66 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "W8 AMT Optional Diesel",
+  //     "1497 cc, Automatic, Diesel, 20.0 kmpl",
+  //     "Rs.13.18 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "W8 AMT Option Diesel Dual Tone",
+  //     "1497 cc, Automatic, Diesel, 20.0 kmpl",
+  //     "Rs.13.33 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Mahindra is offering benefits of up to Rs 44,000 on the XUV300 this July. Mahindra XUV300 Price: The XUV300 is priced between Rs 8 lakh and Rs 13.33 lakh (ex-showroom). Mahindra XUV300 Variants: Mahindra retails the sub-4m SUV in four trims: W4, W6, W8, and W8(O). Mahindra XUV300 Seating Capacity: It is offered in a five-seating layout. Mahindra XUV300 Engine and Transmission: It gets 1.2-litre turbo-petrol (110PS/200Nm) and 1.5-litre diesel engines (117PS/300Nm). Both can be paired with either a 6-speed MT or an AMT gearbox. Mahindra XUV300 Features: The SUV gets a sunroof, cruise control, a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, rain-sensing wipers, auto AC, and connected car tech. Mahindra XUV300 Safety: Safety features include up to seven airbags, corner braking control, and front and rear parking sensors. Mahindra XUV300 Rivals: It takes on the Ford EcoSport, Hyundai Venue, Renault Kiger, Tata Nexon, Toyota Urban Cruiser, Nissan Magnite, Kia Sonet, and the Maruti Suzuki Vitara Brezza.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Comfortable even over bad roads.",
+  //     "Feels premium because of class-leading safety and convenience features.",
+  //     "Stable and fun to drive because of steering and good grip.",
+  //   ],
+  //   cons: [
+  //     "Premium experience let down by quality issues like poorly fitting panels, mushy switches and flimsy stalks.",
+  //     "Small boot will be a hassle if it’s the only car in the family.",
+  //     "Cramped footwell, no space for dead pedal for driver",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Pearl White", "bg-blue-600"],
+  //   color2: ["Aquamarine", "bg-gray-400"],
+  //   color3: ["Dual-Tone Red Rage", "bg-gray-400"],
+  //   color4: ["Dual-Tone Aquamarine", "bg-gray-400"],
+  //   color5: ["Red Rage", "bg-gray-400"],
+  //   color6: ["D'Sat Silver", "bg-gray-400"],
+  //   color7: ["Napoli Black", "bg-gray-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 8.19 Lakh onwards",
+  //     "14.7 to 21.7 kmpl",
+  //     "1496 to 1498 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,998 mm L x 1,765 mm W x 1,647 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 6.92 Lakh Onwards",
+  //     "17.52 to 23.4 kmpl",
+  //     "998 to 1493 cc",
+  //     "Clutchless Manual & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,770 mm W x 1,590 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of XUV300?",
+  //     "The on-road price of XUV300 in Delhi starts at ‎₹ 8.97 Lakh and goes upto ‎₹ 15.91 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between XUV300 and Nexon?",
+  //     "XUV300 price starts at ₹ 7.96 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Nexon price starts at ₹ 7.29 Lakh ex-showroom and It comes with 1199 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Mahindra XUV300?",
+  //     "The Mahindra XUV300 mileage is 17 - 20 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -333,43 +368,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

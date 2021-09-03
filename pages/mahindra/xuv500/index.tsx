@@ -32,161 +32,196 @@ import { TXUV500 } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "₹ 14.27 Lakh";
-  const TopPic = Xuv500;
-  const CarName = "Mahindra XUV 500";
-  const OnlyName = "XUV 500";
-  const ThumPic = TXUV500;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 14.27 Lakh onwards",
-    "15.1 kmpl",
-    "2179 cc",
-    "Manual & Automatic",
-    "Diesel",
-    "7 Seater",
-    "4,585 mm L x 1,890 mm W x 1,785 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Up to six airbags",
-    "Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-    "Electronic Stability Program (ESP) with Rollover mitigation",
-    "hill hold and hill descent control",
-    "disc brakes on all wheels",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {};
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: ["W7", "2179 cc, Manual, Diesel, 15.1 kmpl", "Rs.15.56 Lakh*"],
-    varient2: [
-      "W7 AT",
-      "2179 cc, Automatic, Diesel, 15.1 kmpl",
-      "Rs.16.76 Lakh*",
-    ],
-    varient3: ["W9", "2179 cc, Manual, Diesel, 15.1 kmpl", "Rs.17.30 Lakh*"],
-    varient4: [
-      "W9 AT",
-      "2179 cc, Automatic, Diesel, 15.1 kmpl",
-      "Rs.18.51 Lakh*",
-    ],
-    varient5: [
-      "W11 Option",
-      "2179 cc, Manual, Diesel, 15.1 kmpl",
-      "Rs.18.84 Lakh*",
-    ],
-    varient6: [
-      "W11 Option AT",
-      "2179 cc, Automatic, Diesel, 15.1 kmpl",
-      "Rs.20.07 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Mahindra has increased the prices of the XUV500 by up to Rs 4,000. Mahindra XUV500 Price: The XUV500 is now priced from Rs 15.56 lakh to Rs 20.07 lakh (ex-showroom Delhi). Mahindra XUV500 Variants: It is sold in three trims: W7, W9, and W11. Mahindra XUV500 Seating Capacity: Mahindra’s mid-size SUV can carry up to seven people. Mahindra XUV500 Engine and Transmission: It gets a 2.2-litre diesel engine (155PS/360Nm), coupled with a 6-speed manual or torque converter gearbox. Mahindra XUV500 Features: The XUV500 is equipped with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a 6-way adjustable driver seat, a sunroof, and cruise control. Mahindra XUV500 Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Mahindra XUV500 Rivals: The XUV500 locks horns with the Jeep Compass, Hyundai Tucson, Toyota Innova Crysta, MG Hector, and the Hyundai Alcazar. Mahindra XUV700: Mahindra is expected to launch the XUV700, XUV500’s spiritual successor, in August 2021.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "4WD option offered with both manual and automatic transmissions",
-      "The XUV500 is the only SUV in its class to offer an automatic transmission with every variant except the base",
-      "The XUV500 has a lot of road presence thanks to its large dimensions and muscular design",
-    ],
-    cons: [
-      "Petrol derivative available only with an automatic transmission",
-      "Quality of some of the switches and the AC vents aren’t up to the mark, especially when you consider the price of the higher-spec variants",
-      "The 4WD variant is exclusive to the top-spec W11(O) variant, which puts it out of reach for many buyers",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Lake Side Brown", "bg-blue-600"],
-    color2: ["Pearl White", "bg-gray-400"],
-    color3: ["Mystic Copper", "bg-gray-400"],
-    color4: ["Moondust Silver", "bg-gray-400"],
-    color5: ["Crimson Red", "bg-gray-400"],
-    color6: ["Volcano Black", "bg-gray-400"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 16.30 Lakh Onwards",
-      "14.2 to 20.4 kmpl",
-      "1493 to 1999 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Petrol & Diesel",
-      "6 & 7 Seater",
-      "4,500 mm L x 1,790 mm W x 1,675 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46812/alcazar-exterior-right-front-three-quarter.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of XUV500?",
-      "The on-road price of XUV500 in Delhi starts at ‎₹ 17 Lakh and goes upto ‎₹ 23.77 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between XUV500 and Safari?",
-      "XUV500 price starts at ₹ 14.27 Lakh ex-showroom and It comes with 2179 cc engine. Whereas Safari price starts at ₹ 14.99 Lakh ex-showroom and It comes with 1956 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Mahindra XUV500?",
-      "The Mahindra XUV500 mileage is 15.1 - 15.1 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "₹ 14.27 Lakh";
+  // const TopPic = Xuv500;
+  // const CarName = "Mahindra XUV 500";
+  // const OnlyName = "XUV 500";
+  // const ThumPic = TXUV500;
+
+  // const KeySpecification = [
+  //   "₹ 14.27 Lakh onwards",
+  //   "15.1 kmpl",
+  //   "2179 cc",
+  //   "Manual & Automatic",
+  //   "Diesel",
+  //   "7 Seater",
+  //   "4,585 mm L x 1,890 mm W x 1,785 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Up to six airbags",
+  //   "Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
+  //   "Electronic Stability Program (ESP) with Rollover mitigation",
+  //   "hill hold and hill descent control",
+  //   "disc brakes on all wheels",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: ["W7", "2179 cc, Manual, Diesel, 15.1 kmpl", "Rs.15.56 Lakh*"],
+  //   varient2: [
+  //     "W7 AT",
+  //     "2179 cc, Automatic, Diesel, 15.1 kmpl",
+  //     "Rs.16.76 Lakh*",
+  //   ],
+  //   varient3: ["W9", "2179 cc, Manual, Diesel, 15.1 kmpl", "Rs.17.30 Lakh*"],
+  //   varient4: [
+  //     "W9 AT",
+  //     "2179 cc, Automatic, Diesel, 15.1 kmpl",
+  //     "Rs.18.51 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "W11 Option",
+  //     "2179 cc, Manual, Diesel, 15.1 kmpl",
+  //     "Rs.18.84 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "W11 Option AT",
+  //     "2179 cc, Automatic, Diesel, 15.1 kmpl",
+  //     "Rs.20.07 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Mahindra has increased the prices of the XUV500 by up to Rs 4,000. Mahindra XUV500 Price: The XUV500 is now priced from Rs 15.56 lakh to Rs 20.07 lakh (ex-showroom Delhi). Mahindra XUV500 Variants: It is sold in three trims: W7, W9, and W11. Mahindra XUV500 Seating Capacity: Mahindra’s mid-size SUV can carry up to seven people. Mahindra XUV500 Engine and Transmission: It gets a 2.2-litre diesel engine (155PS/360Nm), coupled with a 6-speed manual or torque converter gearbox. Mahindra XUV500 Features: The XUV500 is equipped with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a 6-way adjustable driver seat, a sunroof, and cruise control. Mahindra XUV500 Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Mahindra XUV500 Rivals: The XUV500 locks horns with the Jeep Compass, Hyundai Tucson, Toyota Innova Crysta, MG Hector, and the Hyundai Alcazar. Mahindra XUV700: Mahindra is expected to launch the XUV700, XUV500’s spiritual successor, in August 2021.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "4WD option offered with both manual and automatic transmissions",
+  //     "The XUV500 is the only SUV in its class to offer an automatic transmission with every variant except the base",
+  //     "The XUV500 has a lot of road presence thanks to its large dimensions and muscular design",
+  //   ],
+  //   cons: [
+  //     "Petrol derivative available only with an automatic transmission",
+  //     "Quality of some of the switches and the AC vents aren’t up to the mark, especially when you consider the price of the higher-spec variants",
+  //     "The 4WD variant is exclusive to the top-spec W11(O) variant, which puts it out of reach for many buyers",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Lake Side Brown", "bg-blue-600"],
+  //   color2: ["Pearl White", "bg-gray-400"],
+  //   color3: ["Mystic Copper", "bg-gray-400"],
+  //   color4: ["Moondust Silver", "bg-gray-400"],
+  //   color5: ["Crimson Red", "bg-gray-400"],
+  //   color6: ["Volcano Black", "bg-gray-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 16.30 Lakh Onwards",
+  //     "14.2 to 20.4 kmpl",
+  //     "1493 to 1999 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Petrol & Diesel",
+  //     "6 & 7 Seater",
+  //     "4,500 mm L x 1,790 mm W x 1,675 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46812/alcazar-exterior-right-front-three-quarter.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of XUV500?",
+  //     "The on-road price of XUV500 in Delhi starts at ‎₹ 17 Lakh and goes upto ‎₹ 23.77 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between XUV500 and Safari?",
+  //     "XUV500 price starts at ₹ 14.27 Lakh ex-showroom and It comes with 2179 cc engine. Whereas Safari price starts at ₹ 14.99 Lakh ex-showroom and It comes with 1956 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Mahindra XUV500?",
+  //     "The Mahindra XUV500 mileage is 15.1 - 15.1 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -254,43 +289,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

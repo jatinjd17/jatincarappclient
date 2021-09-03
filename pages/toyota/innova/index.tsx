@@ -32,236 +32,271 @@ import { TInnova } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Toyota";
-  const CarPrice = "₹ 16.82 Lakh";
-  const TopPic = Innova;
-  const CarName = "Toyota Innova";
-  const OnlyName = "Innova";
-  const ThumPic = TInnova;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 16.82 Lakh onwards",
-    "10.01 to 14.22 kmpl",
-    "2393 to 2694 cc",
-    "Manual & Automatic (Torque Converter)",
-    "Petrol & Diesel",
-    "7-8 Seater",
-    "4,735 mm L x 1,830 mm W x 1,795 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "7 airbags",
-    "ABS with EBD and CSC",
-    "reverse parking sensors",
-    "ISOFIX",
-    "driver and co-driver seatbelt reminder",
-    "high-speed alert system",
-    "impact sensing auto door unlock.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "2.7 GX 7 STR",
-      "2694 cc, Manual, Petrol, 11 kmpl",
-      "Rs.16.82 Lakh*",
-    ],
-    varient2: [
-      "2.7 GX 8 STR",
-      "2694 cc, Manual, Petrol, 11 kmpl",
-      "Rs.16.87 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient3: [
-      "2.7 GX 7 STR AT",
-      "2694 cc, Automatic, Petrol, 11 kmpl",
-      "Rs.18.18 Lakh*",
-    ],
-    varient4: [
-      "2.7 GX 8 STR AT",
-      "2694 cc, Automatic, Petrol, 11 kmpl",
-      "Rs.18.23 Lakh*",
-    ],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient5: [
-      "2.7 VX 7 STR",
-      "2694 cc, Manual, Petrol, 11 kmpl",
-      "Rs.20.26 Lakh*",
-    ],
+  const VarientCNG = joy.VarientCNG;
 
-    varient6: [
-      "2.7 ZX 7 STR AT",
-      "2694 cc, Automatic, Petrol, 11 kmpl",
-      "Rs.23.14 Lakh*",
-    ],
-  };
+  const Mileage = joy.Mileage;
 
-  const VarientDiesel = {
-    varient1: [
-      "2.4 G 7 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.17.58 Lakh*",
-    ],
-    varient2: [
-      "2.4 G 8 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.17.63 Lakh*",
-    ],
-    varient3: [
-      "2.4 G Plus 7 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.18.51 Lakh*",
-    ],
-    varient4: [
-      "2.4 G Plus 8 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.18.56 Lakh*",
-    ],
-    varient5: [
-      "2.4 GX 7 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.18.63 Lakh*",
-    ],
-    varient6: [
-      "2.4 GX 8 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.18.68 Lakh*",
-    ],
-    varient7: [
-      "2.4 GX 7 STR AT",
-      "2755 cc, Automatic, Diesel, 11 kmpl",
-      "Rs.19.94 Lakh*",
-    ],
-    varient8: [
-      "2.4 GX 8 STR AT",
-      "2755 cc, Automatic, Diesel, 11 kmpl",
-      "Rs.19.99 Lakh*",
-    ],
-    varient9: [
-      "2.4 VX 7 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.22.15 Lakh*",
-    ],
-    varient10: [
-      "2.4 VX 8 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.22.20 Lakh*",
-    ],
-    varient11: [
-      "2.4 ZX 7 STR",
-      "2755 cc, Manual, Diesel, 11 kmpl",
-      "Rs.23.79 Lakh*",
-    ],
-    varient12: [
-      "2.4 ZX 7 STR AT",
-      "2755 cc, Automatic, Diesel, 11 kmpl",
-      "Rs.24.99 Lakh*",
-    ],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const VarientCNG = {};
+  const ProsCons = joy.ProsCons;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Colorss = joy.Colorss;
 
-  const LatestUpdate = [
-    "Latest Update: Toyota has hiked the prices of the Innova Crysta by up to Rs 68,000. Toyota Innova Crysta Price: The facelifted Innova Crysta is now priced from Rs 16.82 lakh to Rs 24.99 lakh (ex-showroom Delhi). Toyota Innova Crysta Variants: Toyota offers the MPV in five trims: G, G+, GX, VX, and ZX. Toyota Innova Crysta Seating Capacity: It comes in both 7- and 8-seater layouts. Toyota Innova Crysta Engine and Transmission: The Innova Crysta gets a 2.7-litre petrol (166PS/245Nm) and a 2.4-litre diesel engine (150PS/360Nm). Both are mated to a 5-speed manual transmission and offer a 6-speed torque converter unit as an option. Toyota Innova Crysta Features: It comes with an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, powered driver’s seat, ambient lighting, auto LED headlamps, and cruise control. Toyota Innova Crysta Safety: Safety kit includes front and rear parking sensors, up to seven airbags, and vehicle stability control. Toyota Innova Crysta Rivals: It rivals the MG Hector Plus, Tata Safari, and the upcoming Hexa BS6.",
-  ];
+  const ComparisionCar = joy.ComparisionCar;
 
-  const ProsCons = {
-    pros: [
-      "Spacious and practical cabin",
-      "Toyota’s renowned reliability factor",
-      "Great resale value",
-    ],
-    cons: [
-      "Is slightly expensive for what it offers ",
-      "Bootspace with third row up is negligible ",
-      "Low-speed ride could have been better ",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const Colorss = {
-    color1: ["Sparkling Black Crystal Shine", "bg-gray-800"],
-    color2: ["Garnet Red", "bg-red-900"],
-    color3: ["White Pearl Crystal Shine", "bg-white-900"],
-    color4: ["Avant Garde Bronze", "bg-gray-100"],
-    color5: ["Silver", "bg-gray-900"],
-    color6: ["Grey", "bg-gray-600"],
-    color7: ["Super White", "bg-gray-100"],
-  };
+  const faqs = joy.faqs;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const articles = joy.articles;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Innova Crysta?",
-      "The on-road price of Innova Crysta in Delhi starts at ‎₹ 19.82 Lakh and goes upto ‎₹ 29.83 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
-    ],
-    question2: [
-      "Which car is better between Innova Crysta and Carnival?",
-      "Innova Crysta price starts at ₹ 16.82 Lakh ex-showroom and It comes with 2694 cc engine. Whereas Carnival price starts at ₹ 24.95 Lakh ex-showroom and It comes with 2199 cc",
-    ],
-    question3: [
-      "What is price of Innova Crysta top model?",
-      "Top model of Innova Crysta is 2.4 ZX AT 7 STR and the ex-showroom for Innova Crysta 2.4 ZX AT 7 STR is ₹ 24.98 Lakh.",
-    ],
-  };
+  // const CompanyName = "Toyota";
+  // const CarPrice = "₹ 16.82 Lakh";
+  // const TopPic = Innova;
+  // const CarName = "Toyota Innova";
+  // const OnlyName = "Innova";
+  // const ThumPic = TInnova;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 16.82 Lakh onwards",
+  //   "10.01 to 14.22 kmpl",
+  //   "2393 to 2694 cc",
+  //   "Manual & Automatic (Torque Converter)",
+  //   "Petrol & Diesel",
+  //   "7-8 Seater",
+  //   "4,735 mm L x 1,830 mm W x 1,795 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "7 airbags",
+  //   "ABS with EBD and CSC",
+  //   "reverse parking sensors",
+  //   "ISOFIX",
+  //   "driver and co-driver seatbelt reminder",
+  //   "high-speed alert system",
+  //   "impact sensing auto door unlock.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "2.7 GX 7 STR",
+  //     "2694 cc, Manual, Petrol, 11 kmpl",
+  //     "Rs.16.82 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "2.7 GX 8 STR",
+  //     "2694 cc, Manual, Petrol, 11 kmpl",
+  //     "Rs.16.87 Lakh*",
+  //   ],
+
+  //   varient3: [
+  //     "2.7 GX 7 STR AT",
+  //     "2694 cc, Automatic, Petrol, 11 kmpl",
+  //     "Rs.18.18 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "2.7 GX 8 STR AT",
+  //     "2694 cc, Automatic, Petrol, 11 kmpl",
+  //     "Rs.18.23 Lakh*",
+  //   ],
+
+  //   varient5: [
+  //     "2.7 VX 7 STR",
+  //     "2694 cc, Manual, Petrol, 11 kmpl",
+  //     "Rs.20.26 Lakh*",
+  //   ],
+
+  //   varient6: [
+  //     "2.7 ZX 7 STR AT",
+  //     "2694 cc, Automatic, Petrol, 11 kmpl",
+  //     "Rs.23.14 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "2.4 G 7 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.17.58 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "2.4 G 8 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.17.63 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "2.4 G Plus 7 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.18.51 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "2.4 G Plus 8 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.18.56 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "2.4 GX 7 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.18.63 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "2.4 GX 8 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.18.68 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "2.4 GX 7 STR AT",
+  //     "2755 cc, Automatic, Diesel, 11 kmpl",
+  //     "Rs.19.94 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "2.4 GX 8 STR AT",
+  //     "2755 cc, Automatic, Diesel, 11 kmpl",
+  //     "Rs.19.99 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "2.4 VX 7 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.22.15 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "2.4 VX 8 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.22.20 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "2.4 ZX 7 STR",
+  //     "2755 cc, Manual, Diesel, 11 kmpl",
+  //     "Rs.23.79 Lakh*",
+  //   ],
+  //   varient12: [
+  //     "2.4 ZX 7 STR AT",
+  //     "2755 cc, Automatic, Diesel, 11 kmpl",
+  //     "Rs.24.99 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Toyota has hiked the prices of the Innova Crysta by up to Rs 68,000. Toyota Innova Crysta Price: The facelifted Innova Crysta is now priced from Rs 16.82 lakh to Rs 24.99 lakh (ex-showroom Delhi). Toyota Innova Crysta Variants: Toyota offers the MPV in five trims: G, G+, GX, VX, and ZX. Toyota Innova Crysta Seating Capacity: It comes in both 7- and 8-seater layouts. Toyota Innova Crysta Engine and Transmission: The Innova Crysta gets a 2.7-litre petrol (166PS/245Nm) and a 2.4-litre diesel engine (150PS/360Nm). Both are mated to a 5-speed manual transmission and offer a 6-speed torque converter unit as an option. Toyota Innova Crysta Features: It comes with an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, powered driver’s seat, ambient lighting, auto LED headlamps, and cruise control. Toyota Innova Crysta Safety: Safety kit includes front and rear parking sensors, up to seven airbags, and vehicle stability control. Toyota Innova Crysta Rivals: It rivals the MG Hector Plus, Tata Safari, and the upcoming Hexa BS6.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Spacious and practical cabin",
+  //     "Toyota’s renowned reliability factor",
+  //     "Great resale value",
+  //   ],
+  //   cons: [
+  //     "Is slightly expensive for what it offers ",
+  //     "Bootspace with third row up is negligible ",
+  //     "Low-speed ride could have been better ",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Sparkling Black Crystal Shine", "bg-gray-800"],
+  //   color2: ["Garnet Red", "bg-red-900"],
+  //   color3: ["White Pearl Crystal Shine", "bg-white-900"],
+  //   color4: ["Avant Garde Bronze", "bg-gray-100"],
+  //   color5: ["Silver", "bg-gray-900"],
+  //   color6: ["Grey", "bg-gray-600"],
+  //   color7: ["Super White", "bg-gray-100"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Innova Crysta?",
+  //     "The on-road price of Innova Crysta in Delhi starts at ‎₹ 19.82 Lakh and goes upto ‎₹ 29.83 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Innova Crysta and Carnival?",
+  //     "Innova Crysta price starts at ₹ 16.82 Lakh ex-showroom and It comes with 2694 cc engine. Whereas Carnival price starts at ₹ 24.95 Lakh ex-showroom and It comes with 2199 cc",
+  //   ],
+  //   question3: [
+  //     "What is price of Innova Crysta top model?",
+  //     "Top model of Innova Crysta is 2.4 ZX AT 7 STR and the ex-showroom for Innova Crysta 2.4 ZX AT 7 STR is ₹ 24.98 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -319,18 +354,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Hilux",
-      "Rs.18.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
-      "Land Cruiser",
-      "Rs.1.50 Cr*",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Hilux",
+  //     "Rs.18.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
+  //     "Land Cruiser",
+  //     "Rs.1.50 Cr*",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

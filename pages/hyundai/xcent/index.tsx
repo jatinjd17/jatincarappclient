@@ -29,147 +29,182 @@ import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 
 function Homee({ joy }) {
-  const CompanyName = "Hyundai";
-  const CarPrice = "Rs.6.40 Lakh";
-  const TopPic =
-    "https://imgd.aeplcdn.com/664x374/n/cw/ec/26914/xcent-exterior-right-front-three-quarter.jpeg?q=85";
-  const CarName = "Hyundai Xcent";
-  const OnlyName = "Xcent";
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "Rs.6.40 Lakh onwards",
-    "15.38 kmpl",
-    "1197 cc",
-    "Manual",
-    "Petrol & CNG",
-    "5 Seater",
-    "3,995 mm L x 1,660 mm W x 1,520 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Impact Sensing Auto Door Unlock",
-    "2 airbags",
-    "ABS",
-    "EBD",
-    "Central Locking",
-    "Emergency Stop Signal",
-    "Driver & Passenger SeatBelt Reminder",
-    "Speed Sensing Auto Door Lock",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "T Plus",
-      "1197 cc, Manual, Petrol, 15.38 kmpl",
-      "Rs.6.40 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {
-    varient1: [
-      "T Plus CNG",
-      "1197 cc, Manual, CNG, 25.4 km/kg",
-      "Rs.7.25 Lakh*",
-    ],
-  };
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = ["Latest Update: Xcent Discontinued..."];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Efficient petrol engine",
-      "Good interior fit and finish",
-      "Ride comfort is brilliant for Indian road conditions",
-    ],
-    cons: [
-      "Noisy suspension ",
-      "Airbags and ABS absent on lower variants",
-      "No diesel option",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Typhoon Silver", "bg-red-800"],
-    color2: ["Polar White", "bg-gray-900"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.98 Lakh onwards",
-      "23.26 to 24.12 kmpl",
-      "1197 cc",
-      "Manual & Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,735 mm W x 1,515 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 6.00 Lakh onwards",
-      "20 to 28 kmpl",
-      "998 to 1197 cc",
-      "Manual & Automatic AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,680 mm W x 1,520 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the price of Hyundai Xcent?",
-      "Hyundai has stopped the production of Hyundai Xcent. The last recorded price of Hyundai Xcent is ₹ 5.81 Lakh.",
-    ],
-    question2: [
-      "Which car is better between Xcent and Aura?",
-      "Hyundai Xcent price starts at ₹ 5.81 Lakh ex-showroom and it comes with 1197cc engine. Whereas, Aura price starts at ₹ 6.00 Lakh ex-showroom and it comes with 1197cc engine.",
-    ],
-    question3: [
-      "Is there a new coming up Xcent?",
-      "No, there is no running/upcoming Hyundai Xcent.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Hyundai";
+  // const CarPrice = "Rs.6.40 Lakh";
+  // const TopPic =
+  //   "https://imgd.aeplcdn.com/664x374/n/cw/ec/26914/xcent-exterior-right-front-three-quarter.jpeg?q=85";
+  // const CarName = "Hyundai Xcent";
+  // const OnlyName = "Xcent";
+
+  // const KeySpecification = [
+  //   "Rs.6.40 Lakh onwards",
+  //   "15.38 kmpl",
+  //   "1197 cc",
+  //   "Manual",
+  //   "Petrol & CNG",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,660 mm W x 1,520 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Impact Sensing Auto Door Unlock",
+  //   "2 airbags",
+  //   "ABS",
+  //   "EBD",
+  //   "Central Locking",
+  //   "Emergency Stop Signal",
+  //   "Driver & Passenger SeatBelt Reminder",
+  //   "Speed Sensing Auto Door Lock",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "T Plus",
+  //     "1197 cc, Manual, Petrol, 15.38 kmpl",
+  //     "Rs.6.40 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {
+  //   varient1: [
+  //     "T Plus CNG",
+  //     "1197 cc, Manual, CNG, 25.4 km/kg",
+  //     "Rs.7.25 Lakh*",
+  //   ],
+  // };
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = ["Latest Update: Xcent Discontinued..."];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Efficient petrol engine",
+  //     "Good interior fit and finish",
+  //     "Ride comfort is brilliant for Indian road conditions",
+  //   ],
+  //   cons: [
+  //     "Noisy suspension ",
+  //     "Airbags and ABS absent on lower variants",
+  //     "No diesel option",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Typhoon Silver", "bg-red-800"],
+  //   color2: ["Polar White", "bg-gray-900"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.98 Lakh onwards",
+  //     "23.26 to 24.12 kmpl",
+  //     "1197 cc",
+  //     "Manual & Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,735 mm W x 1,515 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 6.00 Lakh onwards",
+  //     "20 to 28 kmpl",
+  //     "998 to 1197 cc",
+  //     "Manual & Automatic AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,680 mm W x 1,520 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the price of Hyundai Xcent?",
+  //     "Hyundai has stopped the production of Hyundai Xcent. The last recorded price of Hyundai Xcent is ₹ 5.81 Lakh.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Xcent and Aura?",
+  //     "Hyundai Xcent price starts at ₹ 5.81 Lakh ex-showroom and it comes with 1197cc engine. Whereas, Aura price starts at ₹ 6.00 Lakh ex-showroom and it comes with 1197cc engine.",
+  //   ],
+  //   question3: [
+  //     "Is there a new coming up Xcent?",
+  //     "No, there is no running/upcoming Hyundai Xcent.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -257,28 +292,28 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
-      "i20 N Line",
-      "₹ 11.00 - 13.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
-      "AX1 micro-SUV",
-      "₹ 4.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
-      "New Kona",
-      "₹ 23.00 - 25.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
-      "New Elantra",
-      "₹ 16.00 - 20.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
+  //     "i20 N Line",
+  //     "₹ 11.00 - 13.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "AX1 micro-SUV",
+  //     "₹ 4.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
+  //     "New Kona",
+  //     "₹ 23.00 - 25.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
+  //     "New Elantra",
+  //     "₹ 16.00 - 20.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

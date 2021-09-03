@@ -32,173 +32,208 @@ import { TElantra } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Hyundai";
-  const CarPrice = "₹ 17.86 Lakh";
-  const TopPic = Elantra;
-  const CarName = "Hyundai Elantra";
-  const OnlyName = "Elantra";
-  const ThumPic = TElantra;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 17.86 Lakh onwards",
-    "14.59 - 14.62 kmpl",
-    "1493 to 1999 cc",
-    "Manual, Automatic",
-    "Petrol & Diesel",
-    "5 Seater",
-    "4,620 mm L x 1,800 mm W x 1,465 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Impact Sensing Auto Door Unlock",
-    "6 airbags",
-    "ABS",
-    "EBD",
-    "Central Locking",
-    "Emergency Stop Signal",
-    "Driver & Passenger SeatBelt Reminder",
-    "Speed Sensing Auto Door Lock",
-    "Headlamp Escort Function",
-    "ISOFIX",
-    "Speed Alert System",
-    "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "VTVT SX",
-      "1999 cc, Manual, Petrol, 14.59 kmpl",
-      "Rs.17.86 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient2: [
-      "VTVT SX AT",
-      "1999 cc, Automatic, Petrol, 14.62 kmpl",
-      "Rs.18.89 Lakh*",
-    ],
-    varient3: [
-      "VTVT SX Option AT",
-      "1999 cc, Automatic, Petrol, 14.62 kmpl",
-      "s.20.11 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientDiesel = {
-    varient1: [
-      "CRDi SX",
-      "1493 cc, Manual, Diesel, 14.59 kmpl",
-      "Rs.18.88 Lakh*",
-    ],
+  const VarientCNG = joy.VarientCNG;
 
-    varient2: [
-      "CRDi SX Option AT",
-      "1493 cc, Automatic, Diesel, 14.62 kmpl",
-      "Rs.21.13 Lakh*",
-    ],
-  };
+  const Mileage = joy.Mileage;
 
-  const VarientCNG = {};
+  const LatestUpdate = joy.LatestUpdate;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const LatestUpdate = [
-    "Latest Update: Hyundai has increased the prices of the Elantra by up to Rs 15,000. Hyundai Elantra Price: The sedan is priced between Rs 17.85 lakh and Rs 21.12 lakh (ex-showroom Delhi). Hyundai Elantra Variants: It is available in two variants: SX and SX(O).  Hyundai Elantra Powertrain: It comes with a 2.0-litre petrol engine (152PS/192Nm), mated to a 6-speed manual or automatic transmission. The diesel Elantra is powered by the second-gen Hyundai Creta’s 1.5-litre unit (115PS/250Nm) and shares its transmission options with its petrol counterpart. Hyundai Elantra Features: The Elantra comes with an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, dual-zone climate control, a sunroof, wireless charging, connected car tech, and Infinity sound system. Hyundai Elantra Safety: Safety features on offer include six airbags, electronic stability control, and front and rear parking sensors. Hyundai Elantra Rivals: It goes up against the Honda Civic and the upcoming new-gen Skoda Octavia. Hyundai Elantra 2021: Hyundai is expected to launch the next-gen Elantra in India in the second half of 2021.",
-  ];
+  const Colorss = joy.Colorss;
 
-  const ProsCons = {
-    pros: [
-      "Wonderfully balanced ride quality. Super comfortable in the city.",
-      "Engine-transmission combination is well tuned. Offers a smooth, hassle free drive on all fronts.",
-      "Convenience features like ventilated seats and wireless charger are a must have in today’s conditions.",
-    ],
-    cons: [
-      "Looks are polarizing. Use of triangles on an otherwise curvy design feels a mismatch.",
-      "The exteriors have been modernised but the interiors still feel old-school.",
-      "Missing features like an auto day/night IRVM, electronic boot and fuel cap release and one-touch power windows for the passengers takes back from the premium experience",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const Colorss = {
-    color1: ["Fiery Red", "bg-red-800"],
-    color2: ["Typhoon Silver", "bg-gray-900"],
-    color3: ["Phantom Black", "bg-gray-600"],
-    color4: ["Marine Blue", "bg-white"],
-    color5: ["Polar White", "bg-blue-800"],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.31.99 - 34.99 Lakh",
-      "15.1 kmpl",
-      "1984 cc",
-      "Automatic",
-      "Petrol",
-      "5 Seater",
-      "4,869 mm L x 1,864 mm W x 1,469 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Superb/6764/1592459454448/front-left-side-47.jpg",
-    ],
-    comparisioncar2: [
-      "₹ 26.01 Lakh onwards",
-      "15.81 kmpl",
-      "1984 cc",
-      "Automatic",
-      "Petrol",
-      "5 Seater",
-      "4,689 mm L x 1,469 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40371/octavia-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  const articles = joy.articles;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Elantra?",
-      "The on-road price of Elantra in Delhi starts at ‎₹ 20.81 Lakh and goes upto ‎₹ 25.07 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Elantra and Octavia?",
-      "Elantra price starts at ₹ 17.86 Lakh ex-showroom and It comes with 1999 cc engine. Whereas Octavia price starts at ₹ 26.01 Lakh ex-showroom and It comes with 1984 cc engine ",
-    ],
-    question3: [
-      "What is the mileage of Hyundai Elantra?",
-      "The Hyundai Elantra mileage is 15 - 17.32 kmpl.",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const CompanyName = "Hyundai";
+  // const CarPrice = "₹ 17.86 Lakh";
+  // const TopPic = Elantra;
+  // const CarName = "Hyundai Elantra";
+  // const OnlyName = "Elantra";
+  // const ThumPic = TElantra;
+
+  // const KeySpecification = [
+  //   "₹ 17.86 Lakh onwards",
+  //   "14.59 - 14.62 kmpl",
+  //   "1493 to 1999 cc",
+  //   "Manual, Automatic",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "4,620 mm L x 1,800 mm W x 1,465 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Impact Sensing Auto Door Unlock",
+  //   "6 airbags",
+  //   "ABS",
+  //   "EBD",
+  //   "Central Locking",
+  //   "Emergency Stop Signal",
+  //   "Driver & Passenger SeatBelt Reminder",
+  //   "Speed Sensing Auto Door Lock",
+  //   "Headlamp Escort Function",
+  //   "ISOFIX",
+  //   "Speed Alert System",
+  //   "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "VTVT SX",
+  //     "1999 cc, Manual, Petrol, 14.59 kmpl",
+  //     "Rs.17.86 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "VTVT SX AT",
+  //     "1999 cc, Automatic, Petrol, 14.62 kmpl",
+  //     "Rs.18.89 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "VTVT SX Option AT",
+  //     "1999 cc, Automatic, Petrol, 14.62 kmpl",
+  //     "s.20.11 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "CRDi SX",
+  //     "1493 cc, Manual, Diesel, 14.59 kmpl",
+  //     "Rs.18.88 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "CRDi SX Option AT",
+  //     "1493 cc, Automatic, Diesel, 14.62 kmpl",
+  //     "Rs.21.13 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Hyundai has increased the prices of the Elantra by up to Rs 15,000. Hyundai Elantra Price: The sedan is priced between Rs 17.85 lakh and Rs 21.12 lakh (ex-showroom Delhi). Hyundai Elantra Variants: It is available in two variants: SX and SX(O).  Hyundai Elantra Powertrain: It comes with a 2.0-litre petrol engine (152PS/192Nm), mated to a 6-speed manual or automatic transmission. The diesel Elantra is powered by the second-gen Hyundai Creta’s 1.5-litre unit (115PS/250Nm) and shares its transmission options with its petrol counterpart. Hyundai Elantra Features: The Elantra comes with an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, dual-zone climate control, a sunroof, wireless charging, connected car tech, and Infinity sound system. Hyundai Elantra Safety: Safety features on offer include six airbags, electronic stability control, and front and rear parking sensors. Hyundai Elantra Rivals: It goes up against the Honda Civic and the upcoming new-gen Skoda Octavia. Hyundai Elantra 2021: Hyundai is expected to launch the next-gen Elantra in India in the second half of 2021.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Wonderfully balanced ride quality. Super comfortable in the city.",
+  //     "Engine-transmission combination is well tuned. Offers a smooth, hassle free drive on all fronts.",
+  //     "Convenience features like ventilated seats and wireless charger are a must have in today’s conditions.",
+  //   ],
+  //   cons: [
+  //     "Looks are polarizing. Use of triangles on an otherwise curvy design feels a mismatch.",
+  //     "The exteriors have been modernised but the interiors still feel old-school.",
+  //     "Missing features like an auto day/night IRVM, electronic boot and fuel cap release and one-touch power windows for the passengers takes back from the premium experience",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Fiery Red", "bg-red-800"],
+  //   color2: ["Typhoon Silver", "bg-gray-900"],
+  //   color3: ["Phantom Black", "bg-gray-600"],
+  //   color4: ["Marine Blue", "bg-white"],
+  //   color5: ["Polar White", "bg-blue-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.31.99 - 34.99 Lakh",
+  //     "15.1 kmpl",
+  //     "1984 cc",
+  //     "Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,869 mm L x 1,864 mm W x 1,469 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Superb/6764/1592459454448/front-left-side-47.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 26.01 Lakh onwards",
+  //     "15.81 kmpl",
+  //     "1984 cc",
+  //     "Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,689 mm L x 1,469 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40371/octavia-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Elantra?",
+  //     "The on-road price of Elantra in Delhi starts at ‎₹ 20.81 Lakh and goes upto ‎₹ 25.07 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Elantra and Octavia?",
+  //     "Elantra price starts at ₹ 17.86 Lakh ex-showroom and It comes with 1999 cc engine. Whereas Octavia price starts at ₹ 26.01 Lakh ex-showroom and It comes with 1984 cc engine ",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Hyundai Elantra?",
+  //     "The Hyundai Elantra mileage is 15 - 17.32 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -276,28 +311,28 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
-      "i20 N Line",
-      "₹ 11.00 - 13.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
-      "AX1 micro-SUV",
-      "₹ 4.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
-      "New Kona",
-      "₹ 23.00 - 25.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
-      "New Elantra",
-      "₹ 16.00 - 20.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
+  //     "i20 N Line",
+  //     "₹ 11.00 - 13.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "AX1 micro-SUV",
+  //     "₹ 4.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
+  //     "New Kona",
+  //     "₹ 23.00 - 25.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
+  //     "New Elantra",
+  //     "₹ 16.00 - 20.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

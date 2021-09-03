@@ -32,170 +32,205 @@ import { TTucson } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Hyundai";
-  const CarPrice = "₹ 22.69 Lakh";
-  const TopPic = Tucson;
-  const CarName = "Hyundai Tucson";
-  const OnlyName = "Tucson";
-  const ThumPic = TTucson;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 22.69 Lakh onwards",
-    "14.59 - 14.62 kmpl",
-    "1995 to 1999 cc",
-    "Automatic",
-    "Petrol & Diesel",
-    "5 Seater",
-    "4,480 mm L x 1,850 mm W x 1,660 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Impact Sensing Auto Door Unlock",
-    "6 airbags",
-    "ABS",
-    "EBD",
-    "Central Locking",
-    "Emergency Stop Signal",
-    "Driver & Passenger SeatBelt Reminder",
-    "Speed Sensing Auto Door Lock",
-    "Headlamp Escort Function",
-    "ISOFIX",
-    "Speed Alert System",
-    "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "GL Opt AT",
-      "1999 cc, Automatic, Petrol, 12.95 kmpl",
-      "Rs.22.69 Lakh*",
-    ],
-    varient2: [
-      "GLS AT",
-      "1999 cc, Automatic, Petrol, 12.95 kmpl",
-      "Rs.24.37 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: [
-      "GL Opt Diesel AT",
-      "1995 cc, Automatic, Diesel, 15.38 kmpl",
-      "Rs.24.74 Lakh*",
-    ],
-    varient2: [
-      "GLS Diesel AT",
-      "1995 cc, Automatic, Diesel, 15.38 kmpl",
-      "Rs.26.08 Lakh*",
-    ],
-    varient3: [
-      "GLS 4WD Diesel AT",
-      "1995 cc, Automatic, Diesel, 15.38 kmpl",
-      "Rs.27.47 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Automatic", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The Tucson has become costlier by up to Rs 34,000. Hyundai Tucson Prices: Hyundai has priced the SUV from Rs 22.57 lakh to Rs 27.35 lakh (ex-showroom Delhi). Hyundai Tucson Variants: It is offered in three variants: 2WD AT GL(O), 2WD AT GLS, and 4WD AT GLS. Hyundai Tucson Seating Capacity: Hyundai offers the facelifted Tucson in a 5-seater layout. Hyundai Tucson Powertrains: Under the hood, it is powered by 2.0-litre petrol and diesel engines. While the petrol engine continues to come mated to a 6-speed AT, the diesel unit gets a new 8-speed automatic transmission option, instead of the 6-speed AT in the previous model. The petrol engine produces 152PS and 192Nm, while the output of the diesel unit stands at 185PS and 400Nm. Hyundai Tucson Features: The Tucson gets an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, wireless charging, panoramic sunroof, and electric parking brake. It now comes with rain-sensing wipers, 18-inch alloy wheels, LED headlamps and tail lamps, and Hyundai’s BlueLink connected car tech with the update. Hyundai Tucson Safety: Safety features on the facelifted Tucson include up to six airbags, electronic stability control (ESC), ABS with EBD, and hill start assist. Hyundai Tucson Rivals: It takes on the Skoda Karoq, MG Hector, Jeep Compass, Citroen C5 Aircross, and the upcoming VW Tiguan 2021.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "AT with both petrol and diesel",
-      "Available in an AWD variant",
-      "Cabin layout feels premium",
-    ],
-    cons: [
-      "Looks are polarizing. Use of triangles on an otherwise curvy design feels a mismatch.",
-      "Prices are kept at a premium",
-      "Manual transmission variant would have made the Tucson a bit more affordable",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Typhoon Silver", "bg-red-800"],
-    color2: ["Phantom Black", "bg-gray-900"],
-    color3: ["Starry Night", "bg-gray-600"],
-    color4: ["Polar White", "bg-white"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Tucson?",
-      "The on-road price of Tucson in Delhi starts at ‎₹ 26.56 Lakh and goes upto ‎₹ 32.74 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount",
-    ],
-    question2: [
-      "Which car is better between Tucson and C5 Aircross?",
-      "Tucson price starts at ₹ 22.69 Lakh ex-showroom and It comes with 1999 cc engine. Whereas C5 Aircross price starts at ₹ 30.30 Lakh ex-showroom and It comes with 1997 cc engine. ",
-    ],
-    question3: [
-      "What is price of Tucson top model?",
-      "Top model of Tucson is GLS 4WD AT Diesel and the ex-showroom for Tucson GLS 4WD AT Diesel is ₹ 27.47 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Hyundai";
+  // const CarPrice = "₹ 22.69 Lakh";
+  // const TopPic = Tucson;
+  // const CarName = "Hyundai Tucson";
+  // const OnlyName = "Tucson";
+  // const ThumPic = TTucson;
+
+  // const KeySpecification = [
+  //   "₹ 22.69 Lakh onwards",
+  //   "14.59 - 14.62 kmpl",
+  //   "1995 to 1999 cc",
+  //   "Automatic",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "4,480 mm L x 1,850 mm W x 1,660 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Impact Sensing Auto Door Unlock",
+  //   "6 airbags",
+  //   "ABS",
+  //   "EBD",
+  //   "Central Locking",
+  //   "Emergency Stop Signal",
+  //   "Driver & Passenger SeatBelt Reminder",
+  //   "Speed Sensing Auto Door Lock",
+  //   "Headlamp Escort Function",
+  //   "ISOFIX",
+  //   "Speed Alert System",
+  //   "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "GL Opt AT",
+  //     "1999 cc, Automatic, Petrol, 12.95 kmpl",
+  //     "Rs.22.69 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "GLS AT",
+  //     "1999 cc, Automatic, Petrol, 12.95 kmpl",
+  //     "Rs.24.37 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "GL Opt Diesel AT",
+  //     "1995 cc, Automatic, Diesel, 15.38 kmpl",
+  //     "Rs.24.74 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "GLS Diesel AT",
+  //     "1995 cc, Automatic, Diesel, 15.38 kmpl",
+  //     "Rs.26.08 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "GLS 4WD Diesel AT",
+  //     "1995 cc, Automatic, Diesel, 15.38 kmpl",
+  //     "Rs.27.47 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Automatic", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The Tucson has become costlier by up to Rs 34,000. Hyundai Tucson Prices: Hyundai has priced the SUV from Rs 22.57 lakh to Rs 27.35 lakh (ex-showroom Delhi). Hyundai Tucson Variants: It is offered in three variants: 2WD AT GL(O), 2WD AT GLS, and 4WD AT GLS. Hyundai Tucson Seating Capacity: Hyundai offers the facelifted Tucson in a 5-seater layout. Hyundai Tucson Powertrains: Under the hood, it is powered by 2.0-litre petrol and diesel engines. While the petrol engine continues to come mated to a 6-speed AT, the diesel unit gets a new 8-speed automatic transmission option, instead of the 6-speed AT in the previous model. The petrol engine produces 152PS and 192Nm, while the output of the diesel unit stands at 185PS and 400Nm. Hyundai Tucson Features: The Tucson gets an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, wireless charging, panoramic sunroof, and electric parking brake. It now comes with rain-sensing wipers, 18-inch alloy wheels, LED headlamps and tail lamps, and Hyundai’s BlueLink connected car tech with the update. Hyundai Tucson Safety: Safety features on the facelifted Tucson include up to six airbags, electronic stability control (ESC), ABS with EBD, and hill start assist. Hyundai Tucson Rivals: It takes on the Skoda Karoq, MG Hector, Jeep Compass, Citroen C5 Aircross, and the upcoming VW Tiguan 2021.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "AT with both petrol and diesel",
+  //     "Available in an AWD variant",
+  //     "Cabin layout feels premium",
+  //   ],
+  //   cons: [
+  //     "Looks are polarizing. Use of triangles on an otherwise curvy design feels a mismatch.",
+  //     "Prices are kept at a premium",
+  //     "Manual transmission variant would have made the Tucson a bit more affordable",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Typhoon Silver", "bg-red-800"],
+  //   color2: ["Phantom Black", "bg-gray-900"],
+  //   color3: ["Starry Night", "bg-gray-600"],
+  //   color4: ["Polar White", "bg-white"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Tucson?",
+  //     "The on-road price of Tucson in Delhi starts at ‎₹ 26.56 Lakh and goes upto ‎₹ 32.74 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Tucson and C5 Aircross?",
+  //     "Tucson price starts at ₹ 22.69 Lakh ex-showroom and It comes with 1999 cc engine. Whereas C5 Aircross price starts at ₹ 30.30 Lakh ex-showroom and It comes with 1997 cc engine. ",
+  //   ],
+  //   question3: [
+  //     "What is price of Tucson top model?",
+  //     "Top model of Tucson is GLS 4WD AT Diesel and the ex-showroom for Tucson GLS 4WD AT Diesel is ₹ 27.47 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -288,28 +323,28 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
-      "i20 N Line",
-      "₹ 11.00 - 13.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
-      "AX1 micro-SUV",
-      "₹ 4.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
-      "New Kona",
-      "₹ 23.00 - 25.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
-      "New Elantra",
-      "₹ 16.00 - 20.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
+  //     "i20 N Line",
+  //     "₹ 11.00 - 13.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "AX1 micro-SUV",
+  //     "₹ 4.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
+  //     "New Kona",
+  //     "₹ 23.00 - 25.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
+  //     "New Elantra",
+  //     "₹ 16.00 - 20.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

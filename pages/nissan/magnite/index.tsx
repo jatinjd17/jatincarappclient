@@ -32,226 +32,261 @@ import { TMagnite } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Nissan";
-  const CarPrice = "₹ 5.59 Lakh";
-  const TopPic = Magnite;
-  const CarName = "Nissan Magnite";
-  const OnlyName = "Magnite";
-  const ThumPic = TMagnite;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 5.59 Lakh onwards",
-    "17.7 to 19.42 kmpl",
-    "999 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol",
-    "5 Seater",
-    "3,994 mm L x 1,758 mm W x 1,572 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Anti-Lock Braking System",
-    "Central Locking",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-    "Speed Sensing Auto Door Lock",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["XE", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.5.59 Lakh*"],
-    varient2: ["XL", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.6.32 Lakh*"],
-    varient3: ["XV", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.6.99 Lakh*"],
-    varient4: ["XV DT", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.7.15 Lakh*"],
-    varient5: [
-      "Turbo XL",
-      "999 cc, Automatic, Petrol, 20.0 kmpl",
-      "Rs.7.49 Lakh*",
-    ],
-    varient6: [
-      "XV Premium",
-      "999 cc, Manual, Petrol, 18.75 kmpl",
-      "Rs.7.68 Lakh*",
-    ],
-    varient7: [
-      "XV Premium DT",
-      "999 cc, Manual, Petrol, 18.75 kmpl",
-      "Rs.7.84 Lakh*",
-    ],
-    varient8: [
-      "Turbo XV",
-      "999 cc, Manual, Petrol, 20.0 kmpl",
-      "Rs.8.09 Lakh*",
-    ],
-    varient9: [
-      "Turbo XV DT",
-      "999 cc, Manual, Petrol, 20.0 kmpl",
-      "Rs.8.25 Lakh*",
-    ],
-    varient10: [
-      "Turbo CVT XL",
-      "999 cc, Automatic, Petrol, 17.7 kmpl",
-      "Rs.8.39 Lakh*",
-    ],
-    varient11: [
-      "Turbo XV Premium",
-      "999 cc, Manual, Petrol, 20.0 kmpl",
-      "Rs.8.89 Lakh*",
-    ],
-    varient12: [
-      "Turbo XV Premium Opt",
-      "999 cc, Manual, Petrol, 20.0 kmpl",
-      "Rs.8.99 Lakh*",
-    ],
-    varient13: [
-      "Turbo CVT XV",
-      "999 cc, Automatic, Petrol, 17.7 kmpl",
-      "Rs.8.99 Lakh*",
-    ],
-    varient14: [
-      "Turbo XV Premium DT",
-      "999 cc, Manual, Petrol, 20.0 kmpl",
-      "Rs.9.05 Lakh*",
-    ],
-    varient15: [
-      "Turbo XV Premium Opt DT",
-      "999 cc, Manual, Petrol, 20.0 kmpl",
-      "Rs.9.15 Lakh*",
-    ],
-    varient16: [
-      "Turbo CVT XV DT",
-      "999 cc, Automatic, Petrol, 17.7 kmpl",
-      "Rs.9.15 Lakh*",
-    ],
-    varient17: [
-      "Turbo CVT XV Premium",
-      "999 cc, Automatic, Petrol, 17.7 kmpl",
-      "Rs.9.74 Lakh*",
-    ],
-    varient18: [
-      "Turbo CVT XV Premium Opt",
-      "999 cc, Automatic, Petrol, 17.7 kmpl",
-      "Rs.9.84 Lakh*",
-    ],
-    varient19: [
-      "Turbo CVT XV Premium DT",
-      "999 cc, Automatic, Petrol, 17.7 kmpl",
-      "Rs.9.90 Lakh*",
-    ],
-    varient20: [
-      "Turbo CVT XV Prm Opt DT",
-      "999 cc, Automatic, Petrol, 17.7 kmpl",
-      "Rs.10.00 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (3799 cc)", "Automatic (Dual Clutch)", "14.23 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Nissan Magnite Price: The Magnite is priced between Rs Rs 5.59 lakh and Rs 9.90 lakh (ex-showroom Delhi). Nissan Magnite Variants: It is sold in five variants: XE, XL, XV, XV Premium, and XV Premium (O). Nissan Magnite Seating Capacity: The Magnite can carry up to five people. Nissan Magnite Powertrains: The Magnite is a petrol-only offering with two engine options: naturally aspirated 1.0-litre (72PS/96Nm) and 1.0-litre turbo-petrol (100PS/160Nm). While the former is mated to a 5-speed MT only, the latter gets the choice of either a 5-speed MT or CVT (152Nm with the CVT gearbox). Nissan Magnite Features: It gets an 8-inch touchscreen infotainment system with wireless Android Auto and Apple CarPlay, 16-inch dual-tone alloy wheels, LED headlamps with LED DRLs, and auto AC with rear AC vents. The higher-specced XV and XV Premium come with a Tech Pack comprising a wireless charger, an air purifier, high-end JBL speakers, LED scuff plates, ambient lighting, and puddle lamps. Sadly, Nissan doesn’t offer the SUV with a sunroof. Nissan Magnite Safety: It comes with dual front airbags, rear parking sensors, ABS with EBD, hill launch control, and electronic stability control. Nissan Magnite Rivals: The Magnite takes on the Kia Sonet, Hyundai Venue, Maruti Suzuki Vitara Brezza, Toyota Urban Cruiser, Tata Nexon, Mahindra XUV300, Ford EcoSport, and Renault Kiger.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Smartly designed sub-compact SUV. Very well proportioned",
-      "Spacious and practical cabin. A good SUV for the family",
-      "Comfortable ride quality. Bad roads can be tackled with confidence",
-    ],
-    cons: [
-      "Fitment quality is decent but not premium. Doesn’t feel as rich inside as a Sonet/Venue/XUV300",
-      "Not an exciting or fun to drive car, even with the turbo petrol engine",
-      "No diesel engine option",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Flare Garnet Red With Onyx Black", "bg-red-800"],
-    color2: ["Vivid Blue With Strom White", "bg-blue-800"],
-    color3: ["Tourmaline Brown onyx Black", "bg-brown-700"],
-    color4: ["Onyx Black", "bg-gray-900"],
-    color5: ["Blade Silver", "bg-gray-600"],
-    color6: ["PEARL WHITE WITH ONYX BLACK", "bg-white"],
-    color7: ["Sandstone Browns", "bg-brown-800"],
-    color8: ["Storm White", "bg-white"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.92 Lakh Onwards",
-      "17.52 to 23.4 kmpl",
-      "998 to 1493 cc",
-      "Clutchless Manual & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,770 mm W x 1,590 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-    ],
-    comparisioncar2: [
-      "₹7.20 Lakh onwards",
-      "16 to 22.4 kmpl",
-      "1199 to 1497 cc",
-      "Manual & AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Magnite?",
-      "The on-road price of Magnite in Delhi starts at ‎₹ 6.16 Lakh and goes upto ‎₹ 11.06 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Magnite and Kiger?",
-      "Magnite price starts at ₹ 5.59 Lakh ex-showroom and It comes with 999 cc engine. Whereas Kiger price starts at ₹ 5.64 Lakh ex-showroom and It comes with 999 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is the mileage of Nissan Magnite?",
-      "The Nissan Magnite mileage is 17.7 - 19.42 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Nissan";
+  // const CarPrice = "₹ 5.59 Lakh";
+  // const TopPic = Magnite;
+  // const CarName = "Nissan Magnite";
+  // const OnlyName = "Magnite";
+  // const ThumPic = TMagnite;
+
+  // const KeySpecification = [
+  //   "₹ 5.59 Lakh onwards",
+  //   "17.7 to 19.42 kmpl",
+  //   "999 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3,994 mm L x 1,758 mm W x 1,572 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Anti-Lock Braking System",
+  //   "Central Locking",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  //   "Speed Sensing Auto Door Lock",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["XE", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.5.59 Lakh*"],
+  //   varient2: ["XL", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.6.32 Lakh*"],
+  //   varient3: ["XV", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.6.99 Lakh*"],
+  //   varient4: ["XV DT", "999 cc, Manual, Petrol, 18.75 kmpl", "Rs.7.15 Lakh*"],
+  //   varient5: [
+  //     "Turbo XL",
+  //     "999 cc, Automatic, Petrol, 20.0 kmpl",
+  //     "Rs.7.49 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "XV Premium",
+  //     "999 cc, Manual, Petrol, 18.75 kmpl",
+  //     "Rs.7.68 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "XV Premium DT",
+  //     "999 cc, Manual, Petrol, 18.75 kmpl",
+  //     "Rs.7.84 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "Turbo XV",
+  //     "999 cc, Manual, Petrol, 20.0 kmpl",
+  //     "Rs.8.09 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "Turbo XV DT",
+  //     "999 cc, Manual, Petrol, 20.0 kmpl",
+  //     "Rs.8.25 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "Turbo CVT XL",
+  //     "999 cc, Automatic, Petrol, 17.7 kmpl",
+  //     "Rs.8.39 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "Turbo XV Premium",
+  //     "999 cc, Manual, Petrol, 20.0 kmpl",
+  //     "Rs.8.89 Lakh*",
+  //   ],
+  //   varient12: [
+  //     "Turbo XV Premium Opt",
+  //     "999 cc, Manual, Petrol, 20.0 kmpl",
+  //     "Rs.8.99 Lakh*",
+  //   ],
+  //   varient13: [
+  //     "Turbo CVT XV",
+  //     "999 cc, Automatic, Petrol, 17.7 kmpl",
+  //     "Rs.8.99 Lakh*",
+  //   ],
+  //   varient14: [
+  //     "Turbo XV Premium DT",
+  //     "999 cc, Manual, Petrol, 20.0 kmpl",
+  //     "Rs.9.05 Lakh*",
+  //   ],
+  //   varient15: [
+  //     "Turbo XV Premium Opt DT",
+  //     "999 cc, Manual, Petrol, 20.0 kmpl",
+  //     "Rs.9.15 Lakh*",
+  //   ],
+  //   varient16: [
+  //     "Turbo CVT XV DT",
+  //     "999 cc, Automatic, Petrol, 17.7 kmpl",
+  //     "Rs.9.15 Lakh*",
+  //   ],
+  //   varient17: [
+  //     "Turbo CVT XV Premium",
+  //     "999 cc, Automatic, Petrol, 17.7 kmpl",
+  //     "Rs.9.74 Lakh*",
+  //   ],
+  //   varient18: [
+  //     "Turbo CVT XV Premium Opt",
+  //     "999 cc, Automatic, Petrol, 17.7 kmpl",
+  //     "Rs.9.84 Lakh*",
+  //   ],
+  //   varient19: [
+  //     "Turbo CVT XV Premium DT",
+  //     "999 cc, Automatic, Petrol, 17.7 kmpl",
+  //     "Rs.9.90 Lakh*",
+  //   ],
+  //   varient20: [
+  //     "Turbo CVT XV Prm Opt DT",
+  //     "999 cc, Automatic, Petrol, 17.7 kmpl",
+  //     "Rs.10.00 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (3799 cc)", "Automatic (Dual Clutch)", "14.23 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Nissan Magnite Price: The Magnite is priced between Rs Rs 5.59 lakh and Rs 9.90 lakh (ex-showroom Delhi). Nissan Magnite Variants: It is sold in five variants: XE, XL, XV, XV Premium, and XV Premium (O). Nissan Magnite Seating Capacity: The Magnite can carry up to five people. Nissan Magnite Powertrains: The Magnite is a petrol-only offering with two engine options: naturally aspirated 1.0-litre (72PS/96Nm) and 1.0-litre turbo-petrol (100PS/160Nm). While the former is mated to a 5-speed MT only, the latter gets the choice of either a 5-speed MT or CVT (152Nm with the CVT gearbox). Nissan Magnite Features: It gets an 8-inch touchscreen infotainment system with wireless Android Auto and Apple CarPlay, 16-inch dual-tone alloy wheels, LED headlamps with LED DRLs, and auto AC with rear AC vents. The higher-specced XV and XV Premium come with a Tech Pack comprising a wireless charger, an air purifier, high-end JBL speakers, LED scuff plates, ambient lighting, and puddle lamps. Sadly, Nissan doesn’t offer the SUV with a sunroof. Nissan Magnite Safety: It comes with dual front airbags, rear parking sensors, ABS with EBD, hill launch control, and electronic stability control. Nissan Magnite Rivals: The Magnite takes on the Kia Sonet, Hyundai Venue, Maruti Suzuki Vitara Brezza, Toyota Urban Cruiser, Tata Nexon, Mahindra XUV300, Ford EcoSport, and Renault Kiger.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Smartly designed sub-compact SUV. Very well proportioned",
+  //     "Spacious and practical cabin. A good SUV for the family",
+  //     "Comfortable ride quality. Bad roads can be tackled with confidence",
+  //   ],
+  //   cons: [
+  //     "Fitment quality is decent but not premium. Doesn’t feel as rich inside as a Sonet/Venue/XUV300",
+  //     "Not an exciting or fun to drive car, even with the turbo petrol engine",
+  //     "No diesel engine option",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Flare Garnet Red With Onyx Black", "bg-red-800"],
+  //   color2: ["Vivid Blue With Strom White", "bg-blue-800"],
+  //   color3: ["Tourmaline Brown onyx Black", "bg-brown-700"],
+  //   color4: ["Onyx Black", "bg-gray-900"],
+  //   color5: ["Blade Silver", "bg-gray-600"],
+  //   color6: ["PEARL WHITE WITH ONYX BLACK", "bg-white"],
+  //   color7: ["Sandstone Browns", "bg-brown-800"],
+  //   color8: ["Storm White", "bg-white"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.92 Lakh Onwards",
+  //     "17.52 to 23.4 kmpl",
+  //     "998 to 1493 cc",
+  //     "Clutchless Manual & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,770 mm W x 1,590 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹7.20 Lakh onwards",
+  //     "16 to 22.4 kmpl",
+  //     "1199 to 1497 cc",
+  //     "Manual & AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
+  //     "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Magnite?",
+  //     "The on-road price of Magnite in Delhi starts at ‎₹ 6.16 Lakh and goes upto ‎₹ 11.06 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Magnite and Kiger?",
+  //     "Magnite price starts at ₹ 5.59 Lakh ex-showroom and It comes with 999 cc engine. Whereas Kiger price starts at ₹ 5.64 Lakh ex-showroom and It comes with 999 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Nissan Magnite?",
+  //     "The Nissan Magnite mileage is 17.7 - 19.42 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -294,23 +329,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-X-Trail/3718/1568357284267/front-left-side-47.jpg?tr=w-456",
-      "Nissan X-Trail",
-      "Rs.22.60 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Sunny-2020/6887/1555329555708/front-left-side-47.jpg?tr=w-456",
-      "Nissan Sunny 2021",
-      "Rs.8.50 Lakh*",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Leaf/1351/1550722575097/front-left-side-47.jpg?tr=w-456",
-      "Nissan Leaf",
-      "Rs.30.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-X-Trail/3718/1568357284267/front-left-side-47.jpg?tr=w-456",
+  //     "Nissan X-Trail",
+  //     "Rs.22.60 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Sunny-2020/6887/1555329555708/front-left-side-47.jpg?tr=w-456",
+  //     "Nissan Sunny 2021",
+  //     "Rs.8.50 Lakh*",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Leaf/1351/1550722575097/front-left-side-47.jpg?tr=w-456",
+  //     "Nissan Leaf",
+  //     "Rs.30.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

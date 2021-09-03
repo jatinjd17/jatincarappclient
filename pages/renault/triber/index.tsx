@@ -32,170 +32,205 @@ import { TTriber } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Renault";
-  const CarPrice = "₹ 5.49 Lakh";
-  const TopPic = Triber;
-  const CarName = "Renault Triber";
-  const OnlyName = "Triber";
-  const ThumPic = TTriber;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 5.49 Lakh onwards",
-    "18.29 to 19 kmpl",
-    "999 cc",
-    "Manual & AMT",
-    "Petrol",
-    "7 Seater",
-    "3,990 mm L x 1,739 mm W x 1,643 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    " dual airbags",
-    "ABS with EBD",
-    "and child safety locks.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["RXE", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.9.86 Lakh*"],
-    varient2: ["RXL", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.10.46 Lakh*"],
-    varient3: [
-      "RXL EASY-R AMT",
-      "999 cc, Automatic, Petrol, 18.2 kmpl",
-      "Rs.11.27 Lakh*",
-    ],
-    varient4: ["RXT", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.12.05 Lakh*"],
-    varient5: [
-      "RXT EASY-R AMT",
-      "999 cc, Automatic, Petrol, 18.2 kmpl",
-      "Rs.12.65 Lakh*",
-    ],
-    varient6: ["RXZ", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.13.65 Lakh*"],
-    varient7: [
-      "RXZ Dual Tone",
-      "999 cc, Manual, Petrol, 20.0 kmpl",
-      "Rs.14.25 Lakh*",
-    ],
-    varient8: [
-      "RXZ EASY-R AMT",
-      "999 cc, Automatic, Petrol, 18.2 kmpl",
-      "Rs.14.25 Lakh*",
-    ],
-    varient9: [
-      "RXZ EASY-R AMT Dual Tone",
-      "999 cc, Automatic, Petrol, 18.2 kmpl",
-      "Rs.14.25 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (999 cc)", "Automatic (Dual Clutch)", "20.0 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Renault is offering the Triber with benefits of up to Rs 55,000 this July. Renault Triber Price: Renault retails the Triber between Rs 5.50 lakh and Rs 7.95 lakh (ex-showroom Delhi). Renault Triber Variants: The Triber is available in four variants: RXE, RXL, RXT, and RXZ. Renault Triber Seating Capacity: Renault offers the sub-4m crossover MPV in a 7-seater layout. Renault Triber Powertrain: It is powered by a 1.0-litre petrol engine (72PS/96Nm), mated to either a 5-speed manual or an AMT gearbox. Renault will also introduce a 1.0-litre turbo-petrol engine (100PS/160Nm) in the crossover MPV. This motor was showcased at Auto Expo 2020, but its launch has now been pushed to 2022. This unit will likely come paired with a 5-speed manual and a CVT automatic. Renault Triber Features: The Triber gets an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a height-adjustable driver's seat, steering-mounted audio and calling controls, AC vents for second and third-row seats, a digital instrument cluster, and push-button start/stop. Renault Triber Safety: Renault offers dual front airbags, ABS with EBD, and rear parking sensors as standard across all variants. Renault Triber Rivals: While it doesn't have any direct rival, the Triber is an alternative to mid-size hatchbacks such as the Maruti Swift, Hyundai Grand i10 Nios, Ford Freestyle, and Ford Figo. It also rivals the Datsun GO+. That said, if you are looking for a rugged utility vehicle, you could even consider the Mahindra Bolero.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Practical cabin with lots of storage spaces.",
-      "Good boot space of 625 litres.",
-      "Triber can be turned into a two-seater, four seater, five-seater, six-seater or even a seven-seater vehicle.",
-    ],
-    cons: [
-      "Engine feels underpowered on highways or with a full load of passengers.",
-      "No diesel engine option.",
-      "Missing features: No automatic climate control, alloy wheels or foglamps.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Electric Blue", "bg-blue-600"],
-    color2: ["Cedar Brown", "bg-brown-800"],
-    color3: ["Moonlight Silver With Black Roof", "bg-gray-700"],
-    color4: ["Electric Blue With Black Roof", "bg-blue-300"],
-    color5: ["Moonlight Silver", "bg-gray-800"],
-    color6: ["ICE Cool White", "bg-white-800"],
-    color7: ["Metal Mustard With Black Roof", "bg-yellow-800"],
-    color8: ["Metal Mustard", "bg-yellow-800"],
-    color9: ["Cedar Brown With Black Roof", "bg-brown-800"],
-    color10: ["Ice Cool White With Black Roof", "bg-white-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 4.08 Lakh onwards",
-      "16.11 kmpl to 30.47 km/kg",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5-7 Seater",
-      "3,675 mm L x 1,475 mm W x 1,800-1,825 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Eeco/7346/1581669301115/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Triber?",
-      "The on-road price of Triber in Delhi starts at ‎₹ 6.27 Lakh and goes upto ‎₹ 8.76 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Triber and GO+?",
-      "Triber price starts at ₹ 5.49 Lakh ex-showroom and It comes with 999 cc engine. Whereas GO+ price starts at ₹ 4.26 Lakh ex-showroom and It comes with 1198 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Triber top model?",
-      "Top model of Triber is RXZ EASY-R AMT Dual Tone and the ex-showroom for Triber RXZ EASY-R AMT Dual Tone is ₹ 7.95 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Renault";
+  // const CarPrice = "₹ 5.49 Lakh";
+  // const TopPic = Triber;
+  // const CarName = "Renault Triber";
+  // const OnlyName = "Triber";
+  // const ThumPic = TTriber;
+
+  // const KeySpecification = [
+  //   "₹ 5.49 Lakh onwards",
+  //   "18.29 to 19 kmpl",
+  //   "999 cc",
+  //   "Manual & AMT",
+  //   "Petrol",
+  //   "7 Seater",
+  //   "3,990 mm L x 1,739 mm W x 1,643 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   " dual airbags",
+  //   "ABS with EBD",
+  //   "and child safety locks.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["RXE", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.9.86 Lakh*"],
+  //   varient2: ["RXL", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.10.46 Lakh*"],
+  //   varient3: [
+  //     "RXL EASY-R AMT",
+  //     "999 cc, Automatic, Petrol, 18.2 kmpl",
+  //     "Rs.11.27 Lakh*",
+  //   ],
+  //   varient4: ["RXT", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.12.05 Lakh*"],
+  //   varient5: [
+  //     "RXT EASY-R AMT",
+  //     "999 cc, Automatic, Petrol, 18.2 kmpl",
+  //     "Rs.12.65 Lakh*",
+  //   ],
+  //   varient6: ["RXZ", "999 cc, Manual, Petrol, 20.0 kmpl", "Rs.13.65 Lakh*"],
+  //   varient7: [
+  //     "RXZ Dual Tone",
+  //     "999 cc, Manual, Petrol, 20.0 kmpl",
+  //     "Rs.14.25 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "RXZ EASY-R AMT",
+  //     "999 cc, Automatic, Petrol, 18.2 kmpl",
+  //     "Rs.14.25 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "RXZ EASY-R AMT Dual Tone",
+  //     "999 cc, Automatic, Petrol, 18.2 kmpl",
+  //     "Rs.14.25 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (999 cc)", "Automatic (Dual Clutch)", "20.0 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Renault is offering the Triber with benefits of up to Rs 55,000 this July. Renault Triber Price: Renault retails the Triber between Rs 5.50 lakh and Rs 7.95 lakh (ex-showroom Delhi). Renault Triber Variants: The Triber is available in four variants: RXE, RXL, RXT, and RXZ. Renault Triber Seating Capacity: Renault offers the sub-4m crossover MPV in a 7-seater layout. Renault Triber Powertrain: It is powered by a 1.0-litre petrol engine (72PS/96Nm), mated to either a 5-speed manual or an AMT gearbox. Renault will also introduce a 1.0-litre turbo-petrol engine (100PS/160Nm) in the crossover MPV. This motor was showcased at Auto Expo 2020, but its launch has now been pushed to 2022. This unit will likely come paired with a 5-speed manual and a CVT automatic. Renault Triber Features: The Triber gets an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a height-adjustable driver's seat, steering-mounted audio and calling controls, AC vents for second and third-row seats, a digital instrument cluster, and push-button start/stop. Renault Triber Safety: Renault offers dual front airbags, ABS with EBD, and rear parking sensors as standard across all variants. Renault Triber Rivals: While it doesn't have any direct rival, the Triber is an alternative to mid-size hatchbacks such as the Maruti Swift, Hyundai Grand i10 Nios, Ford Freestyle, and Ford Figo. It also rivals the Datsun GO+. That said, if you are looking for a rugged utility vehicle, you could even consider the Mahindra Bolero.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Practical cabin with lots of storage spaces.",
+  //     "Good boot space of 625 litres.",
+  //     "Triber can be turned into a two-seater, four seater, five-seater, six-seater or even a seven-seater vehicle.",
+  //   ],
+  //   cons: [
+  //     "Engine feels underpowered on highways or with a full load of passengers.",
+  //     "No diesel engine option.",
+  //     "Missing features: No automatic climate control, alloy wheels or foglamps.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Electric Blue", "bg-blue-600"],
+  //   color2: ["Cedar Brown", "bg-brown-800"],
+  //   color3: ["Moonlight Silver With Black Roof", "bg-gray-700"],
+  //   color4: ["Electric Blue With Black Roof", "bg-blue-300"],
+  //   color5: ["Moonlight Silver", "bg-gray-800"],
+  //   color6: ["ICE Cool White", "bg-white-800"],
+  //   color7: ["Metal Mustard With Black Roof", "bg-yellow-800"],
+  //   color8: ["Metal Mustard", "bg-yellow-800"],
+  //   color9: ["Cedar Brown With Black Roof", "bg-brown-800"],
+  //   color10: ["Ice Cool White With Black Roof", "bg-white-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 4.08 Lakh onwards",
+  //     "16.11 kmpl to 30.47 km/kg",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5-7 Seater",
+  //     "3,675 mm L x 1,475 mm W x 1,800-1,825 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Eeco/7346/1581669301115/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Triber?",
+  //     "The on-road price of Triber in Delhi starts at ‎₹ 6.27 Lakh and goes upto ‎₹ 8.76 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Triber and GO+?",
+  //     "Triber price starts at ₹ 5.49 Lakh ex-showroom and It comes with 999 cc engine. Whereas GO+ price starts at ₹ 4.26 Lakh ex-showroom and It comes with 1198 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Triber top model?",
+  //     "Top model of Triber is RXZ EASY-R AMT Dual Tone and the ex-showroom for Triber RXZ EASY-R AMT Dual Tone is ₹ 7.95 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -253,23 +288,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Zoe/6278/1581400662093/front-left-side-47.jpg?tr=w-456",
-      "Renault Zoe",
-      "Rs.8.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Kwid-EV/6214/1555414583232/front-left-side-47.jpg?tr=w-456",
-      "Renault K-ZE",
-      "Rs.10.00 Lakh*",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Arkana/6573/front-left-side-47.jpg?tr=w-456",
-      "Renault Arkana",
-      "Rs.10.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Zoe/6278/1581400662093/front-left-side-47.jpg?tr=w-456",
+  //     "Renault Zoe",
+  //     "Rs.8.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Kwid-EV/6214/1555414583232/front-left-side-47.jpg?tr=w-456",
+  //     "Renault K-ZE",
+  //     "Rs.10.00 Lakh*",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Arkana/6573/front-left-side-47.jpg?tr=w-456",
+  //     "Renault Arkana",
+  //     "Rs.10.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

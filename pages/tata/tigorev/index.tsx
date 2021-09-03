@@ -32,153 +32,188 @@ import { TTigorEV } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "₹ 10.58 Lakh";
-  const TopPic = TigorEV;
-  const CarName = "Tata Tigor EV";
-  const OnlyName = "Tigor EV";
-  const ThumPic = TTigorEV;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 10.58 Lakh onwards",
-    "142 Km/Full Charge",
-    "40.23bhp@450rpm",
-    "Automatic",
-    "Electric",
-    "4 Seater",
-    "3,993 mm L x 1,677 mm W x 1,537 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "Antilock Braking System (ABS)",
-    "Electronic Brake Distribution (EBD)",
-    "Corner Stability Control (CSC)",
-    "rear parking sensors",
-    "Seat Belt Warning",
-    "4 Star (Global NCAP)",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "XE Plus",
-      "40.23bhp@450rpm, Automatic, Electric, 142 Km/Full Charge",
-      "Rs.10.58 Lakh*",
-    ],
-    varient2: [
-      "XM Plus",
-      "40.23bhp@450rpm, Automatic, Electric, 142 Km/Full Charge",
-      "Rs.10.75 Lakh*",
-    ],
-    varient3: [
-      "XT Plus",
-      "40.23bhp@450rpm, Automatic, Electric, 142 Km/Full Charge",
-      "Rs.10.90 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Tata Motors has launched an updated version of the Tigor EV in India, which can now also be bought by individuals. Read more about it here. Variants: Tata is offering the Tigor EV in three variants: XE+, XM+ and XT+. Price: The price of the Tata Tigor EV starts from Rs 9.44 lakh. This is for commercial buyers, after adjusting the government subsidy. For private buyers, the price starts from Rs 12.59 lakh and goes up to Rs 13.41 lakh depending upon where you stay. Powertrain: The Tigor EV now uses a 21.5kWh powertrain that drives a 72V 3-phase AC induction motor. The motor can make 41PS of max power and 105Nm of peak torque. Colours: The Tigor EV can be had in three colours only: Pearlescent White, Egyptian Blue and Roman Silver. Warranty: Tata Motors is offering a warranty package of 3 years / 1.25 lakh km on the Tigor EV.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Harman Kardon infotainment system sounds crisp.",
-      "Claimed range is more than enough for a daily commuter with overnight charging.",
-      "Compact dimensions and space means it is the great first electric car for the family.",
-    ],
-    cons: [
-      "Power to weight ratio dictates sluggish performance.",
-      "Not enough range for intercity commutes without an additional charge.",
-      "Steep price for a fairly basic sub-compact sedan.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Roman Sliver", "bg-gray-600"],
-    color2: ["Pearlescent White", "bg-white-400"],
-    color3: ["Egyptian Blue", "bg-blue-500"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.10.15 - 10.49 Lakh",
-      "110km",
-      "41.5bhp@ 4000rpm",
-      "Automatic",
-      "Electric",
-      "5 Seater",
-      "4,247 mm L x 1,740 mm W x 1,540 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/E-Verito/3526/1603712637421/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-    ],
-    comparisioncar2: [
-      "₹ 13.99 Lakh Onwards",
-      "312 km/FullCharge",
-      "129 PS and 245 Nm",
-      "Automatic",
-      "Electric",
-      "5 Seater",
-      "3,993 mm L x 1,811 mm W x 1,606 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42611/tata-nexon-ev-right-front-three-quarter6.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Tigor EV?",
-      "The on-road price of Tigor EV in Delhi starts at ‎₹ 10.13 Lakh and goes upto ‎₹ 10.45 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance ",
-    ],
-    question2: [
-      "Which car is better between Tigor EV and Nexon EV?",
-      "Tigor EV price starts at ₹ 10.58 Lakh ex-showroom and It comes with cc engine. Whereas Nexon EV price starts at ₹ 13.99 Lakh ex-showroom and It comes with cc engine. ",
-    ],
-    question3: [
-      "What is the charging time required to fully charge the Tata Tigor EV?",
-      "It takes 2 Hrs to fully charge the Tata Tigor EV.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Tata";
+  // const CarPrice = "₹ 10.58 Lakh";
+  // const TopPic = TigorEV;
+  // const CarName = "Tata Tigor EV";
+  // const OnlyName = "Tigor EV";
+  // const ThumPic = TTigorEV;
+
+  // const KeySpecification = [
+  //   "₹ 10.58 Lakh onwards",
+  //   "142 Km/Full Charge",
+  //   "40.23bhp@450rpm",
+  //   "Automatic",
+  //   "Electric",
+  //   "4 Seater",
+  //   "3,993 mm L x 1,677 mm W x 1,537 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "Antilock Braking System (ABS)",
+  //   "Electronic Brake Distribution (EBD)",
+  //   "Corner Stability Control (CSC)",
+  //   "rear parking sensors",
+  //   "Seat Belt Warning",
+  //   "4 Star (Global NCAP)",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "XE Plus",
+  //     "40.23bhp@450rpm, Automatic, Electric, 142 Km/Full Charge",
+  //     "Rs.10.58 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "XM Plus",
+  //     "40.23bhp@450rpm, Automatic, Electric, 142 Km/Full Charge",
+  //     "Rs.10.75 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "XT Plus",
+  //     "40.23bhp@450rpm, Automatic, Electric, 142 Km/Full Charge",
+  //     "Rs.10.90 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Tata Motors has launched an updated version of the Tigor EV in India, which can now also be bought by individuals. Read more about it here. Variants: Tata is offering the Tigor EV in three variants: XE+, XM+ and XT+. Price: The price of the Tata Tigor EV starts from Rs 9.44 lakh. This is for commercial buyers, after adjusting the government subsidy. For private buyers, the price starts from Rs 12.59 lakh and goes up to Rs 13.41 lakh depending upon where you stay. Powertrain: The Tigor EV now uses a 21.5kWh powertrain that drives a 72V 3-phase AC induction motor. The motor can make 41PS of max power and 105Nm of peak torque. Colours: The Tigor EV can be had in three colours only: Pearlescent White, Egyptian Blue and Roman Silver. Warranty: Tata Motors is offering a warranty package of 3 years / 1.25 lakh km on the Tigor EV.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Harman Kardon infotainment system sounds crisp.",
+  //     "Claimed range is more than enough for a daily commuter with overnight charging.",
+  //     "Compact dimensions and space means it is the great first electric car for the family.",
+  //   ],
+  //   cons: [
+  //     "Power to weight ratio dictates sluggish performance.",
+  //     "Not enough range for intercity commutes without an additional charge.",
+  //     "Steep price for a fairly basic sub-compact sedan.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Roman Sliver", "bg-gray-600"],
+  //   color2: ["Pearlescent White", "bg-white-400"],
+  //   color3: ["Egyptian Blue", "bg-blue-500"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.10.15 - 10.49 Lakh",
+  //     "110km",
+  //     "41.5bhp@ 4000rpm",
+  //     "Automatic",
+  //     "Electric",
+  //     "5 Seater",
+  //     "4,247 mm L x 1,740 mm W x 1,540 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/E-Verito/3526/1603712637421/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.99 Lakh Onwards",
+  //     "312 km/FullCharge",
+  //     "129 PS and 245 Nm",
+  //     "Automatic",
+  //     "Electric",
+  //     "5 Seater",
+  //     "3,993 mm L x 1,811 mm W x 1,606 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42611/tata-nexon-ev-right-front-three-quarter6.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Tigor EV?",
+  //     "The on-road price of Tigor EV in Delhi starts at ‎₹ 10.13 Lakh and goes upto ‎₹ 10.45 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance ",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Tigor EV and Nexon EV?",
+  //     "Tigor EV price starts at ₹ 10.58 Lakh ex-showroom and It comes with cc engine. Whereas Nexon EV price starts at ₹ 13.99 Lakh ex-showroom and It comes with cc engine. ",
+  //   ],
+  //   question3: [
+  //     "What is the charging time required to fully charge the Tata Tigor EV?",
+  //     "It takes 2 Hrs to fully charge the Tata Tigor EV.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -251,23 +286,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

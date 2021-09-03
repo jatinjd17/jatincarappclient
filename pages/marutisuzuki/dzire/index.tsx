@@ -33,164 +33,199 @@ import { TDzire } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 5.98 Lakh";
-  const TopPic = Dzire;
-  const CarName = "Maruti Dzire";
-  const OnlyName = "Dzire";
-  const ThumPic = TDzire;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 5.98 Lakh onwards",
-    "23.26 to 24.12 kmpl",
-    "1197 cc",
-    "Manual & AMT",
-    "Petrol",
-    "5 Seater",
-    "3,995 mm L x 1,735 mm W x 1,515 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-    "Driver frontal airbag, Front passenger frontal airbag",
-    "Door Ajar Warning.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["LXI", "1197 cc, Manual, Petrol, 23.26 kmpl", "Rs.5.98 Lakh*"],
-    varient2: ["VXI", "1197 cc, Manual, Petrol, 23.26 kmpl", "Rs.7.04 Lakh*"],
-    varient3: [
-      "VXI AGS",
-      "1197 cc, Automatic AMT, Petrol, 24.12 kmpl",
-      "Rs.7.54 Lakh*",
-    ],
-    varient4: ["ZXI", "1197 cc, Manual, Petrol, 23.26 kmpl", "Rs.7.73 Lakh*"],
-    varient5: [
-      "ZXI AGS",
-      "1197 cc, Automatic AMT, Petrol, 24.12 kmpl",
-      "Rs.8.23 Lakh*",
-    ],
-    varient6: [
-      "ZXI Plus",
-      "1197 cc, Manual, Petrol, 23.26 kmpl",
-      "Rs.8.53 Lakh*",
-    ],
-    varient7: [
-      "ZXI Plus AGS",
-      "1197 cc, Automatic AMT, Petrol, 24.12 kmpl",
-      "Rs.9.03 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The Dzire is likely to get a CNG option soon. Maruti Dzire Price: Maruti retails the Dzire from Rs 5.98 lakh to Rs 9.02 lakh (ex-showroom Delhi). Maruti Dzire Variants: The sub-4m sedan is offered in four trims: LXi, VXi, ZXi, and ZXi+. Maruti Dzire Engine and Transmission: It comes with a 1.2-litre DualJet petrol engine (90PS/113Nm), mated to a 5-speed manual or AMT option. Its claimed fuel efficiency stands at 23.26kmpl with the MT and 24.12kmpl with the AMT. Maruti Dzire Features: Maruti offers the Dzire with cruise control, automatic LED headlamps, auto-folding ORVMs, push-button engine start-stop, and auto AC with rear AC vents. The facelifted Dzire also gets a 7.0-inch touchscreen infotainment system with Android Auto and Apple CarPlay connectivity as well as cloud-based services. Its 4.2-inch multi-colour MID shows plenty of useful driving information. Maruti Dzire Safety: The Dzire comes with dual front airbags, ISOFIX child seat anchors, and rear parking sensors as standard. Its AMT variants also get electronic stability control and hill hold assist with features such as a rearview camera and rear defogger offered in the higher-spec variants. Maruti Dzire Rivals: It goes up against the Honda Amaze, Hyundai Aura, Tata Tigor, and Ford Aspire.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Refined petrol engine",
-      "High claimed efficiency",
-      "Comfortable ride quality",
-    ],
-    cons: [
-      "Interior quality could have been better",
-      "Bouncy high speed ride quality",
-      "No diesel engine option",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Oxford Blue", "bg-blue-600"],
-    color2: ["Premium Silver", "bg-gray-400"],
-    color3: ["Arctic White", "bg-white"],
-    color4: ["Sherwood Brown", "bg-brown-600"],
-    color5: ["Magma Grey", "bg-gray-800"],
-    color6: ["Phoenix Red", "bg-red-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.34 Lakh Onwards",
-      "18.3 to 24.7 kmpl",
-      "1199 to 1498 cc",
-      "Manual & Automatic CVT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 6.00 Lakh onwards",
-      "20 to 28 kmpl",
-      "998 to 1197 cc",
-      "Manual & Automatic AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,680 mm W x 1,520 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Dzire?",
-      "The on-road price of Dzire in Delhi starts at ‎₹ 6.6 Lakh and goes upto ‎₹ 10.13 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Dzire and Swift?",
-      "Dzire price starts at ₹ 5.98 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Swift price starts at ₹ 5.81 Lakh ex-showroom and It comes with 1197 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Dzire top model?",
-      "Top model of Dzire is ZXi Plus AGS and the ex-showroom for Dzire ZXi Plus AGS is ₹ 9.03 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 5.98 Lakh";
+  // const TopPic = Dzire;
+  // const CarName = "Maruti Dzire";
+  // const OnlyName = "Dzire";
+  // const ThumPic = TDzire;
+
+  // const KeySpecification = [
+  //   "₹ 5.98 Lakh onwards",
+  //   "23.26 to 24.12 kmpl",
+  //   "1197 cc",
+  //   "Manual & AMT",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,735 mm W x 1,515 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  //   "Driver frontal airbag, Front passenger frontal airbag",
+  //   "Door Ajar Warning.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["LXI", "1197 cc, Manual, Petrol, 23.26 kmpl", "Rs.5.98 Lakh*"],
+  //   varient2: ["VXI", "1197 cc, Manual, Petrol, 23.26 kmpl", "Rs.7.04 Lakh*"],
+  //   varient3: [
+  //     "VXI AGS",
+  //     "1197 cc, Automatic AMT, Petrol, 24.12 kmpl",
+  //     "Rs.7.54 Lakh*",
+  //   ],
+  //   varient4: ["ZXI", "1197 cc, Manual, Petrol, 23.26 kmpl", "Rs.7.73 Lakh*"],
+  //   varient5: [
+  //     "ZXI AGS",
+  //     "1197 cc, Automatic AMT, Petrol, 24.12 kmpl",
+  //     "Rs.8.23 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "ZXI Plus",
+  //     "1197 cc, Manual, Petrol, 23.26 kmpl",
+  //     "Rs.8.53 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "ZXI Plus AGS",
+  //     "1197 cc, Automatic AMT, Petrol, 24.12 kmpl",
+  //     "Rs.9.03 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The Dzire is likely to get a CNG option soon. Maruti Dzire Price: Maruti retails the Dzire from Rs 5.98 lakh to Rs 9.02 lakh (ex-showroom Delhi). Maruti Dzire Variants: The sub-4m sedan is offered in four trims: LXi, VXi, ZXi, and ZXi+. Maruti Dzire Engine and Transmission: It comes with a 1.2-litre DualJet petrol engine (90PS/113Nm), mated to a 5-speed manual or AMT option. Its claimed fuel efficiency stands at 23.26kmpl with the MT and 24.12kmpl with the AMT. Maruti Dzire Features: Maruti offers the Dzire with cruise control, automatic LED headlamps, auto-folding ORVMs, push-button engine start-stop, and auto AC with rear AC vents. The facelifted Dzire also gets a 7.0-inch touchscreen infotainment system with Android Auto and Apple CarPlay connectivity as well as cloud-based services. Its 4.2-inch multi-colour MID shows plenty of useful driving information. Maruti Dzire Safety: The Dzire comes with dual front airbags, ISOFIX child seat anchors, and rear parking sensors as standard. Its AMT variants also get electronic stability control and hill hold assist with features such as a rearview camera and rear defogger offered in the higher-spec variants. Maruti Dzire Rivals: It goes up against the Honda Amaze, Hyundai Aura, Tata Tigor, and Ford Aspire.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Refined petrol engine",
+  //     "High claimed efficiency",
+  //     "Comfortable ride quality",
+  //   ],
+  //   cons: [
+  //     "Interior quality could have been better",
+  //     "Bouncy high speed ride quality",
+  //     "No diesel engine option",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Oxford Blue", "bg-blue-600"],
+  //   color2: ["Premium Silver", "bg-gray-400"],
+  //   color3: ["Arctic White", "bg-white"],
+  //   color4: ["Sherwood Brown", "bg-brown-600"],
+  //   color5: ["Magma Grey", "bg-gray-800"],
+  //   color6: ["Phoenix Red", "bg-red-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.34 Lakh Onwards",
+  //     "18.3 to 24.7 kmpl",
+  //     "1199 to 1498 cc",
+  //     "Manual & Automatic CVT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 6.00 Lakh onwards",
+  //     "20 to 28 kmpl",
+  //     "998 to 1197 cc",
+  //     "Manual & Automatic AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,680 mm W x 1,520 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Dzire?",
+  //     "The on-road price of Dzire in Delhi starts at ‎₹ 6.6 Lakh and goes upto ‎₹ 10.13 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Dzire and Swift?",
+  //     "Dzire price starts at ₹ 5.98 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Swift price starts at ₹ 5.81 Lakh ex-showroom and It comes with 1197 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Dzire top model?",
+  //     "Top model of Dzire is ZXi Plus AGS and the ex-showroom for Dzire ZXi Plus AGS is ₹ 9.03 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -238,23 +273,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -32,179 +32,214 @@ import { TKushaq } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Skoda";
-  const CarPrice = "₹ 10.51 Lakh";
-  const TopPic = Kushaq;
-  const CarName = "Skoda Kushaq";
-  const OnlyName = "Kushaq";
-  const ThumPic = TKushaq;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 10.51 Lakh onwards",
-    "15.78 to 17.88 kmpl",
-    "999 to 1498 cc",
-    "Manual, Automatic (Torque Converter) & Automatic (Dual Clutch)",
-    "Petrol",
-    "5 Seater",
-    "4,225 mm L x 1,760 mm W x 1,612 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "electronic stability control",
-    "ABS",
-    "EBD",
-    "multi-collision braking",
-    "electronic differential lock system",
-    "anti-slip regulation",
-    " motor slip regulation",
-    "rollover protection",
-    "brake disc wiping",
-    "reverse parking sensors",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "1.0 TSI Active",
-      "999 cc, Manual, Petrol, 17.88 kmpl",
-      "Rs.10.49 Lakh*",
-    ],
-    varient2: [
-      "1.0 TSI Ambition",
-      "999 cc, Manual, Petrol, 17.88 kmpl",
-      "Rs.12.79 Lakh*",
-    ],
-    varient3: [
-      "1.0 TSI Ambition AT",
-      "999 cc, Automatic, Petrol, 15.78 kmpl",
-      "Rs.14.19 Lakh*",
-    ],
-    varient4: [
-      "1.0 TSI Style",
-      "999 cc, Manual, Petrol, 17.88 kmpl",
-      "Rs.14.59 Lakh*",
-    ],
-    varient5: [
-      "1.0 TSI Style AT",
-      "999 cc, Automatic, Petrol, 15.78 kmpl",
-      "Rs.15.79 Lakh*",
-    ],
-    varient6: [
-      "1.5 TSI Style",
-      "1498 cc, Manual, Petrol, 16.42 kmpl",
-      "Rs.16.19 Lakh*",
-    ],
-    varient7: [
-      "1.5 TSI Style DSG",
-      "1498 cc, Automatic, Petrol, 16.42 kmpl",
-      "Rs.17.59 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1330 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Skoda has garnered nearly 6,000 bookings for the Kushaq. Skoda Kushaq Price: The Kushaq is priced between Rs 10.50 lakh and Rs 17.60 lakh (ex-showroom pan-India). Skoda Kushaq Variants: It is offered in three broad trims: Active, Ambition, and Style. Skoda Kushaq Seating Capacity: The Kushaq is a five-seater. Skoda Kushaq Engine and Transmission: It gets two turbo-petrol engines: 1-litre (115PS/178Nm) and 1.5-litre (150PS/250Nm). While both engines get a 6-speed manual as standard, the 1-litre unit also comes with the option of a 6-speed torque converter while the other engine gets a 7-speed DSG (dual-clutch automatic). Skoda Kushaq Features: Skoda’s packed the compact SUV with features such as ventilated front seats, a 10.25-inch touchscreen system, wireless charging, a sunroof, connected car tech, and a 6-speaker sound system with a subwoofer. Skoda Kushaq Safety: Safety is covered by up to six airbags, electronic stability control (as standard), and rear parking sensors. Skoda Kushaq Rivals: Skoda’s Kushaq rivals the Maruti Suzuki S-Cross, Hyundai Creta, Kia Seltos, Renault Duster, Nissan Kicks, and the Volkswagen Taigun. If you want a more rugged compact SUV, you can check out the Mahindra Scorpio.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "SUV-like ride quality",
-      "Impressive cabin design and build",
-      "Excellent infotainment and sound experience",
-    ],
-    cons: [
-      "Quality of materials in certain areas isn’t Skoda level",
-      "Lack of premium features",
-      "No diesel engine option",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Brilliant Silver", "bg-gray-600"],
-    color2: ["Honey Orange", "bg-orange-800"],
-    color3: ["Carbon Steel", "bg-gray-700"],
-    color4: ["Toreador Red", "bg-red-300"],
-    color5: ["Candy White", "bg-white-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.63 Lakh onwards",
-      "16.6 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "6-7 Seater",
-      "4,720 mm L x 1,835 mm W x 1,760 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Kushaq?",
-      "The on-road price of Kushaq in Delhi starts at ‎₹ 12.11 Lakh and goes upto ‎₹ 20.26 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
-    ],
-    question2: [
-      "Which car is better between Kushaq and Creta?",
-      "Kushaq price starts at ₹ 10.51 Lakh ex-showroom and It comes with 999 cc engine. Whereas Creta price starts at ₹ 10.15 Lakh ex-showroom and It comes with 1497 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is the mileage of Skoda Kushaq?",
-      "The Skoda Kushaq mileage is 15.78 - 17.88 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Skoda";
+  // const CarPrice = "₹ 10.51 Lakh";
+  // const TopPic = Kushaq;
+  // const CarName = "Skoda Kushaq";
+  // const OnlyName = "Kushaq";
+  // const ThumPic = TKushaq;
+
+  // const KeySpecification = [
+  //   "₹ 10.51 Lakh onwards",
+  //   "15.78 to 17.88 kmpl",
+  //   "999 to 1498 cc",
+  //   "Manual, Automatic (Torque Converter) & Automatic (Dual Clutch)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "4,225 mm L x 1,760 mm W x 1,612 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "electronic stability control",
+  //   "ABS",
+  //   "EBD",
+  //   "multi-collision braking",
+  //   "electronic differential lock system",
+  //   "anti-slip regulation",
+  //   " motor slip regulation",
+  //   "rollover protection",
+  //   "brake disc wiping",
+  //   "reverse parking sensors",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "1.0 TSI Active",
+  //     "999 cc, Manual, Petrol, 17.88 kmpl",
+  //     "Rs.10.49 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "1.0 TSI Ambition",
+  //     "999 cc, Manual, Petrol, 17.88 kmpl",
+  //     "Rs.12.79 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "1.0 TSI Ambition AT",
+  //     "999 cc, Automatic, Petrol, 15.78 kmpl",
+  //     "Rs.14.19 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "1.0 TSI Style",
+  //     "999 cc, Manual, Petrol, 17.88 kmpl",
+  //     "Rs.14.59 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "1.0 TSI Style AT",
+  //     "999 cc, Automatic, Petrol, 15.78 kmpl",
+  //     "Rs.15.79 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "1.5 TSI Style",
+  //     "1498 cc, Manual, Petrol, 16.42 kmpl",
+  //     "Rs.16.19 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "1.5 TSI Style DSG",
+  //     "1498 cc, Automatic, Petrol, 16.42 kmpl",
+  //     "Rs.17.59 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1330 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Skoda has garnered nearly 6,000 bookings for the Kushaq. Skoda Kushaq Price: The Kushaq is priced between Rs 10.50 lakh and Rs 17.60 lakh (ex-showroom pan-India). Skoda Kushaq Variants: It is offered in three broad trims: Active, Ambition, and Style. Skoda Kushaq Seating Capacity: The Kushaq is a five-seater. Skoda Kushaq Engine and Transmission: It gets two turbo-petrol engines: 1-litre (115PS/178Nm) and 1.5-litre (150PS/250Nm). While both engines get a 6-speed manual as standard, the 1-litre unit also comes with the option of a 6-speed torque converter while the other engine gets a 7-speed DSG (dual-clutch automatic). Skoda Kushaq Features: Skoda’s packed the compact SUV with features such as ventilated front seats, a 10.25-inch touchscreen system, wireless charging, a sunroof, connected car tech, and a 6-speaker sound system with a subwoofer. Skoda Kushaq Safety: Safety is covered by up to six airbags, electronic stability control (as standard), and rear parking sensors. Skoda Kushaq Rivals: Skoda’s Kushaq rivals the Maruti Suzuki S-Cross, Hyundai Creta, Kia Seltos, Renault Duster, Nissan Kicks, and the Volkswagen Taigun. If you want a more rugged compact SUV, you can check out the Mahindra Scorpio.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "SUV-like ride quality",
+  //     "Impressive cabin design and build",
+  //     "Excellent infotainment and sound experience",
+  //   ],
+  //   cons: [
+  //     "Quality of materials in certain areas isn’t Skoda level",
+  //     "Lack of premium features",
+  //     "No diesel engine option",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Brilliant Silver", "bg-gray-600"],
+  //   color2: ["Honey Orange", "bg-orange-800"],
+  //   color3: ["Carbon Steel", "bg-gray-700"],
+  //   color4: ["Toreador Red", "bg-red-300"],
+  //   color5: ["Candy White", "bg-white-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.63 Lakh onwards",
+  //     "16.6 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "6-7 Seater",
+  //     "4,720 mm L x 1,835 mm W x 1,760 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Kushaq?",
+  //     "The on-road price of Kushaq in Delhi starts at ‎₹ 12.11 Lakh and goes upto ‎₹ 20.26 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Kushaq and Creta?",
+  //     "Kushaq price starts at ₹ 10.51 Lakh ex-showroom and It comes with 999 cc engine. Whereas Creta price starts at ₹ 10.15 Lakh ex-showroom and It comes with 1497 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Skoda Kushaq?",
+  //     "The Skoda Kushaq mileage is 15.78 - 17.88 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -247,23 +282,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41784/Skoda-Kamiq-Exterior-170110.jpg?wm=0&q=85",
-      "Skoda Kamiq",
-      "₹ 15.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49051/kodiaq-petrol-bs6-exterior-left-front-three-quarter.jpeg?q=85",
-      "Skoda Kodiaq Petrol BS6",
-      "₹ 33.00 - 36.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44088/skoda-new-rapid-exterior-0.jpeg?q=85",
-      "Skoda New Rapid",
-      "₹ 9.00 - 12.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41784/Skoda-Kamiq-Exterior-170110.jpg?wm=0&q=85",
+  //     "Skoda Kamiq",
+  //     "₹ 15.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49051/kodiaq-petrol-bs6-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "Skoda Kodiaq Petrol BS6",
+  //     "₹ 33.00 - 36.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/44088/skoda-new-rapid-exterior-0.jpeg?q=85",
+  //     "Skoda New Rapid",
+  //     "₹ 9.00 - 12.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

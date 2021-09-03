@@ -32,143 +32,178 @@ import { TCamry } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Toyota";
-  const CarPrice = "₹ 40.61 Lakh";
-  const TopPic = Camry;
-  const CarName = "Toyota Camry";
-  const OnlyName = "Camry";
-  const ThumPic = TCamry;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 40.61 Lakh onwards",
-    "19.16 kmpl",
-    "2487 cc",
-    "Automatic",
-    "Hybrid (Electric + Petrol)",
-    "5 Seater",
-    "4,885 mm L x 1,840 mm W x 1,455 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Pre-Collision System with Pedestrian Detection.",
-    "Full-Speed Range Dynamic Radar Cruise Control.",
-    "Lane Departure Alert with Steering Assist",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Hybrid 2.5",
-      "2487 cc, Automatic, Petrol, 19.16 kmpl",
-      "Rs.40.59 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The price of the Toyota Camry has shot up by Rs 1.18 lakh. Toyota Camry Price: It is now priced at Rs 40.59 lakh (ex-showroom Delhi). Toyota Camry Variant: Toyota offers the sedan in a single fully-loaded variant. Toyota Camry Powertrain: The sedan is offered with a BS6 2.5-litre petrol-hybrid engine and a single electric motor that drives the front wheels. It produces a combined output of 218PS with a CVT gearbox. Toyota Camry Features: It gets three-zone climate control, ventilated front seats, cruise control, wireless charger, and rain-sensing wipers. It also comes with a head-up display and a sunroof. Toyota Camry Safety: Safety features on offer include nine airbags, vehicle stability control, and ABS with EBD. Toyota Camry Rivals: It rivals the Skoda Superb and the upcoming VW Passat.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Efficiency. Petrol-Hybrid combo ensures your wallet remains fat.",
-      "Interior quality. Soft-touch material on the dash, leather upholstery feel top class. ",
-      "For the saahab! Powered recline for the rear seats, powered sunshade and audio controls on the rear central armrest. ",
-    ],
-    cons: [
-      "Not for the enthusiast. e-CVT robs some fun. ",
-      "Low seating position makes getting in and out slightly harder. ",
-      "Expensive! At Rs 36.95 lakh (ex-showroom), it’s asking nearly Rs 5 lakh over the Skoda Superb",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["PLATINUM WHITE PEARL", "bg-white-800"],
-    color2: ["Phantom Brown", "bg-brown-400"],
-    color3: ["Graphite", "bg-gray-900"],
-    color4: ["BURNING BLACK", "bg-gray-900"],
-    color5: ["Attitude Black", "bg-gray-900"],
-    color6: ["Silver Metallic", "bg-gray-600"],
-    color7: ["Red Mica Metallic", "bg-red-700"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.31.99 - 34.99 Lakh*",
-      "15.1 kmpl",
-      "1984 cc",
-      "Automatic",
-      "Petrol",
-      "5 Seater",
-      "4,869 mm L x 1,864 mm W x 1,469 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Superb/6764/1592459454448/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "Rs.38.90 - 43.00 Lakh*",
-      "14.82 - 19.62 kmpl",
-      "1995 cc - 1998 cc",
-      "Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,447 mm L x 1,821 mm W x 1,612 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X1/7625/1583398555726/front-left-side-47.jpg?tr=w-456",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Camry?",
-      "The on-road price of Camry in Delhi is ₹ 47.23 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Camry and ES?",
-      "Camry price starts at ₹ 40.61 Lakh ex-showroom and It comes with 2487 cc engine. Whereas ES price starts at ₹ 56.53 Lakh ex-showroom and It comes with 2487 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Toyota Camry?",
-      "The Toyota Camry mileage is 19.16 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Toyota";
+  // const CarPrice = "₹ 40.61 Lakh";
+  // const TopPic = Camry;
+  // const CarName = "Toyota Camry";
+  // const OnlyName = "Camry";
+  // const ThumPic = TCamry;
+
+  // const KeySpecification = [
+  //   "₹ 40.61 Lakh onwards",
+  //   "19.16 kmpl",
+  //   "2487 cc",
+  //   "Automatic",
+  //   "Hybrid (Electric + Petrol)",
+  //   "5 Seater",
+  //   "4,885 mm L x 1,840 mm W x 1,455 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Pre-Collision System with Pedestrian Detection.",
+  //   "Full-Speed Range Dynamic Radar Cruise Control.",
+  //   "Lane Departure Alert with Steering Assist",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Hybrid 2.5",
+  //     "2487 cc, Automatic, Petrol, 19.16 kmpl",
+  //     "Rs.40.59 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The price of the Toyota Camry has shot up by Rs 1.18 lakh. Toyota Camry Price: It is now priced at Rs 40.59 lakh (ex-showroom Delhi). Toyota Camry Variant: Toyota offers the sedan in a single fully-loaded variant. Toyota Camry Powertrain: The sedan is offered with a BS6 2.5-litre petrol-hybrid engine and a single electric motor that drives the front wheels. It produces a combined output of 218PS with a CVT gearbox. Toyota Camry Features: It gets three-zone climate control, ventilated front seats, cruise control, wireless charger, and rain-sensing wipers. It also comes with a head-up display and a sunroof. Toyota Camry Safety: Safety features on offer include nine airbags, vehicle stability control, and ABS with EBD. Toyota Camry Rivals: It rivals the Skoda Superb and the upcoming VW Passat.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Efficiency. Petrol-Hybrid combo ensures your wallet remains fat.",
+  //     "Interior quality. Soft-touch material on the dash, leather upholstery feel top class. ",
+  //     "For the saahab! Powered recline for the rear seats, powered sunshade and audio controls on the rear central armrest. ",
+  //   ],
+  //   cons: [
+  //     "Not for the enthusiast. e-CVT robs some fun. ",
+  //     "Low seating position makes getting in and out slightly harder. ",
+  //     "Expensive! At Rs 36.95 lakh (ex-showroom), it’s asking nearly Rs 5 lakh over the Skoda Superb",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["PLATINUM WHITE PEARL", "bg-white-800"],
+  //   color2: ["Phantom Brown", "bg-brown-400"],
+  //   color3: ["Graphite", "bg-gray-900"],
+  //   color4: ["BURNING BLACK", "bg-gray-900"],
+  //   color5: ["Attitude Black", "bg-gray-900"],
+  //   color6: ["Silver Metallic", "bg-gray-600"],
+  //   color7: ["Red Mica Metallic", "bg-red-700"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.31.99 - 34.99 Lakh*",
+  //     "15.1 kmpl",
+  //     "1984 cc",
+  //     "Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,869 mm L x 1,864 mm W x 1,469 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Superb/6764/1592459454448/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "Rs.38.90 - 43.00 Lakh*",
+  //     "14.82 - 19.62 kmpl",
+  //     "1995 cc - 1998 cc",
+  //     "Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,447 mm L x 1,821 mm W x 1,612 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X1/7625/1583398555726/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Camry?",
+  //     "The on-road price of Camry in Delhi is ₹ 47.23 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Camry and ES?",
+  //     "Camry price starts at ₹ 40.61 Lakh ex-showroom and It comes with 2487 cc engine. Whereas ES price starts at ₹ 56.53 Lakh ex-showroom and It comes with 2487 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Toyota Camry?",
+  //     "The Toyota Camry mileage is 19.16 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -221,18 +256,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Hilux",
-      "Rs.18.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
-      "Land Cruiser",
-      "Rs.1.50 Cr*",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Hilux",
+  //     "Rs.18.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
+  //     "Land Cruiser",
+  //     "Rs.1.50 Cr*",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

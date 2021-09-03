@@ -32,181 +32,216 @@ import { TTiago } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "₹ 5.00 Lakh";
-  const TopPic = Tiago;
-  const CarName = "Tata Tiago";
-  const OnlyName = "Tiago";
-  const ThumPic = TTiago;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 5.00 Lakh onwards",
-    "19.8 to 23.84 kmpl",
-    "1199 cc",
-    "Manual & AMT",
-    "Petrol",
-    "4 Seater",
-    "3,765 mm L x 1,677 mm W x 1,535 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "Antilock Braking System (ABS)",
-    "Electronic Brake Distribution (EBD)",
-    "Corner Stability Control (CSC)",
-    "rear parking sensors",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["XE", "1199  cc, Manual, Petrol, 23.84 kmpl", "Rs.4.99 Lakh*"],
-    varient2: [
-      "XT Option",
-      "1199  cc, Manual, Petrol, 23.84 kmpl",
-      "Rs.5.49 Lakh*",
-    ],
-    varient3: ["XT", "1199 cc, Manual, Petrol, 23.84 kmpl", "Rs.5.62 Lakh*"],
-    varient4: [
-      "XT Limited Edition",
-      "1199 cc, Manual, Diesel, 23.84 kmpl",
-      "Rs.5.79 Lakh*",
-    ],
-    varient5: ["XZ", "1199  cc, Manual, Petrol, 23.84 kmpl", "Rs.6.07 Lakh*"],
-    varient6: [
-      "XTA AMT",
-      "1199 cc, Automatic, Diesel, 23.84 kmpl",
-      "Rs.6.14 Lakh*",
-    ],
-    varient7: [
-      "XZ Plus",
-      "1199 cc, Manual, Petrol, 23.84 kmpl",
-      "Rs.6.33 Lakh*",
-    ],
-    varient8: [
-      "XZ Plus Dual Tone Roof",
-      "1199 cc, Manual, Diesel, 23.84 kmpl",
-      "Rs.6.43 Lakh*",
-    ],
-    varient9: [
-      "XZA AMT",
-      "1199 cc, Automatic, Petrol, 23.84 kmpl",
-      "Rs.6.59 Lakh*",
-    ],
-    varient10: [
-      "XZA Plus AMT",
-      "1199 cc, Automatic, Petrol, 23.84 kmpl",
-      "Rs.6.85 Lakh*",
-    ],
-    varient11: [
-      "XZA Plus Dual Tone Roof AMT",
-      "1199 cc, Automatic, Petrol, 23.84 kmpl",
-      "Rs.6.95 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Tata has launched the facelifted Tiago NRG from Rs 6.57 lakh. Tata Tiago Price: The Tiago is priced between Rs 4.99 lakh and Rs 6.95 lakh (ex-showroom Delhi). Tata Tiago Variants: It is available in ten variants: XE, XT(O), XT, XTA, XZ, XZA, XZ+, XZ+ DT, XZA+, and XZA+ DT. Tata Tiago Engine and Transmission: Tata offers the Tiago with only a 1.2-litre petrol engine (86PS/113Nm), mated to either a 5-speed manual or AMT. Tata Tiago Features: The Tiago is equipped with up to 15-inch alloy wheels, a rear defogger with a wiper, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, an 8-speaker sound system developed by Harman, automatic climate control, and a cooled glovebox. The AMT variant gets some additional features, including creep function and a ‘Sport’ mode. Tata Tiago Safety: Standard safety features on offer include dual front airbags, rear parking sensors, ABS with EBD, and corner stability control. Tata Tiago Rivals: It goes up against the Datsun GO, Hyundai Santro, Maruti Suzuki Celerio, and the Wagon R.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Probably the best looking hatchback of the lot",
-      "Build quality is impressive",
-      "4-stars in Global NCAP speaks highly about safety",
-    ],
-    cons: [
-      "3-pot Engine is not the most refined in the segment ",
-      "AMT transmission is slow to shift",
-      "Plastic starts to rattle in some models",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Flame Red", "bg-red-600"],
-    color2: ["Pearlescent White", "bg-white-400"],
-    color3: ["Pure Silver", "bg-gray-500"],
-    color4: ["Arizona Blue", "bg-blue-600"],
-    color5: ["Daytona Grey", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Tiago?",
-      "The on-road price of Tiago in Delhi starts at ‎₹ 5.56 Lakh and goes upto ‎₹ 7.97 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Tiago and Tiago NRG?",
-      "Tiago price starts at ₹ 5.00 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Tiago NRG price starts at ₹ 6.57 Lakh ex-showroom and It comes with 1199 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Tata Tiago?",
-      "The Tata Tiago mileage is 19.8 - 23.84 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Tata";
+  // const CarPrice = "₹ 5.00 Lakh";
+  // const TopPic = Tiago;
+  // const CarName = "Tata Tiago";
+  // const OnlyName = "Tiago";
+  // const ThumPic = TTiago;
+
+  // const KeySpecification = [
+  //   "₹ 5.00 Lakh onwards",
+  //   "19.8 to 23.84 kmpl",
+  //   "1199 cc",
+  //   "Manual & AMT",
+  //   "Petrol",
+  //   "4 Seater",
+  //   "3,765 mm L x 1,677 mm W x 1,535 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "Antilock Braking System (ABS)",
+  //   "Electronic Brake Distribution (EBD)",
+  //   "Corner Stability Control (CSC)",
+  //   "rear parking sensors",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["XE", "1199  cc, Manual, Petrol, 23.84 kmpl", "Rs.4.99 Lakh*"],
+  //   varient2: [
+  //     "XT Option",
+  //     "1199  cc, Manual, Petrol, 23.84 kmpl",
+  //     "Rs.5.49 Lakh*",
+  //   ],
+  //   varient3: ["XT", "1199 cc, Manual, Petrol, 23.84 kmpl", "Rs.5.62 Lakh*"],
+  //   varient4: [
+  //     "XT Limited Edition",
+  //     "1199 cc, Manual, Diesel, 23.84 kmpl",
+  //     "Rs.5.79 Lakh*",
+  //   ],
+  //   varient5: ["XZ", "1199  cc, Manual, Petrol, 23.84 kmpl", "Rs.6.07 Lakh*"],
+  //   varient6: [
+  //     "XTA AMT",
+  //     "1199 cc, Automatic, Diesel, 23.84 kmpl",
+  //     "Rs.6.14 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "XZ Plus",
+  //     "1199 cc, Manual, Petrol, 23.84 kmpl",
+  //     "Rs.6.33 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "XZ Plus Dual Tone Roof",
+  //     "1199 cc, Manual, Diesel, 23.84 kmpl",
+  //     "Rs.6.43 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "XZA AMT",
+  //     "1199 cc, Automatic, Petrol, 23.84 kmpl",
+  //     "Rs.6.59 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "XZA Plus AMT",
+  //     "1199 cc, Automatic, Petrol, 23.84 kmpl",
+  //     "Rs.6.85 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "XZA Plus Dual Tone Roof AMT",
+  //     "1199 cc, Automatic, Petrol, 23.84 kmpl",
+  //     "Rs.6.95 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Tata has launched the facelifted Tiago NRG from Rs 6.57 lakh. Tata Tiago Price: The Tiago is priced between Rs 4.99 lakh and Rs 6.95 lakh (ex-showroom Delhi). Tata Tiago Variants: It is available in ten variants: XE, XT(O), XT, XTA, XZ, XZA, XZ+, XZ+ DT, XZA+, and XZA+ DT. Tata Tiago Engine and Transmission: Tata offers the Tiago with only a 1.2-litre petrol engine (86PS/113Nm), mated to either a 5-speed manual or AMT. Tata Tiago Features: The Tiago is equipped with up to 15-inch alloy wheels, a rear defogger with a wiper, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, an 8-speaker sound system developed by Harman, automatic climate control, and a cooled glovebox. The AMT variant gets some additional features, including creep function and a ‘Sport’ mode. Tata Tiago Safety: Standard safety features on offer include dual front airbags, rear parking sensors, ABS with EBD, and corner stability control. Tata Tiago Rivals: It goes up against the Datsun GO, Hyundai Santro, Maruti Suzuki Celerio, and the Wagon R.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Probably the best looking hatchback of the lot",
+  //     "Build quality is impressive",
+  //     "4-stars in Global NCAP speaks highly about safety",
+  //   ],
+  //   cons: [
+  //     "3-pot Engine is not the most refined in the segment ",
+  //     "AMT transmission is slow to shift",
+  //     "Plastic starts to rattle in some models",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Flame Red", "bg-red-600"],
+  //   color2: ["Pearlescent White", "bg-white-400"],
+  //   color3: ["Pure Silver", "bg-gray-500"],
+  //   color4: ["Arizona Blue", "bg-blue-600"],
+  //   color5: ["Daytona Grey", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Tiago?",
+  //     "The on-road price of Tiago in Delhi starts at ‎₹ 5.56 Lakh and goes upto ‎₹ 7.97 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Tiago and Tiago NRG?",
+  //     "Tiago price starts at ₹ 5.00 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Tiago NRG price starts at ₹ 6.57 Lakh ex-showroom and It comes with 1199 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Tata Tiago?",
+  //     "The Tata Tiago mileage is 19.8 - 23.84 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -289,23 +324,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

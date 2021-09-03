@@ -29,149 +29,184 @@ import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "Rs.8.09 - 8.35 Lakh*";
-  const TopPic =
-    "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/7230/1573280100232/front-left-side-47.jpg?imwidth=420&impolicy=resize";
-  const CarName = "Mahindra Bolero Pickup";
-  const OnlyName = "Bolero Pickup";
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "Rs.8.09 - 8.35 Lakh*",
-    "13 kmpl",
-    "2523 cc",
-    "Manual",
-    "Diesel",
-    "2 Seater",
-    "5215 mm i x 1700 mm x 1865 mm h",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "A driver’s side airbag",
+  const SafetyFeatures = joy.SafetyFeatures;
 
-    "Rear parking sensors",
+  const VarientPetrol = joy.VarientPetrol;
 
-    "Seatbelt reminders for the driver and front passenger",
+  const VarientDiesel = joy.VarientDiesel;
 
-    "A speed warning system (at 80kmph and 120kmph)",
+  const VarientCNG = joy.VarientCNG;
 
-    "A manual override for the central locking system",
-  ];
+  const Mileage = joy.Mileage;
 
-  const VarientPetrol = {};
+  const LatestUpdate = joy.LatestUpdate;
 
-  const VarientDiesel = {
-    varient1: [
-      "CBC 1.7T",
-      "2523 cc, Manual, Diesel, 13.0 kmpl",
-      "Rs.8.09 Lakh*",
-    ],
-    varient2: [
-      "FB 1.25T",
-      "2523 cc, Manual, Diesel, 13.0 kmpl",
-      "Rs.8.32 Lakh*",
-    ],
-    varient3: [
-      "FB 1.7T",
-      "2523 cc, Manual, Diesel, 13.0 kmpl",
-      "Rs.8.35 Lakh*",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const VarientCNG = {};
+  const Colorss = joy.Colorss;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const LatestUpdate = [
-    "The Mahindra Bolero Pik-Up is the most popular light commercial vehicle in India as well as the highest-selling model in this category. This single product has established Mahindra as a formidable player in the fast-growing last-mile delivery segment in India. This segment has been growing rapidly over the last several years due to the rising demand for goods and services in both urban and semi-urban areas. The Bolero Pik-Up has been designed and developed considering all sizes of shipments. It also offers enough power delivered by a modern engine, besides greater mileage and higher durability. M&M has expanded the Bolero Pik-Up range to cater to mass markets by targeting several applications and payload needs in last-mile transportation. Hence, it comes in several variants: Bolero Pik up Extralong 1.25T, Bolero Pik up Extralong 1.7T, Bolero Pik up Extrastrong 1.3T, Bolero Pik up Extrastrong 1.5T -- all of which feature a flatbed.  All the Mahindra Bolero Pik-Ups are powered by m2DiCR 4 cylinder, 2.5L TB, DI, Turbo charged, 2,523cc engine with 70hp@3200 rpm and 200Nm (20.39 kgm) @ 1400-2200 rpm, 63 hp @2200 rpm 195 Nm (19.38 kgm) @ 1400-2200 rpm. Growing in popularity among first-time buyers and transport entrepreneurs, Bolero Pik-Up comes with superior performance. It features higher payloads, longest cargo body, stronger aggregates including suspensions and tyres and modern contemporary cabin with high ergonomics and driver convenience.",
-  ];
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ProsCons = {
-    pros: [
-      "Tough built quality. Hard to damage.",
-      "Built to take punishment",
-      "Ride quality soft to suit no road conditions",
-    ],
-    cons: ["Noisy cabin", "Utilitarian layout", "Bare bone features"],
-  };
+  const faqs = joy.faqs;
 
-  const Colorss = {
-    color1: ["White", "bg-blue-600"],
-  };
+  const articles = joy.articles;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.6.94 - 7.49 Lakh*",
-      "14km/l",
-      "2956 cc",
-      "Manual",
-      "Diesel",
-      "2 Seater",
-      "length of 2825mm, width of 1860mm and a wheelbase of 2825mm",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Yodha-Pickup/7624/1609147376028/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "Rs.16.98 - 24.49 Lakh*",
-      "	12.4 kmpl",
-      "1898 cc",
-      "Manual",
-      "Diesel",
-      "2 Seater",
-      "5295 mm L x 1,860 mm W x 1,885 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/8430/1620644941293/front-left-side-47.jpg?tr=w-456",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "Rs.8.09 - 8.35 Lakh*";
+  // const TopPic =
+  //   "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/7230/1573280100232/front-left-side-47.jpg?imwidth=420&impolicy=resize";
+  // const CarName = "Mahindra Bolero Pickup";
+  // const OnlyName = "Bolero Pickup";
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Bolero Pickup?",
-      "The on-road price of Bolero in Delhi starts at ‎₹ 9.9 Lakh and goes upto ‎₹ 10.6 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "What are the safety features of bolero pickup?",
-      "A driver’s side airbag, rear parking sensor",
-    ],
-    question3: [
-      "What is the mileage of Mahindra Bolero?",
-      "The Mahindra Bolero mileage is 13.0 kmpl.",
-    ],
-  };
+  // const KeySpecification = [
+  //   "Rs.8.09 - 8.35 Lakh*",
+  //   "13 kmpl",
+  //   "2523 cc",
+  //   "Manual",
+  //   "Diesel",
+  //   "2 Seater",
+  //   "5215 mm i x 1700 mm x 1865 mm h",
+  // ];
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "A driver’s side airbag",
+
+  //   "Rear parking sensors",
+
+  //   "Seatbelt reminders for the driver and front passenger",
+
+  //   "A speed warning system (at 80kmph and 120kmph)",
+
+  //   "A manual override for the central locking system",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "CBC 1.7T",
+  //     "2523 cc, Manual, Diesel, 13.0 kmpl",
+  //     "Rs.8.09 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "FB 1.25T",
+  //     "2523 cc, Manual, Diesel, 13.0 kmpl",
+  //     "Rs.8.32 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "FB 1.7T",
+  //     "2523 cc, Manual, Diesel, 13.0 kmpl",
+  //     "Rs.8.35 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "The Mahindra Bolero Pik-Up is the most popular light commercial vehicle in India as well as the highest-selling model in this category. This single product has established Mahindra as a formidable player in the fast-growing last-mile delivery segment in India. This segment has been growing rapidly over the last several years due to the rising demand for goods and services in both urban and semi-urban areas. The Bolero Pik-Up has been designed and developed considering all sizes of shipments. It also offers enough power delivered by a modern engine, besides greater mileage and higher durability. M&M has expanded the Bolero Pik-Up range to cater to mass markets by targeting several applications and payload needs in last-mile transportation. Hence, it comes in several variants: Bolero Pik up Extralong 1.25T, Bolero Pik up Extralong 1.7T, Bolero Pik up Extrastrong 1.3T, Bolero Pik up Extrastrong 1.5T -- all of which feature a flatbed.  All the Mahindra Bolero Pik-Ups are powered by m2DiCR 4 cylinder, 2.5L TB, DI, Turbo charged, 2,523cc engine with 70hp@3200 rpm and 200Nm (20.39 kgm) @ 1400-2200 rpm, 63 hp @2200 rpm 195 Nm (19.38 kgm) @ 1400-2200 rpm. Growing in popularity among first-time buyers and transport entrepreneurs, Bolero Pik-Up comes with superior performance. It features higher payloads, longest cargo body, stronger aggregates including suspensions and tyres and modern contemporary cabin with high ergonomics and driver convenience.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Tough built quality. Hard to damage.",
+  //     "Built to take punishment",
+  //     "Ride quality soft to suit no road conditions",
+  //   ],
+  //   cons: ["Noisy cabin", "Utilitarian layout", "Bare bone features"],
+  // };
+
+  // const Colorss = {
+  //   color1: ["White", "bg-blue-600"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.6.94 - 7.49 Lakh*",
+  //     "14km/l",
+  //     "2956 cc",
+  //     "Manual",
+  //     "Diesel",
+  //     "2 Seater",
+  //     "length of 2825mm, width of 1860mm and a wheelbase of 2825mm",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Yodha-Pickup/7624/1609147376028/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "Rs.16.98 - 24.49 Lakh*",
+  //     "	12.4 kmpl",
+  //     "1898 cc",
+  //     "Manual",
+  //     "Diesel",
+  //     "2 Seater",
+  //     "5295 mm L x 1,860 mm W x 1,885 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/8430/1620644941293/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Bolero Pickup?",
+  //     "The on-road price of Bolero in Delhi starts at ‎₹ 9.9 Lakh and goes upto ‎₹ 10.6 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "What are the safety features of bolero pickup?",
+  //     "A driver’s side airbag, rear parking sensor",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Mahindra Bolero?",
+  //     "The Mahindra Bolero mileage is 13.0 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -234,43 +269,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

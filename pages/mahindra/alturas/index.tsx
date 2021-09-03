@@ -32,151 +32,186 @@ import Meta from "../../../Components/metaSEO";
 import { TAlturas } from "../../../CarPicsUrl/Thumbnails";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "₹ 28.77 Lakh";
-  const TopPic = Alturas;
-  const CarName = "Mahindra Alturas G4";
-  const OnlyName = "Alturas G4";
-  const ThumPic = TAlturas;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 28.77 Lakh onwards",
-    "12.03 kmpl",
-    "2157 cc",
-    "Automatic (Torque Converter)",
-    "Diesel",
-    "7 Seater",
-    "4,850 mm L x 1,960 mm W x 1,845 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "9 Airbags.",
-    "Rear Parking Camera and Sensors.",
-    "ABS with EBD.",
-    "Driver and Passenger Seatbelt Reminder.",
-    "High-Speed Sensing Alert System.",
-    "Side and Curtain Airbags.",
-    "Door Ajar Warning.",
-    "Perimeter Alarm.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {};
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: [
-      "4X2 AT",
-      "2157 cc, Automatic, Diesel, 12.35 kmpl",
-      "Rs.28.77 Lakh*",
-    ],
-    varient2: [
-      "4X4 AT",
-      "2157 cc, Automatic, Diesel, 12.05 kmpl",
-      "Rs.31.77 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The Alturas G4 has become costlier by Rs 4,000. Mahindra Alturas G4 Price: Mahindra has priced the SUV from Rs 28.77 lakh to Rs 31.77 lakh (ex-showroom Delhi). Mahindra Alturas G4 Variants: It is available in two variants: 2WD and 4WD. Mahindra Alturas G4 Seating Capacity: The Alturas G4 comes in a 7-seater configuration. Mahindra Alturas G4 Powertrain: Mahindra has provided the SUV with a 2.2-litre four-cylinder diesel engine (180PS/420Nm) paired with a 7-speed AT gearbox. Mahindra Alturas G4 Features: It gets a sunroof, cruise control, dual-zone climate control, and an 8-way adjustable driver seat.  Mahindra Alturas G4 Safety: Standard safety features include ABS with EBD, ISOFIX child anchorages, and dual front airbags. Mahindra Alturas G4 Rivals: The Alturas G4 goes up against the Toyota Fortuner, MG Gloster Volkswagen Tiguan Allspace, Ford Endeavour, and 2021 Skoda Kodiaq.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Size: Large and imposing looks make it stand out.",
-      "Loaded: Ventilated seats, Nappa leather upholstery, sunroof, dual-zone AC - you name it.",
-      "Low-speed ride quality: Simply glides over and flattens out bumps. Deliciously smooth!",
-    ],
-    cons: [
-      "Low-set third row best left for kids. Uncomfortable for adults even on short journeys.",
-      "Feels bouncy at higher speeds, more so in the second and third rows.",
-      "Touchscreen graphics and response could’ve been better.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Regal Blue", "bg-blue-600"],
-    color2: ["Lake Side Brown", "bg-gray-400"],
-    color3: ["Pearl White", "bg-white"],
-    color4: ["Napoli Black", "bg-white"],
-    color5: ["Dsat Silver", "bg-white"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 29.98 Lakh Onwards",
-      "12.35 kmpl",
-      "1996 cc",
-      "Automatic",
-      "Diesel",
-      "7 Seater",
-      "4,985 mm L x 1,926 mm W x 1,867 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/43485/gloster-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 30.36 Lakh onwards",
-      "10.01 to 14.22 kmpl",
-      "2694 to 2755 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "7 Seater",
-      "4,795 mm L x 1,855 mm W x 1,835 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-19.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Alturas G4?",
-      "The on-road price of Alturas G4 in Delhi starts at ‎₹ 33.87 Lakh and goes upto ‎₹ 37.35 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Alturas G4 and Gloster?",
-      "Alturas G4 price starts at ₹ 28.77 Lakh ex-showroom and It comes with 2157 cc engine. Whereas Gloster price starts at ₹ 29.98 Lakh ex-showroom and It comes with 1996 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Mahindra Alturas G4?",
-      "The Mahindra Alturas G4 mileage is 12.03 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "₹ 28.77 Lakh";
+  // const TopPic = Alturas;
+  // const CarName = "Mahindra Alturas G4";
+  // const OnlyName = "Alturas G4";
+  // const ThumPic = TAlturas;
+
+  // const KeySpecification = [
+  //   "₹ 28.77 Lakh onwards",
+  //   "12.03 kmpl",
+  //   "2157 cc",
+  //   "Automatic (Torque Converter)",
+  //   "Diesel",
+  //   "7 Seater",
+  //   "4,850 mm L x 1,960 mm W x 1,845 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "9 Airbags.",
+  //   "Rear Parking Camera and Sensors.",
+  //   "ABS with EBD.",
+  //   "Driver and Passenger Seatbelt Reminder.",
+  //   "High-Speed Sensing Alert System.",
+  //   "Side and Curtain Airbags.",
+  //   "Door Ajar Warning.",
+  //   "Perimeter Alarm.",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "4X2 AT",
+  //     "2157 cc, Automatic, Diesel, 12.35 kmpl",
+  //     "Rs.28.77 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "4X4 AT",
+  //     "2157 cc, Automatic, Diesel, 12.05 kmpl",
+  //     "Rs.31.77 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The Alturas G4 has become costlier by Rs 4,000. Mahindra Alturas G4 Price: Mahindra has priced the SUV from Rs 28.77 lakh to Rs 31.77 lakh (ex-showroom Delhi). Mahindra Alturas G4 Variants: It is available in two variants: 2WD and 4WD. Mahindra Alturas G4 Seating Capacity: The Alturas G4 comes in a 7-seater configuration. Mahindra Alturas G4 Powertrain: Mahindra has provided the SUV with a 2.2-litre four-cylinder diesel engine (180PS/420Nm) paired with a 7-speed AT gearbox. Mahindra Alturas G4 Features: It gets a sunroof, cruise control, dual-zone climate control, and an 8-way adjustable driver seat.  Mahindra Alturas G4 Safety: Standard safety features include ABS with EBD, ISOFIX child anchorages, and dual front airbags. Mahindra Alturas G4 Rivals: The Alturas G4 goes up against the Toyota Fortuner, MG Gloster Volkswagen Tiguan Allspace, Ford Endeavour, and 2021 Skoda Kodiaq.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Size: Large and imposing looks make it stand out.",
+  //     "Loaded: Ventilated seats, Nappa leather upholstery, sunroof, dual-zone AC - you name it.",
+  //     "Low-speed ride quality: Simply glides over and flattens out bumps. Deliciously smooth!",
+  //   ],
+  //   cons: [
+  //     "Low-set third row best left for kids. Uncomfortable for adults even on short journeys.",
+  //     "Feels bouncy at higher speeds, more so in the second and third rows.",
+  //     "Touchscreen graphics and response could’ve been better.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Regal Blue", "bg-blue-600"],
+  //   color2: ["Lake Side Brown", "bg-gray-400"],
+  //   color3: ["Pearl White", "bg-white"],
+  //   color4: ["Napoli Black", "bg-white"],
+  //   color5: ["Dsat Silver", "bg-white"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 29.98 Lakh Onwards",
+  //     "12.35 kmpl",
+  //     "1996 cc",
+  //     "Automatic",
+  //     "Diesel",
+  //     "7 Seater",
+  //     "4,985 mm L x 1,926 mm W x 1,867 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/43485/gloster-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 30.36 Lakh onwards",
+  //     "10.01 to 14.22 kmpl",
+  //     "2694 to 2755 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "7 Seater",
+  //     "4,795 mm L x 1,855 mm W x 1,835 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-19.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Alturas G4?",
+  //     "The on-road price of Alturas G4 in Delhi starts at ‎₹ 33.87 Lakh and goes upto ‎₹ 37.35 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Alturas G4 and Gloster?",
+  //     "Alturas G4 price starts at ₹ 28.77 Lakh ex-showroom and It comes with 2157 cc engine. Whereas Gloster price starts at ₹ 29.98 Lakh ex-showroom and It comes with 1996 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Mahindra Alturas G4?",
+  //     "The Mahindra Alturas G4 mileage is 12.03 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -244,43 +279,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

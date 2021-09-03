@@ -33,149 +33,184 @@ import { TErtiga } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 7.78 Lakh onwards";
-  const TopPic = Ertiga;
-  const CarName = "Maruti Ertiga";
-  const OnlyName = "Ertiga";
-  const ThumPic = TErtiga;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 7.78 Lakh onwards",
-    "17.99 to 26.2 km/kg",
-    "1462 cc",
-    "Manual and Automatic",
-    "Petrol & CNG",
-    "5-7 Seater",
-    "4,395 mm L x 1,735 mm W x 1,690 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = ["Driver Airbag", "Seat Belts", "Speed Alert"];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["LXI", "1462 cc, Manual, Petrol, 19.01 kmpl", "Rs.7.78 Lakh*"],
-    varient2: ["VXI", "1462 cc, Manual, Petrol, 19.01 kmpl", "Rs.8.53 Lakh*"],
-    varient3: ["ZXI", "1462 cc, Manual, Petrol, 19.01 kmpl", "Rs.9.36 Lakh*"],
-    varient5: [
-      "VXI AT",
-      "1462 cc, Automatic Torque Converter, Petrol, 19.01 kmpl",
-      "Rs.9.73 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient6: [
-      "ZXI Plus",
-      "1462 cc, Manual, Petrol, 19.01 kmpl",
-      "Rs.9.88 Lakh*",
-    ],
-    varient7: [
-      "ZXI AT",
-      "1462 cc, Automatic Torque Converter, Petrol, 19.01 kmpl",
-      "Rs.10.56 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientDiesel = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientCNG = {
-    varient1: ["VXI CNG", "1462 cc, Manual, CNG, 26.2 km/kg", "Rs.9.47 Lakh*"],
-  };
+  const Mileage = joy.Mileage;
 
-  const Mileage = {
-    mileage1: ["Petrol (1462 cc)", "Manual", "19.01 kmpl"],
-    mileage2: ["CNG (1462 cc)", "Manual", "26.2 km/kg"],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const LatestUpdate = [
-    "Maruti Ertiga Price: The Maruti Ertiga is priced between Rs 7.81 lakh and Rs 10.59 lakh (ex-showroom Delhi). Maruti Ertiga Variants: It is available in four trims: LXi, VXi, ZXi, and ZXi+. Maruti Ertiga Seating Capacity: The Ertiga comes in a seven-seater layout. Maruti Ertiga Powertrain: Maruti has equipped the Ertiga with a 1.5-litre petrol engine (105PS/138Nm), mated to a 5-speed manual or a 4-speed torque converter. The CNG-petrol variant uses the same 1.5-litre petrol engine but without the mild-hybrid tech. It has a claimed efficiency of 26.08km/kg but the performance drops to 92PS and 122Nm. The petrol engine with the MT and AT options has a claimed efficiency of 19.01kmpl and 17.99kmpl respectively. Maruti Ertiga Features: It gets projector headlamps, fog lamps, LED tail lamps, 15-inch wheels, a seven-inch infotainment system with Android Auto and CarPlay, and push-button start-stop. The Ertiga also comes with ventilated front cup holders, auto climate control with rear AC vents, and a reverse parking camera.  Maruti Ertiga Safety: Safety is covered by dual front airbags, ABS with EBD, ISOFIX child seat anchors, and reverse parking sensors. Maruti has also equipped it with ESP and hill hold for safety, but these features are limited to the automatic variant. Maruti Ertiga Rivals: The Ertiga goes up against the Toyota Innova Crysta and Mahindra Marazzo.",
-  ];
+  const ProsCons = joy.ProsCons;
 
-  const ProsCons = {
-    pros: ["Value for money", "Easy to drive", "Good interior space."],
-    cons: [
-      "Petrol motor gets noisy post 2,500rpm",
-      "Bumpy low speed ride",
-      "Interior plastic quality",
-    ],
-  };
+  const Colorss = joy.Colorss;
 
-  const Colorss = {
-    color1: ["Pearl Metallic Oxford Blue", "bg-blue-600"],
-    color2: ["Metallic Silky Silver", "bg-gray-400"],
-    color3: ["Pearl Arctic White", "bg-white"],
-    color4: ["Metallic Magma Grey", "bg-gray-600"],
-    color5: ["Pearl Metallic Auburn Red", "bg-black-800"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.50 Lakh onwards",
-      "18.2 - 20.0 kmpl",
-      "999 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "7 Seater",
-      "3,990 mm L x 1,739 mm W x 1,643 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Triber/7418/1580113966019/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "₹ 9.94 Lakh onwards",
-      "19.01 kmpl",
-      "1462 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "6-7 Seater",
-      "4,445 mm L x 1,775 mm W x 1,700 mm H",
-      "https://www.v3cars.com/media/23261/maruti-xl6.jpg",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "1 Airbags",
-      "",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Ertiga?",
-      "The on-road price of Ertiga in Delhi starts at ‎₹ 8.79 Lakh and goes upto ‎₹ 12.27 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Ertiga and XL6?",
-      "Ertiga price starts at ₹ 7.78 Lakh ex-showroom and It comes with 1462 cc engine. Whereas XL6 price starts at ₹ 9.92 Lakh ex-showroom and It comes with 1462 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Ertiga top model?",
-      "Top model of Ertiga is ZXi AT and the ex-showroom for Ertiga ZXi AT is ₹ 10.56 Lakh.",
-    ],
-  };
+  const articles = joy.articles;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 7.78 Lakh onwards";
+  // const TopPic = Ertiga;
+  // const CarName = "Maruti Ertiga";
+  // const OnlyName = "Ertiga";
+  // const ThumPic = TErtiga;
+
+  // const KeySpecification = [
+  //   "₹ 7.78 Lakh onwards",
+  //   "17.99 to 26.2 km/kg",
+  //   "1462 cc",
+  //   "Manual and Automatic",
+  //   "Petrol & CNG",
+  //   "5-7 Seater",
+  //   "4,395 mm L x 1,735 mm W x 1,690 mm H",
+  // ];
+
+  // const SafetyFeatures = ["Driver Airbag", "Seat Belts", "Speed Alert"];
+
+  // const VarientPetrol = {
+  //   varient1: ["LXI", "1462 cc, Manual, Petrol, 19.01 kmpl", "Rs.7.78 Lakh*"],
+  //   varient2: ["VXI", "1462 cc, Manual, Petrol, 19.01 kmpl", "Rs.8.53 Lakh*"],
+  //   varient3: ["ZXI", "1462 cc, Manual, Petrol, 19.01 kmpl", "Rs.9.36 Lakh*"],
+  //   varient5: [
+  //     "VXI AT",
+  //     "1462 cc, Automatic Torque Converter, Petrol, 19.01 kmpl",
+  //     "Rs.9.73 Lakh*",
+  //   ],
+
+  //   varient6: [
+  //     "ZXI Plus",
+  //     "1462 cc, Manual, Petrol, 19.01 kmpl",
+  //     "Rs.9.88 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "ZXI AT",
+  //     "1462 cc, Automatic Torque Converter, Petrol, 19.01 kmpl",
+  //     "Rs.10.56 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {
+  //   varient1: ["VXI CNG", "1462 cc, Manual, CNG, 26.2 km/kg", "Rs.9.47 Lakh*"],
+  // };
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1462 cc)", "Manual", "19.01 kmpl"],
+  //   mileage2: ["CNG (1462 cc)", "Manual", "26.2 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Maruti Ertiga Price: The Maruti Ertiga is priced between Rs 7.81 lakh and Rs 10.59 lakh (ex-showroom Delhi). Maruti Ertiga Variants: It is available in four trims: LXi, VXi, ZXi, and ZXi+. Maruti Ertiga Seating Capacity: The Ertiga comes in a seven-seater layout. Maruti Ertiga Powertrain: Maruti has equipped the Ertiga with a 1.5-litre petrol engine (105PS/138Nm), mated to a 5-speed manual or a 4-speed torque converter. The CNG-petrol variant uses the same 1.5-litre petrol engine but without the mild-hybrid tech. It has a claimed efficiency of 26.08km/kg but the performance drops to 92PS and 122Nm. The petrol engine with the MT and AT options has a claimed efficiency of 19.01kmpl and 17.99kmpl respectively. Maruti Ertiga Features: It gets projector headlamps, fog lamps, LED tail lamps, 15-inch wheels, a seven-inch infotainment system with Android Auto and CarPlay, and push-button start-stop. The Ertiga also comes with ventilated front cup holders, auto climate control with rear AC vents, and a reverse parking camera.  Maruti Ertiga Safety: Safety is covered by dual front airbags, ABS with EBD, ISOFIX child seat anchors, and reverse parking sensors. Maruti has also equipped it with ESP and hill hold for safety, but these features are limited to the automatic variant. Maruti Ertiga Rivals: The Ertiga goes up against the Toyota Innova Crysta and Mahindra Marazzo.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: ["Value for money", "Easy to drive", "Good interior space."],
+  //   cons: [
+  //     "Petrol motor gets noisy post 2,500rpm",
+  //     "Bumpy low speed ride",
+  //     "Interior plastic quality",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Pearl Metallic Oxford Blue", "bg-blue-600"],
+  //   color2: ["Metallic Silky Silver", "bg-gray-400"],
+  //   color3: ["Pearl Arctic White", "bg-white"],
+  //   color4: ["Metallic Magma Grey", "bg-gray-600"],
+  //   color5: ["Pearl Metallic Auburn Red", "bg-black-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.50 Lakh onwards",
+  //     "18.2 - 20.0 kmpl",
+  //     "999 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "7 Seater",
+  //     "3,990 mm L x 1,739 mm W x 1,643 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Triber/7418/1580113966019/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 9.94 Lakh onwards",
+  //     "19.01 kmpl",
+  //     "1462 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "6-7 Seater",
+  //     "4,445 mm L x 1,775 mm W x 1,700 mm H",
+  //     "https://www.v3cars.com/media/23261/maruti-xl6.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "1 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Ertiga?",
+  //     "The on-road price of Ertiga in Delhi starts at ‎₹ 8.79 Lakh and goes upto ‎₹ 12.27 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Ertiga and XL6?",
+  //     "Ertiga price starts at ₹ 7.78 Lakh ex-showroom and It comes with 1462 cc engine. Whereas XL6 price starts at ₹ 9.92 Lakh ex-showroom and It comes with 1462 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Ertiga top model?",
+  //     "Top model of Ertiga is ZXi AT and the ex-showroom for Ertiga ZXi AT is ₹ 10.56 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -233,23 +268,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

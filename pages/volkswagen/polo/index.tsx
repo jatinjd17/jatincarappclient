@@ -32,178 +32,213 @@ import { TPolo } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Volkswagen";
-  const CarPrice = "₹ 6.21 Lakh";
-  const TopPic = Polo;
-  const CarName = "Volkswagen Polo";
-  const OnlyName = "Polo";
-  const ThumPic = TPolo;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ ₹ 6.21 Lakh onwards",
-    "16.47 to 17.99 kmpl",
-    "999 cc",
-    "Manual & Automatic (Torque Converter)",
-    "Petrol",
-    "5 Seater",
-    "3,971 mm L x 1,682 mm W x 1,469 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Dual Front Airbags for Driver and Front Passenger",
-    "Ventilated Front Disc Brakes",
-    "Central Locking",
-    "high mounted third Brake Light",
-    "Height Adjustable Front head restraints",
-    "Electronic anti-theft Immobiliser",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "1.0 MPI Trendline",
-      "999 cc, Manual, Petrol, 17.74 kmpl",
-      "Rs.6.16 Lakh*",
-    ],
-    varient2: [
-      "1.0 MPI Comfortline",
-      "999 cc, Manual, Petrol, 17.74 kmpl",
-      "Rs.7.11 Lakh*",
-    ],
-    varient3: [
-      "Turbo Edition",
-      "999 cc, Manual, Petrol, 18.24 kmpl",
-      "Rs.7.41 Lakh*",
-    ],
-    varient4: [
-      "1.0 TSI Highline Plus",
-      "999 cc, Manual, Petrol, 18.24 kmpl",
-      "Rs.8.49 Lakh*",
-    ],
-    varient5: [
-      "1.0 TSI Comfortline AT",
-      "999  cc, Automatic, Petrol, 16.47 kmpl",
-      "Rs.8.51 Lakh*",
-    ],
-    varient6: [
-      "1.0 Red And White Edition",
-      "999 cc, Manual, Petrol, 18.24 kmpl",
-      "Rs.9.19 Lakh*",
-    ],
-    varient7: [
-      "1.0 TSI Highline Plus AT",
-      "999 cc, Automatic, Petrol, 16.47 kmpl",
-      "Rs.9.60 Lakh*",
-    ],
-    varient8: [
-      "GT 1.0 TSI",
-      "999 cc, Manual, Petrol, 18.24 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Volkswagen has introduced an automatic gearbox in the second-to-base Comfortline variant. Volkswagen Polo Price: The premium hatchback is priced from Rs 6.16 lakh to Rs 9.99 lakh (ex-showroom). Volkswagen Polo Variants: It is sold in four variants: Trendline, Comfortline, Highline Plus, and GT. Volkswagen Polo Powertrains: It gets two engine options: a 1.0-litre naturally aspirated petrol (75PS/95Nm) and a 1.0-litre turbo-petrol (110PS/175Nm). While the former is mated to a 5-speed MT,  the latter can be paired with either a 6-speed MT or a 6-speed AT. The fuel efficiency figures of the Polo are as follows: 1.0-litre MPI: 17.57kmpl 1.0-litre TSI MT: 18.24kmpl 1.0-litre TSI AT: 16.47kmpl Volkswagen Polo Features: The Polo gets cruise control, auto AC with rear AC vents, rain-sensing wipers, and a 6.5-inch touchscreen infotainment system with Apple CarPlay and Android Auto. Volkswagen Polo Safety: Standard safety features on offer include rear parking sensors and dual front airbags. Volkswagen Polo Rivals: It takes on the Hyundai i20, Honda Jazz, Tata Altroz, and the Maruti Suzuki Baleno/Toyota Glanza.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: ["Punchy turbo engine", "Solid build quality", "Enthusiast handling"],
-    cons: [
-      "Missing features like a reverse camera",
-      "Lack of rear seat space",
-      "Lacks in Modern features",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Lapiz Blue", "bg-blue-600"],
-    color2: ["Carbon Steel", "bg-gray-400"],
-    color3: ["Sunset Red", "bg-white"],
-    color4: ["Toffee Brown", "bg-red-600"],
-    color5: ["Flash Red", "bg-gray-800"],
-    color6: ["Reflex Silver", "bg-gray-800"],
-    color7: ["Candy White", "bg-gray-800"],
-    color8: ["Flash Red", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Polo?",
-      "The on-road price of Polo in Delhi starts at ‎₹ 7.03 Lakh and goes upto ‎₹ 11.27 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Polo and Figo?",
-      "Polo price starts at ₹ 6.21 Lakh ex-showroom and It comes with 999 cc engine. Whereas Figo price starts at ₹ 5.82 Lakh ex-showroom and It comes with 1194 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Volkswagen Polo?",
-      "The Volkswagen Polo mileage is 16.47 - 17.99 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Volkswagen";
+  // const CarPrice = "₹ 6.21 Lakh";
+  // const TopPic = Polo;
+  // const CarName = "Volkswagen Polo";
+  // const OnlyName = "Polo";
+  // const ThumPic = TPolo;
+
+  // const KeySpecification = [
+  //   "₹ ₹ 6.21 Lakh onwards",
+  //   "16.47 to 17.99 kmpl",
+  //   "999 cc",
+  //   "Manual & Automatic (Torque Converter)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3,971 mm L x 1,682 mm W x 1,469 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Dual Front Airbags for Driver and Front Passenger",
+  //   "Ventilated Front Disc Brakes",
+  //   "Central Locking",
+  //   "high mounted third Brake Light",
+  //   "Height Adjustable Front head restraints",
+  //   "Electronic anti-theft Immobiliser",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "1.0 MPI Trendline",
+  //     "999 cc, Manual, Petrol, 17.74 kmpl",
+  //     "Rs.6.16 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "1.0 MPI Comfortline",
+  //     "999 cc, Manual, Petrol, 17.74 kmpl",
+  //     "Rs.7.11 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "Turbo Edition",
+  //     "999 cc, Manual, Petrol, 18.24 kmpl",
+  //     "Rs.7.41 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "1.0 TSI Highline Plus",
+  //     "999 cc, Manual, Petrol, 18.24 kmpl",
+  //     "Rs.8.49 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "1.0 TSI Comfortline AT",
+  //     "999  cc, Automatic, Petrol, 16.47 kmpl",
+  //     "Rs.8.51 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "1.0 Red And White Edition",
+  //     "999 cc, Manual, Petrol, 18.24 kmpl",
+  //     "Rs.9.19 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "1.0 TSI Highline Plus AT",
+  //     "999 cc, Automatic, Petrol, 16.47 kmpl",
+  //     "Rs.9.60 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "GT 1.0 TSI",
+  //     "999 cc, Manual, Petrol, 18.24 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Volkswagen has introduced an automatic gearbox in the second-to-base Comfortline variant. Volkswagen Polo Price: The premium hatchback is priced from Rs 6.16 lakh to Rs 9.99 lakh (ex-showroom). Volkswagen Polo Variants: It is sold in four variants: Trendline, Comfortline, Highline Plus, and GT. Volkswagen Polo Powertrains: It gets two engine options: a 1.0-litre naturally aspirated petrol (75PS/95Nm) and a 1.0-litre turbo-petrol (110PS/175Nm). While the former is mated to a 5-speed MT,  the latter can be paired with either a 6-speed MT or a 6-speed AT. The fuel efficiency figures of the Polo are as follows: 1.0-litre MPI: 17.57kmpl 1.0-litre TSI MT: 18.24kmpl 1.0-litre TSI AT: 16.47kmpl Volkswagen Polo Features: The Polo gets cruise control, auto AC with rear AC vents, rain-sensing wipers, and a 6.5-inch touchscreen infotainment system with Apple CarPlay and Android Auto. Volkswagen Polo Safety: Standard safety features on offer include rear parking sensors and dual front airbags. Volkswagen Polo Rivals: It takes on the Hyundai i20, Honda Jazz, Tata Altroz, and the Maruti Suzuki Baleno/Toyota Glanza.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: ["Punchy turbo engine", "Solid build quality", "Enthusiast handling"],
+  //   cons: [
+  //     "Missing features like a reverse camera",
+  //     "Lack of rear seat space",
+  //     "Lacks in Modern features",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Lapiz Blue", "bg-blue-600"],
+  //   color2: ["Carbon Steel", "bg-gray-400"],
+  //   color3: ["Sunset Red", "bg-white"],
+  //   color4: ["Toffee Brown", "bg-red-600"],
+  //   color5: ["Flash Red", "bg-gray-800"],
+  //   color6: ["Reflex Silver", "bg-gray-800"],
+  //   color7: ["Candy White", "bg-gray-800"],
+  //   color8: ["Flash Red", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Polo?",
+  //     "The on-road price of Polo in Delhi starts at ‎₹ 7.03 Lakh and goes upto ‎₹ 11.27 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Polo and Figo?",
+  //     "Polo price starts at ₹ 6.21 Lakh ex-showroom and It comes with 999 cc engine. Whereas Figo price starts at ₹ 5.82 Lakh ex-showroom and It comes with 1194 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Volkswagen Polo?",
+  //     "The Volkswagen Polo mileage is 16.47 - 17.99 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -261,18 +296,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Taigun",
-      "₹ 10.00 - 16.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
-      "Tiguan",
-      "₹ 28.00 - 32.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Taigun",
+  //     "₹ 10.00 - 16.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
+  //     "Tiguan",
+  //     "₹ 28.00 - 32.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

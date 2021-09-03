@@ -33,197 +33,232 @@ import { TIgnis } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 4.95 Lakh";
-  const TopPic = Ignis;
-  const CarName = "Maruti Ignis";
-  const OnlyName = "Ignis";
-  const ThumPic = TIgnis;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 4.95 Lakh onwards",
-    "20.89 kmpl",
-    "1197 cc",
-    "Manual and AMT",
-    "Petrol",
-    "5 Seater",
-    "3700mm x 1690mm x 1595mm (Length x Width x Height).",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Sigma 1.2 MT",
-      "1197  cc, Manual, Petrol, 20.89 kmpl",
-      "Rs.4.95 Lakh*",
-    ],
-    varient2: [
-      "Delta 1.2 MT",
-      "1197  cc, Manual, Petrol, 20.89 kmpl",
-      "Rs.5.81 Lakh*",
-    ],
-    varient3: [
-      "Zeta 1.2 MT",
-      "1197 cc, Manual, Petrol, 20.89 kmpl",
-      "Rs.6.12 Lakh*",
-    ],
-    varient4: [
-      "Zeta 1.2 MT Dual Tone",
-      "1197 cc, Manual, Petrol, 20.89 kmpl",
-      "Rs.6.25 Lakh*",
-    ],
-    varient5: [
-      "Delta 1.2 AMT",
-      "1197  cc, Automatic, Petrol, 20.89 kmpl",
-      "Rs.6.31 Lakh*",
-    ],
-    varient6: [
-      "Zeta 1.2 AMT",
-      "1197 cc, Automatic, Petrol, 20.89 kmpl",
-      "Rs.6.62 Lakh*",
-    ],
-    varient7: [
-      "Zeta 1.2 AMT Dual Tone",
-      "1197 cc, Automatic, Petrol, 20.89 kmpl",
-      "Rs.6.75 Lakh*",
-    ],
-    varient8: [
-      "Alpha 1.2 MT",
-      "1197 cc, Manual, Petrol, 20.89 kmpl",
-      "Rs.6.87 Lakh*",
-    ],
-    varient9: [
-      "Alpha 1.2 MT Dual Tone",
-      "1197 cc, Manual, Petrol, 20.89 kmpl",
-      "Rs.7.00 Lakh*",
-    ],
-    varient10: [
-      "Alpha 1.2 AMT",
-      "1197 cc, Automatic, Petrol, 20.89 kmpl",
-      "Rs.7.37 Lakh*",
-    ],
-    varient11: [
-      "Alpha 1.2 AMT Dual Tone",
-      "1197 cc, Automatic, Petrol, 20.89 kmpl",
-      "Rs.7.50 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "20.89 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Maruti Ignis Price: The Ignis is priced from Rs 4.95 lakh to Rs 7.36 lakh (ex-showroom Delhi). Maruti Ignis Variants: Maruti offers it in four trims: Sigma, Delta, Zeta, and Alpha. Maruti Ignis Powertrain: The hatchback is powered by a 1.2-litre petrol engine (83PS/113Nm), mated to a 5-speed manual gearbox or AMT. Maruti Ignis Features: It gets LED projector headlamps with daytime running lamps, 15-inch alloy wheels, a 7-inch touchscreen infotainment system (with Apple CarPlay, Android Auto and Navigation), and automatic climate control. Maruti Ignis Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Maruti Ignis Rivals: It locks horns with the Hyundai Santro, Tata Tiago, Datsun GO, and Maruti Wagon R and Celerio.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Quirky design appeals to young buyers",
-      "Great fuel economy",
-      "Good handling compared to rivals",
-    ],
-    cons: [
-      "Average NVH levels",
-      "Cabin isn’t spacious",
-      "Mediocre build quality",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Nexa Blue", "bg-blue-600"],
-    color2: ["Silky Silver", "bg-gray-400"],
-    color3: ["Pearl Arctic White", "bg-white"],
-    color4: ["Lucent Orange with Black Roof", "bg-blue-800"],
-    color5: ["Turquoise Blue", "bg-blue-800"],
-    color6: ["Lucent Orange", "bg-orange-800"],
-    color7: ["Glistening Grey", "bg-gray-800"],
-    color8: ["Nexa Blue with Black Roof", "bg-blue-800"],
-    color9: ["Nexa Blue with Silver Roof", "bg-blue-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Ignis?",
-      "The on-road price of Ignis in Delhi starts at ‎₹ 5.47 Lakh and goes upto ‎₹ 8.41 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Ignis and Wagon R?",
-      "Ignis price starts at ₹ 4.95 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Wagon R price starts at ₹ 4.79 Lakh ex-showroom and It comes with 998 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Ignis top model?",
-      "Top model of Ignis is Alpha 1.2 AMT Dual Tone and the ex-showroom for Ignis Alpha 1.2 AMT Dual Tone is ₹ 7.50 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 4.95 Lakh";
+  // const TopPic = Ignis;
+  // const CarName = "Maruti Ignis";
+  // const OnlyName = "Ignis";
+  // const ThumPic = TIgnis;
+
+  // const KeySpecification = [
+  //   "₹ 4.95 Lakh onwards",
+  //   "20.89 kmpl",
+  //   "1197 cc",
+  //   "Manual and AMT",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3700mm x 1690mm x 1595mm (Length x Width x Height).",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Sigma 1.2 MT",
+  //     "1197  cc, Manual, Petrol, 20.89 kmpl",
+  //     "Rs.4.95 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "Delta 1.2 MT",
+  //     "1197  cc, Manual, Petrol, 20.89 kmpl",
+  //     "Rs.5.81 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "Zeta 1.2 MT",
+  //     "1197 cc, Manual, Petrol, 20.89 kmpl",
+  //     "Rs.6.12 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "Zeta 1.2 MT Dual Tone",
+  //     "1197 cc, Manual, Petrol, 20.89 kmpl",
+  //     "Rs.6.25 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "Delta 1.2 AMT",
+  //     "1197  cc, Automatic, Petrol, 20.89 kmpl",
+  //     "Rs.6.31 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "Zeta 1.2 AMT",
+  //     "1197 cc, Automatic, Petrol, 20.89 kmpl",
+  //     "Rs.6.62 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "Zeta 1.2 AMT Dual Tone",
+  //     "1197 cc, Automatic, Petrol, 20.89 kmpl",
+  //     "Rs.6.75 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "Alpha 1.2 MT",
+  //     "1197 cc, Manual, Petrol, 20.89 kmpl",
+  //     "Rs.6.87 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "Alpha 1.2 MT Dual Tone",
+  //     "1197 cc, Manual, Petrol, 20.89 kmpl",
+  //     "Rs.7.00 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "Alpha 1.2 AMT",
+  //     "1197 cc, Automatic, Petrol, 20.89 kmpl",
+  //     "Rs.7.37 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "Alpha 1.2 AMT Dual Tone",
+  //     "1197 cc, Automatic, Petrol, 20.89 kmpl",
+  //     "Rs.7.50 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "20.89 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Maruti Ignis Price: The Ignis is priced from Rs 4.95 lakh to Rs 7.36 lakh (ex-showroom Delhi). Maruti Ignis Variants: Maruti offers it in four trims: Sigma, Delta, Zeta, and Alpha. Maruti Ignis Powertrain: The hatchback is powered by a 1.2-litre petrol engine (83PS/113Nm), mated to a 5-speed manual gearbox or AMT. Maruti Ignis Features: It gets LED projector headlamps with daytime running lamps, 15-inch alloy wheels, a 7-inch touchscreen infotainment system (with Apple CarPlay, Android Auto and Navigation), and automatic climate control. Maruti Ignis Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Maruti Ignis Rivals: It locks horns with the Hyundai Santro, Tata Tiago, Datsun GO, and Maruti Wagon R and Celerio.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Quirky design appeals to young buyers",
+  //     "Great fuel economy",
+  //     "Good handling compared to rivals",
+  //   ],
+  //   cons: [
+  //     "Average NVH levels",
+  //     "Cabin isn’t spacious",
+  //     "Mediocre build quality",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Nexa Blue", "bg-blue-600"],
+  //   color2: ["Silky Silver", "bg-gray-400"],
+  //   color3: ["Pearl Arctic White", "bg-white"],
+  //   color4: ["Lucent Orange with Black Roof", "bg-blue-800"],
+  //   color5: ["Turquoise Blue", "bg-blue-800"],
+  //   color6: ["Lucent Orange", "bg-orange-800"],
+  //   color7: ["Glistening Grey", "bg-gray-800"],
+  //   color8: ["Nexa Blue with Black Roof", "bg-blue-800"],
+  //   color9: ["Nexa Blue with Silver Roof", "bg-blue-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Ignis?",
+  //     "The on-road price of Ignis in Delhi starts at ‎₹ 5.47 Lakh and goes upto ‎₹ 8.41 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Ignis and Wagon R?",
+  //     "Ignis price starts at ₹ 4.95 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Wagon R price starts at ₹ 4.79 Lakh ex-showroom and It comes with 998 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Ignis top model?",
+  //     "Top model of Ignis is Alpha 1.2 AMT Dual Tone and the ex-showroom for Ignis Alpha 1.2 AMT Dual Tone is ₹ 7.50 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -281,23 +316,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

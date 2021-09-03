@@ -32,161 +32,196 @@ import { TGlanza } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Toyota";
-  const CarPrice = "₹ 7.34 Lakh";
-  const TopPic = Glanza;
-  const CarName = "Toyota Glanza";
-  const OnlyName = "Glanza";
-  const ThumPic = TGlanza;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 7.34 Lakh onwards",
-    "19.56 to 21.96 kmpl",
-    "1197 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol",
-    "5 Seater",
-    "3,995 mm L x 1,745 mm W x 1,510 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "ABS with EBD and BA",
-    "ISOFIX, reverse parking camera",
-    "reverse parking sensors",
-    "front seat belts with pre-tensioners and force limiters",
-    "high-speed warning alert",
-    "electrochromic IRVM",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "G",
-      "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
-      "Rs.7.34 Lakh*",
-    ],
-    varient2: [
-      "G Smart Hybrid",
-      "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
-      "Rs.7.99 Lakh*",
-    ],
-    varient3: ["V", "1197 cc, Manual, Petrol, 21.01 kmpl", "Rs.8.10 Lakh*"],
-    varient4: [
-      "G CVT",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.8.54 Lakh*",
-    ],
-    varient5: [
-      "V CVT",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.9.30 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Toyota has hiked prices of the Glanza by up to Rs 34,000. Toyota Glanza Price: It is currently priced from Rs 7.34 lakh to Rs 9.30 lakh (ex-showroom Delhi). Toyota Glanza Variants: The Glanza is sold in two trims: G and V. Toyota Glanza Powertrain: Toyota has provided the hatchback with a 1.2-litre DualJet mild-hybrid engine (90PS/113Nm) mated to a 5-speed MT and a 1.2-litre petrol engine (83PS/113Nm) paired with a 5-speed MT or CVT. Here are the fuel economy figures of the Toyota Glanza: 1.2-litre petrol MT- 21.01kmpl 1.2-litre petrol mild hybrid MT- 23.87kmpl 1.2-litre petrol CVT- 19.56kmpl Toyota Glanza Features: It gets auto-LED projector headlamps, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, and auto AC. Toyota Glanza Safety: Dual front airbags, ABS with EBD, ISOFIX child seat anchors, and rear parking sensors are available as standard. Toyota Glanza Rivals: The Glanza locks horns with the Maruti Baleno, Hyundai i20, Volkswagen Polo, Honda Jazz, and Tata Altroz.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Apart from dual airbags, ABS with EBD, rear parking camera, the Glanza gets ISOFIX as standard across the range.",
-      "Gets plenty of standard features like LED projector headlamps, 16-inch alloy wheels, 7-inch touchscreen and push button start/stop.",
-      "Comes with a 3-year/1 lakh km standard warranty as well as a 5-year/2,20,000km extended warranty.",
-    ],
-    cons: [
-      "No diesel option. All its rivals offer a diesel engine option as of now, including the donor car Baleno.",
-      "Doesn’t take the Toyota baton forward by offering additional safety features like side and curtain airbags.",
-      "Limited variants has resulted in higher entry point for buyers.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["GAMING GREY", "bg-gray-800"],
-    color2: ["SPORTIN' RED", "bg-red-900"],
-    color3: ["ENTICING SILVER", "bg-gray-400"],
-    color4: ["INSTA BLUE", "bg-blue-800"],
-    color5: ["Cafe White", "bg-gray-100"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Glanza?",
-      "The on-road price of Glanza in Delhi starts at ‎₹ 8.27 Lakh and goes upto ‎₹ 10.42 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Glanza and Baleno?",
-      "Glanza price starts at ₹ 7.34 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Baleno price starts at ₹ 5.97 Lakh ex-showroom and It comes with 1197 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Toyota Glanza?",
-      "The Toyota Glanza mileage is 19.56 - 21.96 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Toyota";
+  // const CarPrice = "₹ 7.34 Lakh";
+  // const TopPic = Glanza;
+  // const CarName = "Toyota Glanza";
+  // const OnlyName = "Glanza";
+  // const ThumPic = TGlanza;
+
+  // const KeySpecification = [
+  //   "₹ 7.34 Lakh onwards",
+  //   "19.56 to 21.96 kmpl",
+  //   "1197 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "ABS with EBD and BA",
+  //   "ISOFIX, reverse parking camera",
+  //   "reverse parking sensors",
+  //   "front seat belts with pre-tensioners and force limiters",
+  //   "high-speed warning alert",
+  //   "electrochromic IRVM",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "G",
+  //     "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
+  //     "Rs.7.34 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "G Smart Hybrid",
+  //     "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
+  //     "Rs.7.99 Lakh*",
+  //   ],
+  //   varient3: ["V", "1197 cc, Manual, Petrol, 21.01 kmpl", "Rs.8.10 Lakh*"],
+  //   varient4: [
+  //     "G CVT",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.8.54 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "V CVT",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.9.30 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Toyota has hiked prices of the Glanza by up to Rs 34,000. Toyota Glanza Price: It is currently priced from Rs 7.34 lakh to Rs 9.30 lakh (ex-showroom Delhi). Toyota Glanza Variants: The Glanza is sold in two trims: G and V. Toyota Glanza Powertrain: Toyota has provided the hatchback with a 1.2-litre DualJet mild-hybrid engine (90PS/113Nm) mated to a 5-speed MT and a 1.2-litre petrol engine (83PS/113Nm) paired with a 5-speed MT or CVT. Here are the fuel economy figures of the Toyota Glanza: 1.2-litre petrol MT- 21.01kmpl 1.2-litre petrol mild hybrid MT- 23.87kmpl 1.2-litre petrol CVT- 19.56kmpl Toyota Glanza Features: It gets auto-LED projector headlamps, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, and auto AC. Toyota Glanza Safety: Dual front airbags, ABS with EBD, ISOFIX child seat anchors, and rear parking sensors are available as standard. Toyota Glanza Rivals: The Glanza locks horns with the Maruti Baleno, Hyundai i20, Volkswagen Polo, Honda Jazz, and Tata Altroz.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Apart from dual airbags, ABS with EBD, rear parking camera, the Glanza gets ISOFIX as standard across the range.",
+  //     "Gets plenty of standard features like LED projector headlamps, 16-inch alloy wheels, 7-inch touchscreen and push button start/stop.",
+  //     "Comes with a 3-year/1 lakh km standard warranty as well as a 5-year/2,20,000km extended warranty.",
+  //   ],
+  //   cons: [
+  //     "No diesel option. All its rivals offer a diesel engine option as of now, including the donor car Baleno.",
+  //     "Doesn’t take the Toyota baton forward by offering additional safety features like side and curtain airbags.",
+  //     "Limited variants has resulted in higher entry point for buyers.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["GAMING GREY", "bg-gray-800"],
+  //   color2: ["SPORTIN' RED", "bg-red-900"],
+  //   color3: ["ENTICING SILVER", "bg-gray-400"],
+  //   color4: ["INSTA BLUE", "bg-blue-800"],
+  //   color5: ["Cafe White", "bg-gray-100"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Glanza?",
+  //     "The on-road price of Glanza in Delhi starts at ‎₹ 8.27 Lakh and goes upto ‎₹ 10.42 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Glanza and Baleno?",
+  //     "Glanza price starts at ₹ 7.34 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Baleno price starts at ₹ 5.97 Lakh ex-showroom and It comes with 1197 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Toyota Glanza?",
+  //     "The Toyota Glanza mileage is 19.56 - 21.96 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -259,18 +294,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Hilux",
-      "Rs.18.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
-      "Land Cruiser",
-      "Rs.1.50 Cr*",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Hilux",
+  //     "Rs.18.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
+  //     "Land Cruiser",
+  //     "Rs.1.50 Cr*",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

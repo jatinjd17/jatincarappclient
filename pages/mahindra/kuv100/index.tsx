@@ -32,164 +32,199 @@ import Meta from "../../../Components/metaSEO";
 import { TKuv100 } from "../../../CarPicsUrl/Thumbnails";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "₹ 6.10 Lakh";
-  const TopPic = Kuv100;
-  const CarName = "Mahindra KUV 100 NXT";
-  const OnlyName = "KUV 100 NXT";
-  const ThumPic = TKuv100;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 6.10 Lakh onwards",
-    "18.1 kmpl",
-    "1198 cc",
-    "Manual",
-    "Petrol",
-    "4 Seater",
-    "3,700 mm L x 1,735 mm W x 1,655 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "A driver’s side airbag",
+  const SafetyFeatures = joy.SafetyFeatures;
 
-    "Rear parking sensors",
+  const VarientPetrol = joy.VarientPetrol;
 
-    "Seatbelt reminders for the driver and front passenger",
+  const VarientDiesel = joy.VarientDiesel;
 
-    "A speed warning system (at 80kmph and 120kmph)",
+  const VarientCNG = joy.VarientCNG;
 
-    "A manual override for the central locking system",
-  ];
+  const Mileage = joy.Mileage;
 
-  const VarientPetrol = {
-    varient1: [
-      "G80 K2 Plus 6 Str",
-      "1198 cc, Manual, Petrol, 18.1 kmpl",
-      "Rs.6.08 Lakh*",
-    ],
-    varient2: [
-      "G80 K4 Plus 6Str",
-      "1198 cc, Manual, Petrol, 18.1 kmpl",
-      "Rs.6.57 Lakh*",
-    ],
-    varient3: [
-      "G80 K6 Plus 6Str",
-      "1198 cc, Manual, Petrol, 18.1 kmpl",
-      "Rs.7.10 Lakh*",
-    ],
-    varient4: [
-      "K8 6Str",
-      "1198 cc, Manual, Petrol, 18.1 kmpl",
-      "Rs.7.74 Lakh*",
-    ],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const VarientDiesel = {};
+  const ProsCons = joy.ProsCons;
 
-  const VarientCNG = {};
+  const Colorss = joy.Colorss;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const LatestUpdate = [
-    "Latest Update: The prices of the KUV100 NXT have been increased by Rs 3,000. Mahindra KUV100 NXT Price: Mahindra retails it from Rs 6.08 lakh to Rs 7.82 lakh (ex-showroom Delhi). Mahindra KUV100 NXT Variants: It is sold in four trims: K2+, K4+, K6+, and K8. Mahindra KUV100 NXT Seating Capacity: The KUV100 NXT comes in both 5- and 6-seater layouts. Mahindra KUV100 NXT Engine and Transmission: It gets a 1.2-litre petrol engine (82PS/115Nm), paired to a 5-speed manual gearbox. Mahindra KUV100 NXT Features: The KUV100 NXT comes with a 7-inch touchscreen infotainment system with Bluetooth and AUX connectivity, steering-mounted audio and calling controls, and a height-adjustable driver’s seat. Mahindra KUV100 NXT Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Mahindra KUV100 NXT Rivals: It goes up against the Maruti Ignis and Swift, Hyundai Grand i10 Nios, and Ford Figo",
-  ];
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ProsCons = {
-    pros: [
-      "Feature loaded: Daytime running lights, chilled glovebox, 7.0-inch touchscreen infotainment system with steering mounted controls and ambient lights, etc.",
-      "Space. Headroom and legroom at the rear are generous.",
-      "Safety features. All variants get ABS with EBD as standard. Dual front airbags on all variants except the base K2.",
-    ],
-    cons: [
-      "Not a real 6-seater. Front middle seat is cramped and unsafe to use.",
-      "Looks. While better than, it may still come across a bit too quirky for some buyers.",
-      "Average handling and noise insulation. Competitors like the Grand i10 and Ignis are better in these aspects",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const Colorss = {
-    color1: ["Dazzling Silver & Metallic Black", "bg-blue-600"],
-    color2: ["Designer Grey", "bg-gray-400"],
-    color3: ["Flamboyant Red & Metallic Black", "bg-gray-400"],
-    color4: ["Flamboyant Red", "bg-gray-400"],
-    color5: ["Fiery Orange", "bg-gray-400"],
-    color6: ["Polar White", "bg-gray-400"],
-    color7: ["Midnight black", "bg-gray-400"],
-  };
+  const articles = joy.articles;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 3.32 Lakh onwards",
-      "25 kmpl",
-      "799 to 1000 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
-      "https://i.ibb.co/C63SXxn/Kwid.jpg",
-    ],
-    comparisioncar2: [
-      "₹ 3.80 Lakh onwards",
-      "22 kmpl",
-      "799 to 999 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
-      "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "₹ 6.10 Lakh";
+  // const TopPic = Kuv100;
+  // const CarName = "Mahindra KUV 100 NXT";
+  // const OnlyName = "KUV 100 NXT";
+  // const ThumPic = TKuv100;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of KUV100 NXT?",
-      "The on-road price of KUV100 NXT in Delhi starts at ‎₹ 6.88 Lakh and goes upto ‎₹ 8.88 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between KUV100 NXT and Kiger?",
-      "KUV100 NXT price starts at ₹ 6.10 Lakh ex-showroom and It comes with 1198 cc engine. Whereas Kiger price starts at ₹ 5.64 Lakh ex-showroom and It comes with 999 cc engine.",
-    ],
-    question3: [
-      "What is price of KUV100 NXT top model?",
-      "Top model of KUV100 NXT is K8 6 STR and the ex-showroom for KUV100 NXT K8 6 STR is ₹ 7.76 Lakh.",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 6.10 Lakh onwards",
+  //   "18.1 kmpl",
+  //   "1198 cc",
+  //   "Manual",
+  //   "Petrol",
+  //   "4 Seater",
+  //   "3,700 mm L x 1,735 mm W x 1,655 mm H",
+  // ];
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "A driver’s side airbag",
+
+  //   "Rear parking sensors",
+
+  //   "Seatbelt reminders for the driver and front passenger",
+
+  //   "A speed warning system (at 80kmph and 120kmph)",
+
+  //   "A manual override for the central locking system",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "G80 K2 Plus 6 Str",
+  //     "1198 cc, Manual, Petrol, 18.1 kmpl",
+  //     "Rs.6.08 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "G80 K4 Plus 6Str",
+  //     "1198 cc, Manual, Petrol, 18.1 kmpl",
+  //     "Rs.6.57 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "G80 K6 Plus 6Str",
+  //     "1198 cc, Manual, Petrol, 18.1 kmpl",
+  //     "Rs.7.10 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "K8 6Str",
+  //     "1198 cc, Manual, Petrol, 18.1 kmpl",
+  //     "Rs.7.74 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The prices of the KUV100 NXT have been increased by Rs 3,000. Mahindra KUV100 NXT Price: Mahindra retails it from Rs 6.08 lakh to Rs 7.82 lakh (ex-showroom Delhi). Mahindra KUV100 NXT Variants: It is sold in four trims: K2+, K4+, K6+, and K8. Mahindra KUV100 NXT Seating Capacity: The KUV100 NXT comes in both 5- and 6-seater layouts. Mahindra KUV100 NXT Engine and Transmission: It gets a 1.2-litre petrol engine (82PS/115Nm), paired to a 5-speed manual gearbox. Mahindra KUV100 NXT Features: The KUV100 NXT comes with a 7-inch touchscreen infotainment system with Bluetooth and AUX connectivity, steering-mounted audio and calling controls, and a height-adjustable driver’s seat. Mahindra KUV100 NXT Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Mahindra KUV100 NXT Rivals: It goes up against the Maruti Ignis and Swift, Hyundai Grand i10 Nios, and Ford Figo",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Feature loaded: Daytime running lights, chilled glovebox, 7.0-inch touchscreen infotainment system with steering mounted controls and ambient lights, etc.",
+  //     "Space. Headroom and legroom at the rear are generous.",
+  //     "Safety features. All variants get ABS with EBD as standard. Dual front airbags on all variants except the base K2.",
+  //   ],
+  //   cons: [
+  //     "Not a real 6-seater. Front middle seat is cramped and unsafe to use.",
+  //     "Looks. While better than, it may still come across a bit too quirky for some buyers.",
+  //     "Average handling and noise insulation. Competitors like the Grand i10 and Ignis are better in these aspects",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Dazzling Silver & Metallic Black", "bg-blue-600"],
+  //   color2: ["Designer Grey", "bg-gray-400"],
+  //   color3: ["Flamboyant Red & Metallic Black", "bg-gray-400"],
+  //   color4: ["Flamboyant Red", "bg-gray-400"],
+  //   color5: ["Fiery Orange", "bg-gray-400"],
+  //   color6: ["Polar White", "bg-gray-400"],
+  //   color7: ["Midnight black", "bg-gray-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 3.32 Lakh onwards",
+  //     "25 kmpl",
+  //     "799 to 1000 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
+  //     "https://i.ibb.co/C63SXxn/Kwid.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 3.80 Lakh onwards",
+  //     "22 kmpl",
+  //     "799 to 999 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
+  //     "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of KUV100 NXT?",
+  //     "The on-road price of KUV100 NXT in Delhi starts at ‎₹ 6.88 Lakh and goes upto ‎₹ 8.88 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between KUV100 NXT and Kiger?",
+  //     "KUV100 NXT price starts at ₹ 6.10 Lakh ex-showroom and It comes with 1198 cc engine. Whereas Kiger price starts at ₹ 5.64 Lakh ex-showroom and It comes with 999 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is price of KUV100 NXT top model?",
+  //     "Top model of KUV100 NXT is K8 6 STR and the ex-showroom for KUV100 NXT K8 6 STR is ₹ 7.76 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -272,43 +307,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

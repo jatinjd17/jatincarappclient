@@ -32,232 +32,267 @@ import { TAltroz } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "₹ 5.80 Lakh";
-  const TopPic = Altroz;
-  const CarName = "Tata Altroz";
-  const OnlyName = "Altroz";
-  const ThumPic = TAltroz;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 5.80 Lakh onwards",
-    "19.05 to 25.11 kmpl",
-    "1199 to 1497 cc",
-    "Manual",
-    "Petrol & Diesel",
-    "5 Seater",
-    "3,990 mm L x 1,755 mm W x 1,523 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "ABS with EBD and CSC",
-    "reverse parking sensors",
-    "ISOFIX",
-    "driver and co-driver seatbelt reminder",
-    "high-speed alert system",
-    "impact sensing auto door unlock.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["XE", "1199  cc, Manual, Petrol, 19.05 kmpl", "Rs.5.84 Lakh*"],
-    varient2: ["XM", "1199  cc, Manual, Petrol, 19.05 kmpl", "Rs.6.49 Lakh*"],
-    varient3: [
-      "XM plus",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.6.79 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient4: ["XT", "1199  cc, Manual, Petrol, 19.05 kmpl", "Rs.7.38 Lakh*"],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient5: ["XZ", "1199 cc, Manual, Petrol, 19.05 kmpl", "Rs.7.92 Lakh*"],
+  const VarientCNG = joy.VarientCNG;
 
-    varient6: [
-      "XT Turbo",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.8.02 Lakh*",
-    ],
-    varient7: [
-      "XZ Option",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.8.04 Lakh*",
-    ],
-    varient8: [
-      "XZ Plus",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.8.44 Lakh*",
-    ],
+  const Mileage = joy.Mileage;
 
-    varient9: [
-      "XZ Plus Dark Edition",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.8.70 Lakh*",
-    ],
-    varient10: [
-      "XZ Opt Turbo",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.8.72 Lakh*",
-    ],
-    varient11: [
-      "XZ Turbo",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.8.72 Lakh*",
-    ],
+  const LatestUpdate = joy.LatestUpdate;
 
-    varient12: [
-      "XZ Plus Turbo",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.9.09 Lakh*",
-    ],
+  const ProsCons = joy.ProsCons;
 
-    varient13: [
-      "XZ Plus Turbo Dark Edition",
-      "1199 cc, Manual, Petrol, 19.05 kmpl",
-      "Rs.9.35 Lakh*",
-    ],
-  };
+  const Colorss = joy.Colorss;
 
-  const VarientDiesel = {
-    varient1: [
-      "XE Diesel",
-      "1497 cc, Manual, Diesel, 25.11 kmpl",
-      "Rs.7.04 Lakh*",
-    ],
-    varient2: [
-      "XM Diesel",
-      "1497 cc, Manual, Diesel, 25.11 kmpl",
-      "Rs.7.64 Lakh*",
-    ],
-    varient3: [
-      "XM plus Diesel",
-      "1497 cc, Manual, Diesel, 25.11 kmpl",
-      "Rs.7.94 Lakh*",
-    ],
-    varient4: [
-      "XT Diesel",
-      "1497 cc, Manual, Diesel, 25.11 kmpl",
-      "Rs.8.53 Lakh*",
-    ],
-    varient5: [
-      "XZ Diesel",
-      "1497 cc, Manual, Diesel, 25.11 kmpl",
-      "Rs.9.07 Lakh*",
-    ],
-    varient6: [
-      "XZ Option Diesel",
-      "1497 cc, Manual, Diesel, 25.11 kmpl",
-      "Rs.9.19 Lakh*",
-    ],
-    varient7: [
-      "XZ Plus Diesel",
-      "1497 cc, Manual, Diesel, 25.11 kmpl",
-      "Rs.9.59 Lakh*",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const VarientCNG = {};
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const faqs = joy.faqs;
 
-  const LatestUpdate = [
-    "Latest Update: Tata has launched the Altroz Dark Edition. Tata Altroz Price: The Altroz is priced between Rs 5.79 lakh and Rs 9.55 lakh (ex-showroom). Tata Altroz Variants: It is available in seven trims: XE, XM, XM+, XT, XZ, XZ (O), and XZ+. Tata Altroz Engine and Transmission: Under the hood, the hatchback comes with three engine options: a 1.2-litre naturally aspirated petrol (86PS/113Nm), a 1.2-litre turbo-petrol (110PS/140Nm), and a 1.5-litre diesel (90PS/200Nm). All three are offered with a 5-speed manual gearbox as standard, while a 7-speed DCT automatic is expected to be introduced later. Tata Altroz Features: Tata has equipped the Altroz with a semi-digital instrument cluster, ambient lighting, cruise control, a 7-inch touchscreen system with Android Auto and Apple CarPlay, and connected car tech. The Altroz also offers various customisation options. Tata Altroz Safety: Standard safety features include dual front airbags, ISOFIX child seat anchors, and rear parking sensors. Tata Altroz Rivals: It rivals the Toyota Glanza, Hyundai i20, Maruti Suzuki Baleno, Volkswagen Polo, and Honda Jazz.",
-  ];
+  const articles = joy.articles;
 
-  const ProsCons = {
-    pros: [
-      "Turbo-petrol engine offers enjoyable performance",
-      "Five-star safety rating",
-      "Leatherette upholstery makes the cabin feel more premium",
-    ],
-    cons: [
-      "Premium features like ventilated seats, wireless changer, and sunroof still missing",
-      "No option for an automatic transmission yet",
-      "Cabin insulation is lacking",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const Colorss = {
-    color1: ["HighStreet Gold", "bg-yellow-600"],
-    color2: ["Downtown Red", "bg-red-400"],
-    color3: ["Avenue White", "bg-white"],
-    color4: ["Midtown Grey", "bg-gray-600"],
-    color5: ["Harbour Blue", "bg-blue-800"],
-    color6: ["Premium Cosmo Dark", "bg-gray-900"],
-  };
+  // const CompanyName = "Tata";
+  // const CarPrice = "₹ 5.80 Lakh";
+  // const TopPic = Altroz;
+  // const CarName = "Tata Altroz";
+  // const OnlyName = "Altroz";
+  // const ThumPic = TAltroz;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 5.80 Lakh onwards",
+  //   "19.05 to 25.11 kmpl",
+  //   "1199 to 1497 cc",
+  //   "Manual",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "3,990 mm L x 1,755 mm W x 1,523 mm H",
+  // ];
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "ABS with EBD and CSC",
+  //   "reverse parking sensors",
+  //   "ISOFIX",
+  //   "driver and co-driver seatbelt reminder",
+  //   "high-speed alert system",
+  //   "impact sensing auto door unlock.",
+  // ];
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Altroz?",
-      "The on-road price of Altroz in Delhi starts at ‎₹ 6.41 Lakh and goes upto ‎₹ 10.86 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Altroz and i20?",
-      "Altroz price starts at ₹ 5.80 Lakh ex-showroom and It comes with 1199 cc engine. Whereas i20 price starts at ₹ 6.91 Lakh ex-showroom and It comes with 1197 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Altroz top model?",
-      "Top model of Altroz is XZ Plus Diesel and the ex-showroom for Altroz XZ Plus Diesel is ₹ 9.57 Lakh.",
-    ],
-  };
+  // const VarientPetrol = {
+  //   varient1: ["XE", "1199  cc, Manual, Petrol, 19.05 kmpl", "Rs.5.84 Lakh*"],
+  //   varient2: ["XM", "1199  cc, Manual, Petrol, 19.05 kmpl", "Rs.6.49 Lakh*"],
+  //   varient3: [
+  //     "XM plus",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.6.79 Lakh*",
+  //   ],
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  //   varient4: ["XT", "1199  cc, Manual, Petrol, 19.05 kmpl", "Rs.7.38 Lakh*"],
+
+  //   varient5: ["XZ", "1199 cc, Manual, Petrol, 19.05 kmpl", "Rs.7.92 Lakh*"],
+
+  //   varient6: [
+  //     "XT Turbo",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.8.02 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "XZ Option",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.8.04 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "XZ Plus",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.8.44 Lakh*",
+  //   ],
+
+  //   varient9: [
+  //     "XZ Plus Dark Edition",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.8.70 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "XZ Opt Turbo",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.8.72 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "XZ Turbo",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.8.72 Lakh*",
+  //   ],
+
+  //   varient12: [
+  //     "XZ Plus Turbo",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.9.09 Lakh*",
+  //   ],
+
+  //   varient13: [
+  //     "XZ Plus Turbo Dark Edition",
+  //     "1199 cc, Manual, Petrol, 19.05 kmpl",
+  //     "Rs.9.35 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "XE Diesel",
+  //     "1497 cc, Manual, Diesel, 25.11 kmpl",
+  //     "Rs.7.04 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "XM Diesel",
+  //     "1497 cc, Manual, Diesel, 25.11 kmpl",
+  //     "Rs.7.64 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "XM plus Diesel",
+  //     "1497 cc, Manual, Diesel, 25.11 kmpl",
+  //     "Rs.7.94 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "XT Diesel",
+  //     "1497 cc, Manual, Diesel, 25.11 kmpl",
+  //     "Rs.8.53 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "XZ Diesel",
+  //     "1497 cc, Manual, Diesel, 25.11 kmpl",
+  //     "Rs.9.07 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "XZ Option Diesel",
+  //     "1497 cc, Manual, Diesel, 25.11 kmpl",
+  //     "Rs.9.19 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "XZ Plus Diesel",
+  //     "1497 cc, Manual, Diesel, 25.11 kmpl",
+  //     "Rs.9.59 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Tata has launched the Altroz Dark Edition. Tata Altroz Price: The Altroz is priced between Rs 5.79 lakh and Rs 9.55 lakh (ex-showroom). Tata Altroz Variants: It is available in seven trims: XE, XM, XM+, XT, XZ, XZ (O), and XZ+. Tata Altroz Engine and Transmission: Under the hood, the hatchback comes with three engine options: a 1.2-litre naturally aspirated petrol (86PS/113Nm), a 1.2-litre turbo-petrol (110PS/140Nm), and a 1.5-litre diesel (90PS/200Nm). All three are offered with a 5-speed manual gearbox as standard, while a 7-speed DCT automatic is expected to be introduced later. Tata Altroz Features: Tata has equipped the Altroz with a semi-digital instrument cluster, ambient lighting, cruise control, a 7-inch touchscreen system with Android Auto and Apple CarPlay, and connected car tech. The Altroz also offers various customisation options. Tata Altroz Safety: Standard safety features include dual front airbags, ISOFIX child seat anchors, and rear parking sensors. Tata Altroz Rivals: It rivals the Toyota Glanza, Hyundai i20, Maruti Suzuki Baleno, Volkswagen Polo, and Honda Jazz.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Turbo-petrol engine offers enjoyable performance",
+  //     "Five-star safety rating",
+  //     "Leatherette upholstery makes the cabin feel more premium",
+  //   ],
+  //   cons: [
+  //     "Premium features like ventilated seats, wireless changer, and sunroof still missing",
+  //     "No option for an automatic transmission yet",
+  //     "Cabin insulation is lacking",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["HighStreet Gold", "bg-yellow-600"],
+  //   color2: ["Downtown Red", "bg-red-400"],
+  //   color3: ["Avenue White", "bg-white"],
+  //   color4: ["Midtown Grey", "bg-gray-600"],
+  //   color5: ["Harbour Blue", "bg-blue-800"],
+  //   color6: ["Premium Cosmo Dark", "bg-gray-900"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Altroz?",
+  //     "The on-road price of Altroz in Delhi starts at ‎₹ 6.41 Lakh and goes upto ‎₹ 10.86 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Altroz and i20?",
+  //     "Altroz price starts at ₹ 5.80 Lakh ex-showroom and It comes with 1199 cc engine. Whereas i20 price starts at ₹ 6.91 Lakh ex-showroom and It comes with 1197 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Altroz top model?",
+  //     "Top model of Altroz is XZ Plus Diesel and the ex-showroom for Altroz XZ Plus Diesel is ₹ 9.57 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -340,23 +375,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

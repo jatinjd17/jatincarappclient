@@ -30,210 +30,267 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Endeavour } from "../../../CarPicsUrl/CarPics";
 import { TEndeavour } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  AspireBasicInfoCard,
+  EndeavourBasicInfoCard,
+  FigoBasicInfoCard,
+  FreestyleBasicInfoCard,
+} from "../../../AllCarBasicInfo/ford";
+import { GlosterBasicInfoCard } from "../../../AllCarBasicInfo/mg";
+import { FortunerBasicInfoCard } from "../../../AllCarBasicInfo/toyota";
+import { AlturasBasicInfoCard } from "../../../AllCarBasicInfo/mahindra";
 
 function Homee({ joy }) {
-  const CompanyName = "Ford";
-  const CarPrice = "₹ 33.81 Lakh";
-  const TopPic = Endeavour;
-  const CarName = "Ford Endeavour";
-  const OnlyName = "Endeavour";
-  const ThumPic = TEndeavour;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 33.81 Lakh onwards",
-    "12.9 kmpl",
-    "1996 cc",
-    "Automatic",
-    "Diesel",
-    "7 Seater",
-    "4903 mm L x 1869 mm W x 1837 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "6 Airbags.",
-    "Rear Parking Camera and Sensors.",
-    "ABS with EBD.",
-    "Driver and Passenger Seatbelt Reminder.",
-    "High-Speed Sensing Alert System.",
-    "Side and Curtain Airbags.",
-    "Door Ajar Warning.",
-    "Perimeter Alarm.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {};
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: [
-      "Titanium Plus 4X2 AT",
-      "1996 cc, Automatic, Diesel, 13.9 kmpl",
-      "Rs.33.81 Lakh*",
-    ],
-    varient2: [
-      "Titanium Plus 4X4 AT",
-      "1996 cc, Automatic, Diesel, 12.4 kmpl",
-      "Rs.35.61 Lakh*",
-    ],
-    varient3: [
-      "Sport Edition",
-      "1996 cc, Automatic AMT, Diesel, 13.9 kmpl",
-      "Rs.36.26 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The prices of the Endeavour have been increased by up to Rs 80,000. Ford Endeavour Price: Ford retails the full-size SUV from Rs 29.99 lakh to Rs 36.25 lakh (ex-showroom Delhi). Ford Endeavour Variants: It is available in four variants: Titanium AT, Titanium+ AT 4x2, Titanium+ AT 4x4, and Sport AT. Ford Endeavour Seating Capacity: The Endeavour can seat up to seven occupants. Ford Endeavour Powertrain: Ford has equipped the Endeavour with a 2.0-litre turbo-diesel unit (170PS/420Nm), paired with a 10-speed AT (a first in India). There is no manual transmission on offer. It comes with both 2WD and 4WD drivetrains. Ford Endeavour Features: It gets FordPass connected car technology as standard, allowing users to perform remote vehicle operations, track its live location, and get an overview of the car’s telematics via the smartphone app. Other features that continue to be offered include active noise cancellation for the cabin, semi-autonomous parallel park assist, power-folding third-row seats, dual-zone climate control, and a panoramic sunroof. It also gets an 8-inch SYNC 3 touchscreen infotainment system with Apple CarPlay and Android Auto connectivity. Ford Endeavour Safety: Safety features on offer include seven airbags, tyre pressure monitoring, and hill launch assist. Ford Endeavour Rivals: The Endeavour fights it out with the MG Gloster, Mahindra Alturas G4, Volkswagen Tiguan Allspace, Toyota Fortuner, and the 2021 Skoda Kodiaq. Ford Endeavour 2022: The next-gen Endeavour has been spied testing and is expected to arrive in India by 2022.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Refined and more efficient engine ",
-      "Sophisticated transmission that can skip and lock gears",
-      "Full off-road kit still available",
-    ],
-    cons: [
-      "No major feature update",
-      "Torque surge of the 3.2L is missing",
-      "Only a tilt adjustable steering",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Diffused Silver", "bg-blue-600"],
-    color2: ["Diamond White", "bg-gray-400"],
-    color3: ["Absolute Black", "bg-white"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 29.98 Lakh Onwards",
-      "12.35 kmpl",
-      "1996 cc",
-      "Automatic",
-      "Diesel",
-      "7 Seater",
-      "4,985 mm L x 1,926 mm W x 1,867 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/43485/gloster-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 30.36 Lakh onwards",
-      "10.01 to 14.22 kmpl",
-      "2694 to 2755 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "7 Seater",
-      "4,795 mm L x 1,855 mm W x 1,835 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-19.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Endeavour?",
-      "The on-road price of Endeavour in Delhi starts at ‎₹ 40.32 Lakh and goes upto ‎₹ 43.19 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Endeavour and Fortuner?",
-      "Endeavour price starts at ₹ 33.81 Lakh ex-showroom and It comes with 1996 cc engine. Whereas Fortuner price starts at ₹ 30.36 Lakh ex-showroom and It comes with 2694 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Ford Endeavour?",
-      "The Ford Endeavour mileage is 12.9 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
 
   const SimilarCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/43485/gloster-exterior-right-front-three-quarter-3.jpeg?q=85",
-      "Gloster",
-      "₹ 29.98 Lakh Onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-19.jpeg?q=85",
-      "Fortuner",
-      "₹ 30.36 Lakh onwards0",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33266/alturas-g4-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Alturas G4",
-      "₹ 28.77 Lakhonwards",
-    ],
+    car1: GlosterBasicInfoCard,
+    car2: FortunerBasicInfoCard,
+    car3: AlturasBasicInfoCard,
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
-      "EcoSport",
-      "₹ 8.19 Lakh onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/37640/endeavour-exterior-right-front-three-quarter-149473.jpeg?q=85",
-      "Endeavour",
-      "₹ 33.81 Lakh onwards",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg?q=85",
-      "Figo",
-      "₹ 5.82 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32698/freestyle-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Freestyle",
-      "₹ 7.28 Lakh onwards",
-    ],
+    car1: AspireBasicInfoCard,
+    car2: EndeavourBasicInfoCard,
+    car3: FigoBasicInfoCard,
+    car4: FreestyleBasicInfoCard,
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ford/Mustang-2021/7939/1595910236308/front-left-side-47.jpg?tr=w-456",
-      "Mustang 2021",
-      "Rs.75.00 Lakh*",
-    ],
-    car2: [
-      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20210705015326_Ford_ecosport.jpg&h=795&w=1200&c=1",
-      "EcoSport 2021 Facelift",
-      "Rs.8.49 Lakh",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Ford";
+  // const CarPrice = "₹ 33.81 Lakh";
+  // const TopPic = Endeavour;
+  // const CarName = "Ford Endeavour";
+  // const OnlyName = "Endeavour";
+  // const ThumPic = TEndeavour;
+
+  // const KeySpecification = [
+  //   "₹ 33.81 Lakh onwards",
+  //   "12.9 kmpl",
+  //   "1996 cc",
+  //   "Automatic",
+  //   "Diesel",
+  //   "7 Seater",
+  //   "4903 mm L x 1869 mm W x 1837 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "6 Airbags.",
+  //   "Rear Parking Camera and Sensors.",
+  //   "ABS with EBD.",
+  //   "Driver and Passenger Seatbelt Reminder.",
+  //   "High-Speed Sensing Alert System.",
+  //   "Side and Curtain Airbags.",
+  //   "Door Ajar Warning.",
+  //   "Perimeter Alarm.",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "Titanium Plus 4X2 AT",
+  //     "1996 cc, Automatic, Diesel, 13.9 kmpl",
+  //     "Rs.33.81 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "Titanium Plus 4X4 AT",
+  //     "1996 cc, Automatic, Diesel, 12.4 kmpl",
+  //     "Rs.35.61 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "Sport Edition",
+  //     "1996 cc, Automatic AMT, Diesel, 13.9 kmpl",
+  //     "Rs.36.26 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The prices of the Endeavour have been increased by up to Rs 80,000. Ford Endeavour Price: Ford retails the full-size SUV from Rs 29.99 lakh to Rs 36.25 lakh (ex-showroom Delhi). Ford Endeavour Variants: It is available in four variants: Titanium AT, Titanium+ AT 4x2, Titanium+ AT 4x4, and Sport AT. Ford Endeavour Seating Capacity: The Endeavour can seat up to seven occupants. Ford Endeavour Powertrain: Ford has equipped the Endeavour with a 2.0-litre turbo-diesel unit (170PS/420Nm), paired with a 10-speed AT (a first in India). There is no manual transmission on offer. It comes with both 2WD and 4WD drivetrains. Ford Endeavour Features: It gets FordPass connected car technology as standard, allowing users to perform remote vehicle operations, track its live location, and get an overview of the car’s telematics via the smartphone app. Other features that continue to be offered include active noise cancellation for the cabin, semi-autonomous parallel park assist, power-folding third-row seats, dual-zone climate control, and a panoramic sunroof. It also gets an 8-inch SYNC 3 touchscreen infotainment system with Apple CarPlay and Android Auto connectivity. Ford Endeavour Safety: Safety features on offer include seven airbags, tyre pressure monitoring, and hill launch assist. Ford Endeavour Rivals: The Endeavour fights it out with the MG Gloster, Mahindra Alturas G4, Volkswagen Tiguan Allspace, Toyota Fortuner, and the 2021 Skoda Kodiaq. Ford Endeavour 2022: The next-gen Endeavour has been spied testing and is expected to arrive in India by 2022.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Refined and more efficient engine ",
+  //     "Sophisticated transmission that can skip and lock gears",
+  //     "Full off-road kit still available",
+  //   ],
+  //   cons: [
+  //     "No major feature update",
+  //     "Torque surge of the 3.2L is missing",
+  //     "Only a tilt adjustable steering",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Diffused Silver", "bg-blue-600"],
+  //   color2: ["Diamond White", "bg-gray-400"],
+  //   color3: ["Absolute Black", "bg-white"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 29.98 Lakh Onwards",
+  //     "12.35 kmpl",
+  //     "1996 cc",
+  //     "Automatic",
+  //     "Diesel",
+  //     "7 Seater",
+  //     "4,985 mm L x 1,926 mm W x 1,867 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/43485/gloster-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 30.36 Lakh onwards",
+  //     "10.01 to 14.22 kmpl",
+  //     "2694 to 2755 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "7 Seater",
+  //     "4,795 mm L x 1,855 mm W x 1,835 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-19.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Endeavour?",
+  //     "The on-road price of Endeavour in Delhi starts at ‎₹ 40.32 Lakh and goes upto ‎₹ 43.19 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Endeavour and Fortuner?",
+  //     "Endeavour price starts at ₹ 33.81 Lakh ex-showroom and It comes with 1996 cc engine. Whereas Fortuner price starts at ₹ 30.36 Lakh ex-showroom and It comes with 2694 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Ford Endeavour?",
+  //     "The Ford Endeavour mileage is 12.9 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
+
+  // const SimilarCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/43485/gloster-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //     "Gloster",
+  //     "₹ 29.98 Lakh Onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-19.jpeg?q=85",
+  //     "Fortuner",
+  //     "₹ 30.36 Lakh onwards0",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33266/alturas-g4-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Alturas G4",
+  //     "₹ 28.77 Lakhonwards",
+  //   ],
+  // };
+
+  // const ThatBrandCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
+  //     "EcoSport",
+  //     "₹ 8.19 Lakh onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/37640/endeavour-exterior-right-front-three-quarter-149473.jpeg?q=85",
+  //     "Endeavour",
+  //     "₹ 33.81 Lakh onwards",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg?q=85",
+  //     "Figo",
+  //     "₹ 5.82 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32698/freestyle-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Freestyle",
+  //     "₹ 7.28 Lakh onwards",
+  //   ],
+  // };
+
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ford/Mustang-2021/7939/1595910236308/front-left-side-47.jpg?tr=w-456",
+  //     "Mustang 2021",
+  //     "Rs.75.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20210705015326_Ford_ecosport.jpg&h=795&w=1200&c=1",
+  //     "EcoSport 2021 Facelift",
+  //     "Rs.8.49 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

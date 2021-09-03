@@ -32,265 +32,300 @@ import { THarrier } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "₹ 14.39 Lakh";
-  const TopPic = Harrier;
-  const CarName = "Tata Harrier";
-  const OnlyName = "Harrier";
-  const ThumPic = THarrier;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 14.39 Lakh onwards",
-    "14.63 to 16.35 kmpl",
-    "1956 cc",
-    "Manual & Automatic (Torque Converter)",
-    "Diesel",
-    "5 Seater",
-    "4,598 mm L x 1,894 mm W x 1,706 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "6 airbags",
-    "ABS with EBD and CSC",
-    "reverse parking sensors",
-    "ISOFIX",
-    "driver and co-driver seatbelt reminder",
-    "high-speed alert system",
-    "impact sensing auto door unlock.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {};
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: ["XE", "1956  cc, Manual, Diesel, 16.35 kmpl", "Rs.14.39 Lakh*"],
-    varient2: ["XM", "1956  cc, Manual, Diesel, 16.35 kmpl", "Rs.15.78 Lakh*"],
-    varient3: ["XT", "1956 cc, Manual, Diesel, 16.35 kmpl", "Rs.17.03 Lakh*"],
-    varient4: [
-      "XMA",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "Rs.17.05 Lakh*",
-    ],
-    varient5: [
-      "XT Dark Edition",
-      "1956  cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.17.08 Lakh*",
-    ],
-    varient6: [
-      "XT Camo",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.17.24 Lakh*",
-    ],
-    varient7: [
-      "XT Plus",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.17.84 Lakh*",
-    ],
-    varient8: [
-      "XT plus Dark Edition",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.17.88 Lakh*",
-    ],
-    varient9: [
-      "XT Plus Camo",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.18.04 Lakh*",
-    ],
-    varient10: [
-      "XT Plus Dark Edition",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.18.06 Lakh*",
-    ],
-    varient11: ["XZ", "1956 cc, Manual, Diesel, 16.35 kmpl", "Rs.18.33 Lakh*"],
-    varient12: [
-      "XZ Dark Edition",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.18.37 Lakh*",
-    ],
-    varient13: [
-      "XZ Dual Tone",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.18.53 Lakh*",
-    ],
-    varient14: [
-      "XZ Camo",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "Rs.18.54 Lakh*",
-    ],
-    varient15: [
-      "XZ Plus",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "₹ 19.58 Lakh",
-    ],
-    varient16: [
-      "XZA",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 19.60 Lakh",
-    ],
-    varient17: [
-      "XZ Plus Dark Edition",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "₹ 19.62 Lakh",
-    ],
-    varient18: [
-      "XZA Dark Edition",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 19.62 Lakh",
-    ],
-    varient19: [
-      "XZ Plus Dual Tone",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "₹ 19.78 Lakh",
-    ],
-    varient20: [
-      "XZ Plus Camo",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "₹ 19.79 Lakh*",
-    ],
-    varient21: [
-      "XZA Dual Tone",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 19.80 Lakh*",
-    ],
-    varient22: [
-      "XZA Camo",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 19.81 Lakh",
-    ],
-    varient23: [
-      "XZ Plus Dark Edition",
-      "1956 cc, Manual, Diesel, 16.35 kmpl",
-      "₹ 19.91 Lakh",
-    ],
-    varient24: [
-      "XZA Plus",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 20.80 Lakh",
-    ],
-    varient25: [
-      "XZA Plus Dark Edition",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 20.83 Lakh",
-    ],
-    varient26: [
-      "XZA Plus Dual Tone",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 21.00 Lakh",
-    ],
-    varient27: [
-      "XZA Plus Camo",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 21.01 Lakh",
-    ],
-    varient28: [
-      "XZA 2021 Plus Dark Edition",
-      "1956 cc, Automatic, Diesel, 14.63 kmpl",
-      "₹ 21.11 Lakh",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Tata has updated the Harrier’s Dark Edition. Tata Harrier Price: The Harrier is priced from Rs 14.29 lakh to Rs 21.09 lakh (ex-showroom). Tata Harrier Variants: It is available in six trims: XE, XM, XT, XT+, XZ, and XZ+. Tata Harrier Seating Capacity: The Harrier is a 5-seater. Tata Harrier Powertrain: The SUV is equipped with a 2.0-litre diesel engine (170PS/350Nm), mated to a 6-speed MT or a 6-speed torque converter. Tata Harrier Features: The Harrier gets a panoramic sunroof, dual-tone alloy wheels, an 8.8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, and rain-sensing wipers. Tata Harrier Safety: Standard features on offer include ABS with EBD, electronic stability program, and dual front airbags. Tata Harrier Rivals: It locks horns with the Hyundai Creta and Kia Seltos’s top-spec variants. These aside, it also rivals the low- and mid-spec variants of the Jeep Compass, Mahindra XUV500, Mahindra XUV700, and MG Hector.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "More power makes the Harrier's highway performance stronger.",
-      "6-speed AT is smooth, and adds convenience.",
-      "Cabin space is among the best. Proper 5-seater.",
-    ],
-    cons: [
-      "No petrol engine available. No AWD variant either.",
-      "New features limited to top-spec XZ+ variant only.",
-      "Ergonomic issues: narrow footwell, non-sliding armrest remain.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Camo Green", "bg-green-800"],
-    color2: ["Telesto Grey", "bg-gray-400"],
-    color3: ["Oberon Black With Deep Blue Undertone", "bg-gray-900"],
-    color4: ["Calypso Red", "bg-red-600"],
-    color5: ["Orcus White", "bg-white-800"],
-    color6: ["Atlas Black", "bg-gray-900"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 16.30 Lakh Onwards",
-      "14.2 to 20.4 kmpl",
-      "1493 to 1999 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Petrol & Diesel",
-      "6 & 7 Seater",
-      "4,500 mm L x 1,790 mm W x 1,675 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46812/alcazar-exterior-right-front-three-quarter.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Harrier?",
-      "The on-road price of Harrier in Delhi starts at ‎₹ 17.36 Lakh and goes upto ‎₹ 25.23 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
-    ],
-    question2: [
-      "Which car is better between Harrier and Safari?",
-      "Harrier price starts at ₹ 14.30 Lakh ex-showroom and It comes with 1956 cc engine. Whereas Safari price starts at ₹ 14.99 Lakh ex-showroom and It comes with 1956 cc engine",
-    ],
-    question3: [
-      "What are the offers available on Tata Harrier for August?",
-      "There are 2 Tata Harrier offers in Delhi for the month of August.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Tata";
+  // const CarPrice = "₹ 14.39 Lakh";
+  // const TopPic = Harrier;
+  // const CarName = "Tata Harrier";
+  // const OnlyName = "Harrier";
+  // const ThumPic = THarrier;
+
+  // const KeySpecification = [
+  //   "₹ 14.39 Lakh onwards",
+  //   "14.63 to 16.35 kmpl",
+  //   "1956 cc",
+  //   "Manual & Automatic (Torque Converter)",
+  //   "Diesel",
+  //   "5 Seater",
+  //   "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "6 airbags",
+  //   "ABS with EBD and CSC",
+  //   "reverse parking sensors",
+  //   "ISOFIX",
+  //   "driver and co-driver seatbelt reminder",
+  //   "high-speed alert system",
+  //   "impact sensing auto door unlock.",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: ["XE", "1956  cc, Manual, Diesel, 16.35 kmpl", "Rs.14.39 Lakh*"],
+  //   varient2: ["XM", "1956  cc, Manual, Diesel, 16.35 kmpl", "Rs.15.78 Lakh*"],
+  //   varient3: ["XT", "1956 cc, Manual, Diesel, 16.35 kmpl", "Rs.17.03 Lakh*"],
+  //   varient4: [
+  //     "XMA",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "Rs.17.05 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "XT Dark Edition",
+  //     "1956  cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.17.08 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "XT Camo",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.17.24 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "XT Plus",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.17.84 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "XT plus Dark Edition",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.17.88 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "XT Plus Camo",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.18.04 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "XT Plus Dark Edition",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.18.06 Lakh*",
+  //   ],
+  //   varient11: ["XZ", "1956 cc, Manual, Diesel, 16.35 kmpl", "Rs.18.33 Lakh*"],
+  //   varient12: [
+  //     "XZ Dark Edition",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.18.37 Lakh*",
+  //   ],
+  //   varient13: [
+  //     "XZ Dual Tone",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.18.53 Lakh*",
+  //   ],
+  //   varient14: [
+  //     "XZ Camo",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "Rs.18.54 Lakh*",
+  //   ],
+  //   varient15: [
+  //     "XZ Plus",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "₹ 19.58 Lakh",
+  //   ],
+  //   varient16: [
+  //     "XZA",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 19.60 Lakh",
+  //   ],
+  //   varient17: [
+  //     "XZ Plus Dark Edition",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "₹ 19.62 Lakh",
+  //   ],
+  //   varient18: [
+  //     "XZA Dark Edition",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 19.62 Lakh",
+  //   ],
+  //   varient19: [
+  //     "XZ Plus Dual Tone",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "₹ 19.78 Lakh",
+  //   ],
+  //   varient20: [
+  //     "XZ Plus Camo",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "₹ 19.79 Lakh*",
+  //   ],
+  //   varient21: [
+  //     "XZA Dual Tone",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 19.80 Lakh*",
+  //   ],
+  //   varient22: [
+  //     "XZA Camo",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 19.81 Lakh",
+  //   ],
+  //   varient23: [
+  //     "XZ Plus Dark Edition",
+  //     "1956 cc, Manual, Diesel, 16.35 kmpl",
+  //     "₹ 19.91 Lakh",
+  //   ],
+  //   varient24: [
+  //     "XZA Plus",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 20.80 Lakh",
+  //   ],
+  //   varient25: [
+  //     "XZA Plus Dark Edition",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 20.83 Lakh",
+  //   ],
+  //   varient26: [
+  //     "XZA Plus Dual Tone",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 21.00 Lakh",
+  //   ],
+  //   varient27: [
+  //     "XZA Plus Camo",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 21.01 Lakh",
+  //   ],
+  //   varient28: [
+  //     "XZA 2021 Plus Dark Edition",
+  //     "1956 cc, Automatic, Diesel, 14.63 kmpl",
+  //     "₹ 21.11 Lakh",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Tata has updated the Harrier’s Dark Edition. Tata Harrier Price: The Harrier is priced from Rs 14.29 lakh to Rs 21.09 lakh (ex-showroom). Tata Harrier Variants: It is available in six trims: XE, XM, XT, XT+, XZ, and XZ+. Tata Harrier Seating Capacity: The Harrier is a 5-seater. Tata Harrier Powertrain: The SUV is equipped with a 2.0-litre diesel engine (170PS/350Nm), mated to a 6-speed MT or a 6-speed torque converter. Tata Harrier Features: The Harrier gets a panoramic sunroof, dual-tone alloy wheels, an 8.8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, and rain-sensing wipers. Tata Harrier Safety: Standard features on offer include ABS with EBD, electronic stability program, and dual front airbags. Tata Harrier Rivals: It locks horns with the Hyundai Creta and Kia Seltos’s top-spec variants. These aside, it also rivals the low- and mid-spec variants of the Jeep Compass, Mahindra XUV500, Mahindra XUV700, and MG Hector.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "More power makes the Harrier's highway performance stronger.",
+  //     "6-speed AT is smooth, and adds convenience.",
+  //     "Cabin space is among the best. Proper 5-seater.",
+  //   ],
+  //   cons: [
+  //     "No petrol engine available. No AWD variant either.",
+  //     "New features limited to top-spec XZ+ variant only.",
+  //     "Ergonomic issues: narrow footwell, non-sliding armrest remain.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Camo Green", "bg-green-800"],
+  //   color2: ["Telesto Grey", "bg-gray-400"],
+  //   color3: ["Oberon Black With Deep Blue Undertone", "bg-gray-900"],
+  //   color4: ["Calypso Red", "bg-red-600"],
+  //   color5: ["Orcus White", "bg-white-800"],
+  //   color6: ["Atlas Black", "bg-gray-900"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 16.30 Lakh Onwards",
+  //     "14.2 to 20.4 kmpl",
+  //     "1493 to 1999 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Petrol & Diesel",
+  //     "6 & 7 Seater",
+  //     "4,500 mm L x 1,790 mm W x 1,675 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46812/alcazar-exterior-right-front-three-quarter.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Harrier?",
+  //     "The on-road price of Harrier in Delhi starts at ‎₹ 17.36 Lakh and goes upto ‎₹ 25.23 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Harrier and Safari?",
+  //     "Harrier price starts at ₹ 14.30 Lakh ex-showroom and It comes with 1956 cc engine. Whereas Safari price starts at ₹ 14.99 Lakh ex-showroom and It comes with 1956 cc engine",
+  //   ],
+  //   question3: [
+  //     "What are the offers available on Tata Harrier for August?",
+  //     "There are 2 Tata Harrier offers in Delhi for the month of August.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -358,23 +393,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -32,165 +32,200 @@ import { TDuster } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Renault";
-  const CarPrice = "₹ 9.84 Lakh";
-  const TopPic = Duster;
-  const CarName = "Renault Duster";
-  const OnlyName = "Duster";
-  const ThumPic = TDuster;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 9.84 Lakh onwards",
-    "14.19 to 16.5 kmpl",
-    "1330 to 1498 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol",
-    "4 Seater",
-    "4,384 mm L x 1,813 mm W x 1,669 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "ABS (Anti-Lock Braking System)",
-    "EBD (Electronic BrakeForce Distribution)",
-    "brake assist",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["RXS", "1330 cc, Manual, Petrol, 16.42 kmpl", "Rs.9.86 Lakh*"],
-    varient2: ["RXZ", "1330 cc, Manual, Petrol, 16.42 kmpl", "Rs.10.46 Lakh*"],
-    varient3: [
-      "RXE Turbo",
-      "1330 cc, Manual, Petrol, 16.42 kmpl",
-      "Rs.11.27 Lakh*",
-    ],
-    varient4: [
-      "RXS Turbo",
-      "1330 cc, Manual, Petrol, 16.42 kmpl",
-      "Rs.12.05 Lakh*",
-    ],
-    varient5: [
-      "RXZ Turbo",
-      "1330 cc, Manual, Petrol, 16.42 kmpl",
-      "Rs.12.65 Lakh*",
-    ],
-    varient6: [
-      "RXS Turbo CVT",
-      "1330 cc, Automatic, Petrol, 16.42 kmpl",
-      "Rs.13.65 Lakh*",
-    ],
-    varient7: [
-      "RXZ Turbo CVT",
-      "1330 cc, Automatic, Petrol, 16.42 kmpl",
-      "Rs.14.25 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1330 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The Duster is carrying discounts of up to Rs 65,000 this July. Renault Duster Price: The compact SUV retails between Rs 9.86 lakh and Rs 14.25 lakh (ex-showroom Delhi). Renault Duster Variants: While the standard Duster is sold in two variants (RXS and RXZ), the Duster Turbo is available in three (RXE, RXS, and RXZ). Renault Duster Seating Capacity: The Renault Duster can accommodate up to five people. Renault Duster Powertrains: The Duster gets two engine options: a 1.5-litre petrol unit (106PS/142Nm), mated to a 5-speed MT and a 1.3-litre turbo-petrol motor (156PS/254Nm), paired with a 6-speed MT and an optional 7-step CVT. Renault Duster Features: The Duster is equipped with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a 6-speaker Arkamys sound system, and auto climate control with rear AC vents. It also comes with projector headlamps with DRLs, engine idle-stop/start, and cabin pre-cooling (with the key fob). Renault Duster Safety: Standard safety features include dual front airbags, ABS with EBD, rear parking sensors, and front seat belt reminders. ESP and hill start assist are available in the higher variants. Renault Duster Rivals: The Duster competes with the Skoda Kushaq, Hyundai Creta, Kia Seltos, Nissan Kicks, Maruti Suzuki S-Cross, and Volkswagen Taigun. If you are looking for a similarly priced alternative, you can also consider the Mahindra Scorpio.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Most powerful SUV in the segment",
-      "Convenience of a CVT automatic.available as an option",
-      "Gets new convenience features along with the engine upgrade",
-    ],
-    cons: [
-      "New turbo-petrol engine costs up to Rs 2 lakh more over the regular Duster",
-      "Cabin quality is not on par with the competition",
-      "Ergonomic issues start to spoil the experience over time.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Caspian Blue", "bg-blue-600"],
-    color2: ["Mahogany Brown", "bg-brown-800"],
-    color3: ["Cayenne Orange", "bg-red-700"],
-    color4: ["Moonlight Silver", "bg-gray-300"],
-    color5: ["Slate Grey", "bg-gray-800"],
-    color6: ["Outback Bronze", "bg-gray-800"],
-    color7: ["Pearl White", "bg-white-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.63 Lakh onwards",
-      "16.6 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "6-7 Seater",
-      "4,720 mm L x 1,835 mm W x 1,760 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Duster?",
-      "The on-road price of Duster in Delhi starts at ‎₹ 11.08 Lakh and goes upto ‎₹ 16.58 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Duster and Kicks?",
-      "Duster price starts at ₹ 9.84 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Kicks price starts at ₹ 9.50 Lakh ex-showroom and It comes with 1498 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Duster top model?",
-      "Top model of Duster is RXZ 1.3 Turbo Petrol CVT and the ex-showroom for Duster RXZ 1.3 Turbo Petrol CVT is ₹ 14.25 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Renault";
+  // const CarPrice = "₹ 9.84 Lakh";
+  // const TopPic = Duster;
+  // const CarName = "Renault Duster";
+  // const OnlyName = "Duster";
+  // const ThumPic = TDuster;
+
+  // const KeySpecification = [
+  //   "₹ 9.84 Lakh onwards",
+  //   "14.19 to 16.5 kmpl",
+  //   "1330 to 1498 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol",
+  //   "4 Seater",
+  //   "4,384 mm L x 1,813 mm W x 1,669 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "ABS (Anti-Lock Braking System)",
+  //   "EBD (Electronic BrakeForce Distribution)",
+  //   "brake assist",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["RXS", "1330 cc, Manual, Petrol, 16.42 kmpl", "Rs.9.86 Lakh*"],
+  //   varient2: ["RXZ", "1330 cc, Manual, Petrol, 16.42 kmpl", "Rs.10.46 Lakh*"],
+  //   varient3: [
+  //     "RXE Turbo",
+  //     "1330 cc, Manual, Petrol, 16.42 kmpl",
+  //     "Rs.11.27 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "RXS Turbo",
+  //     "1330 cc, Manual, Petrol, 16.42 kmpl",
+  //     "Rs.12.05 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "RXZ Turbo",
+  //     "1330 cc, Manual, Petrol, 16.42 kmpl",
+  //     "Rs.12.65 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "RXS Turbo CVT",
+  //     "1330 cc, Automatic, Petrol, 16.42 kmpl",
+  //     "Rs.13.65 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "RXZ Turbo CVT",
+  //     "1330 cc, Automatic, Petrol, 16.42 kmpl",
+  //     "Rs.14.25 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1330 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The Duster is carrying discounts of up to Rs 65,000 this July. Renault Duster Price: The compact SUV retails between Rs 9.86 lakh and Rs 14.25 lakh (ex-showroom Delhi). Renault Duster Variants: While the standard Duster is sold in two variants (RXS and RXZ), the Duster Turbo is available in three (RXE, RXS, and RXZ). Renault Duster Seating Capacity: The Renault Duster can accommodate up to five people. Renault Duster Powertrains: The Duster gets two engine options: a 1.5-litre petrol unit (106PS/142Nm), mated to a 5-speed MT and a 1.3-litre turbo-petrol motor (156PS/254Nm), paired with a 6-speed MT and an optional 7-step CVT. Renault Duster Features: The Duster is equipped with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a 6-speaker Arkamys sound system, and auto climate control with rear AC vents. It also comes with projector headlamps with DRLs, engine idle-stop/start, and cabin pre-cooling (with the key fob). Renault Duster Safety: Standard safety features include dual front airbags, ABS with EBD, rear parking sensors, and front seat belt reminders. ESP and hill start assist are available in the higher variants. Renault Duster Rivals: The Duster competes with the Skoda Kushaq, Hyundai Creta, Kia Seltos, Nissan Kicks, Maruti Suzuki S-Cross, and Volkswagen Taigun. If you are looking for a similarly priced alternative, you can also consider the Mahindra Scorpio.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Most powerful SUV in the segment",
+  //     "Convenience of a CVT automatic.available as an option",
+  //     "Gets new convenience features along with the engine upgrade",
+  //   ],
+  //   cons: [
+  //     "New turbo-petrol engine costs up to Rs 2 lakh more over the regular Duster",
+  //     "Cabin quality is not on par with the competition",
+  //     "Ergonomic issues start to spoil the experience over time.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Caspian Blue", "bg-blue-600"],
+  //   color2: ["Mahogany Brown", "bg-brown-800"],
+  //   color3: ["Cayenne Orange", "bg-red-700"],
+  //   color4: ["Moonlight Silver", "bg-gray-300"],
+  //   color5: ["Slate Grey", "bg-gray-800"],
+  //   color6: ["Outback Bronze", "bg-gray-800"],
+  //   color7: ["Pearl White", "bg-white-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.63 Lakh onwards",
+  //     "16.6 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "6-7 Seater",
+  //     "4,720 mm L x 1,835 mm W x 1,760 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Duster?",
+  //     "The on-road price of Duster in Delhi starts at ‎₹ 11.08 Lakh and goes upto ‎₹ 16.58 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Duster and Kicks?",
+  //     "Duster price starts at ₹ 9.84 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Kicks price starts at ₹ 9.50 Lakh ex-showroom and It comes with 1498 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Duster top model?",
+  //     "Top model of Duster is RXZ 1.3 Turbo Petrol CVT and the ex-showroom for Duster RXZ 1.3 Turbo Petrol CVT is ₹ 14.25 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -233,23 +268,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Zoe/6278/1581400662093/front-left-side-47.jpg?tr=w-456",
-      "Renault Zoe",
-      "Rs.8.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Kwid-EV/6214/1555414583232/front-left-side-47.jpg?tr=w-456",
-      "Renault K-ZE",
-      "Rs.10.00 Lakh*",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Arkana/6573/front-left-side-47.jpg?tr=w-456",
-      "Renault Arkana",
-      "Rs.10.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Zoe/6278/1581400662093/front-left-side-47.jpg?tr=w-456",
+  //     "Renault Zoe",
+  //     "Rs.8.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Kwid-EV/6214/1555414583232/front-left-side-47.jpg?tr=w-456",
+  //     "Renault K-ZE",
+  //     "Rs.10.00 Lakh*",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Arkana/6573/front-left-side-47.jpg?tr=w-456",
+  //     "Renault Arkana",
+  //     "Rs.10.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

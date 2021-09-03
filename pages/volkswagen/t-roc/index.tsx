@@ -32,144 +32,179 @@ import { TTroc } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Volkswagen";
-  const CarPrice = "₹ 21.35 Lakh";
-  const TopPic = Troc;
-  const CarName = "Volkswagen T-Roc";
-  const OnlyName = "T-Roc";
-  const ThumPic = TTroc;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ ₹ 21.35 Lakh onwards",
-    "17.85 kmpl",
-    "1498 cc",
-    "Automatic",
-    "Petrol",
-    "5 Seater",
-    "4,234 mm L x 1,819 mm W x 1,573 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "6 Airbags",
-    "Ventilated Front Disc Brakes",
-    "Central Locking",
-    "high mounted third Brake Light",
-    "Height Adjustable Front head restraints",
-    "Electronic anti-theft Immobiliser",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "1.5 TSI",
-      "1498 cc, Automatic, Petrol, 17.85 kmpl",
-      "₹ 21.35 Lakh",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Volkswagen has started accepting bookings for the 2021 T-Roc. We took the SUV for a drive recently, and here’s what we think about it. Volkswagen T-Roc Price: The 2021 T-Roc is priced at Rs 21.35 lakh (ex-showroom). Volkswagen T-Roc Seating Capacity: It gets a 5-seater layout. Volkswagen T-Roc Powertrains: Volkswagen will continue to offer the SUV with the same 1.5-litre TSI petrol engine that puts out 150PS and 250Nm, mated to a 7-speed DSG unit. It comes with a front-wheel drivetrain. Volkswagen T-Roc Features: In terms of features, the SUV comes with an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a 6-speaker sound system, dual-zone climate control, heated front seats, and a panoramic sunroof. Volkswagen T-Roc Safety: Safety features include six airbags, ABS with EBD, and electronic stability control (ESC). Volkswagen T-Roc Rivals: It will continue to take on the Jeep Compass and Skoda Karoq. However, in terms of size, it also takes on the Kia Seltos and Hyundai Creta.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Refined engine and smooth suspension setup",
-      "Smart styling and strong build quality",
-      "Touchscreen system feels premium and easy to use",
-    ],
-    cons: [
-      "No diesel option",
-      "Misses must-haves like cruise control and wireless charging",
-      "immoderate usage of hard plastics inside the cabin",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Kurkuma Yellow", "bg-blue-600"],
-    color2: ["Ravenna Blue", "bg-gray-400"],
-    color3: ["Indium Grey", "bg-white"],
-    color4: ["Flash Red", "bg-red-600"],
-    color5: ["Pure white", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.63 Lakh onwards",
-      "16.6 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "6-7 Seater",
-      "4,720 mm L x 1,835 mm W x 1,760 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of T-Roc?",
-      "The on-road price of T-Roc in Delhi is ₹ 24.93 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between T-Roc and Tiguan AllSpace?",
-      "T-Roc price starts at ₹ 21.35 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Tiguan AllSpace price starts at ₹ 34.19 Lakh ex-showroom and It comes with 1984 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Volkswagen T-Roc?",
-      "The Volkswagen T-Roc mileage is 17.85 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Volkswagen";
+  // const CarPrice = "₹ 21.35 Lakh";
+  // const TopPic = Troc;
+  // const CarName = "Volkswagen T-Roc";
+  // const OnlyName = "T-Roc";
+  // const ThumPic = TTroc;
+
+  // const KeySpecification = [
+  //   "₹ ₹ 21.35 Lakh onwards",
+  //   "17.85 kmpl",
+  //   "1498 cc",
+  //   "Automatic",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "4,234 mm L x 1,819 mm W x 1,573 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "6 Airbags",
+  //   "Ventilated Front Disc Brakes",
+  //   "Central Locking",
+  //   "high mounted third Brake Light",
+  //   "Height Adjustable Front head restraints",
+  //   "Electronic anti-theft Immobiliser",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "1.5 TSI",
+  //     "1498 cc, Automatic, Petrol, 17.85 kmpl",
+  //     "₹ 21.35 Lakh",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Volkswagen has started accepting bookings for the 2021 T-Roc. We took the SUV for a drive recently, and here’s what we think about it. Volkswagen T-Roc Price: The 2021 T-Roc is priced at Rs 21.35 lakh (ex-showroom). Volkswagen T-Roc Seating Capacity: It gets a 5-seater layout. Volkswagen T-Roc Powertrains: Volkswagen will continue to offer the SUV with the same 1.5-litre TSI petrol engine that puts out 150PS and 250Nm, mated to a 7-speed DSG unit. It comes with a front-wheel drivetrain. Volkswagen T-Roc Features: In terms of features, the SUV comes with an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, a 6-speaker sound system, dual-zone climate control, heated front seats, and a panoramic sunroof. Volkswagen T-Roc Safety: Safety features include six airbags, ABS with EBD, and electronic stability control (ESC). Volkswagen T-Roc Rivals: It will continue to take on the Jeep Compass and Skoda Karoq. However, in terms of size, it also takes on the Kia Seltos and Hyundai Creta.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Refined engine and smooth suspension setup",
+  //     "Smart styling and strong build quality",
+  //     "Touchscreen system feels premium and easy to use",
+  //   ],
+  //   cons: [
+  //     "No diesel option",
+  //     "Misses must-haves like cruise control and wireless charging",
+  //     "immoderate usage of hard plastics inside the cabin",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Kurkuma Yellow", "bg-blue-600"],
+  //   color2: ["Ravenna Blue", "bg-gray-400"],
+  //   color3: ["Indium Grey", "bg-white"],
+  //   color4: ["Flash Red", "bg-red-600"],
+  //   color5: ["Pure white", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.63 Lakh onwards",
+  //     "16.6 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "6-7 Seater",
+  //     "4,720 mm L x 1,835 mm W x 1,760 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of T-Roc?",
+  //     "The on-road price of T-Roc in Delhi is ₹ 24.93 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between T-Roc and Tiguan AllSpace?",
+  //     "T-Roc price starts at ₹ 21.35 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Tiguan AllSpace price starts at ₹ 34.19 Lakh ex-showroom and It comes with 1984 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Volkswagen T-Roc?",
+  //     "The Volkswagen T-Roc mileage is 17.85 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -212,18 +247,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Taigun",
-      "₹ 10.00 - 16.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
-      "Tiguan",
-      "₹ 28.00 - 32.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Taigun",
+  //     "₹ 10.00 - 16.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
+  //     "Tiguan",
+  //     "₹ 28.00 - 32.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -29,141 +29,176 @@ import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 
 function Homee({ joy }) {
-  const CompanyName = "Tata";
-  const CarPrice = "Rs.6.94 - 7.49 Lakh*";
-  const TopPic =
-    "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Yodha-Pickup/7624/1609147376028/front-left-side-47.jpg?tr=w-456";
-  const CarName = "Tata Yodha";
-  const OnlyName = "Yodha";
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "Rs.6.94 - 7.49 Lakh*",
-    "14km/l",
-    "2956 cc",
-    "Manual",
-    "Diesel",
-    "2 Seater",
-    "length of 2825mm, width of 1860mm and a wheelbase of 2825mm",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "Antilock Braking System (ABS)",
-    "Fog lights, anti-roll bars",
-    "3-layered body construction",
-    "crumple zones",
-    "retractable seat belts",
-    "side intrusion beams",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {};
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: ["Eco", "2956, Manual, Diesel, 14km/l", "Rs.6.94 Lakh*"],
-    varient2: ["Crew Cabin", "2956, Manual, Diesel, 14km/l", "Rs.7.09 Lakh*"],
-    varient3: ["1500", "2956, Manual, Diesel, 14km/l", "Rs.7.10 Lakh*"],
-    varient4: ["4x4", "2956, Manual, Diesel, 14km/l", "Rs.7.49 Lakh*"],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "The Yodha introduced in the middle of 2017 is a superior product than the prior generation Xenon. Yodha is designed and developed keeping in mind the rapidly evolving customer needs of modern transportation. Yodha offers higher payload than the Ace range of compact trucks, and customers looking to upgrade from Ace or some of them from even smaller vehicles, the Yodha pickup is the most suitable vehicle. Mahindra is the market leader in this segment with the popular Bolero Pickup. Tata Motors is a challenger brand trying to get a strong number 2 position. While the company has several products such as 207 and Xenon pickup in this segment offering a variety of loads options and applications to customers, Yodha is a next-generation product from Tata Motors. Yodha comes in single and crew cab options in 4x4 and 4x2 variants, with rated payload options of 1140, 1,250 kg &amp; 1500 kgs, for a wide range of commercial applications. The modern styling with SUV-type tough appearance and well-appointed, comfortable interiors makes Yodha a modern pickup. Yodha gets bigger 16-inch radial tyres, and a proven driveline consists of 4-cylinder 2956 cc engine with 85 HP of power @3000 rpm and 250 of torque @1000-2000 rpm across variants. For ease of driving Yodha comes with standards power-steering, the suspension offers comfort and flexibility with 6 semi-elliptical springs and 9 leaves leaf springs. Tata Motors has not only banking on the looks of Yodha but also promising lower operating costs-critical for a transporter, higher mileage and much less total cost of ownership ensuring the customer earns more per trip. In the just concluded Auto Expo 2020, Tata Motors has introduced the BSVI Yodha 1700 with additional features, a higher power engine and more loading space. Yodha competes with the market leader Mahindra Bolero Pikup range.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "It has Good Mileage",
-      "Low Cost Pickup truck in Market",
-      "Can carry Heavy Load",
-      "available in 4x4",
-    ],
-    cons: [
-      "Missing some features",
-      "Safety features is not that good",
-      "Many Costcutting has been seen",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["White", "bg-White-600"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.8.12 - 8.38 Lakh*",
-      "13 Km/l",
-      "2523 cc",
-      "Manual",
-      "Diesel",
-      "2 Seater",
-      "5215 mm L x 1700 mm W x 1,865 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/7230/1573280100232/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "Rs.16.98 - 24.49 Lakh*",
-      "	12.4 kmpl",
-      "1898 cc",
-      "Manual",
-      "Diesel",
-      "2 Seater",
-      "5295 mm L x 1,860 mm W x 1,885 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/8430/1620644941293/front-left-side-47.jpg?tr=w-456",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "Which is best mileage give Tata yodha 1.7t vs Bolero pickup 1.7 ?",
-      "Tata yodha having good mileage ",
-    ],
-    question2: [
-      "What is the seating capacity of Tata Yodha?",
-      "Tata Yodha Pickup is available in two and four seating layouts. While the Eco, 1500, and 4x4 variants get a 2-seating layout, the Crew Cabin variant can seat four.",
-    ],
-    question3: [
-      "Are the cabin crew back seats comfortable?",
-      "The Tata Yodha Pickup Crew Cabin comes with a seating capacity of 4-people. The Pickup offers a decent amount of space at the rear, however, the leg space could be an issue for taller passengers.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Tata";
+  // const CarPrice = "Rs.6.94 - 7.49 Lakh*";
+  // const TopPic =
+  //   "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Yodha-Pickup/7624/1609147376028/front-left-side-47.jpg?tr=w-456";
+  // const CarName = "Tata Yodha";
+  // const OnlyName = "Yodha";
+
+  // const KeySpecification = [
+  //   "Rs.6.94 - 7.49 Lakh*",
+  //   "14km/l",
+  //   "2956 cc",
+  //   "Manual",
+  //   "Diesel",
+  //   "2 Seater",
+  //   "length of 2825mm, width of 1860mm and a wheelbase of 2825mm",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "Antilock Braking System (ABS)",
+  //   "Fog lights, anti-roll bars",
+  //   "3-layered body construction",
+  //   "crumple zones",
+  //   "retractable seat belts",
+  //   "side intrusion beams",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: ["Eco", "2956, Manual, Diesel, 14km/l", "Rs.6.94 Lakh*"],
+  //   varient2: ["Crew Cabin", "2956, Manual, Diesel, 14km/l", "Rs.7.09 Lakh*"],
+  //   varient3: ["1500", "2956, Manual, Diesel, 14km/l", "Rs.7.10 Lakh*"],
+  //   varient4: ["4x4", "2956, Manual, Diesel, 14km/l", "Rs.7.49 Lakh*"],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "The Yodha introduced in the middle of 2017 is a superior product than the prior generation Xenon. Yodha is designed and developed keeping in mind the rapidly evolving customer needs of modern transportation. Yodha offers higher payload than the Ace range of compact trucks, and customers looking to upgrade from Ace or some of them from even smaller vehicles, the Yodha pickup is the most suitable vehicle. Mahindra is the market leader in this segment with the popular Bolero Pickup. Tata Motors is a challenger brand trying to get a strong number 2 position. While the company has several products such as 207 and Xenon pickup in this segment offering a variety of loads options and applications to customers, Yodha is a next-generation product from Tata Motors. Yodha comes in single and crew cab options in 4x4 and 4x2 variants, with rated payload options of 1140, 1,250 kg &amp; 1500 kgs, for a wide range of commercial applications. The modern styling with SUV-type tough appearance and well-appointed, comfortable interiors makes Yodha a modern pickup. Yodha gets bigger 16-inch radial tyres, and a proven driveline consists of 4-cylinder 2956 cc engine with 85 HP of power @3000 rpm and 250 of torque @1000-2000 rpm across variants. For ease of driving Yodha comes with standards power-steering, the suspension offers comfort and flexibility with 6 semi-elliptical springs and 9 leaves leaf springs. Tata Motors has not only banking on the looks of Yodha but also promising lower operating costs-critical for a transporter, higher mileage and much less total cost of ownership ensuring the customer earns more per trip. In the just concluded Auto Expo 2020, Tata Motors has introduced the BSVI Yodha 1700 with additional features, a higher power engine and more loading space. Yodha competes with the market leader Mahindra Bolero Pikup range.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "It has Good Mileage",
+  //     "Low Cost Pickup truck in Market",
+  //     "Can carry Heavy Load",
+  //     "available in 4x4",
+  //   ],
+  //   cons: [
+  //     "Missing some features",
+  //     "Safety features is not that good",
+  //     "Many Costcutting has been seen",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["White", "bg-White-600"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.8.12 - 8.38 Lakh*",
+  //     "13 Km/l",
+  //     "2523 cc",
+  //     "Manual",
+  //     "Diesel",
+  //     "2 Seater",
+  //     "5215 mm L x 1700 mm W x 1,865 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/7230/1573280100232/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "Rs.16.98 - 24.49 Lakh*",
+  //     "	12.4 kmpl",
+  //     "1898 cc",
+  //     "Manual",
+  //     "Diesel",
+  //     "2 Seater",
+  //     "5295 mm L x 1,860 mm W x 1,885 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/8430/1620644941293/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "Which is best mileage give Tata yodha 1.7t vs Bolero pickup 1.7 ?",
+  //     "Tata yodha having good mileage ",
+  //   ],
+  //   question2: [
+  //     "What is the seating capacity of Tata Yodha?",
+  //     "Tata Yodha Pickup is available in two and four seating layouts. While the Eco, 1500, and 4x4 variants get a 2-seating layout, the Crew Cabin variant can seat four.",
+  //   ],
+  //   question3: [
+  //     "Are the cabin crew back seats comfortable?",
+  //     "The Tata Yodha Pickup Crew Cabin comes with a seating capacity of 4-people. The Pickup offers a decent amount of space at the rear, however, the leg space could be an issue for taller passengers.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -226,23 +261,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
-      "HBX",
-      "₹ 5.00 - 8.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
-      "Tiago EV",
-      "₹ 5.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
-      "Altroz EV",
-      "₹ 12.00 - 15.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39015/Tata-H2X-Exterior-170093.jpg?wm=0&q=85",
+  //     "HBX",
+  //     "₹ 5.00 - 8.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40453/Tata-Tiago-EV-Exterior-169932.jpg?wm=0&q=85",
+  //     "Tiago EV",
+  //     "₹ 5.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46800/tata-altroz-ev-left-side-view5.jpeg?q=85",
+  //     "Altroz EV",
+  //     "₹ 12.00 - 15.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

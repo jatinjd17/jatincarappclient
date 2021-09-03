@@ -32,163 +32,198 @@ import { TVento } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Volkswagen";
-  const CarPrice = "₹ 6.21 Lakh";
-  const TopPic = Vento;
-  const CarName = "Volkswagen Vento";
-  const OnlyName = "Vento";
-  const ThumPic = TVento;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 10.00 Lakh onwards",
-    "16.35 to 17.69 kmpl",
-    "999 cc",
-    "Manual & Automatic (Torque Converter)",
-    "Petrol",
-    "5 Seater",
-    "4,390 mm L x 1,699 mm W x 1,467 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "electronic stability control",
-    "ABS",
-    "EBD",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "1.0 TSI Comfortline",
-      "999 cc, Manual, Petrol, 17.69 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
-    varient2: [
-      "1.0 TSI Highline",
-      "999 cc, Manual, Petrol, 17.69 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
-    varient3: [
-      "1.0 TSI Highline AT",
-      "999 cc, Automatic, Petrol, 16.35 kmpl",
-      "Rs.12.49 Lakh*",
-    ],
-    varient4: [
-      "1.0 TSI Highline Plus",
-      "999 cc, Manual, Petrol, 17.69 kmpl",
-      "Rs.12.52 Lakh*",
-    ],
-    varient5: [
-      "1.0 TSI Highline Plus AT",
-      "999  cc, Automatic, Petrol, 16.35 kmpl",
-      "Rs.13.83 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Volkswagen has launched the Turbo Edition of the Vento. Volkswagen Vento Price: The sedan is priced between Rs 8.69 lakh and Rs 13.68 lakh (ex-showroom). Volkswagen Vento Variants: It comes in four variants: Trendline, Comfortline, Highline, and Highline Plus. Volkswagen Vento Powertrains: Volkswagen provides the Vento with a 1.0-litre turbo-petrol engine that churns out 110PS and 175Nm. There is an option between a 6-speed manual and a 6-speed AT gearbox. Their claimed fuel efficiency figures are 17.69kmpl and 16.35kmpl respectively. Volkswagen Vento Features: It packs features like an auto AC with rear AC vents, auto-dimming IRVM, LED headlamps, reverse parking camera, and a 6.5-inch touchscreen infotainment system with Apple CarPlay and Android Auto. Volkswagen Vento Safety: Safety features on offer include up to four airbags, ABS with EBD, and rear parking sensors. Volkswagen Vento Rivals: The Vento goes up against the Honda City, Hyundai Verna, Maruti Suzuki Ciaz, Skoda Rapid, and the Toyota Yaris.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Solid build quality",
-      "Refined and powerful TSI powertrain",
-      "Sporty handling",
-    ],
-    cons: [
-      "Misses modern day features",
-      "Doesn't look special anymore",
-      "Just one USB charger in the cabin",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Lapiz Blue", "bg-blue-600"],
-    color2: ["Carbon Steel", "bg-gray-400"],
-    color3: ["Sunset Red", "bg-white"],
-    color4: ["Toffee Brown", "bg-red-600"],
-    color5: ["Reflex Silver", "bg-gray-800"],
-    color6: ["Candy White", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 11.19 Lakh",
-      "17.8 to 24.1 kmpl",
-      "1498 cc",
-      "Manual & Automatic (CVT)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,549 mm L x 1,748 mm W x 1,489 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 9.28 Lakh*",
-      "17.7 to 25 kmpl",
-      "998 to 1497 cc",
-      "Manual, Automatic (CVT), Automatic (Torque Converter) & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,440 mm L x 1,729 mm W x 1,475 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Vento?",
-      "The on-road price of Vento in Delhi starts at ‎₹ 11.29 Lakh and goes upto ‎₹ 16.06 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Vento and Rapid TSI?",
-      "Vento price starts at ₹ 10.00 Lakh ex-showroom and It comes with 999 cc engine. Whereas Rapid TSI price starts at ₹ 7.80 Lakh ex-showroom and It comes with 999 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Volkswagen Vento?",
-      "The Volkswagen Vento mileage is 16.35 - 17.69 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Volkswagen";
+  // const CarPrice = "₹ 10.00 Lakh";
+  // const TopPic = Vento;
+  // const CarName = "Volkswagen Vento";
+  // const OnlyName = "Vento";
+  // const ThumPic = TVento;
+
+  // const KeySpecification = [
+  //   "₹ 10.00 Lakh onwards",
+  //   "16.35 to 17.69 kmpl",
+  //   "999 cc",
+  //   "Manual & Automatic (Torque Converter)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "4,390 mm L x 1,699 mm W x 1,467 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "electronic stability control",
+  //   "ABS",
+  //   "EBD",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "1.0 TSI Comfortline",
+  //     "999 cc, Manual, Petrol, 17.69 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "1.0 TSI Highline",
+  //     "999 cc, Manual, Petrol, 17.69 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "1.0 TSI Highline AT",
+  //     "999 cc, Automatic, Petrol, 16.35 kmpl",
+  //     "Rs.12.49 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "1.0 TSI Highline Plus",
+  //     "999 cc, Manual, Petrol, 17.69 kmpl",
+  //     "Rs.12.52 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "1.0 TSI Highline Plus AT",
+  //     "999  cc, Automatic, Petrol, 16.35 kmpl",
+  //     "Rs.13.83 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Volkswagen has launched the Turbo Edition of the Vento. Volkswagen Vento Price: The sedan is priced between Rs 8.69 lakh and Rs 13.68 lakh (ex-showroom). Volkswagen Vento Variants: It comes in four variants: Trendline, Comfortline, Highline, and Highline Plus. Volkswagen Vento Powertrains: Volkswagen provides the Vento with a 1.0-litre turbo-petrol engine that churns out 110PS and 175Nm. There is an option between a 6-speed manual and a 6-speed AT gearbox. Their claimed fuel efficiency figures are 17.69kmpl and 16.35kmpl respectively. Volkswagen Vento Features: It packs features like an auto AC with rear AC vents, auto-dimming IRVM, LED headlamps, reverse parking camera, and a 6.5-inch touchscreen infotainment system with Apple CarPlay and Android Auto. Volkswagen Vento Safety: Safety features on offer include up to four airbags, ABS with EBD, and rear parking sensors. Volkswagen Vento Rivals: The Vento goes up against the Honda City, Hyundai Verna, Maruti Suzuki Ciaz, Skoda Rapid, and the Toyota Yaris.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Solid build quality",
+  //     "Refined and powerful TSI powertrain",
+  //     "Sporty handling",
+  //   ],
+  //   cons: [
+  //     "Misses modern day features",
+  //     "Doesn't look special anymore",
+  //     "Just one USB charger in the cabin",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Lapiz Blue", "bg-blue-600"],
+  //   color2: ["Carbon Steel", "bg-gray-400"],
+  //   color3: ["Sunset Red", "bg-white"],
+  //   color4: ["Toffee Brown", "bg-red-600"],
+  //   color5: ["Reflex Silver", "bg-gray-800"],
+  //   color6: ["Candy White", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 11.19 Lakh",
+  //     "17.8 to 24.1 kmpl",
+  //     "1498 cc",
+  //     "Manual & Automatic (CVT)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,549 mm L x 1,748 mm W x 1,489 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 9.28 Lakh*",
+  //     "17.7 to 25 kmpl",
+  //     "998 to 1497 cc",
+  //     "Manual, Automatic (CVT), Automatic (Torque Converter) & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,440 mm L x 1,729 mm W x 1,475 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Vento?",
+  //     "The on-road price of Vento in Delhi starts at ‎₹ 11.29 Lakh and goes upto ‎₹ 16.06 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Vento and Rapid TSI?",
+  //     "Vento price starts at ₹ 10.00 Lakh ex-showroom and It comes with 999 cc engine. Whereas Rapid TSI price starts at ₹ 7.80 Lakh ex-showroom and It comes with 999 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Volkswagen Vento?",
+  //     "The Volkswagen Vento mileage is 16.35 - 17.69 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -231,18 +266,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Taigun",
-      "₹ 10.00 - 16.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
-      "Tiguan",
-      "₹ 28.00 - 32.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Taigun",
+  //     "₹ 10.00 - 16.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
+  //     "Tiguan",
+  //     "₹ 28.00 - 32.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -32,193 +32,228 @@ import { TAura } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Hyundai";
-  const CarPrice = "₹ 6.00 Lakh";
-  const TopPic = Aura;
-  const CarName = "Hyundai Aura";
-  const OnlyName = "Aura";
-  const ThumPic = TAura;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 6.00 Lakh onwards",
-    "20 to 28 kmpl",
-    "998 to 1197 cc",
-    "Manual & AMT",
-    "Petrol, CNG & Diesel",
-    "5 Seater",
-    "3,995 mm L x 1,680 mm W x 1,520 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Impact Sensing Auto Door Unlock",
-    "2 airbags",
-    "ABS",
-    "EBD",
-    "Central Locking",
-    "Emergency Stop Signal",
-    "Driver & Passenger SeatBelt Reminder",
-    "Speed Sensing Auto Door Lock",
-    "Headlamp Escort Function",
-    "ISOFIX",
-    "Speed Alert System",
-    "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["E", "1197 cc, Manual, Petrol, 20.5 kmpl", "	Rs.16.30 Lakh*"],
-    varient2: ["S", "1197 cc, Manual, Petrol, 20.5 kmpl", "Rs.16.45 Lakh*"],
-    varient3: [
-      "S AMT",
-      "1197 cc, Automatic, Petrol, 20.1 kmpl",
-      "Rs.16.53 Lakh*",
-    ],
-    varient4: ["SX", "1197 cc, Manual, Petrol, 20.5 kmpl", "Rs.16.68 Lakh*"],
-    varient5: ["S CNG", "1197 cc, Manual, Petrol, 14.2 kmpl", "Rs.17.93 Lakh*"],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient6: [
-      "SX Option",
-      "1197 cc, Manual, Petrol, 20.5 kmpl",
-      "Rs.18.22 Lakh*",
-    ],
-    varient7: [
-      "SX Plus AMT",
-      "1197 cc, Automatic, Petrol, 20.1 kmpl",
-      "Rs.18.45 Lakh*",
-    ],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient8: [
-      "SX Plus Turbo",
-      "998 cc, Manual, Petrol, 120.5 kmpl",
-      "Rs.18.85 Lakh*",
-    ],
-  };
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientDiesel = {
-    varient1: [
-      "S Diesel",
-      "1186 cc, Manual, Diesel, 25.35 kmpl",
-      "Rs.18.01 Lakh*",
-    ],
-    varient2: [
-      "S AMT Diesel",
-      "1186 cc, Automatic, Diesel, 25.4 kmpl",
-      "Rs.18.70 Lakh*",
-    ],
-    varient3: [
-      "SX option Diesel",
-      "1186 cc, Manual, Diesel, 25.35 kmpl",
-      "Rs.18.93 Lakh*",
-    ],
-    varient4: [
-      "SX Plus AMT Diesel",
-      "1186 cc, Automatic, Diesel, 25.4 kmpl",
-      "Rs.19.08 Lakh*",
-    ],
-  };
+  const Mileage = joy.Mileage;
 
-  const VarientCNG = {};
+  const LatestUpdate = joy.LatestUpdate;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const LatestUpdate = [
-    "Hyundai Aura Price: Hyundai retails the Aura between Rs 5.97 lakh and Rs 9.35 lakh (ex-showroom Delhi). Hyundai Aura Variants: It is available in five variants: E, S, SX, SX+, and SX(O). Hyundai Aura Powertrains: It comes with three engine options -- 1.2-litre petrol (83PS/114Nm) and 1.2-litre diesel (75PS/190Nm) from the Grand i10 Nios and a 1.0-litre turbo-petrol (100PS/172Nm) from the Venue. While the first two are paired with a 5-speed MT and AMT, the turbo-petrol is mated to only a 5-speed MT. The 1.2-litre petrol engine is also available with a factory-fitted CNG kit. However, it is present only in the ‘S’ variant. Hyundai Aura Features: Hyundai has provided it with features like an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, wireless charging, auto AC, a height-adjustable driver seat, and cruise control. Hyundai Aura Safety: Standard safety features include dual front airbags, ISOFIX child seat anchorages, and rear parking sensors. Hyundai Aura Rivals: Hyundai’s sub-4m sedan locks horns with the Maruti Suzuki Dzire, Honda Amaze, Ford Aspire, and Tata Tigor.",
-  ];
+  const Colorss = joy.Colorss;
 
-  const ProsCons = {
-    pros: [
-      "Segment best feature list - wireless charging, projector foglamps, cruise control - gets everything!",
-      "Interior quality feels on par with cars from a segment above.",
-      "Multiple engine-gearbox-fuel options to choose from. Take your pick.",
-    ],
-    cons: [
-      "Strict four-seater, seating five will be a stretch.",
-      "Diesel engine not as refined as earlier.",
-      "Silly misses: adjustable front headrests, backlit switches, front armrest.",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const Colorss = {
-    color1: ["Fiery Red", "bg-red-800"],
-    color2: ["Polar White", "bg-gray-900"],
-    color3: ["Typhoon Silver", "bg-gray-600"],
-    color4: ["Titan Grey", "bg-white"],
-    color5: ["Alpha Blue", "bg-blue-800"],
-    color6: ["Vintage Brown", "bg-red-400"],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.34 Lakh Onwards",
-      "18.3 to 24.7 kmpl",
-      "1199 to 1498 cc",
-      "Manual & Automatic CVT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 5.98 Lakh onwards",
-      "23.26 to 24.12 kmpl",
-      "1197 cc",
-      "Manual & AMT",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,735 mm W x 1,515 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  const articles = joy.articles;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Aura?",
-      "The on-road price of Aura in Delhi starts at ‎₹ 6.68 Lakh and goes upto ‎₹ 10.72 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Aura and Amaze?",
-      "Aura price starts at ₹ 6.00 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Amaze price starts at ₹ 6.34 Lakh ex-showroom and It comes with 1199 cc engine. ",
-    ],
-    question3: [
-      "What is the mileage of Hyundai Aura?",
-      "The Hyundai Aura mileage is 20 - 28 kmpl.",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const CompanyName = "Hyundai";
+  // const CarPrice = "₹ 6.00 Lakh";
+  // const TopPic = Aura;
+  // const CarName = "Hyundai Aura";
+  // const OnlyName = "Aura";
+  // const ThumPic = TAura;
+
+  // const KeySpecification = [
+  //   "₹ 6.00 Lakh onwards",
+  //   "20 to 28 kmpl",
+  //   "998 to 1197 cc",
+  //   "Manual & AMT",
+  //   "Petrol, CNG & Diesel",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,680 mm W x 1,520 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Impact Sensing Auto Door Unlock",
+  //   "2 airbags",
+  //   "ABS",
+  //   "EBD",
+  //   "Central Locking",
+  //   "Emergency Stop Signal",
+  //   "Driver & Passenger SeatBelt Reminder",
+  //   "Speed Sensing Auto Door Lock",
+  //   "Headlamp Escort Function",
+  //   "ISOFIX",
+  //   "Speed Alert System",
+  //   "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["E", "1197 cc, Manual, Petrol, 20.5 kmpl", "	Rs.16.30 Lakh*"],
+  //   varient2: ["S", "1197 cc, Manual, Petrol, 20.5 kmpl", "Rs.16.45 Lakh*"],
+  //   varient3: [
+  //     "S AMT",
+  //     "1197 cc, Automatic, Petrol, 20.1 kmpl",
+  //     "Rs.16.53 Lakh*",
+  //   ],
+  //   varient4: ["SX", "1197 cc, Manual, Petrol, 20.5 kmpl", "Rs.16.68 Lakh*"],
+  //   varient5: ["S CNG", "1197 cc, Manual, Petrol, 14.2 kmpl", "Rs.17.93 Lakh*"],
+
+  //   varient6: [
+  //     "SX Option",
+  //     "1197 cc, Manual, Petrol, 20.5 kmpl",
+  //     "Rs.18.22 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "SX Plus AMT",
+  //     "1197 cc, Automatic, Petrol, 20.1 kmpl",
+  //     "Rs.18.45 Lakh*",
+  //   ],
+
+  //   varient8: [
+  //     "SX Plus Turbo",
+  //     "998 cc, Manual, Petrol, 120.5 kmpl",
+  //     "Rs.18.85 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "S Diesel",
+  //     "1186 cc, Manual, Diesel, 25.35 kmpl",
+  //     "Rs.18.01 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "S AMT Diesel",
+  //     "1186 cc, Automatic, Diesel, 25.4 kmpl",
+  //     "Rs.18.70 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "SX option Diesel",
+  //     "1186 cc, Manual, Diesel, 25.35 kmpl",
+  //     "Rs.18.93 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "SX Plus AMT Diesel",
+  //     "1186 cc, Automatic, Diesel, 25.4 kmpl",
+  //     "Rs.19.08 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Hyundai Aura Price: Hyundai retails the Aura between Rs 5.97 lakh and Rs 9.35 lakh (ex-showroom Delhi). Hyundai Aura Variants: It is available in five variants: E, S, SX, SX+, and SX(O). Hyundai Aura Powertrains: It comes with three engine options -- 1.2-litre petrol (83PS/114Nm) and 1.2-litre diesel (75PS/190Nm) from the Grand i10 Nios and a 1.0-litre turbo-petrol (100PS/172Nm) from the Venue. While the first two are paired with a 5-speed MT and AMT, the turbo-petrol is mated to only a 5-speed MT. The 1.2-litre petrol engine is also available with a factory-fitted CNG kit. However, it is present only in the ‘S’ variant. Hyundai Aura Features: Hyundai has provided it with features like an 8-inch touchscreen infotainment system with Android Auto and Apple CarPlay, wireless charging, auto AC, a height-adjustable driver seat, and cruise control. Hyundai Aura Safety: Standard safety features include dual front airbags, ISOFIX child seat anchorages, and rear parking sensors. Hyundai Aura Rivals: Hyundai’s sub-4m sedan locks horns with the Maruti Suzuki Dzire, Honda Amaze, Ford Aspire, and Tata Tigor.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Segment best feature list - wireless charging, projector foglamps, cruise control - gets everything!",
+  //     "Interior quality feels on par with cars from a segment above.",
+  //     "Multiple engine-gearbox-fuel options to choose from. Take your pick.",
+  //   ],
+  //   cons: [
+  //     "Strict four-seater, seating five will be a stretch.",
+  //     "Diesel engine not as refined as earlier.",
+  //     "Silly misses: adjustable front headrests, backlit switches, front armrest.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Fiery Red", "bg-red-800"],
+  //   color2: ["Polar White", "bg-gray-900"],
+  //   color3: ["Typhoon Silver", "bg-gray-600"],
+  //   color4: ["Titan Grey", "bg-white"],
+  //   color5: ["Alpha Blue", "bg-blue-800"],
+  //   color6: ["Vintage Brown", "bg-red-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.34 Lakh Onwards",
+  //     "18.3 to 24.7 kmpl",
+  //     "1199 to 1498 cc",
+  //     "Manual & Automatic CVT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 5.98 Lakh onwards",
+  //     "23.26 to 24.12 kmpl",
+  //     "1197 cc",
+  //     "Manual & AMT",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,735 mm W x 1,515 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Aura?",
+  //     "The on-road price of Aura in Delhi starts at ‎₹ 6.68 Lakh and goes upto ‎₹ 10.72 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Aura and Amaze?",
+  //     "Aura price starts at ₹ 6.00 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Amaze price starts at ₹ 6.34 Lakh ex-showroom and It comes with 1199 cc engine. ",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Hyundai Aura?",
+  //     "The Hyundai Aura mileage is 20 - 28 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -306,28 +341,28 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
-      "i20 N Line",
-      "₹ 11.00 - 13.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
-      "AX1 micro-SUV",
-      "₹ 4.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
-      "New Kona",
-      "₹ 23.00 - 25.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
-      "New Elantra",
-      "₹ 16.00 - 20.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
+  //     "i20 N Line",
+  //     "₹ 11.00 - 13.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "AX1 micro-SUV",
+  //     "₹ 4.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
+  //     "New Kona",
+  //     "₹ 23.00 - 25.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
+  //     "New Elantra",
+  //     "₹ 16.00 - 20.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

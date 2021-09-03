@@ -32,166 +32,201 @@ import { TMarazzo } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "₹ 12.30 Lakh";
-  const TopPic = Marazzo;
-  const CarName = "Mahindra Marazzo";
-  const OnlyName = "Marazzo";
-  const ThumPic = TMarazzo;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 12.30 Lakh onwards",
-    "17.33 kmpl",
-    "1497 cc",
-    "Manual",
-    "Diesel",
-    "7-8 Seater",
-    "4,585 mm L x 1,866 mm W x 1,774 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Dual front airbags. Provide protection for driver and co-driver in the event of frontal collision.",
-    "All 4 disc brakes with ABS & EBD.",
-    "ISOFIX child seat mounts.",
-    "Rear parking camera and rear sensors.",
-    "Cornering lamps.",
-    "Crumple zone and side impact beams.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {};
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: ["M2", "1497 cc, Manual, Diesel, 17.3 kmpl", "Rs.12.30 Lakh*"],
-    varient2: [
-      "M2 8Str",
-      "1497 cc, Manual, Diesel, 17.3 kmpl",
-      "Rs.12.30 Lakh*",
-    ],
-    varient3: [
-      "M4 Plus",
-      "1497 cc, Manual, Diesel, 17.3 kmpl",
-      "Rs.13.41 Lakh*",
-    ],
-    varient4: [
-      "M4 Plus 8Str",
-      "1497 cc, Manual, Diesel, 17.3 kmpl",
-      "Rs.13.49 Lakh*",
-    ],
-    varient5: [
-      "M6 Plus",
-      "1497 cc, Manual, Diesel, 17.3 kmpl",
-      "Rs.14.35 Lakh*",
-    ],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient6: [
-      "M6 Plus 8Str",
-      "1497 cc, Manual, Diesel, 17.3 kmpl",
-      "Rs.14.43 Lakh*",
-    ],
-  };
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientCNG = {};
+  const Mileage = joy.Mileage;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const LatestUpdate = [
-    "Latest Update: Mahindra’s only MPV, the Marazzo, has received a price hike of up to Rs 31,000. Mahindra Marazzo Price: The Marazzo is priced from Rs 12.30 lakh to Rs 14.43 lakh (ex-showroom Delhi). Mahindra Marazzo Variants: Mahindra offers it in three trims: M2, M4+, and M6+. Mahindra Marazzo Seating Capacity: It can seat up to eight people. Mahindra Marazzo Powertrain: Mahindra has equipped the Marazzo with a 1.5-litre diesel engine (122PS/300Nm), mated to a 6-speed manual. Mahindra also offers an Eco mode that reduces the engine output to a modest 100PS. Mahindra Marazzo Features: The Marazzo gets 17-inch alloy wheels, remote keyless entry, a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, and auto climate control. Mahindra Marazzo Safety: Safety features include dual front airbags, ABS with EBD, and ISOFIX child seat anchors. Mahindra Marazzo Rivals: It takes on the Toyota Innova Crysta and the Maruti Suzuki Ertiga.",
-  ];
+  const ProsCons = joy.ProsCons;
 
-  const ProsCons = {
-    pros: [
-      "Refined engine and light steering is great around town",
-      "Well thought out practical interiors",
-      "Great ride comfort in a variety of conditions and road surfaces",
-    ],
-    cons: [
-      "Bigger engine will be missed when climbing hilly roads with a full load",
-      "Slight vibrations felt through the floorboards at cruising speeds when fully loaded",
-      "Third row, right-side passenger seat lacks shoulder room on account of the AC duct",
-    ],
-  };
+  const Colorss = joy.Colorss;
 
-  const Colorss = {
-    color1: ["Mariner Maroon", "bg-blue-600"],
-    color2: ["Shimmering Silver", "bg-gray-400"],
-    color3: ["Iceberg White", "bg-white"],
-    color4: ["Aqua Marine", "bg-white"],
-    color5: ["Oceanic Black", "bg-white"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Marazzo?",
-      "The on-road price of Marazzo in Delhi starts at ‎₹ 14.57 Lakh and goes upto ‎₹ 17.04 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Marazzo and XL6?",
-      "Marazzo price starts at ₹ 12.30 Lakh ex-showroom and It comes with 1497 cc engine. Whereas XL6 price starts at ₹ 9.92 Lakh ex-showroom and It comes with 1462 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Mahindra Marazzo?",
-      "The Mahindra Marazzo mileage is 17.33 kmpl.",
-    ],
-  };
+  const articles = joy.articles;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "₹ 12.30 Lakh";
+  // const TopPic = Marazzo;
+  // const CarName = "Mahindra Marazzo";
+  // const OnlyName = "Marazzo";
+  // const ThumPic = TMarazzo;
+
+  // const KeySpecification = [
+  //   "₹ 12.30 Lakh onwards",
+  //   "17.33 kmpl",
+  //   "1497 cc",
+  //   "Manual",
+  //   "Diesel",
+  //   "7-8 Seater",
+  //   "4,585 mm L x 1,866 mm W x 1,774 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Dual front airbags. Provide protection for driver and co-driver in the event of frontal collision.",
+  //   "All 4 disc brakes with ABS & EBD.",
+  //   "ISOFIX child seat mounts.",
+  //   "Rear parking camera and rear sensors.",
+  //   "Cornering lamps.",
+  //   "Crumple zone and side impact beams.",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: ["M2", "1497 cc, Manual, Diesel, 17.3 kmpl", "Rs.12.30 Lakh*"],
+  //   varient2: [
+  //     "M2 8Str",
+  //     "1497 cc, Manual, Diesel, 17.3 kmpl",
+  //     "Rs.12.30 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "M4 Plus",
+  //     "1497 cc, Manual, Diesel, 17.3 kmpl",
+  //     "Rs.13.41 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "M4 Plus 8Str",
+  //     "1497 cc, Manual, Diesel, 17.3 kmpl",
+  //     "Rs.13.49 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "M6 Plus",
+  //     "1497 cc, Manual, Diesel, 17.3 kmpl",
+  //     "Rs.14.35 Lakh*",
+  //   ],
+
+  //   varient6: [
+  //     "M6 Plus 8Str",
+  //     "1497 cc, Manual, Diesel, 17.3 kmpl",
+  //     "Rs.14.43 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Mahindra’s only MPV, the Marazzo, has received a price hike of up to Rs 31,000. Mahindra Marazzo Price: The Marazzo is priced from Rs 12.30 lakh to Rs 14.43 lakh (ex-showroom Delhi). Mahindra Marazzo Variants: Mahindra offers it in three trims: M2, M4+, and M6+. Mahindra Marazzo Seating Capacity: It can seat up to eight people. Mahindra Marazzo Powertrain: Mahindra has equipped the Marazzo with a 1.5-litre diesel engine (122PS/300Nm), mated to a 6-speed manual. Mahindra also offers an Eco mode that reduces the engine output to a modest 100PS. Mahindra Marazzo Features: The Marazzo gets 17-inch alloy wheels, remote keyless entry, a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, and auto climate control. Mahindra Marazzo Safety: Safety features include dual front airbags, ABS with EBD, and ISOFIX child seat anchors. Mahindra Marazzo Rivals: It takes on the Toyota Innova Crysta and the Maruti Suzuki Ertiga.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Refined engine and light steering is great around town",
+  //     "Well thought out practical interiors",
+  //     "Great ride comfort in a variety of conditions and road surfaces",
+  //   ],
+  //   cons: [
+  //     "Bigger engine will be missed when climbing hilly roads with a full load",
+  //     "Slight vibrations felt through the floorboards at cruising speeds when fully loaded",
+  //     "Third row, right-side passenger seat lacks shoulder room on account of the AC duct",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Mariner Maroon", "bg-blue-600"],
+  //   color2: ["Shimmering Silver", "bg-gray-400"],
+  //   color3: ["Iceberg White", "bg-white"],
+  //   color4: ["Aqua Marine", "bg-white"],
+  //   color5: ["Oceanic Black", "bg-white"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Marazzo?",
+  //     "The on-road price of Marazzo in Delhi starts at ‎₹ 14.57 Lakh and goes upto ‎₹ 17.04 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Marazzo and XL6?",
+  //     "Marazzo price starts at ₹ 12.30 Lakh ex-showroom and It comes with 1497 cc engine. Whereas XL6 price starts at ₹ 9.92 Lakh ex-showroom and It comes with 1462 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Mahindra Marazzo?",
+  //     "The Mahindra Marazzo mileage is 17.33 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -259,43 +294,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

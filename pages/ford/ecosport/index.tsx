@@ -27,277 +27,340 @@ import UpcommingCars from "../../../Components/SpecificCar/UpcommingCars";
 import SideBar from "../../../Components/SideBar";
 import MobileSideBar from "../../../Components/MobileSideBar";
 import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
-import { Ecosport } from "../../../CarPicsUrl/CarPics";
+import { Ecosport, Nexon } from "../../../CarPicsUrl/CarPics";
 import { TEcosport } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import { VenueBasicInfoCard } from "../../../AllCarBasicInfo/hyundai";
+import { NexonBasicInfoCard } from "../../../AllCarBasicInfo/tata";
+import { UrbanCruiserBasicInfoCard } from "../../../AllCarBasicInfo/toyota";
+import { SonetBasicInfoCard } from "../../../AllCarBasicInfo/kia";
+import { Xuv300BasicInfoCard } from "../../../AllCarBasicInfo/mahindra";
+import { MagniteBasicInfoCard } from "../../../AllCarBasicInfo/nissan";
+import {
+  AspireBasicInfoCard,
+  EndeavourBasicInfoCard,
+  FigoBasicInfoCard,
+  FreestyleBasicInfoCard,
+} from "../../../AllCarBasicInfo/ford";
 
 function Homee({ joy }) {
-  const CompanyName = "Ford";
-  const CarPrice = "₹ 8.19 Lakh";
-  const TopPic = Ecosport;
-  const CarName = "Ford EcoSport";
-  const OnlyName = "EcoSport";
-  const ThumPic = TEcosport;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 8.19 Lakh onwards",
-    "14.7 to 21.7 kmpl",
-    "1496 to 1498 cc",
-    "Manual & Automatic (Torque Converter)",
-    "Petrol & Diesel",
-    "5 Seater",
-    "3,998 mm L x 1,765 mm W x 1,647 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "6 Airbags.",
-    "Rear Parking Camera and Sensors.",
-    "ABS with EBD.",
-    "Driver and Passenger Seatbelt Reminder.",
-    "High-Speed Sensing Alert System.",
-    "Side and Curtain Airbags.",
-    "Door Ajar Warning.",
-    "Perimeter Alarm.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Ambiente",
-      "1496 cc, Manual, Petrol, 15.9 kmpl",
-      "Rs.8.19 Lakh*",
-    ],
-    varient2: ["Trend", "1496 cc, Manual, Petrol, 15.9 kmpl", "Rs.8.84 Lakh*"],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient3: [
-      "Titanium",
-      "1496 cc, Manual, Petrol, 15.9 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient4: [
-      "SE Petrol",
-      "1496 cc, Manual, Petrol, 15.9 kmpl",
-      "Rs.10.69 Lakh*",
-    ],
+  const VarientCNG = joy.VarientCNG;
 
-    varient5: [
-      "Sports",
-      "1496 cc, Manual, Petrol, 15.9 kmpl",
-      "Rs.11.19 Lakh*",
-    ],
+  const Mileage = joy.Mileage;
 
-    varient6: [
-      "Titanium Plus AT",
-      "1496 cc, Manual, Petrol, 15.9 kmpl",
-      "Rs.11.39 Lakh*",
-    ],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const VarientDiesel = {
-    varient1: [
-      "Ambiente Diesel",
-      "1498 cc, Manual AMT, Diesel, 21.7 kmpl",
-      "Rs.8.89 Lakh*",
-    ],
+  const ProsCons = joy.ProsCons;
 
-    varient2: [
-      "Trend Diesel",
-      "1498 cc, Manual, Diesel, 21.7 kmpl",
-      "Rs.9.34 Lakh*",
-    ],
+  const Colorss = joy.Colorss;
 
-    varient3: [
-      "Titanium Diesel",
-      "1498 cc, Manual, Diesel, 21.7 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
+  const ComparisionCar = joy.ComparisionCar;
 
-    varient4: [
-      "SE Diesel",
-      "1498 cc, Manual, Diesel, 21.7 kmpl",
-      "Rs.11.19 Lakh*",
-    ],
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-    varient5: [
-      "Sports Diesel",
-      "1498 cc, Manual, Diesel, 21.7 kmpl",
-      "Rs.11.69 Lakh*",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const VarientCNG = {};
-
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
-
-  const LatestUpdate = [
-    "Latest Update: The facelifted EcoSport has been spied in a new exterior shade. Ford EcoSport Price: Ford retails the EcoSport from Rs 8.19 lakh to Rs 11.69 lakh (ex-showroom Delhi). Ford EcoSport Variants: It is sold in six variants: Ambiente, Trend, Titanium, Titanium+, SE, and Sports. Ford EcoSport Seating Capacity: The sub-4m SUV can seat up to five people.  Ford EcoSport Engine and Transmission: It gets 1.5-litre petrol (122PS/149Nm) and 1.5-litre diesel (100PS/215Nm) engines, both paired with a 5-speed MT as standard. The petrol-powered SUV also gets an optional 6-speed torque converter. Ford EcoSport Features: Ford offers it with a sunroof, auto climate control, rain-sensing wipers, FordPass connected car tech, and up to a 9-inch touchscreen infotainment system with Android Auto and Apple CarPlay. Ford EcoSport Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Ford EcoSport Rivals: It goes up against the Nissan Magnite, Tata Nexon, Mahindra XUV300, Maruti Suzuki Vitara Brezza, Toyota Urban Cruiser, Hyundai Venue, Kia Sonet, and Renault Kiger.",
-  ];
-
-  const ProsCons = {
-    pros: [
-      "Striking looks especially in the S guise ",
-      "Feature-rich cabin with decent ergonomics ",
-      "Sporty drivability in terms of steering and body control",
-    ],
-    cons: [
-      "Narrow cabin lack of shoulder room on the rear bench ",
-      "Inconsistent cabin plastics and dated instrument console ",
-      "More expensive than its rivals",
-    ],
-  };
-
-  const Colorss = {
-    color1: ["Lightning Blue", "bg-blue-600"],
-    color2: ["Diamond White", "bg-gray-400"],
-    color3: ["Moondust Silver", "bg-white"],
-    color4: ["Canyon Ridge", "bg-brown-600"],
-    color5: ["Race Red", "bg-gray-800"],
-    color6: ["Absolute Black", "bg-gray-800"],
-    color7: ["Smoke Grey", "bg-gray-800"],
-  };
-
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.92 Lakh Onwards",
-      "17.52 to 23.4 kmpl",
-      "998 to 1493 cc",
-      "Clutchless Manual & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,770 mm W x 1,590 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-    ],
-    comparisioncar2: [
-      "₹7.20 Lakh onwards",
-      "16 to 22.4 kmpl",
-      "1199 to 1497 cc",
-      "Manual & AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-    ],
-  };
-
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
-
-  const faqs = {
-    question1: [
-      "What is the on road price of EcoSport?",
-      "The on-road price of EcoSport in Delhi starts at ‎₹ 9.26 Lakh and goes upto ‎₹ 13.85 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between EcoSport and Nexon?",
-      "EcoSport price starts at ₹ 8.19 Lakh ex-showroom and It comes with 1496 cc engine. Whereas Nexon price starts at ₹ 7.28 Lakh ex-showroom and It comes with 1199 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Ford EcoSport?",
-      "The Ford EcoSport mileage is 14.7 - 21.7 kmpl.",
-    ],
-  };
-
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
 
   const SimilarCars = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-      "Venue",
-      "₹ 6.92 Lakh Onwards",
-    ],
-    car2: [
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-      "Nexon",
-      "₹ 7.20 Lakh onwards0",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47016/urban-cruiser-exterior-right-front-three-quarter.jpeg?q=85",
-      "Urban Cruiser",
-      "₹ 8.63 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41523/sonet-exterior-right-front-three-quarter-110.jpeg?q=85",
-      "Sonet",
-      "₹ 6.79 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26918/xuv300-exterior-right-front-three-quarter-148706.jpeg?q=85",
-      "XUV300",
-      "₹ 7.96 Lakh onwards",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45795/magnite-exterior-right-front-three-quarter-3.jpeg?q=85",
-      "Magnite",
-      "₹ 5.59 Lakh onwards",
-    ],
+    car1: VenueBasicInfoCard,
+    car2: NexonBasicInfoCard,
+    car3: UrbanCruiserBasicInfoCard,
+    car4: SonetBasicInfoCard,
+    car5: Xuv300BasicInfoCard,
+    car6: MagniteBasicInfoCard,
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
-      "EcoSport",
-      "₹ 8.19 Lakh onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/37640/endeavour-exterior-right-front-three-quarter-149473.jpeg?q=85",
-      "Endeavour",
-      "₹ 33.81 Lakh onwards",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg?q=85",
-      "Figo",
-      "₹ 5.82 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32698/freestyle-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Freestyle",
-      "₹ 7.28 Lakh onwards",
-    ],
+    car1: AspireBasicInfoCard,
+    car2: EndeavourBasicInfoCard,
+    car3: FigoBasicInfoCard,
+    car4: FreestyleBasicInfoCard,
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ford/Mustang-2021/7939/1595910236308/front-left-side-47.jpg?tr=w-456",
-      "Mustang 2021",
-      "Rs.75.00 Lakh*",
-    ],
-    car2: [
-      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20210705015326_Ford_ecosport.jpg&h=795&w=1200&c=1",
-      "EcoSport 2021 Facelift",
-      "Rs.8.49 Lakh",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Ford";
+  // const CarPrice = "₹ 8.19 Lakh";
+  // const TopPic = Ecosport;
+  // const CarName = "Ford EcoSport";
+  // const OnlyName = "EcoSport";
+  // const ThumPic = TEcosport;
+
+  // const KeySpecification = [
+  //   "₹ 8.19 Lakh onwards",
+  //   "14.7 to 21.7 kmpl",
+  //   "1496 to 1498 cc",
+  //   "Manual & Automatic (Torque Converter)",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "3,998 mm L x 1,765 mm W x 1,647 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "6 Airbags.",
+  //   "Rear Parking Camera and Sensors.",
+  //   "ABS with EBD.",
+  //   "Driver and Passenger Seatbelt Reminder.",
+  //   "High-Speed Sensing Alert System.",
+  //   "Side and Curtain Airbags.",
+  //   "Door Ajar Warning.",
+  //   "Perimeter Alarm.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Ambiente",
+  //     "1496 cc, Manual, Petrol, 15.9 kmpl",
+  //     "Rs.8.19 Lakh*",
+  //   ],
+  //   varient2: ["Trend", "1496 cc, Manual, Petrol, 15.9 kmpl", "Rs.8.84 Lakh*"],
+
+  //   varient3: [
+  //     "Titanium",
+  //     "1496 cc, Manual, Petrol, 15.9 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+
+  //   varient4: [
+  //     "SE Petrol",
+  //     "1496 cc, Manual, Petrol, 15.9 kmpl",
+  //     "Rs.10.69 Lakh*",
+  //   ],
+
+  //   varient5: [
+  //     "Sports",
+  //     "1496 cc, Manual, Petrol, 15.9 kmpl",
+  //     "Rs.11.19 Lakh*",
+  //   ],
+
+  //   varient6: [
+  //     "Titanium Plus AT",
+  //     "1496 cc, Manual, Petrol, 15.9 kmpl",
+  //     "Rs.11.39 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "Ambiente Diesel",
+  //     "1498 cc, Manual AMT, Diesel, 21.7 kmpl",
+  //     "Rs.8.89 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "Trend Diesel",
+  //     "1498 cc, Manual, Diesel, 21.7 kmpl",
+  //     "Rs.9.34 Lakh*",
+  //   ],
+
+  //   varient3: [
+  //     "Titanium Diesel",
+  //     "1498 cc, Manual, Diesel, 21.7 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+
+  //   varient4: [
+  //     "SE Diesel",
+  //     "1498 cc, Manual, Diesel, 21.7 kmpl",
+  //     "Rs.11.19 Lakh*",
+  //   ],
+
+  //   varient5: [
+  //     "Sports Diesel",
+  //     "1498 cc, Manual, Diesel, 21.7 kmpl",
+  //     "Rs.11.69 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The facelifted EcoSport has been spied in a new exterior shade. Ford EcoSport Price: Ford retails the EcoSport from Rs 8.19 lakh to Rs 11.69 lakh (ex-showroom Delhi). Ford EcoSport Variants: It is sold in six variants: Ambiente, Trend, Titanium, Titanium+, SE, and Sports. Ford EcoSport Seating Capacity: The sub-4m SUV can seat up to five people.  Ford EcoSport Engine and Transmission: It gets 1.5-litre petrol (122PS/149Nm) and 1.5-litre diesel (100PS/215Nm) engines, both paired with a 5-speed MT as standard. The petrol-powered SUV also gets an optional 6-speed torque converter. Ford EcoSport Features: Ford offers it with a sunroof, auto climate control, rain-sensing wipers, FordPass connected car tech, and up to a 9-inch touchscreen infotainment system with Android Auto and Apple CarPlay. Ford EcoSport Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Ford EcoSport Rivals: It goes up against the Nissan Magnite, Tata Nexon, Mahindra XUV300, Maruti Suzuki Vitara Brezza, Toyota Urban Cruiser, Hyundai Venue, Kia Sonet, and Renault Kiger.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Striking looks especially in the S guise ",
+  //     "Feature-rich cabin with decent ergonomics ",
+  //     "Sporty drivability in terms of steering and body control",
+  //   ],
+  //   cons: [
+  //     "Narrow cabin lack of shoulder room on the rear bench ",
+  //     "Inconsistent cabin plastics and dated instrument console ",
+  //     "More expensive than its rivals",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Lightning Blue", "bg-blue-600"],
+  //   color2: ["Diamond White", "bg-gray-400"],
+  //   color3: ["Moondust Silver", "bg-white"],
+  //   color4: ["Canyon Ridge", "bg-brown-600"],
+  //   color5: ["Race Red", "bg-gray-800"],
+  //   color6: ["Absolute Black", "bg-gray-800"],
+  //   color7: ["Smoke Grey", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.92 Lakh Onwards",
+  //     "17.52 to 23.4 kmpl",
+  //     "998 to 1493 cc",
+  //     "Clutchless Manual & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,770 mm W x 1,590 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹7.20 Lakh onwards",
+  //     "16 to 22.4 kmpl",
+  //     "1199 to 1497 cc",
+  //     "Manual & AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
+  //     "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of EcoSport?",
+  //     "The on-road price of EcoSport in Delhi starts at ‎₹ 9.26 Lakh and goes upto ‎₹ 13.85 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between EcoSport and Nexon?",
+  //     "EcoSport price starts at ₹ 8.19 Lakh ex-showroom and It comes with 1496 cc engine. Whereas Nexon price starts at ₹ 7.28 Lakh ex-showroom and It comes with 1199 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Ford EcoSport?",
+  //     "The Ford EcoSport mileage is 14.7 - 21.7 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
+
+  // const SimilarCars = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //     "Venue",
+  //     "₹ 6.92 Lakh Onwards",
+  //   ],
+  //   car2: [
+  //     "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
+  //     "Nexon",
+  //     "₹ 7.20 Lakh onwards0",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47016/urban-cruiser-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "Urban Cruiser",
+  //     "₹ 8.63 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41523/sonet-exterior-right-front-three-quarter-110.jpeg?q=85",
+  //     "Sonet",
+  //     "₹ 6.79 Lakh onwards",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/26918/xuv300-exterior-right-front-three-quarter-148706.jpeg?q=85",
+  //     "XUV300",
+  //     "₹ 7.96 Lakh onwards",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45795/magnite-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //     "Magnite",
+  //     "₹ 5.59 Lakh onwards",
+  //   ],
+  // };
+
+  // const ThatBrandCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40369/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg?wm=0&q=85",
+  //     "EcoSport",
+  //     "₹ 8.19 Lakh onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/37640/endeavour-exterior-right-front-three-quarter-149473.jpeg?q=85",
+  //     "Endeavour",
+  //     "₹ 33.81 Lakh onwards",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg?q=85",
+  //     "Figo",
+  //     "₹ 5.82 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32698/freestyle-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Freestyle",
+  //     "₹ 7.28 Lakh onwards",
+  //   ],
+  // };
+
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ford/Mustang-2021/7939/1595910236308/front-left-side-47.jpg?tr=w-456",
+  //     "Mustang 2021",
+  //     "Rs.75.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20210705015326_Ford_ecosport.jpg&h=795&w=1200&c=1",
+  //     "EcoSport 2021 Facelift",
+  //     "Rs.8.49 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

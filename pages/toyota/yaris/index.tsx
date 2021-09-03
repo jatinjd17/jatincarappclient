@@ -32,194 +32,229 @@ import { TYaris } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Toyota";
-  const CarPrice = "₹ 9.17 Lakh";
-  const TopPic = Yaris;
-  const CarName = "Toyota Yaris";
-  const OnlyName = "Yaris";
-  const ThumPic = TYaris;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 9.17 Lakh onwards",
-    "17.1 to 17.8 kmpl",
-    "1496 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol",
-    "5 Seater",
-    "4,425 mm L x 1,730 mm W x 1,495 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "ALL 4 DISC BRAKES.",
-    "TYRE PRESSURE MONITORING SYSTEM.",
-    "VEHICLE STABILITY CONTROL.",
-    "STANDARDISED ABS, EBD & BA.",
-    "HILL-START ASSIST CONTROL.",
-    "REVERSE CAMERA.",
-    "AUTO HEADLAMPS.",
-    "FRONT AND REAR PARKING SENSORS.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "J Optional",
-      "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
-      "Rs.7.34 Lakh*",
-    ],
-    varient2: [
-      "J Optional CVT",
-      "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
-      "Rs.7.99 Lakh*",
-    ],
-    varient3: [
-      "G Optional",
-      "1197 cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.8.10 Lakh*",
-    ],
-    varient4: [
-      "G Optional CVT",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.8.54 Lakh*",
-    ],
-    varient5: ["J", "1197 cc, Automatic, Petrol, 19.56 kmpl", "Rs.9.30 Lakh*"],
-    varient6: ["G", "1197 cc, Automatic, Petrol, 19.56 kmpl", "Rs.9.30 Lakh*"],
-    varient7: [
-      "J CVT",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.9.30 Lakh*",
-    ],
-    varient8: [
-      "V Optional",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.9.30 Lakh*",
-    ],
-    varient9: [
-      "G CVT",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.9.30 Lakh*",
-    ],
-    varient10: [
-      "V Optional CVT",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.9.30 Lakh*",
-    ],
-    varient11: [
-      "VX CVT",
-      "1197 cc, Automatic, Petrol, 19.56 kmpl",
-      "Rs.9.30 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Toyota has increased prices of the Yaris. Toyota Yaris Price: The sedan is priced between Rs 9.16 lakh and Rs 14.60 lakh (ex-showroom Delhi). Toyota Yaris Variants: It is sold in seven variants: J-Optional, G-Optional, J, G, V, V-Optional, and VX. Toyota Yaris Powertrains: Toyota provides the sedan with a 1.5-litre petrol engine (107PS/140Nm) paired to a 6-speed MT or 7-step CVT. The manual returns a mileage of 17.18kmpl, while the automatic has a claimed fuel efficiency of 18.10kmpl. Toyota Yaris Features: The Yaris comes with roof-mounted rear AC vents, 60:40 split-folding rear seats, acoustic and vibration control glass, solar energy-absorbing windshield (with infrared cut-off), and infotainment system with air-gesture control. Toyota Yaris Safety: Safety features include up to seven airbags, ABS with EBD, and brake assist. Toyota Yaris Rivals: It rivals the Honda City, Hyundai Verna, Maruti Suzuki Ciaz, Volkswagen Vento, and Skoda Rapid.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Easy to use and refined petrol engine. CVT available right from base variant.",
-      "Class-leading ride comfort. Manages bad roads and high speed undulations brilliantly, even with a full passenger load.",
-      "Standard safety includes 7 airbags, ABS with EBD, brake assist and ISOFIX. Higher variants add tyre pressure warning, hill-start assist, front parking sensors and more!",
-      "Cavernous 476-litre boot with folding rear seats. Will easily accommodate the family’s luggage.",
-    ],
-    cons: [
-      "No diesel engine available, period.",
-      "Not a very wide car. Etios has a greater sense of space and can seat 3 in the back with more ease.",
-      "Infotainment system looks aftermarket. Glares under harsh sunlight. Misses out on Android Auto and Apple CarPlay.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Wildfire Red", "bg-gray-800"],
-    color2: ["Phantom Brown", "bg-red-900"],
-    color3: ["Wildfire Red With Attitude Black", "bg-gray-400"],
-    color4: ["Pearl White", "bg-blue-800"],
-    color5: ["Silver Metallic With Attitude Black", "bg-gray-100"],
-    color6: ["Super Whithe With Attitude Black", "bg-gray-100"],
-    color7: ["Super white", "bg-gray-100"],
-    color8: ["Grey Metallic", "bg-gray-100"],
-    color9: ["Silver Metallic", "bg-gray-100"],
-    color10: ["Grey Metallic With Attitude Black", "bg-gray-100"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 11.19 Lakh",
-      "17.8 to 24.1 kmpl",
-      "1498 cc",
-      "Manual & Automatic (CVT)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,549 mm L x 1,748 mm W x 1,489 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 9.28 Lakh*",
-      "17.7 to 25 kmpl",
-      "998 to 1497 cc",
-      "Manual, Automatic (CVT), Automatic (Torque Converter) & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,440 mm L x 1,729 mm W x 1,475 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Yaris?",
-      "The on-road price of Yaris in Delhi starts at ‎₹ 10.34 Lakh and goes upto ‎₹ 16.9 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Yaris and All New City?",
-      "Yaris price starts at ₹ 9.17 Lakh ex-showroom and It comes with 1496 cc engine. Whereas All New City price starts at ₹ 11.19 Lakh ex-showroom and It comes with 1498 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Toyota Yaris?",
-      "The Toyota Yaris mileage is 17.1 - 17.8 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Toyota";
+  // const CarPrice = "₹ 9.17 Lakh";
+  // const TopPic = Yaris;
+  // const CarName = "Toyota Yaris";
+  // const OnlyName = "Yaris";
+  // const ThumPic = TYaris;
+
+  // const KeySpecification = [
+  //   "₹ 9.17 Lakh onwards",
+  //   "17.1 to 17.8 kmpl",
+  //   "1496 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "4,425 mm L x 1,730 mm W x 1,495 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "ALL 4 DISC BRAKES.",
+  //   "TYRE PRESSURE MONITORING SYSTEM.",
+  //   "VEHICLE STABILITY CONTROL.",
+  //   "STANDARDISED ABS, EBD & BA.",
+  //   "HILL-START ASSIST CONTROL.",
+  //   "REVERSE CAMERA.",
+  //   "AUTO HEADLAMPS.",
+  //   "FRONT AND REAR PARKING SENSORS.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "J Optional",
+  //     "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
+  //     "Rs.7.34 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "J Optional CVT",
+  //     "1197 cc, Manual, Petrol, 10.01 kmpl - 21.01 kmpl",
+  //     "Rs.7.99 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "G Optional",
+  //     "1197 cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.8.10 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "G Optional CVT",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.8.54 Lakh*",
+  //   ],
+  //   varient5: ["J", "1197 cc, Automatic, Petrol, 19.56 kmpl", "Rs.9.30 Lakh*"],
+  //   varient6: ["G", "1197 cc, Automatic, Petrol, 19.56 kmpl", "Rs.9.30 Lakh*"],
+  //   varient7: [
+  //     "J CVT",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.9.30 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "V Optional",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.9.30 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "G CVT",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.9.30 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "V Optional CVT",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.9.30 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "VX CVT",
+  //     "1197 cc, Automatic, Petrol, 19.56 kmpl",
+  //     "Rs.9.30 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Toyota has increased prices of the Yaris. Toyota Yaris Price: The sedan is priced between Rs 9.16 lakh and Rs 14.60 lakh (ex-showroom Delhi). Toyota Yaris Variants: It is sold in seven variants: J-Optional, G-Optional, J, G, V, V-Optional, and VX. Toyota Yaris Powertrains: Toyota provides the sedan with a 1.5-litre petrol engine (107PS/140Nm) paired to a 6-speed MT or 7-step CVT. The manual returns a mileage of 17.18kmpl, while the automatic has a claimed fuel efficiency of 18.10kmpl. Toyota Yaris Features: The Yaris comes with roof-mounted rear AC vents, 60:40 split-folding rear seats, acoustic and vibration control glass, solar energy-absorbing windshield (with infrared cut-off), and infotainment system with air-gesture control. Toyota Yaris Safety: Safety features include up to seven airbags, ABS with EBD, and brake assist. Toyota Yaris Rivals: It rivals the Honda City, Hyundai Verna, Maruti Suzuki Ciaz, Volkswagen Vento, and Skoda Rapid.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Easy to use and refined petrol engine. CVT available right from base variant.",
+  //     "Class-leading ride comfort. Manages bad roads and high speed undulations brilliantly, even with a full passenger load.",
+  //     "Standard safety includes 7 airbags, ABS with EBD, brake assist and ISOFIX. Higher variants add tyre pressure warning, hill-start assist, front parking sensors and more!",
+  //     "Cavernous 476-litre boot with folding rear seats. Will easily accommodate the family’s luggage.",
+  //   ],
+  //   cons: [
+  //     "No diesel engine available, period.",
+  //     "Not a very wide car. Etios has a greater sense of space and can seat 3 in the back with more ease.",
+  //     "Infotainment system looks aftermarket. Glares under harsh sunlight. Misses out on Android Auto and Apple CarPlay.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Wildfire Red", "bg-gray-800"],
+  //   color2: ["Phantom Brown", "bg-red-900"],
+  //   color3: ["Wildfire Red With Attitude Black", "bg-gray-400"],
+  //   color4: ["Pearl White", "bg-blue-800"],
+  //   color5: ["Silver Metallic With Attitude Black", "bg-gray-100"],
+  //   color6: ["Super Whithe With Attitude Black", "bg-gray-100"],
+  //   color7: ["Super white", "bg-gray-100"],
+  //   color8: ["Grey Metallic", "bg-gray-100"],
+  //   color9: ["Silver Metallic", "bg-gray-100"],
+  //   color10: ["Grey Metallic With Attitude Black", "bg-gray-100"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 11.19 Lakh",
+  //     "17.8 to 24.1 kmpl",
+  //     "1498 cc",
+  //     "Manual & Automatic (CVT)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,549 mm L x 1,748 mm W x 1,489 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 9.28 Lakh*",
+  //     "17.7 to 25 kmpl",
+  //     "998 to 1497 cc",
+  //     "Manual, Automatic (CVT), Automatic (Torque Converter) & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,440 mm L x 1,729 mm W x 1,475 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41197/hyundai-verna-right-front-three-quarter7.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Yaris?",
+  //     "The on-road price of Yaris in Delhi starts at ‎₹ 10.34 Lakh and goes upto ‎₹ 16.9 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Yaris and All New City?",
+  //     "Yaris price starts at ₹ 9.17 Lakh ex-showroom and It comes with 1496 cc engine. Whereas All New City price starts at ₹ 11.19 Lakh ex-showroom and It comes with 1498 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Toyota Yaris?",
+  //     "The Toyota Yaris mileage is 17.1 - 17.8 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -277,18 +312,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Hilux",
-      "Rs.18.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
-      "Land Cruiser",
-      "Rs.1.50 Cr*",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Hilux",
+  //     "Rs.18.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
+  //     "Land Cruiser",
+  //     "Rs.1.50 Cr*",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

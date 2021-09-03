@@ -33,175 +33,210 @@ import Head from "next/head";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 5.97 Lakh";
-  const TopPic = Baleno;
-  const CarName = "Maruti Baleno";
-  const OnlyName = "Baleno";
-  const ThumPic = TBaleno;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ ₹ 5.97 Lakh onwards",
-    "21.01 kmpl",
-    "1197 cc",
-    "Manual",
-    "Petrol",
-    "5 Seater",
-    "3,995 mm L x 1,745 mm W x 1,510 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Sigma",
-      "1197  cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.5.97 Lakh*",
-    ],
-    varient2: [
-      "Delta",
-      "1197  cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.6.69 Lakh*",
-    ],
-    varient3: ["Zeta", "1197 cc, Manual, Petrol, 21.01 kmpl", "Rs.7.32 Lakh*"],
-    varient4: [
-      "Delta Dualjet",
-      "1197 cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.7.57 Lakh*",
-    ],
-    varient5: [
-      "Delta Automatic",
-      "1197  cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.7.89 Lakh*",
-    ],
-    varient6: ["Alpha", "1197 cc, Manual, Petrol, 21.01 kmpl", "Rs.8.06 Lakh*"],
-    varient7: [
-      "Zeta Dualjet",
-      "1197 cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.8.20 Lakh*",
-    ],
-    varient8: [
-      "Zeta Automatic",
-      "1197 cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.8.51 Lakh*",
-    ],
-    varient9: [
-      "Alpha Automatic",
-      "1197 cc, Manual, Petrol, 21.01 kmpl",
-      "Rs.9.27 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The Baleno carries savings of up to Rs 40,000 this July Maruti Baleno Price: Maruti has priced the premium hatchback between Rs 5.98 lakh and Rs 9.30 lakh (ex-showroom Delhi). Maruti Baleno Variants: It is offered in four trims: Sigma, Delta, Zeta, and Alpha. Maruti Baleno Engine and Transmission: It comes equipped with a 1.2-litre petrol engine (83PS/113Nm), mated to either a 5-speed MT or a CVT. The hatchback also gets a 1.2-litre Dualjet petrol engine with mild-hybrid tech (90PS/113Nm), paired with a 5-speed MT. Maruti claims a mileage of 21.01kmpl for the petrol-manual variants, while those with the CVT return 19.56kmpl. On the other hand, the mild-hybrid powertrain offers a claimed fuel efficiency of 23.87kmpl. Maruti Baleno Features: The Baleno is equipped with LED projector headlamps, a rearview camera, 16-inch alloy wheels, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, auto climate control, push-button stop/start, and keyless entry. Maruti Baleno Safety: Standard safety features include rear parking sensors, ABS with EBD, ISOFIX child seat anchors, and dual front airbags across all variants. Maruti Baleno Rivals: It rivals the Toyota Glanza, Volkswagen Polo, Honda Jazz, Hyundai i20, and Tata Altroz. Its petrol-hybrid variant has no direct rival.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "LED projector headlamps from Delta variant onwards. LEDs usually offer better visibility than halogens or bi-xenon units.",
-      "Automatic climate control from Delta variant onwards. unlike a manual AC, automatic climate control allows the user to maintain a set temperature inside the cabin as per their needs.",
-      "ISOFIX child seat anchors are standard across the range. This lets you attach a child seat on the back seat of the hatchback to offer kids below the age of 10 better safety.",
-    ],
-    cons: [
-      "Could have been more rear passenger-centric: Misses out on side and curtain airbags, rear AC vents and rear armrest.",
-      "Ride and Handling could have been better",
-      "Lacks in Modern features",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Nexa Blue", "bg-blue-600"],
-    color2: ["Premium Silver Metallic", "bg-gray-400"],
-    color3: ["Pearl Artic White", "bg-white"],
-    color4: ["Pearl Phoenix Red", "bg-red-600"],
-    color5: ["Magma Grey Metallic", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Baleno?",
-      "The on-road price of Baleno in Delhi starts at ‎₹ 6.58 Lakh and goes upto ‎₹ 10.4 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount..",
-    ],
-    question2: [
-      "Which car is better between Baleno and Swift?",
-      "Baleno price starts at ₹ 6.69 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Swift price starts at ₹ 5.81 Lakh ex-showroom and It comes with 1197 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Baleno top model?",
-      "Top model of Baleno is Alpha Automatic and the ex-showroom for Baleno Alpha Automatic is ₹ 9.27 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 5.97 Lakh";
+  // const TopPic = Baleno;
+  // const CarName = "Maruti Baleno";
+  // const OnlyName = "Baleno";
+  // const ThumPic = TBaleno;
+
+  // const KeySpecification = [
+  //   "₹ ₹ 5.97 Lakh onwards",
+  //   "21.01 kmpl",
+  //   "1197 cc",
+  //   "Manual",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Sigma",
+  //     "1197  cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.5.97 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "Delta",
+  //     "1197  cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.6.69 Lakh*",
+  //   ],
+  //   varient3: ["Zeta", "1197 cc, Manual, Petrol, 21.01 kmpl", "Rs.7.32 Lakh*"],
+  //   varient4: [
+  //     "Delta Dualjet",
+  //     "1197 cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.7.57 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "Delta Automatic",
+  //     "1197  cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.7.89 Lakh*",
+  //   ],
+  //   varient6: ["Alpha", "1197 cc, Manual, Petrol, 21.01 kmpl", "Rs.8.06 Lakh*"],
+  //   varient7: [
+  //     "Zeta Dualjet",
+  //     "1197 cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.8.20 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "Zeta Automatic",
+  //     "1197 cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.8.51 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "Alpha Automatic",
+  //     "1197 cc, Manual, Petrol, 21.01 kmpl",
+  //     "Rs.9.27 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The Baleno carries savings of up to Rs 40,000 this July Maruti Baleno Price: Maruti has priced the premium hatchback between Rs 5.98 lakh and Rs 9.30 lakh (ex-showroom Delhi). Maruti Baleno Variants: It is offered in four trims: Sigma, Delta, Zeta, and Alpha. Maruti Baleno Engine and Transmission: It comes equipped with a 1.2-litre petrol engine (83PS/113Nm), mated to either a 5-speed MT or a CVT. The hatchback also gets a 1.2-litre Dualjet petrol engine with mild-hybrid tech (90PS/113Nm), paired with a 5-speed MT. Maruti claims a mileage of 21.01kmpl for the petrol-manual variants, while those with the CVT return 19.56kmpl. On the other hand, the mild-hybrid powertrain offers a claimed fuel efficiency of 23.87kmpl. Maruti Baleno Features: The Baleno is equipped with LED projector headlamps, a rearview camera, 16-inch alloy wheels, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, auto climate control, push-button stop/start, and keyless entry. Maruti Baleno Safety: Standard safety features include rear parking sensors, ABS with EBD, ISOFIX child seat anchors, and dual front airbags across all variants. Maruti Baleno Rivals: It rivals the Toyota Glanza, Volkswagen Polo, Honda Jazz, Hyundai i20, and Tata Altroz. Its petrol-hybrid variant has no direct rival.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "LED projector headlamps from Delta variant onwards. LEDs usually offer better visibility than halogens or bi-xenon units.",
+  //     "Automatic climate control from Delta variant onwards. unlike a manual AC, automatic climate control allows the user to maintain a set temperature inside the cabin as per their needs.",
+  //     "ISOFIX child seat anchors are standard across the range. This lets you attach a child seat on the back seat of the hatchback to offer kids below the age of 10 better safety.",
+  //   ],
+  //   cons: [
+  //     "Could have been more rear passenger-centric: Misses out on side and curtain airbags, rear AC vents and rear armrest.",
+  //     "Ride and Handling could have been better",
+  //     "Lacks in Modern features",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Nexa Blue", "bg-blue-600"],
+  //   color2: ["Premium Silver Metallic", "bg-gray-400"],
+  //   color3: ["Pearl Artic White", "bg-white"],
+  //   color4: ["Pearl Phoenix Red", "bg-red-600"],
+  //   color5: ["Magma Grey Metallic", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Baleno?",
+  //     "The on-road price of Baleno in Delhi starts at ‎₹ 6.58 Lakh and goes upto ‎₹ 10.4 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount..",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Baleno and Swift?",
+  //     "Baleno price starts at ₹ 6.69 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Swift price starts at ₹ 5.81 Lakh ex-showroom and It comes with 1197 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Baleno top model?",
+  //     "Top model of Baleno is Alpha Automatic and the ex-showroom for Baleno Alpha Automatic is ₹ 9.27 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -259,23 +294,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

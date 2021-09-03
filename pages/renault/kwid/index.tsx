@@ -32,190 +32,223 @@ import { TKwid } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Renault";
-  const CarPrice = "₹ 3.31 Lakh";
-  const TopPic = Kwid;
-  const CarName = "Renault Kwid";
-  const OnlyName = "Kwid";
-  const ThumPic = TKwid;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 3.31 Lakh onwards",
-    "22 to 25 kmpl",
-    "799 to 999 cc",
-    "Manual & AMT",
-    "Petrol",
-    "4 Seater",
-    "3,731 mm L x 1,579 mm W x 1,474-1,490 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual airbags.",
-    "reverse parking sensors.",
-    "ABS and EBD.",
-    "seat belt reminder.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["STD", "799 cc, Manual, Petrol, 22.3 kmpl", "Rs.5.64 Lakh*"],
-    varient2: ["RXE", "799 cc, Manual, Petrol, 22.3 kmpl", "Rs.5.84 Lakh*"],
-    varient3: ["RXL", "799 cc, Manual, Petrol, 22.3 kmpl", "Rs.6.54 Lakh*"],
-    varient4: [
-      "Neotech",
-      "999 cc, Manual, Petrol, 21.74 kmpl",
-      "Rs.6.74 Lakh*",
-    ],
-    varient5: [
-      "1.0 RXL",
-      "999 cc, Manual, Petrol, 21.74 kmpl",
-      "Rs.7.02 Lakh*",
-    ],
-    varient6: [
-      "1.0 Neotech",
-      "999 cc, Manual, Petrol, 21.74 kmpl",
-      "Rs.7.04 Lakh*",
-    ],
-    varient7: ["RXT", "999 cc, Manual, Petrol, 21.74 kmpl", "Rs.7.22 Lakh*"],
-    varient8: [
-      "1.0 RXT Opt",
-      "999 cc, Manual, Petrol, 21.74 kmpl",
-      "Rs.7.24 Lakh*",
-    ],
-    varient9: [
-      "1.0 RXL AMT",
-      "999 cc, Automatic, Petrol, 22.0 kmpl",
-      "Rs.7.37 Lakh*",
-    ],
-    varient10: [
-      "1.0 Neotech AMT",
-      "999 cc, Automatic, Petrol, 22.0 kmpl",
-      "Rs.7.52 Lakh*",
-    ],
-    varient11: [
-      "Climber 1.0 MT Opt",
-      "999 cc, Manual, Petrol, 21.74 kmpl",
-      "Rs.7.64 Lakh*",
-    ],
-    varient12: [
-      "1.0 RXT AMT Opt",
-      "999 cc, Automatic, Petrol, 22.0 kmpl",
-      "Rs.7.72 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient13: [
-      "Climber 1.0 AMT Opt",
-      "999 cc, Automatic, Petrol, 22.0 kmpl",
-      "Rs.7.84 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientDiesel = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientCNG = {};
+  const Mileage = joy.Mileage;
 
-  const Mileage = {
-    mileage1: ["Petrol (999 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const LatestUpdate = [
-    "Latest Update: The Kwid is carrying offers of up to Rs 52,000 this July. Renault Kwid Price: Renault has priced the Kwid from Rs 3.32 lakh to Rs 5.48 lakh (ex-showroom Delhi). Renault Kwid Variants: It is available in five trims: STD, RXE, RXL, RXT, and Climber. Renault Kwid Powertrain: Renault offers the Kwid with two petrol engines: a 0.8-litre (54PS/72Nm) and a 1.0-litre (68PS/91Nm). While the former is mated to only a 5-speed manual, the latter gets both 5-speed MT and 5-speed AMT. Renault Kwid Features: It comes with keyless entry, a reverse-parking camera, manual AC, an 8-inch touchscreen infotainment system with Apple CarPlay and Android Auto, and a 12V charger for rear passengers. Renault Kwid Safety: Standard safety features include rear parking sensors, a driver-side airbag, and ABS with EBD. Renault Kwid Rivals: The Kwid locks horns with the Maruti Suzuki Alto, Maruti Suzuki S-Presso, and Datsun redi-GO.",
-  ];
+  const ProsCons = joy.ProsCons;
 
-  const ProsCons = {
-    pros: [
-      "Looks better than the rivals",
-      "Ride quality is ideal for Indian roads",
-      "Loaded with segment above features",
-    ],
-    cons: [
-      "Engine is not the most refined in the segment",
-      "AMT transmission is slow to shift",
-      "Build and plastic quality should have been better",
-    ],
-  };
+  const Colorss = joy.Colorss;
 
-  const Colorss = {
-    color1: ["Fiery Red", "bg-red-600"],
-    color2: ["Moonlight Silver", "bg-gray-800"],
-    color3: ["Ice Cool White", "bg-white-700"],
-    color4: ["Outback Bronze", "bg-gray-300"],
-    color5: ["Electric Blue", "bg-blue-800"],
-    color6: ["Zanskar Blue", "bg-blue-800"],
-    color7: ["Moonlight Silver Body with Zanskar Blue roof", "bg-gray-800"],
-    color8: ["Zanskar Blue with Moonlight Silver roof", "bg-blue-800"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 3.32 Lakh onwards",
-      "25 kmpl",
-      "799 to 1000 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
-      "https://i.ibb.co/C63SXxn/Kwid.jpg",
-    ],
-    comparisioncar2: [
-      "₹ 3.80 Lakh onwards",
-      "22 kmpl",
-      "799 to 999 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
-      "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Kwid?",
-      "The on-road price of Kwid in Delhi starts at ‎₹ 3.74 Lakh and goes upto ‎₹ 6.08 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Kwid and Alto?",
-      "Kwid price starts at ₹ 3.31 Lakh ex-showroom and It comes with 799 cc engine. Whereas Alto price starts at ₹ 3.00 Lakh ex-showroom and It comes with 796 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Kwid top model?",
-      "Top model of Kwid is CLIMBER 1.0 AMT Opt and the ex-showroom for Kwid CLIMBER 1.0 AMT Opt is ₹ 5.47 Lakh.",
-    ],
-  };
+  const articles = joy.articles;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Renault";
+  // const CarPrice = "₹ 3.31 Lakh";
+  // const TopPic = Kwid;
+  // const CarName = "Renault Kwid";
+  // const OnlyName = "Kwid";
+  // const ThumPic = TKwid;
+
+  // const KeySpecification = [
+  //   "₹ 3.31 Lakh onwards",
+  //   "22 to 25 kmpl",
+  //   "799 to 999 cc",
+  //   "Manual & AMT",
+  //   "Petrol",
+  //   "4 Seater",
+  //   "3,731 mm L x 1,579 mm W x 1,474-1,490 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual airbags.",
+  //   "reverse parking sensors.",
+  //   "ABS and EBD.",
+  //   "seat belt reminder.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["STD", "799 cc, Manual, Petrol, 22.3 kmpl", "Rs.5.64 Lakh*"],
+  //   varient2: ["RXE", "799 cc, Manual, Petrol, 22.3 kmpl", "Rs.5.84 Lakh*"],
+  //   varient3: ["RXL", "799 cc, Manual, Petrol, 22.3 kmpl", "Rs.6.54 Lakh*"],
+  //   varient4: [
+  //     "Neotech",
+  //     "999 cc, Manual, Petrol, 21.74 kmpl",
+  //     "Rs.6.74 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "1.0 RXL",
+  //     "999 cc, Manual, Petrol, 21.74 kmpl",
+  //     "Rs.7.02 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "1.0 Neotech",
+  //     "999 cc, Manual, Petrol, 21.74 kmpl",
+  //     "Rs.7.04 Lakh*",
+  //   ],
+  //   varient7: ["RXT", "999 cc, Manual, Petrol, 21.74 kmpl", "Rs.7.22 Lakh*"],
+  //   varient8: [
+  //     "1.0 RXT Opt",
+  //     "999 cc, Manual, Petrol, 21.74 kmpl",
+  //     "Rs.7.24 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "1.0 RXL AMT",
+  //     "999 cc, Automatic, Petrol, 22.0 kmpl",
+  //     "Rs.7.37 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "1.0 Neotech AMT",
+  //     "999 cc, Automatic, Petrol, 22.0 kmpl",
+  //     "Rs.7.52 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "Climber 1.0 MT Opt",
+  //     "999 cc, Manual, Petrol, 21.74 kmpl",
+  //     "Rs.7.64 Lakh*",
+  //   ],
+  //   varient12: [
+  //     "1.0 RXT AMT Opt",
+  //     "999 cc, Automatic, Petrol, 22.0 kmpl",
+  //     "Rs.7.72 Lakh*",
+  //   ],
+
+  //   varient13: [
+  //     "Climber 1.0 AMT Opt",
+  //     "999 cc, Automatic, Petrol, 22.0 kmpl",
+  //     "Rs.7.84 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (999 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Looks better than the rivals",
+  //     "Ride quality is ideal for Indian roads",
+  //     "Loaded with segment above features",
+  //   ],
+  //   cons: [
+  //     "Engine is not the most refined in the segment",
+  //     "AMT transmission is slow to shift",
+  //     "Build and plastic quality should have been better",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Fiery Red", "bg-red-600"],
+  //   color2: ["Moonlight Silver", "bg-gray-800"],
+  //   color3: ["Ice Cool White", "bg-white-700"],
+  //   color4: ["Outback Bronze", "bg-gray-300"],
+  //   color5: ["Electric Blue", "bg-blue-800"],
+  //   color6: ["Zanskar Blue", "bg-blue-800"],
+  //   color7: ["Moonlight Silver Body with Zanskar Blue roof", "bg-gray-800"],
+  //   color8: ["Zanskar Blue with Moonlight Silver roof", "bg-blue-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 3.32 Lakh onwards",
+  //     "25 kmpl",
+  //     "799 to 1000 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
+  //     "https://i.ibb.co/C63SXxn/Kwid.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 3.80 Lakh onwards",
+  //     "22 kmpl",
+  //     "799 to 999 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
+  //     "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Kwid?",
+  //     "The on-road price of Kwid in Delhi starts at ‎₹ 3.74 Lakh and goes upto ‎₹ 6.08 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Kwid and Alto?",
+  //     "Kwid price starts at ₹ 3.31 Lakh ex-showroom and It comes with 799 cc engine. Whereas Alto price starts at ₹ 3.00 Lakh ex-showroom and It comes with 796 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Kwid top model?",
+  //     "Top model of Kwid is CLIMBER 1.0 AMT Opt and the ex-showroom for Kwid CLIMBER 1.0 AMT Opt is ₹ 5.47 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -273,23 +306,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Zoe/6278/1581400662093/front-left-side-47.jpg?tr=w-456",
-      "Renault Zoe",
-      "Rs.8.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Kwid-EV/6214/1555414583232/front-left-side-47.jpg?tr=w-456",
-      "Renault K-ZE",
-      "Rs.10.00 Lakh*",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Arkana/6573/front-left-side-47.jpg?tr=w-456",
-      "Renault Arkana",
-      "Rs.10.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Zoe/6278/1581400662093/front-left-side-47.jpg?tr=w-456",
+  //     "Renault Zoe",
+  //     "Rs.8.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Kwid-EV/6214/1555414583232/front-left-side-47.jpg?tr=w-456",
+  //     "Renault K-ZE",
+  //     "Rs.10.00 Lakh*",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Renault-Arkana/6573/front-left-side-47.jpg?tr=w-456",
+  //     "Renault Arkana",
+  //     "Rs.10.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

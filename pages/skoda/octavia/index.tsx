@@ -32,154 +32,189 @@ import { TOctavia } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Skoda";
-  const CarPrice = "₹ 26.01 Lakh";
-  const TopPic = Octavia;
-  const CarName = "Skoda Octavia";
-  const OnlyName = "Octavia";
-  const ThumPic = TOctavia;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 26.01 Lakh onwards",
-    "15.81 kmpl",
-    "1984 cc",
-    "Automatic",
-    "Petrol",
-    "5 Seater",
-    "4,689 mm L x 1,469 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "dual front airbags",
-    "electronic stability control",
-    "ABS",
-    "EBD",
-    "multi-collision braking",
-    "electronic differential lock system",
-    "anti-slip regulation",
-    " motor slip regulation",
-    "rollover protection",
-    "brake disc wiping",
-    "reverse parking sensors",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Style",
-      "1984 cc, Automatic, Petrol, 15.81 kmpl",
-      "Rs.25.99 Lakh*",
-    ],
-    varient2: [
-      "Laurin and Klement",
-      "1984 cc, Automatic, Petrol, 15.81 kmpl",
-      "Rs.28.99 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1330 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Skoda Octavia Price: Skoda retails the Octavia from Rs 25.99 lakh to Rs 28.99 lakh (ex-showroom pan-India). Skoda Octavia Variants: The Octavia is available in two variants: Style and Laurin & Klement. Skoda Octavia Engine and Transmission: It comes with the Superb’s 2-litre turbo-petrol engine (190PS/320Nm), paired to a 7-speed DSG (dual-clutch automatic). While there is no diesel engine on offer, Skoda could offer the sedan with the Kushaq’s 1.5-litre turbo-petrol engine at a later date. Skoda Octavia Features: Skoda offers the sedan with a 10-inch touchscreen infotainment system, dual-zone climate control, adaptive-LED headlamps, a powered tailgate, digital instrument cluster, a tyre pressure monitoring system, and wireless charging.  Skoda Octavia Safety: Its safety features include up to eight airbags, electronic stability control, hill-hold control as well as front and rear parking sensors. Skoda Octavia Rivals: The Skoda Octavia’s only rival is the Hyundai Elantra.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Punchy motor ",
-      "Luxurious interior",
-      "Excellent infotainment and sound experience",
-    ],
-    cons: [
-      "More features expected ",
-      "Steep pricing ",
-      "No diesel engine option",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Brilliant Silver", "bg-gray-600"],
-    color2: ["Maple Brown", "bg-brown-800"],
-    color3: ["Candy White", "bg-white-700"],
-    color4: ["Lava Blue", "bg-blue-300"],
-    color5: ["Magic Black", "bg-gray-900"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.31.99 - 34.99 Lakh",
-      "15.1 kmpl",
-      "1984 cc",
-      "Automatic",
-      "Petrol",
-      "5 Seater",
-      "4,869 mm L x 1,864 mm W x 1,469 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Superb/6764/1592459454448/front-left-side-47.jpg",
-    ],
-    comparisioncar2: [
-      "Rs.17.86 - 21.13 Lakh*",
-      "14.59 - 14.62 kmpl",
-      "1493 cc - 1999 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,620 mm L x 1,800 mm W x 1,465 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Elantra/7168/1595226914508/front-left-side-47.jpg?tr=w-456",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Octavia?",
-      "The on-road price of Octavia in Delhi starts at ‎₹ 30.33 Lakh and goes upto ‎₹ 33.78 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
-    ],
-    question2: [
-      "Which car is better between Octavia and Superb?",
-      "Octavia price starts at ₹ 26.01 Lakh ex-showroom and It comes with 1984 cc engine. Whereas Superb price starts at ₹ 32.02 Lakh ex-showroom and It comes with 1984 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Octavia top model?",
-      "Top model of Octavia is 2.0 L&K and the ex-showroom for Octavia 2.0 L&K is ₹ 29.02 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Skoda";
+  // const CarPrice = "₹ 26.01 Lakh";
+  // const TopPic = Octavia;
+  // const CarName = "Skoda Octavia";
+  // const OnlyName = "Octavia";
+  // const ThumPic = TOctavia;
+
+  // const KeySpecification = [
+  //   "₹ 26.01 Lakh onwards",
+  //   "15.81 kmpl",
+  //   "1984 cc",
+  //   "Automatic",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "4,689 mm L x 1,469 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "dual front airbags",
+  //   "electronic stability control",
+  //   "ABS",
+  //   "EBD",
+  //   "multi-collision braking",
+  //   "electronic differential lock system",
+  //   "anti-slip regulation",
+  //   " motor slip regulation",
+  //   "rollover protection",
+  //   "brake disc wiping",
+  //   "reverse parking sensors",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Style",
+  //     "1984 cc, Automatic, Petrol, 15.81 kmpl",
+  //     "Rs.25.99 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "Laurin and Klement",
+  //     "1984 cc, Automatic, Petrol, 15.81 kmpl",
+  //     "Rs.28.99 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1330 cc)", "Automatic (Dual Clutch)", "16.42 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Skoda Octavia Price: Skoda retails the Octavia from Rs 25.99 lakh to Rs 28.99 lakh (ex-showroom pan-India). Skoda Octavia Variants: The Octavia is available in two variants: Style and Laurin & Klement. Skoda Octavia Engine and Transmission: It comes with the Superb’s 2-litre turbo-petrol engine (190PS/320Nm), paired to a 7-speed DSG (dual-clutch automatic). While there is no diesel engine on offer, Skoda could offer the sedan with the Kushaq’s 1.5-litre turbo-petrol engine at a later date. Skoda Octavia Features: Skoda offers the sedan with a 10-inch touchscreen infotainment system, dual-zone climate control, adaptive-LED headlamps, a powered tailgate, digital instrument cluster, a tyre pressure monitoring system, and wireless charging.  Skoda Octavia Safety: Its safety features include up to eight airbags, electronic stability control, hill-hold control as well as front and rear parking sensors. Skoda Octavia Rivals: The Skoda Octavia’s only rival is the Hyundai Elantra.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Punchy motor ",
+  //     "Luxurious interior",
+  //     "Excellent infotainment and sound experience",
+  //   ],
+  //   cons: [
+  //     "More features expected ",
+  //     "Steep pricing ",
+  //     "No diesel engine option",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Brilliant Silver", "bg-gray-600"],
+  //   color2: ["Maple Brown", "bg-brown-800"],
+  //   color3: ["Candy White", "bg-white-700"],
+  //   color4: ["Lava Blue", "bg-blue-300"],
+  //   color5: ["Magic Black", "bg-gray-900"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.31.99 - 34.99 Lakh",
+  //     "15.1 kmpl",
+  //     "1984 cc",
+  //     "Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,869 mm L x 1,864 mm W x 1,469 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Superb/6764/1592459454448/front-left-side-47.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "Rs.17.86 - 21.13 Lakh*",
+  //     "14.59 - 14.62 kmpl",
+  //     "1493 cc - 1999 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,620 mm L x 1,800 mm W x 1,465 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Elantra/7168/1595226914508/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Octavia?",
+  //     "The on-road price of Octavia in Delhi starts at ‎₹ 30.33 Lakh and goes upto ‎₹ 33.78 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Octavia and Superb?",
+  //     "Octavia price starts at ₹ 26.01 Lakh ex-showroom and It comes with 1984 cc engine. Whereas Superb price starts at ₹ 32.02 Lakh ex-showroom and It comes with 1984 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Octavia top model?",
+  //     "Top model of Octavia is 2.0 L&K and the ex-showroom for Octavia 2.0 L&K is ₹ 29.02 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -217,23 +252,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41784/Skoda-Kamiq-Exterior-170110.jpg?wm=0&q=85",
-      "Skoda Kamiq",
-      "₹ 15.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49051/kodiaq-petrol-bs6-exterior-left-front-three-quarter.jpeg?q=85",
-      "Skoda Kodiaq Petrol BS6",
-      "₹ 33.00 - 36.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44088/skoda-new-rapid-exterior-0.jpeg?q=85",
-      "Skoda New Rapid",
-      "₹ 9.00 - 12.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41784/Skoda-Kamiq-Exterior-170110.jpg?wm=0&q=85",
+  //     "Skoda Kamiq",
+  //     "₹ 15.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49051/kodiaq-petrol-bs6-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "Skoda Kodiaq Petrol BS6",
+  //     "₹ 33.00 - 36.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/44088/skoda-new-rapid-exterior-0.jpeg?q=85",
+  //     "Skoda New Rapid",
+  //     "₹ 9.00 - 12.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

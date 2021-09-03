@@ -32,212 +32,247 @@ import { TWaganr } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 4.79 Lakh";
-  const TopPic = WaganR;
-  const CarName = "Maruti WaganR";
-  const OnlyName = "WaganR";
-  const ThumPic = TWaganr;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 4.79 Lakh onwards",
-    "20.52 to 32.52 kmpl",
-    "998 to 1197 cc",
-    "Manual & AMT",
-    "Petrol & CNG",
-    "5 Seater",
-    "length of 3655 mm, width of 1620 mm and a wheelbase of 2435 mm.",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "LXI 1.0",
-      "998  cc, Manual, Petrol, 21.79 kmpl",
-      "Rs.4.79 Lakh*",
-    ],
-    varient2: [
-      "LXI (O) 1.0",
-      "998  cc, Manual, Petrol, 21.79 kmpl",
-      "Rs.4.86 Lakh*",
-    ],
-    varient3: [
-      "VXI 1.0",
-      "998 cc, Manual, Petrol, 21.79 kmpl",
-      "Rs.5.12 Lakh*",
-    ],
-    varient4: [
-      "VXI (O) 1.0",
-      "998 cc, Manual, Petrol, 21.79 kmpl",
-      "Rs.5.19 Lakh*",
-    ],
-    varient5: [
-      "VXI 1.2",
-      "1197  cc, Manual, Petrol, 20.52 kmpl",
-      "Rs.5.47 Lakh*",
-    ],
-    varient6: [
-      "VXI (O) 1.2",
-      "1197 cc, Manual, Petrol, 20.52 kmpl",
-      "Rs.5.54 Lakh*",
-    ],
-    varient7: [
-      "VXI 1.0 AMT",
-      "998 cc, Automatic, Petrol, 21.79 kmpl",
-      "Rs.5.62 Lakh*",
-    ],
-    varient8: [
-      "VXI (O) 1.0 AMT",
-      "998 cc, Automatic, Petrol, 21.79 kmpl",
-      "Rs.5.69 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient9: [
-      "ZXI 1.2",
-      "1197 cc, Manual, Petrol, 20.52 kmpl",
-      "Rs.5.82 Lakh*",
-    ],
-    varient10: [
-      "VXi 1.2 AMT",
-      "1197 cc, Automatic, Petrol, 20.52 kmpl",
-      "Rs.5.97 Lakh*",
-    ],
-    varient11: [
-      "VXi (O) 1.2 AMT",
-      "1197 cc, Automatic, Petrol, 20.52 kmpl",
-      "Rs.6.04 Lakh*",
-    ],
-    varient12: [
-      "ZXi 1.2 AMT",
-      "1197 cc, Automatic, Petrol, 20.52 kmpl",
-      "Rs.6.32 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientDiesel = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientCNG = {
-    varient1: [
-      "LXI 1.0 CNG",
-      "998 cc, Manual, CNG, 32.52 km/kg",
-      "Rs.5.71 Lakh*",
-    ],
-    varient2: [
-      "LXI (O) 1.0 CNG",
-      "998 cc, Manual, CNG, 32.52 km/kg",
-      "Rs.5.78 Lakh*",
-    ],
-  };
+  const Mileage = joy.Mileage;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "20.52 kmpl"],
-    mileage2: ["CNG (1.0 cc)", "Manual", "32.52 km/kg"],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const LatestUpdate = [
-    "Latest Update: Maruti has launched a limited edition Wagon R called Xtra. Maruti Wagon R Price: The Wagon R is priced between Rs 4.80 lakh and Rs 6.33 lakh (ex-showroom Delhi). Maruti Wagon R Variants: It is offered in three trims: LXi, VXi, and ZXi. Maruti Wagon R Engine and Transmission: Maruti offers the Wagon R with two petrol engine options: a 1.0-litre (68PS/90Nm) and a 1.2-litre (83PS/113Nm). Both engines can be mated to 5-speed manual and AMT gearboxes. The Wagon R also has a CNG variant with a 1.0-litre engine (59PS/78Nm), paired with a 5-speed MT. Claimed fuel efficiency figures are as follows: 1.0-litre MT/AMT- 21.79kmpl 1.0-litre CNG- 32.52km/kg 1.2-litre MT/AMT- 20.52kmpl Maruti Wagon R Features: It is equipped with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, manual AC, all four power windows, keyless entry, and steering-mounted audio and calling controls. Maruti Wagon R Safety: Standard safety features include a driver airbag, ABS with EBD, and rear parking sensors. Maruti Wagon R Rivals: The Wagon R fights it out with the Tata Tiago, Hyundai Santro, Datsun GO, and Maruti Suzuki Celerio.",
-  ];
+  const ProsCons = joy.ProsCons;
 
-  const ProsCons = {
-    pros: [
-      "More than sufficient cabin space ",
-      "Bigger 1.2-litre engine with a choice of AMT ",
-      "All the features expected from its segment",
-    ],
-    cons: [
-      "Has gotten pricier over the older generation",
-      "Could do with slightly better driving dynamics ",
-      "Excessive body roll owing to the tall-boy design",
-    ],
-  };
+  const Colorss = joy.Colorss;
 
-  const Colorss = {
-    color1: ["Poolside Blue", "bg-blue-600"],
-    color2: ["Silky Silver", "bg-gray-400"],
-    color3: ["Solid White", "bg-white"],
-    color4: ["Pearl Phoenix Red", "bg-red-600"],
-    color5: ["Magma Grey", "bg-gray-800"],
-    color6: ["Autumn Orange", "bg-orange-800"],
-    color7: ["Nutmeg Brown", "bg-gray-800"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Wagon R?",
-      "The on-road price of Wagon R in Delhi starts at ‎₹ 5.3 Lakh and goes upto ‎₹ 6.98 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Wagon R and Celerio?",
-      "Wagon R price starts at ₹ 4.79 Lakh ex-showroom and It comes with 998 cc engine. Whereas Celerio price starts at ₹ 4.65 Lakh ex-showroom and It comes with 998 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Wagon R top model?",
-      "Top model of Wagon R is ZXi 1.2 AMT and the ex-showroom for Wagon R ZXi 1.2 AMT is ₹ 6.32 Lakh.",
-    ],
-  };
+  const articles = joy.articles;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 4.79 Lakh";
+  // const TopPic = WaganR;
+  // const CarName = "Maruti WaganR";
+  // const OnlyName = "WaganR";
+  // const ThumPic = TWaganr;
+
+  // const KeySpecification = [
+  //   "₹ 4.79 Lakh onwards",
+  //   "20.52 to 32.52 kmpl",
+  //   "998 to 1197 cc",
+  //   "Manual & AMT",
+  //   "Petrol & CNG",
+  //   "5 Seater",
+  //   "length of 3655 mm, width of 1620 mm and a wheelbase of 2435 mm.",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "LXI 1.0",
+  //     "998  cc, Manual, Petrol, 21.79 kmpl",
+  //     "Rs.4.79 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "LXI (O) 1.0",
+  //     "998  cc, Manual, Petrol, 21.79 kmpl",
+  //     "Rs.4.86 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "VXI 1.0",
+  //     "998 cc, Manual, Petrol, 21.79 kmpl",
+  //     "Rs.5.12 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "VXI (O) 1.0",
+  //     "998 cc, Manual, Petrol, 21.79 kmpl",
+  //     "Rs.5.19 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "VXI 1.2",
+  //     "1197  cc, Manual, Petrol, 20.52 kmpl",
+  //     "Rs.5.47 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "VXI (O) 1.2",
+  //     "1197 cc, Manual, Petrol, 20.52 kmpl",
+  //     "Rs.5.54 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "VXI 1.0 AMT",
+  //     "998 cc, Automatic, Petrol, 21.79 kmpl",
+  //     "Rs.5.62 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "VXI (O) 1.0 AMT",
+  //     "998 cc, Automatic, Petrol, 21.79 kmpl",
+  //     "Rs.5.69 Lakh*",
+  //   ],
+
+  //   varient9: [
+  //     "ZXI 1.2",
+  //     "1197 cc, Manual, Petrol, 20.52 kmpl",
+  //     "Rs.5.82 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "VXi 1.2 AMT",
+  //     "1197 cc, Automatic, Petrol, 20.52 kmpl",
+  //     "Rs.5.97 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "VXi (O) 1.2 AMT",
+  //     "1197 cc, Automatic, Petrol, 20.52 kmpl",
+  //     "Rs.6.04 Lakh*",
+  //   ],
+  //   varient12: [
+  //     "ZXi 1.2 AMT",
+  //     "1197 cc, Automatic, Petrol, 20.52 kmpl",
+  //     "Rs.6.32 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {
+  //   varient1: [
+  //     "LXI 1.0 CNG",
+  //     "998 cc, Manual, CNG, 32.52 km/kg",
+  //     "Rs.5.71 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "LXI (O) 1.0 CNG",
+  //     "998 cc, Manual, CNG, 32.52 km/kg",
+  //     "Rs.5.78 Lakh*",
+  //   ],
+  // };
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "20.52 kmpl"],
+  //   mileage2: ["CNG (1.0 cc)", "Manual", "32.52 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Maruti has launched a limited edition Wagon R called Xtra. Maruti Wagon R Price: The Wagon R is priced between Rs 4.80 lakh and Rs 6.33 lakh (ex-showroom Delhi). Maruti Wagon R Variants: It is offered in three trims: LXi, VXi, and ZXi. Maruti Wagon R Engine and Transmission: Maruti offers the Wagon R with two petrol engine options: a 1.0-litre (68PS/90Nm) and a 1.2-litre (83PS/113Nm). Both engines can be mated to 5-speed manual and AMT gearboxes. The Wagon R also has a CNG variant with a 1.0-litre engine (59PS/78Nm), paired with a 5-speed MT. Claimed fuel efficiency figures are as follows: 1.0-litre MT/AMT- 21.79kmpl 1.0-litre CNG- 32.52km/kg 1.2-litre MT/AMT- 20.52kmpl Maruti Wagon R Features: It is equipped with a 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay, manual AC, all four power windows, keyless entry, and steering-mounted audio and calling controls. Maruti Wagon R Safety: Standard safety features include a driver airbag, ABS with EBD, and rear parking sensors. Maruti Wagon R Rivals: The Wagon R fights it out with the Tata Tiago, Hyundai Santro, Datsun GO, and Maruti Suzuki Celerio.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "More than sufficient cabin space ",
+  //     "Bigger 1.2-litre engine with a choice of AMT ",
+  //     "All the features expected from its segment",
+  //   ],
+  //   cons: [
+  //     "Has gotten pricier over the older generation",
+  //     "Could do with slightly better driving dynamics ",
+  //     "Excessive body roll owing to the tall-boy design",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Poolside Blue", "bg-blue-600"],
+  //   color2: ["Silky Silver", "bg-gray-400"],
+  //   color3: ["Solid White", "bg-white"],
+  //   color4: ["Pearl Phoenix Red", "bg-red-600"],
+  //   color5: ["Magma Grey", "bg-gray-800"],
+  //   color6: ["Autumn Orange", "bg-orange-800"],
+  //   color7: ["Nutmeg Brown", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Wagon R?",
+  //     "The on-road price of Wagon R in Delhi starts at ‎₹ 5.3 Lakh and goes upto ‎₹ 6.98 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Wagon R and Celerio?",
+  //     "Wagon R price starts at ₹ 4.79 Lakh ex-showroom and It comes with 998 cc engine. Whereas Celerio price starts at ₹ 4.65 Lakh ex-showroom and It comes with 998 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Wagon R top model?",
+  //     "Top model of Wagon R is ZXi 1.2 AMT and the ex-showroom for Wagon R ZXi 1.2 AMT is ₹ 6.32 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -295,23 +330,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

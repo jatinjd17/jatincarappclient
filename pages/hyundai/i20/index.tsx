@@ -32,266 +32,301 @@ import { Ti20 } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Hyundai";
-  const CarPrice = "₹ 6.91 Lakh";
-  const TopPic = i20;
-  const CarName = "Hyundai i20";
-  const OnlyName = "i20";
-  const ThumPic = Ti20;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 6.91 Lakh onwards",
-    "19.65 to 25.2 kmpl",
-    "998 to 1493 cc",
-    "Manual, Automatic (CVT), Clutchless Manual & Automatic (Dual Clutch)",
-    "Petrol & Diesel",
-    "5 Seater",
-    "3,995 mm L x 1,775 mm W x 1,505 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Impact Sensing Auto Door Unlock",
-    "6 airbags",
-    "ABS",
-    "EBD",
-    "Central Locking",
-    "Emergency Stop Signal",
-    "Driver & Passenger SeatBelt Reminder",
-    "Speed Sensing Auto Door Lock",
-    "Headlamp Escort Function",
-    "ISOFIX",
-    "Speed Alert System",
-    "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["Magna", "1197 cc, Manual, Petrol, 20.35 kmpl", "Rs.6.91 Lakh*"],
-    varient2: [
-      "Sportz",
-      "1197 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.7.75 Lakh*",
-    ],
-    varient3: [
-      "Sportz DT",
-      "1197 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.7.90 Lakh*",
-    ],
-    varient4: [
-      "Sportz IVT",
-      "1197 cc, Automatic, Petrol, 19.65 kmpl",
-      "Rs.8.77 Lakh*",
-    ],
-    varient5: [
-      "Sportz Turbo iMT",
-      "998 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.8.81 Lakh*",
-    ],
-    varient6: ["Asta", "1197 cc, Manual, Petrol, 20.35 kmpl", "Rs.8.86 Lakh*"],
-    varient7: [
-      "Sportz IVT DT",
-      "1197 cc, Automatic, Petrol, 19.65 kmpl",
-      "Rs.8.92 Lakh*",
-    ],
-    varient8: [
-      "Sportz Turbo iMT DT",
-      "998 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.8.96 Lakh*",
-    ],
-    varient9: [
-      "Asta DT",
-      "1197 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.9.01 Lakh*",
-    ],
-    varient10: [
-      "Asta Opt",
-      "1197 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.9.41 Lakh*",
-    ],
-    varient11: [
-      "Asta Opt DT",
-      "1197 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.9.56 Lakh*",
-    ],
-    varient12: [
-      "Asta IVT",
-      "1197 cc, Automatic, Petrol, 19.65 kmpl",
-      "Rs.9.88 Lakh*",
-    ],
-    varient13: [
-      "Asta Turbo iMT",
-      "998 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.9.91 Lakh*",
-    ],
-    varient14: [
-      "Asta IVT DT",
-      "1197 cc, Automatic, Petrol, 19.65 kmpl",
-      "Rs.10.03 Lakh*",
-    ],
-    varient15: [
-      "Asta Turbo iMT DT",
-      "1197 cc, Manual, Petrol, 20.35 kmpl",
-      "Rs.10.06 Lakh*",
-    ],
-    varient16: [
-      "Asta Turbo DCT",
-      "998 cc, Automatic, Petrol, 20.28 kmpl",
-      "Rs.10.74 Lakh*",
-    ],
-    varient17: [
-      "Asta Turbo DCT DT",
-      "998 cc, Automatic, Petrol, 20.28 kmpl",
-      "Rs.10.89 Lakh*",
-    ],
-    varient18: [
-      "Asta Opt Turbo DCT",
-      "998 cc, Automatic, Petrol, 20.28 kmpl",
-      "Rs.11.25 Lakh*",
-    ],
-    varient19: [
-      "Asta Opt Turbo DCT DT",
-      "998 cc, Automatic, Petrol, 20.28 kmpl",
-      "Rs.11.40 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {
-    varient1: [
-      "Magna Diesel",
-      "1493 cc, Manual, Diesel, 25.2 kmpl",
-      "Rs.8.21 Lakh*",
-    ],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient2: [
-      "Sportz Diesel",
-      "1493 cc, Manual, Diesel, 25.2 kmpl",
-      "Rs.9.01 Lakh*",
-    ],
+  const VarientCNG = joy.VarientCNG;
 
-    varient3: [
-      "Sportz Diesel DT",
-      "1493 cc, Manual, Diesel, 25.2 kmpl",
-      "Rs.9.16 Lakh*",
-    ],
+  const Mileage = joy.Mileage;
 
-    varient4: [
-      "Asta Opt Diesel",
-      "1493 cc, Manual, Diesel, 25.2 kmpl",
-      "Rs.10.61 Lakh*",
-    ],
+  const LatestUpdate = joy.LatestUpdate;
 
-    varient5: [
-      "Asta Opt Diesel DT",
-      "1493 cc, Manual, Diesel, 25.2 kmpl",
-      "Rs.10.76 Lakh*",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const VarientCNG = {};
+  const Colorss = joy.Colorss;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const LatestUpdate = [
-    "Latest Update: The i20 has received a price hike of up to Rs 8,000. Hyundai i20 Price: It is priced between Rs 6.91 lakh and Rs 11.40 lakh (ex-showroom Delhi). Hyundai i20 Variants: The i20 is sold in four trims: Magna, Sportz, Asta, and Asta (O). Hyundai i20 Engine and Transmission: It gets the same three engines as the Venue: two petrol and a diesel. The first petrol is a 1.2-litre naturally aspirated engine (83PS/114Nm) and the other is a 1-litre turbo-petrol (120PS/172Nm). The diesel is a 1.5-litre engine (100PS/240Nm). While the 1.2-litre petrol engine is mated to either a 5-speed MT or CVT, the 1-litre turbo-petrol unit gets either a 6-speed iMT (clutchless manual) or a 7-speed DCT, like the Venue. The diesel engine, on the other hand, is paired with a 6-speed MT only. Hyundai i20 Features: The i20 gets LED headlamps, a 10.25-inch touchscreen infotainment system with Apple CarPlay and Android Auto, an air purifier, BlueLink connected car tech, and a sunroof. Hyundai i20 Safety: Safety features include six airbags, rear parking sensors, and electronic stability control. Hyundai i20 Rivals: Hyundai’s premium hatchback competes with the Honda Jazz, Tata Altroz, Volkswagen Polo, Maruti Baleno, and Toyota Glanza.",
-  ];
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ProsCons = {
-    pros: [
-      "Looks edgy and aggressive",
-      "Powertrain options for every need",
-      "Loaded with good quality features",
-    ],
-    cons: [
-      "Turbo-petrol variants priced at a premium",
-      "Brakes feel spongy",
-      "Suspension should have been better damped",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const Colorss = {
-    color1: ["Fiery Red", "bg-red-800"],
-    color2: ["Typhoon Silver", "bg-gray-900"],
-    color3: ["Metallic Copper", "bg-gray-600"],
-    color4: ["Fiery Red Turbo", "bg-white"],
-    color5: ["Starry Night", "bg-blue-800"],
-    color6: ["Polar White", "bg-red-400"],
-    color7: ["Polar White with Black Roof", "bg-red-400"],
-    color8: ["Titan Grey", "bg-red-400"],
-    color9: ["Fiery Red with Black Roof", "bg-red-400"],
-  };
+  const articles = joy.articles;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.81 Lakh onwards",
-      "23.2 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "length of 3845, width of 1735 and a wheelbase of 2450",
-      "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.34 Lakh onwards",
-      "21.96 kmpl",
-      "1197 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,745 mm W x 1,510 mm H",
-      "https://images.financialexpress.com/2019/06/19-1.jpg",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  // const CompanyName = "Hyundai";
+  // const CarPrice = "₹ 6.91 Lakh";
+  // const TopPic = i20;
+  // const CarName = "Hyundai i20";
+  // const OnlyName = "i20";
+  // const ThumPic = Ti20;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of i20?",
-      "The on-road price of i20 in Delhi starts at ‎₹ 7.86 Lakh and goes upto ‎₹ 13.21 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between i20 and Altroz?",
-      "i20 price starts at ₹ 6.91 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Altroz price starts at ₹ 5.84 Lakh ex-showroom and It comes with 1199 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Hyundai i20?",
-      "The Hyundai i20 mileage is 19.65 - 25.2 kmpl.",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 6.91 Lakh onwards",
+  //   "19.65 to 25.2 kmpl",
+  //   "998 to 1493 cc",
+  //   "Manual, Automatic (CVT), Clutchless Manual & Automatic (Dual Clutch)",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,775 mm W x 1,505 mm H",
+  // ];
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "Impact Sensing Auto Door Unlock",
+  //   "6 airbags",
+  //   "ABS",
+  //   "EBD",
+  //   "Central Locking",
+  //   "Emergency Stop Signal",
+  //   "Driver & Passenger SeatBelt Reminder",
+  //   "Speed Sensing Auto Door Lock",
+  //   "Headlamp Escort Function",
+  //   "ISOFIX",
+  //   "Speed Alert System",
+  //   "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["Magna", "1197 cc, Manual, Petrol, 20.35 kmpl", "Rs.6.91 Lakh*"],
+  //   varient2: [
+  //     "Sportz",
+  //     "1197 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.7.75 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "Sportz DT",
+  //     "1197 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.7.90 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "Sportz IVT",
+  //     "1197 cc, Automatic, Petrol, 19.65 kmpl",
+  //     "Rs.8.77 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "Sportz Turbo iMT",
+  //     "998 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.8.81 Lakh*",
+  //   ],
+  //   varient6: ["Asta", "1197 cc, Manual, Petrol, 20.35 kmpl", "Rs.8.86 Lakh*"],
+  //   varient7: [
+  //     "Sportz IVT DT",
+  //     "1197 cc, Automatic, Petrol, 19.65 kmpl",
+  //     "Rs.8.92 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "Sportz Turbo iMT DT",
+  //     "998 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.8.96 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "Asta DT",
+  //     "1197 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.9.01 Lakh*",
+  //   ],
+  //   varient10: [
+  //     "Asta Opt",
+  //     "1197 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.9.41 Lakh*",
+  //   ],
+  //   varient11: [
+  //     "Asta Opt DT",
+  //     "1197 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.9.56 Lakh*",
+  //   ],
+  //   varient12: [
+  //     "Asta IVT",
+  //     "1197 cc, Automatic, Petrol, 19.65 kmpl",
+  //     "Rs.9.88 Lakh*",
+  //   ],
+  //   varient13: [
+  //     "Asta Turbo iMT",
+  //     "998 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.9.91 Lakh*",
+  //   ],
+  //   varient14: [
+  //     "Asta IVT DT",
+  //     "1197 cc, Automatic, Petrol, 19.65 kmpl",
+  //     "Rs.10.03 Lakh*",
+  //   ],
+  //   varient15: [
+  //     "Asta Turbo iMT DT",
+  //     "1197 cc, Manual, Petrol, 20.35 kmpl",
+  //     "Rs.10.06 Lakh*",
+  //   ],
+  //   varient16: [
+  //     "Asta Turbo DCT",
+  //     "998 cc, Automatic, Petrol, 20.28 kmpl",
+  //     "Rs.10.74 Lakh*",
+  //   ],
+  //   varient17: [
+  //     "Asta Turbo DCT DT",
+  //     "998 cc, Automatic, Petrol, 20.28 kmpl",
+  //     "Rs.10.89 Lakh*",
+  //   ],
+  //   varient18: [
+  //     "Asta Opt Turbo DCT",
+  //     "998 cc, Automatic, Petrol, 20.28 kmpl",
+  //     "Rs.11.25 Lakh*",
+  //   ],
+  //   varient19: [
+  //     "Asta Opt Turbo DCT DT",
+  //     "998 cc, Automatic, Petrol, 20.28 kmpl",
+  //     "Rs.11.40 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "Magna Diesel",
+  //     "1493 cc, Manual, Diesel, 25.2 kmpl",
+  //     "Rs.8.21 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "Sportz Diesel",
+  //     "1493 cc, Manual, Diesel, 25.2 kmpl",
+  //     "Rs.9.01 Lakh*",
+  //   ],
+
+  //   varient3: [
+  //     "Sportz Diesel DT",
+  //     "1493 cc, Manual, Diesel, 25.2 kmpl",
+  //     "Rs.9.16 Lakh*",
+  //   ],
+
+  //   varient4: [
+  //     "Asta Opt Diesel",
+  //     "1493 cc, Manual, Diesel, 25.2 kmpl",
+  //     "Rs.10.61 Lakh*",
+  //   ],
+
+  //   varient5: [
+  //     "Asta Opt Diesel DT",
+  //     "1493 cc, Manual, Diesel, 25.2 kmpl",
+  //     "Rs.10.76 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The i20 has received a price hike of up to Rs 8,000. Hyundai i20 Price: It is priced between Rs 6.91 lakh and Rs 11.40 lakh (ex-showroom Delhi). Hyundai i20 Variants: The i20 is sold in four trims: Magna, Sportz, Asta, and Asta (O). Hyundai i20 Engine and Transmission: It gets the same three engines as the Venue: two petrol and a diesel. The first petrol is a 1.2-litre naturally aspirated engine (83PS/114Nm) and the other is a 1-litre turbo-petrol (120PS/172Nm). The diesel is a 1.5-litre engine (100PS/240Nm). While the 1.2-litre petrol engine is mated to either a 5-speed MT or CVT, the 1-litre turbo-petrol unit gets either a 6-speed iMT (clutchless manual) or a 7-speed DCT, like the Venue. The diesel engine, on the other hand, is paired with a 6-speed MT only. Hyundai i20 Features: The i20 gets LED headlamps, a 10.25-inch touchscreen infotainment system with Apple CarPlay and Android Auto, an air purifier, BlueLink connected car tech, and a sunroof. Hyundai i20 Safety: Safety features include six airbags, rear parking sensors, and electronic stability control. Hyundai i20 Rivals: Hyundai’s premium hatchback competes with the Honda Jazz, Tata Altroz, Volkswagen Polo, Maruti Baleno, and Toyota Glanza.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Looks edgy and aggressive",
+  //     "Powertrain options for every need",
+  //     "Loaded with good quality features",
+  //   ],
+  //   cons: [
+  //     "Turbo-petrol variants priced at a premium",
+  //     "Brakes feel spongy",
+  //     "Suspension should have been better damped",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Fiery Red", "bg-red-800"],
+  //   color2: ["Typhoon Silver", "bg-gray-900"],
+  //   color3: ["Metallic Copper", "bg-gray-600"],
+  //   color4: ["Fiery Red Turbo", "bg-white"],
+  //   color5: ["Starry Night", "bg-blue-800"],
+  //   color6: ["Polar White", "bg-red-400"],
+  //   color7: ["Polar White with Black Roof", "bg-red-400"],
+  //   color8: ["Titan Grey", "bg-red-400"],
+  //   color9: ["Fiery Red with Black Roof", "bg-red-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.81 Lakh onwards",
+  //     "23.2 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "length of 3845, width of 1735 and a wheelbase of 2450",
+  //     "https://imgd.aeplcdn.com/600x600/n/cw/ec/26742/swift-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.34 Lakh onwards",
+  //     "21.96 kmpl",
+  //     "1197 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,745 mm W x 1,510 mm H",
+  //     "https://images.financialexpress.com/2019/06/19-1.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of i20?",
+  //     "The on-road price of i20 in Delhi starts at ‎₹ 7.86 Lakh and goes upto ‎₹ 13.21 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between i20 and Altroz?",
+  //     "i20 price starts at ₹ 6.91 Lakh ex-showroom and It comes with 1197 cc engine. Whereas Altroz price starts at ₹ 5.84 Lakh ex-showroom and It comes with 1199 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Hyundai i20?",
+  //     "The Hyundai i20 mileage is 19.65 - 25.2 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -389,28 +424,28 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
-      "i20 N Line",
-      "₹ 11.00 - 13.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
-      "AX1 micro-SUV",
-      "₹ 4.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
-      "New Kona",
-      "₹ 23.00 - 25.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
-      "New Elantra",
-      "₹ 16.00 - 20.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
+  //     "i20 N Line",
+  //     "₹ 11.00 - 13.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "AX1 micro-SUV",
+  //     "₹ 4.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
+  //     "New Kona",
+  //     "₹ 23.00 - 25.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
+  //     "New Elantra",
+  //     "₹ 16.00 - 20.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

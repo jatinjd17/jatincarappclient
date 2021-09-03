@@ -32,151 +32,186 @@ import { TScorpio } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Mahindra";
-  const CarPrice = "₹ 12.66 Lakh";
-  const TopPic = Scorpio;
-  const CarName = "Mahindra Scorpio";
-  const OnlyName = "Scorpio";
-  const ThumPic = TScorpio;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 12.66 Lakh onwards",
-    "15 kmpl",
-    "2179 cc",
-    "Manual",
-    "Diesel",
-    "7 Seater",
-    "4,456 mm L x 1,820 mm W x 1,995 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Dual airbags",
+  const SafetyFeatures = joy.SafetyFeatures;
 
-    "Rear parking sensors",
+  const VarientPetrol = joy.VarientPetrol;
 
-    "Seatbelt reminders for the driver and front passenger",
+  const VarientDiesel = joy.VarientDiesel;
 
-    "A speed warning system (at 80kmph and 120kmph)",
+  const VarientCNG = joy.VarientCNG;
 
-    "A manual override for the central locking system",
-  ];
+  const Mileage = joy.Mileage;
 
-  const VarientPetrol = {};
+  const LatestUpdate = joy.LatestUpdate;
 
-  const VarientDiesel = {
-    varient1: [
-      "S3 Plus",
-      "2179 cc, Manual, Diesel, 15.0 kmpl",
-      "Rs.12.59 Lakh*",
-    ],
-    varient2: [
-      "S3 Plus 9 Seater",
-      "2179 cc, Manual, Diesel, 15.0 kmpl",
-      "Rs.12.59 Lakh*",
-    ],
-    varient3: ["S5", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.13.30 Lakh*"],
-    varient4: ["S7", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.15.52 Lakh*"],
-    varient5: ["S9", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.16.14 Lakh*"],
-    varient6: ["S11", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.17.39 Lakh*"],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const VarientCNG = {};
+  const Colorss = joy.Colorss;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const LatestUpdate = [
-    "Latest Update: Mahindra has increased the prices of the Scorpio by up to Rs 37,000. Mahindra Scorpio Price: The Scorpio is priced from Rs 12.59 lakh to Rs 17.39 lakh (ex-showroom Delhi). Mahindra Scorpio Variants: Mahindra sells the SUV in five trims: S3+, S5, S7, S9, and S11. Mahindra Scorpio Seating Capacity: It can seat up to nine occupants. Mahindra Scorpio Engine and Transmission: The SUV is powered by a 2.2-litre diesel engine available in two states of tune: 120PS/280Nm and 140PS/319Nm. Mahindra offers the former in the new base-spec S3+ variant, whereas the higher tuned engine comes with the other variants. While the S3+ variant gets a 5-speed MT, the remaining variants come mated to a 6-speed manual gearbox. Mahindra Scorpio Features: The Scorpio gets cruise control, auto AC, a 7-inch touchscreen infotainment system with Bluetooth and AUX connectivity, and auto headlamps with LED DRLs. Mahindra Scorpio Safety: Standard safety features on offer include dual front airbags, rear parking sensors, ABS, and speed alert. Mahindra Scorpio Rivals: While the Scorpio uses a ladder-frame chassis and has no direct rivals as such, you can check out other similarly priced compact SUVs, such as the Hyundai Creta, Renault Duster, Skoda Kushaq, Nissan Kicks, Kia Seltos and Volkswagen Taigun that use a monocoque chassis. Mahindra Scorpio 2022: Mahindra is expected to launch the new-gen Scorpio by January 2022.",
-  ];
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ProsCons = {
-    pros: [
-      "The Mahindra Scorpio commands loads of road presence, aggressive styling and an abuse-friendly structure.",
-      "With a starting price of Rs 9.99 lakh (ex-showroom Delhi), the Scorpio is on of the most affordable 7-seater SUVs in the country",
-      "Unlike many of its rivals, the Scorpio comes with proper shift on fly 4WD system.",
-    ],
-    cons: ["Noisy cabin", "Utilitarian layout", "Bare bone features"],
-  };
+  const faqs = joy.faqs;
 
-  const Colorss = {
-    color1: ["Pearl White", "bg-blue-600"],
-    color2: ["Molten Red Rage", "bg-gray-400"],
-    color3: ["Napoli Black", "bg-gray-400"],
-    color4: ["Dsat Silver", "bg-gray-400"],
-  };
+  const articles = joy.articles;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.18 Lakh onwards",
-      "13.96 to 17.41 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4655 mm in length, 1835 mm in width and 1760 mm in height",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  // const CompanyName = "Mahindra";
+  // const CarPrice = "₹ 12.66 Lakh";
+  // const TopPic = Scorpio;
+  // const CarName = "Mahindra Scorpio";
+  // const OnlyName = "Scorpio";
+  // const ThumPic = TScorpio;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Scorpio?",
-      "The on-road price of Scorpio in Delhi starts at ‎₹ 15.22 Lakh and goes upto ‎₹ 20.66 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Scorpio and XUV500?",
-      "Scorpio price starts at ₹ 12.66 Lakh ex-showroom and It comes with 2179 cc engine. Whereas XUV500 price starts at ₹ 14.27 Lakh ex-showroom and It comes with 2179 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Mahindra Scorpio?",
-      "The Mahindra Scorpio mileage is 15 kmpl.",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 12.66 Lakh onwards",
+  //   "15 kmpl",
+  //   "2179 cc",
+  //   "Manual",
+  //   "Diesel",
+  //   "7 Seater",
+  //   "4,456 mm L x 1,820 mm W x 1,995 mm H",
+  // ];
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "Dual airbags",
+
+  //   "Rear parking sensors",
+
+  //   "Seatbelt reminders for the driver and front passenger",
+
+  //   "A speed warning system (at 80kmph and 120kmph)",
+
+  //   "A manual override for the central locking system",
+  // ];
+
+  // const VarientPetrol = {};
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "S3 Plus",
+  //     "2179 cc, Manual, Diesel, 15.0 kmpl",
+  //     "Rs.12.59 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "S3 Plus 9 Seater",
+  //     "2179 cc, Manual, Diesel, 15.0 kmpl",
+  //     "Rs.12.59 Lakh*",
+  //   ],
+  //   varient3: ["S5", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.13.30 Lakh*"],
+  //   varient4: ["S7", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.15.52 Lakh*"],
+  //   varient5: ["S9", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.16.14 Lakh*"],
+  //   varient6: ["S11", "2179 cc, Manual, Diesel, 15.0 kmpl", "Rs.17.39 Lakh*"],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Mahindra has increased the prices of the Scorpio by up to Rs 37,000. Mahindra Scorpio Price: The Scorpio is priced from Rs 12.59 lakh to Rs 17.39 lakh (ex-showroom Delhi). Mahindra Scorpio Variants: Mahindra sells the SUV in five trims: S3+, S5, S7, S9, and S11. Mahindra Scorpio Seating Capacity: It can seat up to nine occupants. Mahindra Scorpio Engine and Transmission: The SUV is powered by a 2.2-litre diesel engine available in two states of tune: 120PS/280Nm and 140PS/319Nm. Mahindra offers the former in the new base-spec S3+ variant, whereas the higher tuned engine comes with the other variants. While the S3+ variant gets a 5-speed MT, the remaining variants come mated to a 6-speed manual gearbox. Mahindra Scorpio Features: The Scorpio gets cruise control, auto AC, a 7-inch touchscreen infotainment system with Bluetooth and AUX connectivity, and auto headlamps with LED DRLs. Mahindra Scorpio Safety: Standard safety features on offer include dual front airbags, rear parking sensors, ABS, and speed alert. Mahindra Scorpio Rivals: While the Scorpio uses a ladder-frame chassis and has no direct rivals as such, you can check out other similarly priced compact SUVs, such as the Hyundai Creta, Renault Duster, Skoda Kushaq, Nissan Kicks, Kia Seltos and Volkswagen Taigun that use a monocoque chassis. Mahindra Scorpio 2022: Mahindra is expected to launch the new-gen Scorpio by January 2022.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "The Mahindra Scorpio commands loads of road presence, aggressive styling and an abuse-friendly structure.",
+  //     "With a starting price of Rs 9.99 lakh (ex-showroom Delhi), the Scorpio is on of the most affordable 7-seater SUVs in the country",
+  //     "Unlike many of its rivals, the Scorpio comes with proper shift on fly 4WD system.",
+  //   ],
+  //   cons: ["Noisy cabin", "Utilitarian layout", "Bare bone features"],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Pearl White", "bg-blue-600"],
+  //   color2: ["Molten Red Rage", "bg-gray-400"],
+  //   color3: ["Napoli Black", "bg-gray-400"],
+  //   color4: ["Dsat Silver", "bg-gray-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.18 Lakh onwards",
+  //     "13.96 to 17.41 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4655 mm in length, 1835 mm in width and 1760 mm in height",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Scorpio?",
+  //     "The on-road price of Scorpio in Delhi starts at ‎₹ 15.22 Lakh and goes upto ‎₹ 20.66 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Scorpio and XUV500?",
+  //     "Scorpio price starts at ₹ 12.66 Lakh ex-showroom and It comes with 2179 cc engine. Whereas XUV500 price starts at ₹ 14.27 Lakh ex-showroom and It comes with 2179 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Mahindra Scorpio?",
+  //     "The Mahindra Scorpio mileage is 15 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -244,43 +279,43 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
-      "XUV 700",
-      "₹ 13.00 - 20.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
-      "TUV 300 Plus",
-      "₹ 10.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
-      "e20 NXT",
-      "₹ 6.00 - 8.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
-      "Mahindra S204",
-      "₹ 11.00 - 15.00 Lakh",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
-      "eXUV300",
-      "₹ 14.00 - 16.00 Lakh",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
-      "New Scorpio",
-      "₹ 10.00 - 14.00 Lakh",
-    ],
-    car7: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
-      "eKUV100",
-      "₹ 8.00 - 9.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/42355/xuv700-exterior-left-front-three-quarter.jpeg?isig=0&q=85",
+  //     "XUV 700",
+  //     "₹ 13.00 - 20.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/41157/Mahindra-TUV300-Plus-Facelift-Exterior-163347.jpg?wm=0&q=85",
+  //     "TUV 300 Plus",
+  //     "₹ 10.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33297/Mahindra-e20-NXT-Exterior-120569.jpg?wm=0&q=85",
+  //     "e20 NXT",
+  //     "₹ 6.00 - 8.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/42453/Mahindra-S204-Exterior-171413.jpg?wm=0&q=85",
+  //     "Mahindra S204",
+  //     "₹ 11.00 - 15.00 Lakh",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45278/mahindra-exuv300-left-side-view0.jpeg?q=85",
+  //     "eXUV300",
+  //     "₹ 14.00 - 16.00 Lakh",
+  //   ],
+  //   car6: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/40432/Mahindra-New-Scorpio-Exterior-159617.jpg?wm=0&q=85",
+  //     "New Scorpio",
+  //     "₹ 10.00 - 14.00 Lakh",
+  //   ],
+  //   car7: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/33261/Mahindra-eKUV100-Exterior-170053.jpg?wm=0&q=85",
+  //     "eKUV100",
+  //     "₹ 8.00 - 9.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -33,189 +33,224 @@ import Head from "next/head";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 7.51 Lakh";
-  const TopPic = Brezza;
-  const CarName = "Maruti Vitara Brezza";
-  const OnlyName = "Brezza";
-  const ThumPic = TBrezza;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 7.51 Lakh onwards",
-    "17.03 to 18.76 kmpl",
-    "1462 cc",
-    "Manual",
-    "Petrol",
-    "5 Seater",
-    "3,995 mm L x 1,790 mm W x 1,640 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-    "Driver frontal airbag, Front passenger frontal airbag",
-    "Door Ajar Warning.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "LXI",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.7.51 Lakh*",
-    ],
-    varient2: [
-      "VXI",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.8.57 Lakh*",
-    ],
-    varient3: [
-      "ZXI",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.9.32 Lakh*",
-    ],
-    varient4: [
-      "ZXI PLUS",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.9.86 Lakh*",
-    ],
-    varient5: [
-      "VXi AT SHVS",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.9.88 Lakh*",
-    ],
-    varient6: [
-      "ZXI PLUS Dual Tone",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.10.00 Lakh*",
-    ],
-    varient7: [
-      "ZXi AT SHVS",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.10.63 Lakh*",
-    ],
-    varient8: [
-      "ZXi PLUS AT SHVS",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.11.26 Lakh*",
-    ],
-    varient9: [
-      "ZXi PLUS AT DualTone",
-      "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
-      "Rs.11.42 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1462 cc)", "Manual", "17.03 to 18.76 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Maruti is offering discounts of up to Rs 39,000 on the Vitara Brezza this July. Maruti Vitara Brezza Price: The Vitara Brezza is priced between Rs 7.51 lakh and Rs 11.41 lakh (ex-showroom Delhi). Maruti Vitara Brezza Variants: It is sold in four trims: LXi, VXi, ZXi, and ZXi+. Maruti Vitara Brezza Seating Capacity: The sub-4m SUV can seat up to five people. Maruti Vitara Brezza Engine and Transmission: It gets a 1.5-litre petrol engine (105PS/138Nm) paired with either a 5-speed manual or a 4-speed AT. Maruti Vitara Brezza Features: The SUV is equipped with cruise control, a height-adjustable driver’s seat, auto AC, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, rain-sensing wipers, and push-button start/stop. Maruti Vitara Brezza Safety: Safety features include dual front airbags, ABS with EBD, and rear parking sensors.  Maruti Vitara Brezza Rivals: It goes up against the Toyota Urban Cruiser, Mahindra XUV300, Hyundai Venue, Tata Nexon, Ford EcoSport, Renault Kiger, Nissan Magnite, and Kia Sonet.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Smooth petrol engine is relaxing and fun!",
-      "Comfortable ride quality. Tackles bumps, potholes much better.",
-      "Spacious cabin for a family of five. Ample boot space too.",
-    ],
-    cons: [
-      "Old-school 4-speed automatic feels slow on inclines and highways.",
-      "Missing features: sunroof, rear-AC vents, side and curtain airbags.",
-      "No option of a diesel engine.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Torque Blue", "bg-blue-600"],
-    color2: ["PREMIUM SILVER", "bg-gray-400"],
-    color3: ["Pearl Artic White", "bg-white"],
-    color4: ["Sizzling Red With Midnight Black Roof", "bg-red-600"],
-    color5: ["Granite Grey", "bg-gray-800"],
-    color6: ["Granite Grey with Autumn Orange Roof", "bg-gray-800"],
-    color7: ["Autumn Orange", "bg-orange-800"],
-    color8: ["Torque Blue With Midnight Black Roof", "bg-blue-800"],
-    color9: ["Sizzling Red", "bg-red-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 6.92 Lakh Onwards",
-      "17.52 to 23.4 kmpl",
-      "998 to 1493 cc",
-      "Clutchless Manual & Automatic (Dual Clutch)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,770 mm W x 1,590 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-    ],
-    comparisioncar2: [
-      "₹7.20 Lakh onwards",
-      "16 to 22.4 kmpl",
-      "1199 to 1497 cc",
-      "Manual & AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Vitara Brezza?",
-      "The on-road price of Vitara Brezza in Delhi starts at ‎₹ 8.49 Lakh and goes upto ‎₹ 13.24 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Vitara Brezza and Venue?",
-      "Vitara Brezza price starts at ₹ 7.51 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Venue price starts at ₹ 6.92 Lakh ex-showroom and It comes with 998 cc engine. Compare the two models to identify the best car for you",
-    ],
-    question3: [
-      "What is price of Vitara Brezza top model?",
-      "Top model of Vitara Brezza is ZXI Plus AT Dual Tone and the ex-showroom for Vitara Brezza ZXI Plus AT Dual Tone is ₹ 11.42 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 7.51 Lakh";
+  // const TopPic = Brezza;
+  // const CarName = "Maruti Vitara Brezza";
+  // const OnlyName = "Brezza";
+  // const ThumPic = TBrezza;
+
+  // const KeySpecification = [
+  //   "₹ 7.51 Lakh onwards",
+  //   "17.03 to 18.76 kmpl",
+  //   "1462 cc",
+  //   "Manual",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,790 mm W x 1,640 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  //   "Driver frontal airbag, Front passenger frontal airbag",
+  //   "Door Ajar Warning.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "LXI",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.7.51 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "VXI",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.8.57 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "ZXI",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.9.32 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "ZXI PLUS",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.9.86 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "VXi AT SHVS",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.9.88 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "ZXI PLUS Dual Tone",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.10.00 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "ZXi AT SHVS",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.10.63 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "ZXi PLUS AT SHVS",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.11.26 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "ZXi PLUS AT DualTone",
+  //     "1462 cc, Manual, Petrol, 17.03 to 18.76 kmpl",
+  //     "Rs.11.42 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1462 cc)", "Manual", "17.03 to 18.76 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Maruti is offering discounts of up to Rs 39,000 on the Vitara Brezza this July. Maruti Vitara Brezza Price: The Vitara Brezza is priced between Rs 7.51 lakh and Rs 11.41 lakh (ex-showroom Delhi). Maruti Vitara Brezza Variants: It is sold in four trims: LXi, VXi, ZXi, and ZXi+. Maruti Vitara Brezza Seating Capacity: The sub-4m SUV can seat up to five people. Maruti Vitara Brezza Engine and Transmission: It gets a 1.5-litre petrol engine (105PS/138Nm) paired with either a 5-speed manual or a 4-speed AT. Maruti Vitara Brezza Features: The SUV is equipped with cruise control, a height-adjustable driver’s seat, auto AC, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, rain-sensing wipers, and push-button start/stop. Maruti Vitara Brezza Safety: Safety features include dual front airbags, ABS with EBD, and rear parking sensors.  Maruti Vitara Brezza Rivals: It goes up against the Toyota Urban Cruiser, Mahindra XUV300, Hyundai Venue, Tata Nexon, Ford EcoSport, Renault Kiger, Nissan Magnite, and Kia Sonet.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Smooth petrol engine is relaxing and fun!",
+  //     "Comfortable ride quality. Tackles bumps, potholes much better.",
+  //     "Spacious cabin for a family of five. Ample boot space too.",
+  //   ],
+  //   cons: [
+  //     "Old-school 4-speed automatic feels slow on inclines and highways.",
+  //     "Missing features: sunroof, rear-AC vents, side and curtain airbags.",
+  //     "No option of a diesel engine.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Torque Blue", "bg-blue-600"],
+  //   color2: ["PREMIUM SILVER", "bg-gray-400"],
+  //   color3: ["Pearl Artic White", "bg-white"],
+  //   color4: ["Sizzling Red With Midnight Black Roof", "bg-red-600"],
+  //   color5: ["Granite Grey", "bg-gray-800"],
+  //   color6: ["Granite Grey with Autumn Orange Roof", "bg-gray-800"],
+  //   color7: ["Autumn Orange", "bg-orange-800"],
+  //   color8: ["Torque Blue With Midnight Black Roof", "bg-blue-800"],
+  //   color9: ["Sizzling Red", "bg-red-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 6.92 Lakh Onwards",
+  //     "17.52 to 23.4 kmpl",
+  //     "998 to 1493 cc",
+  //     "Clutchless Manual & Automatic (Dual Clutch)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,770 mm W x 1,590 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹7.20 Lakh onwards",
+  //     "16 to 22.4 kmpl",
+  //     "1199 to 1497 cc",
+  //     "Manual & AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3993 mm L x 1811 mm W x 1606 mm H, 2498mm WB",
+  //     "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Vitara Brezza?",
+  //     "The on-road price of Vitara Brezza in Delhi starts at ‎₹ 8.49 Lakh and goes upto ‎₹ 13.24 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Vitara Brezza and Venue?",
+  //     "Vitara Brezza price starts at ₹ 7.51 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Venue price starts at ₹ 6.92 Lakh ex-showroom and It comes with 998 cc engine. Compare the two models to identify the best car for you",
+  //   ],
+  //   question3: [
+  //     "What is price of Vitara Brezza top model?",
+  //     "Top model of Vitara Brezza is ZXI Plus AT Dual Tone and the ex-showroom for Vitara Brezza ZXI Plus AT Dual Tone is ₹ 11.42 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -273,23 +308,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

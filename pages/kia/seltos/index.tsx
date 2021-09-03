@@ -32,216 +32,251 @@ import { TSeltos } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Kia";
-  const CarPrice = "₹ 9.96 Lakh";
-  const TopPic = Seltos;
-  const CarName = "Kia Seltos";
-  const OnlyName = "Seltos";
-  const ThumPic = TSeltos;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 9.96 Lakh onwards",
-    "16.1 to 20.86 kmpl",
-    "1353 to 1497 cc",
-    "Manual, Clutchless Manual, Automatic (Torque Converter), Automatic (CVT) & Automatic (Dual Clutch)",
-    "Petrol & Diesel",
-    "5 Seater",
-    "4,315 mm L x 1,800 mm W x 1,620-1,630 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Impact Sensing Auto Door Unlock",
-    "6 airbags",
-    "ABS",
-    "EBD",
-    "Central Locking",
-    "Emergency Stop Signal",
-    "Driver & Passenger SeatBelt Reminder",
-    "Speed Sensing Auto Door Lock",
-    "Headlamp Escort Function",
-    "ISOFIX",
-    "Speed Alert System",
-    "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["HTE G", "1497 cc, Manual, Petrol, 16.8 kmpl", "Rs.9.95 Lakh*"],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient2: ["HTK G", "1497 cc, Manual, Petrol, 16.8 kmpl", "Rs.10.74 Lakh*"],
-    varient3: [
-      "HTK Plus G",
-      "1497 cc, Manual, Petrol, 16.8 kmpl",
-      "Rs.11.79 Lakh*",
-    ],
-    varient4: [
-      "HTK Plus iMT",
-      "1497 cc, Manual, Petrol, 16.8 kmpl",
-      "Rs.12.19 Lakh*",
-    ],
-    varient5: ["HTX G", "1497 cc, Manual, Petrol, 16.8 kmpl", "Rs.13.65 Lakh*"],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient6: [
-      "HTX IVT G",
-      "1497 cc, Manual, Petrol, 16.8 kmpl",
-      "Rs.14.65 Lakh*",
-    ],
-    varient7: [
-      "GTX Option",
-      "1353 cc, Manual, Petrol, 16.1 kmpl",
-      "Rs.15.35 Lakh*",
-    ],
-    varient8: [
-      "GTX Plus",
-      "1353 cc, Manual, Petrol, 16.1 kmpl",
-      "Rs.16.65 Lakh*",
-    ],
-    varient9: [
-      "GTX Plus DCT",
-      "1353 cc, Automatic, Petrol, 16.8 kmpl",
-      "Rs.17.44 Lakh*",
-    ],
-  };
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientDiesel = {
-    varient1: ["HTE D", "1493 cc, Manual, Diesel, 20.8 kmpl", "Rs.10.45 Lakh*"],
-    varient2: ["HTK D", "1493 cc, Manual, Diesel, 20.8 kmpl", "Rs.11.79 Lakh*"],
+  const Mileage = joy.Mileage;
 
-    varient3: [
-      "HTK Plus D",
-      "1493 cc, Manual, Diesel, 20.8 kmpl",
-      "Rs.12.99 Lakh*",
-    ],
+  const LatestUpdate = joy.LatestUpdate;
 
-    varient4: [
-      "HTK Plus AT D",
-      "1493 cc, Automatic, Diesel, 17.8 kmpl",
-      "Rs.13.95 Lakh*",
-    ],
+  const ProsCons = joy.ProsCons;
 
-    varient5: ["HTX D", "1493 cc, Manual, Diesel, 20.8 kmpl", "Rs.14.75 Lakh*"],
+  const Colorss = joy.Colorss;
 
-    varient6: [
-      "HTX Plus D",
-      "1493 cc, Manual, Diesel, 20.8 kmpl",
-      "Rs.15.79 Lakh*",
-    ],
+  const ComparisionCar = joy.ComparisionCar;
 
-    varient7: [
-      "GTX Plus AT D",
-      "1493 cc, Automatic, Diesel, 17.8 kmpl",
-      "Rs.17.65 Lakh*",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const VarientCNG = {};
+  const faqs = joy.faqs;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Automatic", "31.59 km/kg"],
-  };
+  const articles = joy.articles;
 
-  const LatestUpdate = [
-    "Latest Update: Kia has launched the updated Seltos. Kia Seltos Price: The 2021 Seltos is priced between Rs 9.95 lakh and Rs 17.85 lakh (ex-showroom). Kia Seltos Variants: It is offered in two trims: Tech (HT) Line and GT Line. While the former has five variants (HTE, HTK, HTK+, HTX, and HTX+), the latter has only two [GTX(O) and GTX+]. Kia Seltos Seating Capacity: The Seltos can seat up to five people. Kia Seltos Powertrains: It comes with three engine options: 1.5-litre petrol (115PS/144Nm), 1.4-litre turbocharged petrol (140PS/242Nm), and 1.5-litre diesel (115PS/250Nm). A 6-speed manual gearbox is offered as standard with all three engines. It also gets optional automatic transmissions: a 7-speed DCT (1.4-litre turbo-petrol), a CVT (1.5-litre petrol), and a 6-speed torque converter unit (1.5-litre diesel). The 1.5-litre petrol engine also gets a 6-speed iMT (clutchless manual) gearbox. Kia claims a fuel efficiency of 16.5kmpl for the petrol-manual and 16.8kmpl for the petrol-CVT variants. The diesel-manual’s claimed fuel efficiency figure stands at 21kmpl, while the 6-speed AT’s stands at 18kmpl. The 1.4-litre turbo-petrol, paired with the DCT, offers a claimed mileage of 16.5kmpl, while the manual returns 16.1kmpl. Kia Seltos Features: The Seltos packs a 10.25-inch touchscreen infotainment system along with Kia's UVO connected car technology, an air purifier, ambient lighting, and an 8-inch head-up display. It also gets ventilated front seats, a power-adjustable driver’s seat, a 7-inch multi-information display, an 8-speaker Bose sound system, and a sunroof. It comes with smartwatch connectivity, smart-key remote engine start, and a 'Hello Kia' wake up command as well. Kia Seltos Safety: It gets up to six airbags, ABS with EBD, brake assist, emergency stop signal, vehicle stability management (VSM), electronic stability control (ESC), and hill assist control (HAC). Kia Seltos Rivals: Kia’s compact SUV competes with the Hyundai Creta, Renault Duster, Nissan Kicks, Maruti Suzuki S-Cross, Skoda Kushaq, and Volkswagen Taigun. If you wish to buy a more rugged SUV, you can check out the Mahindra Scorpio.",
-  ];
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const ProsCons = {
-    pros: [
-      "Cabin build and quality",
-      "Lots to choose from",
-      "Automatics with all three engines",
-    ],
-    cons: [
-      "Underthigh support",
-      "No 6 airbag option with diesel variants",
-      "Poor Build Quality",
-    ],
-  };
+  // const CompanyName = "Kia";
+  // const CarPrice = "₹ 9.96 Lakh";
+  // const TopPic = Seltos;
+  // const CarName = "Kia Seltos";
+  // const OnlyName = "Seltos";
+  // const ThumPic = TSeltos;
 
-  const Colorss = {
-    color1: ["Intense Red", "bg-red-800"],
-    color2: ["Punchy Orange", "bg-gray-900"],
-    color3: ["Glacier White Pearl", "bg-gray-600"],
-    color4: ["Punchy Orange With Clear White", "bg-gray-600"],
-    color5: ["Steel Silver", "bg-gray-600"],
-    color6: ["Aurora Black Pearl", "bg-gray-600"],
-    color7: ["Glacier White Pearl With Punchy Orange", "bg-gray-600"],
-    color8: ["Intelligence Blue", "bg-gray-600"],
-    color9: ["Steel Silver With Punchy Orange", "bg-gray-600"],
-    color10: ["Glacier White Pearl With Aurora Black Pearl", "bg-gray-600"],
-    color11: ["Gravity Gray", "bg-gray-600"],
-    color12: ["Intense Red With Aurora Black Pearl", "bg-gray-600"],
-  };
+  // const KeySpecification = [
+  //   "₹ 9.96 Lakh onwards",
+  //   "16.1 to 20.86 kmpl",
+  //   "1353 to 1497 cc",
+  //   "Manual, Clutchless Manual, Automatic (Torque Converter), Automatic (CVT) & Automatic (Dual Clutch)",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "4,315 mm L x 1,800 mm W x 1,620-1,630 mm H",
+  // ];
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.63 Lakh onwards",
-      "16.6 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "6-7 Seater",
-      "4,720 mm L x 1,835 mm W x 1,760 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "Impact Sensing Auto Door Unlock",
+  //   "6 airbags",
+  //   "ABS",
+  //   "EBD",
+  //   "Central Locking",
+  //   "Emergency Stop Signal",
+  //   "Driver & Passenger SeatBelt Reminder",
+  //   "Speed Sensing Auto Door Lock",
+  //   "Headlamp Escort Function",
+  //   "ISOFIX",
+  //   "Speed Alert System",
+  //   "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
+  // ];
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  // const VarientPetrol = {
+  //   varient1: ["HTE G", "1497 cc, Manual, Petrol, 16.8 kmpl", "Rs.9.95 Lakh*"],
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Seltos?",
-      "The on-road price of Seltos in Delhi starts at ‎₹ 11.13 Lakh and goes upto ‎₹ 20.98 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Seltos and Creta?",
-      "Seltos price starts at ₹ 9.96 Lakh ex-showroom and It comes with 1497 cc engine. Whereas Creta price starts at ₹ 10.15 Lakh ex-showroom and It comes with 1497 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Kia Seltos?",
-      "The Kia Seltos mileage is 16.1 - 20.86 kmpl.",
-    ],
-  };
+  //   varient2: ["HTK G", "1497 cc, Manual, Petrol, 16.8 kmpl", "Rs.10.74 Lakh*"],
+  //   varient3: [
+  //     "HTK Plus G",
+  //     "1497 cc, Manual, Petrol, 16.8 kmpl",
+  //     "Rs.11.79 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "HTK Plus iMT",
+  //     "1497 cc, Manual, Petrol, 16.8 kmpl",
+  //     "Rs.12.19 Lakh*",
+  //   ],
+  //   varient5: ["HTX G", "1497 cc, Manual, Petrol, 16.8 kmpl", "Rs.13.65 Lakh*"],
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  //   varient6: [
+  //     "HTX IVT G",
+  //     "1497 cc, Manual, Petrol, 16.8 kmpl",
+  //     "Rs.14.65 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "GTX Option",
+  //     "1353 cc, Manual, Petrol, 16.1 kmpl",
+  //     "Rs.15.35 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "GTX Plus",
+  //     "1353 cc, Manual, Petrol, 16.1 kmpl",
+  //     "Rs.16.65 Lakh*",
+  //   ],
+  //   varient9: [
+  //     "GTX Plus DCT",
+  //     "1353 cc, Automatic, Petrol, 16.8 kmpl",
+  //     "Rs.17.44 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: ["HTE D", "1493 cc, Manual, Diesel, 20.8 kmpl", "Rs.10.45 Lakh*"],
+  //   varient2: ["HTK D", "1493 cc, Manual, Diesel, 20.8 kmpl", "Rs.11.79 Lakh*"],
+
+  //   varient3: [
+  //     "HTK Plus D",
+  //     "1493 cc, Manual, Diesel, 20.8 kmpl",
+  //     "Rs.12.99 Lakh*",
+  //   ],
+
+  //   varient4: [
+  //     "HTK Plus AT D",
+  //     "1493 cc, Automatic, Diesel, 17.8 kmpl",
+  //     "Rs.13.95 Lakh*",
+  //   ],
+
+  //   varient5: ["HTX D", "1493 cc, Manual, Diesel, 20.8 kmpl", "Rs.14.75 Lakh*"],
+
+  //   varient6: [
+  //     "HTX Plus D",
+  //     "1493 cc, Manual, Diesel, 20.8 kmpl",
+  //     "Rs.15.79 Lakh*",
+  //   ],
+
+  //   varient7: [
+  //     "GTX Plus AT D",
+  //     "1493 cc, Automatic, Diesel, 17.8 kmpl",
+  //     "Rs.17.65 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Automatic", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Kia has launched the updated Seltos. Kia Seltos Price: The 2021 Seltos is priced between Rs 9.95 lakh and Rs 17.85 lakh (ex-showroom). Kia Seltos Variants: It is offered in two trims: Tech (HT) Line and GT Line. While the former has five variants (HTE, HTK, HTK+, HTX, and HTX+), the latter has only two [GTX(O) and GTX+]. Kia Seltos Seating Capacity: The Seltos can seat up to five people. Kia Seltos Powertrains: It comes with three engine options: 1.5-litre petrol (115PS/144Nm), 1.4-litre turbocharged petrol (140PS/242Nm), and 1.5-litre diesel (115PS/250Nm). A 6-speed manual gearbox is offered as standard with all three engines. It also gets optional automatic transmissions: a 7-speed DCT (1.4-litre turbo-petrol), a CVT (1.5-litre petrol), and a 6-speed torque converter unit (1.5-litre diesel). The 1.5-litre petrol engine also gets a 6-speed iMT (clutchless manual) gearbox. Kia claims a fuel efficiency of 16.5kmpl for the petrol-manual and 16.8kmpl for the petrol-CVT variants. The diesel-manual’s claimed fuel efficiency figure stands at 21kmpl, while the 6-speed AT’s stands at 18kmpl. The 1.4-litre turbo-petrol, paired with the DCT, offers a claimed mileage of 16.5kmpl, while the manual returns 16.1kmpl. Kia Seltos Features: The Seltos packs a 10.25-inch touchscreen infotainment system along with Kia's UVO connected car technology, an air purifier, ambient lighting, and an 8-inch head-up display. It also gets ventilated front seats, a power-adjustable driver’s seat, a 7-inch multi-information display, an 8-speaker Bose sound system, and a sunroof. It comes with smartwatch connectivity, smart-key remote engine start, and a 'Hello Kia' wake up command as well. Kia Seltos Safety: It gets up to six airbags, ABS with EBD, brake assist, emergency stop signal, vehicle stability management (VSM), electronic stability control (ESC), and hill assist control (HAC). Kia Seltos Rivals: Kia’s compact SUV competes with the Hyundai Creta, Renault Duster, Nissan Kicks, Maruti Suzuki S-Cross, Skoda Kushaq, and Volkswagen Taigun. If you wish to buy a more rugged SUV, you can check out the Mahindra Scorpio.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Cabin build and quality",
+  //     "Lots to choose from",
+  //     "Automatics with all three engines",
+  //   ],
+  //   cons: [
+  //     "Underthigh support",
+  //     "No 6 airbag option with diesel variants",
+  //     "Poor Build Quality",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Intense Red", "bg-red-800"],
+  //   color2: ["Punchy Orange", "bg-gray-900"],
+  //   color3: ["Glacier White Pearl", "bg-gray-600"],
+  //   color4: ["Punchy Orange With Clear White", "bg-gray-600"],
+  //   color5: ["Steel Silver", "bg-gray-600"],
+  //   color6: ["Aurora Black Pearl", "bg-gray-600"],
+  //   color7: ["Glacier White Pearl With Punchy Orange", "bg-gray-600"],
+  //   color8: ["Intelligence Blue", "bg-gray-600"],
+  //   color9: ["Steel Silver With Punchy Orange", "bg-gray-600"],
+  //   color10: ["Glacier White Pearl With Aurora Black Pearl", "bg-gray-600"],
+  //   color11: ["Gravity Gray", "bg-gray-600"],
+  //   color12: ["Intense Red With Aurora Black Pearl", "bg-gray-600"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.63 Lakh onwards",
+  //     "16.6 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "6-7 Seater",
+  //     "4,720 mm L x 1,835 mm W x 1,760 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Seltos?",
+  //     "The on-road price of Seltos in Delhi starts at ‎₹ 11.13 Lakh and goes upto ‎₹ 20.98 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Seltos and Creta?",
+  //     "Seltos price starts at ₹ 9.96 Lakh ex-showroom and It comes with 1497 cc engine. Whereas Creta price starts at ₹ 10.15 Lakh ex-showroom and It comes with 1497 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Kia Seltos?",
+  //     "The Kia Seltos mileage is 16.1 - 20.86 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -279,28 +314,28 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-7-Seater/8424/1619518563355/front-left-side-47.jpg?tr=w-456",
-      "Kia Seltos 7-Seater",
-      "₹ 12.00 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carnival-2021/7886/1614601829878/front-left-side-47.jpg?tr=w-456",
-      "Carnival 2022",
-      "Rs.26.00 Lakh*",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Sportage/5860/1623155125464/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Sportage",
-      "Rs.25.00 Lakh*",
-    ],
-    car4: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Kia-Ceed/6220/1558590662958/front-left-side-47.jpg?tr=w-456",
-      "Ceed",
-      "Rs.9.00 Lakh*",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-7-Seater/8424/1619518563355/front-left-side-47.jpg?tr=w-456",
+  //     "Kia Seltos 7-Seater",
+  //     "₹ 12.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carnival-2021/7886/1614601829878/front-left-side-47.jpg?tr=w-456",
+  //     "Carnival 2022",
+  //     "Rs.26.00 Lakh*",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Sportage/5860/1623155125464/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Sportage",
+  //     "Rs.25.00 Lakh*",
+  //   ],
+  //   car4: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Kia-Ceed/6220/1558590662958/front-left-side-47.jpg?tr=w-456",
+  //     "Ceed",
+  //     "Rs.9.00 Lakh*",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -32,201 +32,236 @@ import { TVerna } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Hyundai";
-  const CarPrice = "₹ 9.28 Lakh";
-  const TopPic = Verna;
-  const CarName = "Hyundai Verna";
-  const OnlyName = "Verna";
-  const ThumPic = TVerna;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 9.28 Lakh onwards",
-    "17.7 to 25 kmpl",
-    "998 to 1497 cc",
-    "Manual, Automatic (CVT), Automatic (Torque Converter) & Automatic (Dual Clutch)",
-    "Petrol & Diesel",
-    "5 Seater",
-    "4,440 mm L x 1,729 mm W x 1,475 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Impact Sensing Auto Door Unlock",
-    "6 airbags",
-    "ABS",
-    "EBD",
-    "Central Locking",
-    "Emergency Stop Signal",
-    "Driver & Passenger SeatBelt Reminder",
-    "Speed Sensing Auto Door Lock",
-    "Headlamp Escort Function",
-    "ISOFIX",
-    "Speed Alert System",
-    "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["E", "1497 cc, Manual, Petrol, 17.7 kmpl", "Rs.6.99 Lakh*"],
-    varient2: ["S Plus", "1497 cc, Manual, Petrol, 17.7 kmpl", "Rs.7.77 Lakh*"],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient3: ["SX", "1497 cc, Manual, Petrol, 17.7 kmpl", "Rs.9.10 Lakh*"],
+  const VarientDiesel = joy.VarientDiesel;
 
-    varient4: [
-      "SX IVT",
-      "1497 cc, Manual, Petrol, 18.45 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
-    varient5: [
-      "SX Opt",
-      "1497 cc, Manual, Petrol, 17.7 kmpl",
-      "Rs.10.01 Lakh*",
-    ],
+  const VarientCNG = joy.VarientCNG;
 
-    varient6: [
-      "SX IVT Opt",
-      "1497 cc, Manual, Petrol, 18.45 kmpl",
-      "Rs.10.37 Lakh*",
-    ],
-    varient7: [
-      "SX Opt Turbo",
-      "998 cc, Manual, Petrol, 19.2 kmpl",
-      "Rs.10.40 Lakh*",
-    ],
-  };
+  const Mileage = joy.Mileage;
 
-  const VarientDiesel = {
-    varient1: [
-      "S Plus Diesel",
-      "1493 cc, Manual, Diesel, 25.0 kmpl",
-      "Rs.8.64 Lakh*",
-    ],
+  const LatestUpdate = joy.LatestUpdate;
 
-    varient2: [
-      "SX Diesel",
-      "1493 cc, Manual, Diesel, 25.0 kmpl",
-      "Rs.9.52 Lakh*",
-    ],
+  const ProsCons = joy.ProsCons;
 
-    varient3: [
-      "SX AT Diesel",
-      "1493 cc, Manual, Diesel, 21.3 kmpl",
-      "Rs.10.07 Lakh*",
-    ],
-    varient4: [
-      "SX Opt Diesel",
-      "1493 cc, Manual, Diesel, 25.0 kmpl",
-      "Rs.10.07 Lakh*",
-    ],
+  const Colorss = joy.Colorss;
 
-    varient5: [
-      "SX Opt AT Diesel",
-      "1493 cc, Manual, Diesel, 21.3 kmpl",
-      "Rs.11.04 Lakh*",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const VarientCNG = {};
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const Mileage = {
-    mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const faqs = joy.faqs;
 
-  const LatestUpdate = [
-    "Latest Update: Select variants of the Verna now get wireless Android Auto and Apple CarPlay. Hyundai Verna Price: Hyundai retails the sedan from Rs 9.19 lakh to Rs 15.25 lakh (ex-showroom Delhi). Hyundai Verna Variants: It is offered in four trims: E, S+, SX, and SX(O). Hyundai Verna Powertrains: The Verna is equipped with a 1.5-litre petrol (115PS/144Nm), a 1.5-litre diesel (115PS/250Nm), and a 1.0-litre turbo-petrol engine (120PS/172Nm). The 1.5-litre petrol comes with either a 6-speed MT or CVT, the 1.5-litre diesel gets a 6-speed MT or a 6-speed AT, whereas the turbo-petrol engine gets only a 7-speed DCT. Hyundai Verna Features: Hyundai offers it with BlueLink connected car technology, a semi-digital instrument cluster, ventilated front seats, and wireless charging. Hyundai also offers hands-free boot opening, a sunroof, a tyre pressure monitoring system, and front parking sensors.  Hyundai Verna Safety: Standard safety features include ABS with EBD, rear parking sensors, and speed alert. Hyundai Verna Rivals: Hyundai’s compact sedan rivals the Maruti Suzuki Ciaz, Honda City, Skoda Rapid, VW Vento, and the Toyota Yaris.",
-  ];
+  const articles = joy.articles;
 
-  const ProsCons = {
-    pros: [
-      "Looks aggressive and sporty",
-      "Super refined 1.5-litre petrol CVT powertrain",
-      "Ride comfort is brilliant for Indian road conditions",
-    ],
-    cons: [
-      "Lacks rear seat space",
-      "Wireless charger tray is too short",
-      "Brakes feel spongy",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
 
-  const Colorss = {
-    color1: ["Fiery Red", "bg-red-800"],
-    color2: ["Typhoon Silver", "bg-gray-900"],
-    color3: ["Phantom Black", "bg-gray-600"],
-    color4: ["Starry Night", "bg-white"],
-    color5: ["Polar White", "bg-blue-800"],
-    color6: ["Titan Grey", "bg-red-400"],
-  };
+  // const CompanyName = "Hyundai";
+  // const CarPrice = "₹ 9.28 Lakh";
+  // const TopPic = Verna;
+  // const CarName = "Hyundai Verna";
+  // const OnlyName = "Verna";
+  // const ThumPic = TVerna;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 11.19 Lakh",
-      "17.8 to 24.1 kmpl",
-      "1498 cc",
-      "Manual & Automatic (CVT)",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,549 mm L x 1,748 mm W x 1,489 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 7.80 Lakh",
-      "16.24 to 18.97 kmpl",
-      "999 cc",
-      "Manual & Automatic",
-      "Petrol",
-      "5 Seater",
-      "4,413 mm L x 1,699 mm W x 1,466 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47562/skoda-rapid-tsi-right-front-three-quarter0.jpeg?q=85",
-    ],
-  };
+  // const KeySpecification = [
+  //   "₹ 9.28 Lakh onwards",
+  //   "17.7 to 25 kmpl",
+  //   "998 to 1497 cc",
+  //   "Manual, Automatic (CVT), Automatic (Torque Converter) & Automatic (Dual Clutch)",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "4,440 mm L x 1,729 mm W x 1,475 mm H",
+  // ];
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "6 Airbags",
-      "",
-    ],
-  };
+  // const SafetyFeatures = [
+  //   "Impact Sensing Auto Door Unlock",
+  //   "6 airbags",
+  //   "ABS",
+  //   "EBD",
+  //   "Central Locking",
+  //   "Emergency Stop Signal",
+  //   "Driver & Passenger SeatBelt Reminder",
+  //   "Speed Sensing Auto Door Lock",
+  //   "Headlamp Escort Function",
+  //   "ISOFIX",
+  //   "Speed Alert System",
+  //   "Driver & Passenger Side Seat Belt Pretensioners & Load Limiters",
+  // ];
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Verna?",
-      "The on-road price of Verna in Delhi starts at ‎₹ 10.47 Lakh and goes upto ‎₹ 18.13 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Verna and All New City?",
-      "Verna price starts at ₹ 15.32 Lakh ex-showroom and It comes with 1497 cc engine. Whereas All New City price starts at ₹ 11.19 Lakh ex-showroom and It comes with 1498 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Hyundai Verna?",
-      "The Hyundai Verna mileage is 17.7 - 25 kmpl.",
-    ],
-  };
+  // const VarientPetrol = {
+  //   varient1: ["E", "1497 cc, Manual, Petrol, 17.7 kmpl", "Rs.6.99 Lakh*"],
+  //   varient2: ["S Plus", "1497 cc, Manual, Petrol, 17.7 kmpl", "Rs.7.77 Lakh*"],
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  //   varient3: ["SX", "1497 cc, Manual, Petrol, 17.7 kmpl", "Rs.9.10 Lakh*"],
+
+  //   varient4: [
+  //     "SX IVT",
+  //     "1497 cc, Manual, Petrol, 18.45 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "SX Opt",
+  //     "1497 cc, Manual, Petrol, 17.7 kmpl",
+  //     "Rs.10.01 Lakh*",
+  //   ],
+
+  //   varient6: [
+  //     "SX IVT Opt",
+  //     "1497 cc, Manual, Petrol, 18.45 kmpl",
+  //     "Rs.10.37 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "SX Opt Turbo",
+  //     "998 cc, Manual, Petrol, 19.2 kmpl",
+  //     "Rs.10.40 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "S Plus Diesel",
+  //     "1493 cc, Manual, Diesel, 25.0 kmpl",
+  //     "Rs.8.64 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "SX Diesel",
+  //     "1493 cc, Manual, Diesel, 25.0 kmpl",
+  //     "Rs.9.52 Lakh*",
+  //   ],
+
+  //   varient3: [
+  //     "SX AT Diesel",
+  //     "1493 cc, Manual, Diesel, 21.3 kmpl",
+  //     "Rs.10.07 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "SX Opt Diesel",
+  //     "1493 cc, Manual, Diesel, 25.0 kmpl",
+  //     "Rs.10.07 Lakh*",
+  //   ],
+
+  //   varient5: [
+  //     "SX Opt AT Diesel",
+  //     "1493 cc, Manual, Diesel, 21.3 kmpl",
+  //     "Rs.11.04 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Select variants of the Verna now get wireless Android Auto and Apple CarPlay. Hyundai Verna Price: Hyundai retails the sedan from Rs 9.19 lakh to Rs 15.25 lakh (ex-showroom Delhi). Hyundai Verna Variants: It is offered in four trims: E, S+, SX, and SX(O). Hyundai Verna Powertrains: The Verna is equipped with a 1.5-litre petrol (115PS/144Nm), a 1.5-litre diesel (115PS/250Nm), and a 1.0-litre turbo-petrol engine (120PS/172Nm). The 1.5-litre petrol comes with either a 6-speed MT or CVT, the 1.5-litre diesel gets a 6-speed MT or a 6-speed AT, whereas the turbo-petrol engine gets only a 7-speed DCT. Hyundai Verna Features: Hyundai offers it with BlueLink connected car technology, a semi-digital instrument cluster, ventilated front seats, and wireless charging. Hyundai also offers hands-free boot opening, a sunroof, a tyre pressure monitoring system, and front parking sensors.  Hyundai Verna Safety: Standard safety features include ABS with EBD, rear parking sensors, and speed alert. Hyundai Verna Rivals: Hyundai’s compact sedan rivals the Maruti Suzuki Ciaz, Honda City, Skoda Rapid, VW Vento, and the Toyota Yaris.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Looks aggressive and sporty",
+  //     "Super refined 1.5-litre petrol CVT powertrain",
+  //     "Ride comfort is brilliant for Indian road conditions",
+  //   ],
+  //   cons: [
+  //     "Lacks rear seat space",
+  //     "Wireless charger tray is too short",
+  //     "Brakes feel spongy",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Fiery Red", "bg-red-800"],
+  //   color2: ["Typhoon Silver", "bg-gray-900"],
+  //   color3: ["Phantom Black", "bg-gray-600"],
+  //   color4: ["Starry Night", "bg-white"],
+  //   color5: ["Polar White", "bg-blue-800"],
+  //   color6: ["Titan Grey", "bg-red-400"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 11.19 Lakh",
+  //     "17.8 to 24.1 kmpl",
+  //     "1498 cc",
+  //     "Manual & Automatic (CVT)",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,549 mm L x 1,748 mm W x 1,489 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.80 Lakh",
+  //     "16.24 to 18.97 kmpl",
+  //     "999 cc",
+  //     "Manual & Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,413 mm L x 1,699 mm W x 1,466 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47562/skoda-rapid-tsi-right-front-three-quarter0.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "6 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Verna?",
+  //     "The on-road price of Verna in Delhi starts at ‎₹ 10.47 Lakh and goes upto ‎₹ 18.13 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Verna and All New City?",
+  //     "Verna price starts at ₹ 15.32 Lakh ex-showroom and It comes with 1497 cc engine. Whereas All New City price starts at ₹ 11.19 Lakh ex-showroom and It comes with 1498 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Hyundai Verna?",
+  //     "The Hyundai Verna mileage is 17.7 - 25 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -309,28 +344,28 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
-      "i20 N Line",
-      "₹ 11.00 - 13.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
-      "AX1 micro-SUV",
-      "₹ 4.00 - 7.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
-      "New Kona",
-      "₹ 23.00 - 25.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
-      "New Elantra",
-      "₹ 16.00 - 20.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
+  //     "i20 N Line",
+  //     "₹ 11.00 - 13.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
+  //     "AX1 micro-SUV",
+  //     "₹ 4.00 - 7.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
+  //     "New Kona",
+  //     "₹ 23.00 - 25.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
+  //     "New Elantra",
+  //     "₹ 16.00 - 20.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

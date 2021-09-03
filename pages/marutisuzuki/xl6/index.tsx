@@ -32,153 +32,188 @@ import { TXL6 } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 9.92 Lakh onwards";
-  const TopPic = Xl6;
-  const CarName = "Maruti XL6";
-  const OnlyName = "XL6";
-  const ThumPic = TXL6;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 9.92 Lakh onwards",
-    "17.99 to 19.01 kmpl",
-    "1462 cc",
-    "Manual and Automatic",
-    "Petrol & CNG",
-    "6-7 Seater",
-    "4,445 mm L x 1,775 mm W x 1,700 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = ["Driver Airbag", "Seat Belts", "Speed Alert"];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Zeta MT Petrol",
-      "1462 cc, Manual, Petrol, 19.01 kmpl",
-      "Rs.9.92 Lakh*",
-    ],
-    varient2: [
-      "Alpha MT Petrol",
-      "1462 cc, Manual, Petrol, 19.01 kmpl",
-      "Rs.10.50 Lakh*",
-    ],
-    varient3: [
-      "Zeta AT Petrol",
-      "1462 cc, Automatic, Petrol, 19.01 kmpl",
-      "Rs.11.12 Lakh*",
-    ],
-    varient4: [
-      "Alpha AT Petrol",
-      "1462 cc, Automatic, Petrol, 19.01 kmpl",
-      "Rs.11.70 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1462 cc)", "Manual", "19.01 kmpl"],
-    mileage2: ["CNG (1462 cc)", "Manual", "26.2 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Maruti XL6 Price: The XL6 is priced from Rs 9.94 lakh to Rs 11.73 lakh (ex-showroom Delhi). Maruti XL6 Variants: Maruti offers the MPV in two trims: Zeta and Alpha. Maruti XL6 Seating Capacity: It comes in a six-seater layout. Maruti XL6 Powertrain: It gets the same 1.5-litre petrol engine as the Ertiga (105PS/138Nm) with mild-hybrid tech, mated to a 5-speed MT and a 4-speed torque converter. Maruti XL6 Features: Maruti has equipped it with a 7-inch infotainment screen with Android Auto and Apple CarPlay connectivity, cruise control, and auto climate control with rear AC vents. Maruti XL6 Safety: Standard safety features include dual airbags, ABS with EBD, and rear parking sensors. Maruti XL6 Rivals: The XL6 competes with the Maruti Suzuki Ertiga, Mahindra Marazzo, and Toyota Innova Crysta.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "The redesigned front face packs more attitude and offers better road presence.",
-      "All-black leather interiors improve the ambience of the cabin.",
-      "Captain seats are large and comfortable, and offer a more upmarket experience.",
-    ],
-    cons: [
-      "Petrol motor gets noisy post 2,500rpm",
-      "The engine feels laidback and doesn't respond well to quick speed changes.",
-      "At the higher price, some premium features like automatic day/night IRVM, rear window blinds and cup holders are missing.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Nexa Blue", "bg-blue-600"],
-    color2: ["Premium Silver", "bg-gray-400"],
-    color3: ["Arctic White", "bg-white"],
-    color4: ["Magma Gray", "bg-gray-600"],
-    color5: ["Brave Khaki", "bg-black-800"],
-    color6: ["Auburn Red", "bg-black-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.50 Lakh onwards",
-      "18.2 - 20.0 kmpl",
-      "999 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "7 Seater",
-      "3,990 mm L x 1,739 mm W x 1,643 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Triber/7418/1580113966019/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "₹ 7.78 Lakh onwards",
-      "19.01 kmpl",
-      "1462 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "6-7 Seater",
-      "4,395 mm L x 1,735 mm W x 1,690 mm H",
-      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FGalleries%2F20180420105800_2018-Suzuki-Ertiga-fronw.jpg&h=578&w=872&c=1",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "1 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of XL6?",
-      "The on-road price of XL6 in Delhi starts at ‎₹ 11.11 Lakh and goes upto ‎₹ 13.54 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between XL6 and Ertiga?",
-      "XL6 price starts at ₹ 9.92 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Ertiga price starts at ₹ 7.78 Lakh ex-showroom and It comes with 1462 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is the mileage of Maruti Suzuki XL6?",
-      "The Maruti Suzuki XL6 mileage is 17.99 - 19.01 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 9.92 Lakh onwards";
+  // const TopPic = Xl6;
+  // const CarName = "Maruti XL6";
+  // const OnlyName = "XL6";
+  // const ThumPic = TXL6;
+
+  // const KeySpecification = [
+  //   "₹ 9.92 Lakh onwards",
+  //   "17.99 to 19.01 kmpl",
+  //   "1462 cc",
+  //   "Manual and Automatic",
+  //   "Petrol & CNG",
+  //   "6-7 Seater",
+  //   "4,445 mm L x 1,775 mm W x 1,700 mm H",
+  // ];
+
+  // const SafetyFeatures = ["Driver Airbag", "Seat Belts", "Speed Alert"];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Zeta MT Petrol",
+  //     "1462 cc, Manual, Petrol, 19.01 kmpl",
+  //     "Rs.9.92 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "Alpha MT Petrol",
+  //     "1462 cc, Manual, Petrol, 19.01 kmpl",
+  //     "Rs.10.50 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "Zeta AT Petrol",
+  //     "1462 cc, Automatic, Petrol, 19.01 kmpl",
+  //     "Rs.11.12 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "Alpha AT Petrol",
+  //     "1462 cc, Automatic, Petrol, 19.01 kmpl",
+  //     "Rs.11.70 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1462 cc)", "Manual", "19.01 kmpl"],
+  //   mileage2: ["CNG (1462 cc)", "Manual", "26.2 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Maruti XL6 Price: The XL6 is priced from Rs 9.94 lakh to Rs 11.73 lakh (ex-showroom Delhi). Maruti XL6 Variants: Maruti offers the MPV in two trims: Zeta and Alpha. Maruti XL6 Seating Capacity: It comes in a six-seater layout. Maruti XL6 Powertrain: It gets the same 1.5-litre petrol engine as the Ertiga (105PS/138Nm) with mild-hybrid tech, mated to a 5-speed MT and a 4-speed torque converter. Maruti XL6 Features: Maruti has equipped it with a 7-inch infotainment screen with Android Auto and Apple CarPlay connectivity, cruise control, and auto climate control with rear AC vents. Maruti XL6 Safety: Standard safety features include dual airbags, ABS with EBD, and rear parking sensors. Maruti XL6 Rivals: The XL6 competes with the Maruti Suzuki Ertiga, Mahindra Marazzo, and Toyota Innova Crysta.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "The redesigned front face packs more attitude and offers better road presence.",
+  //     "All-black leather interiors improve the ambience of the cabin.",
+  //     "Captain seats are large and comfortable, and offer a more upmarket experience.",
+  //   ],
+  //   cons: [
+  //     "Petrol motor gets noisy post 2,500rpm",
+  //     "The engine feels laidback and doesn't respond well to quick speed changes.",
+  //     "At the higher price, some premium features like automatic day/night IRVM, rear window blinds and cup holders are missing.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Nexa Blue", "bg-blue-600"],
+  //   color2: ["Premium Silver", "bg-gray-400"],
+  //   color3: ["Arctic White", "bg-white"],
+  //   color4: ["Magma Gray", "bg-gray-600"],
+  //   color5: ["Brave Khaki", "bg-black-800"],
+  //   color6: ["Auburn Red", "bg-black-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.50 Lakh onwards",
+  //     "18.2 - 20.0 kmpl",
+  //     "999 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "7 Seater",
+  //     "3,990 mm L x 1,739 mm W x 1,643 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Triber/7418/1580113966019/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 7.78 Lakh onwards",
+  //     "19.01 kmpl",
+  //     "1462 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "6-7 Seater",
+  //     "4,395 mm L x 1,735 mm W x 1,690 mm H",
+  //     "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FGalleries%2F20180420105800_2018-Suzuki-Ertiga-fronw.jpg&h=578&w=872&c=1",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "1 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of XL6?",
+  //     "The on-road price of XL6 in Delhi starts at ‎₹ 11.11 Lakh and goes upto ‎₹ 13.54 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between XL6 and Ertiga?",
+  //     "XL6 price starts at ₹ 9.92 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Ertiga price starts at ₹ 7.78 Lakh ex-showroom and It comes with 1462 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Maruti Suzuki XL6?",
+  //     "The Maruti Suzuki XL6 mileage is 17.99 - 19.01 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -236,23 +271,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

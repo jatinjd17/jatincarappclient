@@ -32,145 +32,180 @@ import { TVellfire } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Toyota";
-  const CarPrice = "₹ 89.89 Lakh";
-  const TopPic = Vellfire;
-  const CarName = "Toyota Vellfire";
-  const OnlyName = "Vellfire";
-  const ThumPic = TVellfire;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 89.89 Lakh onwards",
-    "16.35 kmpl",
-    "2494 cc",
-    "Automatic (Dual Clutch)",
-    "Hybrid (Electric + Petrol)",
-    "7 Seater",
-    "4,935 mm L x 1,850 mm W x 1,895 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    " Pre-Collision System (PCS)",
-    "Lane Tracing Assist (LTA)",
-    "Dynamic Radar Cruise Control (DRCC) for All Speeds.",
-    "Automatic High Beam (AHB)",
-    "Electric Parking Brake (EPB) with Brake Hold.",
-    "Blind Spot Monitor (BSM)",
-    "Front and Rear Digital Video Recorder (DVR)",
-    "Panoramic View Monitor (PVM)",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "Executive Lounge",
-      "2494 cc, Automatic, Petrol, 16.35 kmpl",
-      "Rs.89.90 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Toyota has increased the price of the Vellfire. Toyota Vellfire Variant: The Vellfire is offered in a single fully-loaded Executive Lounge variant. Toyota Vellfire Price: It is priced at Rs 83.50 lakh (ex-showroom). Toyota Vellfire Powertrain: The luxury MPV is powered by a BS6-compliant 2.5-litre petrol-hybrid engine that puts out 180PS and 235Nm. It also features a 4WD system and comes paired to a CVT gearbox. Toyota Vellfire Features: Toyota offers the Vellfire with heated and ventilated memory seats with an Ottoman full-recline function, twin sunroof, sunshades, ambient lighting, and automatic climate control.  Toyota Vellfire Safety: It gets seven airbags, vehicle dynamic management, a panoramic view monitor, and front and rear parking sensors. Toyota Vellfire Rivals: The Toyota Vellfire goes up against the Mercedes-Benz V-Class.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Luxurious second row seats like no other",
-      "Powered adjust for recline, foot rest and even footrest extension",
-      "Enough space to seat even the tallest of individuals",
-    ],
-    cons: [
-      "Costs nearly a crore",
-      "No charging sockets or ports for the second and third row",
-      "Ride quality will be a bit stiff",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Pearl White", "bg-brown-800"],
-    color2: ["Graphite", "bg-gray-900"],
-    color3: ["BURNING BLACK", "bg-yellow-900"],
-    color4: ["Black", "bg-gray-100"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 71.10 Lakh Onwards",
-      "16 kmpl",
-      "1950 cc",
-      "Automatic",
-      "Diesel",
-      "7 Seater",
-      "5,140-5,370 mm L x 1,928 mm W x 1,901-1,909 mm H",
-      "https://imgd.aeplcdn.com/664x374/cw/ec/37616/MercedesBenz-VClass-Right-Front-Three-Quarter-147184.jpg?wm=0&q=85",
-    ],
-    comparisioncar2: [
-      "₹ 24.95 Lakh",
-      "14 kmpl",
-      "2199 cc",
-      "Automatic (Torque Converter)",
-      "Diesel",
-      "6 & 7 Seater",
-      "5,115 mm L x 1,985 mm W x 1,740-1,755 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41205/kia-carnival-right-front-three-quarter8.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Vellfire?",
-      "The on-road price of Vellfire in Delhi is ₹ 1.03 Crore. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Vellfire and V-Class?",
-      "Vellfire price starts at ₹ 89.89 Lakh ex-showroom and It comes with 2494 cc engine. Whereas V-Class price starts at ₹ 71.10 Lakh ex-showroom and It comes with 2143 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Toyota Vellfire?",
-      "The Toyota Vellfire mileage is 16.35 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Toyota";
+  // const CarPrice = "₹ 89.89 Lakh";
+  // const TopPic = Vellfire;
+  // const CarName = "Toyota Vellfire";
+  // const OnlyName = "Vellfire";
+  // const ThumPic = TVellfire;
+
+  // const KeySpecification = [
+  //   "₹ 89.89 Lakh onwards",
+  //   "16.35 kmpl",
+  //   "2494 cc",
+  //   "Automatic (Dual Clutch)",
+  //   "Hybrid (Electric + Petrol)",
+  //   "7 Seater",
+  //   "4,935 mm L x 1,850 mm W x 1,895 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   " Pre-Collision System (PCS)",
+  //   "Lane Tracing Assist (LTA)",
+  //   "Dynamic Radar Cruise Control (DRCC) for All Speeds.",
+  //   "Automatic High Beam (AHB)",
+  //   "Electric Parking Brake (EPB) with Brake Hold.",
+  //   "Blind Spot Monitor (BSM)",
+  //   "Front and Rear Digital Video Recorder (DVR)",
+  //   "Panoramic View Monitor (PVM)",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "Executive Lounge",
+  //     "2494 cc, Automatic, Petrol, 16.35 kmpl",
+  //     "Rs.89.90 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Toyota has increased the price of the Vellfire. Toyota Vellfire Variant: The Vellfire is offered in a single fully-loaded Executive Lounge variant. Toyota Vellfire Price: It is priced at Rs 83.50 lakh (ex-showroom). Toyota Vellfire Powertrain: The luxury MPV is powered by a BS6-compliant 2.5-litre petrol-hybrid engine that puts out 180PS and 235Nm. It also features a 4WD system and comes paired to a CVT gearbox. Toyota Vellfire Features: Toyota offers the Vellfire with heated and ventilated memory seats with an Ottoman full-recline function, twin sunroof, sunshades, ambient lighting, and automatic climate control.  Toyota Vellfire Safety: It gets seven airbags, vehicle dynamic management, a panoramic view monitor, and front and rear parking sensors. Toyota Vellfire Rivals: The Toyota Vellfire goes up against the Mercedes-Benz V-Class.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Luxurious second row seats like no other",
+  //     "Powered adjust for recline, foot rest and even footrest extension",
+  //     "Enough space to seat even the tallest of individuals",
+  //   ],
+  //   cons: [
+  //     "Costs nearly a crore",
+  //     "No charging sockets or ports for the second and third row",
+  //     "Ride quality will be a bit stiff",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Pearl White", "bg-brown-800"],
+  //   color2: ["Graphite", "bg-gray-900"],
+  //   color3: ["BURNING BLACK", "bg-yellow-900"],
+  //   color4: ["Black", "bg-gray-100"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 71.10 Lakh Onwards",
+  //     "16 kmpl",
+  //     "1950 cc",
+  //     "Automatic",
+  //     "Diesel",
+  //     "7 Seater",
+  //     "5,140-5,370 mm L x 1,928 mm W x 1,901-1,909 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/37616/MercedesBenz-VClass-Right-Front-Three-Quarter-147184.jpg?wm=0&q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 24.95 Lakh",
+  //     "14 kmpl",
+  //     "2199 cc",
+  //     "Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "6 & 7 Seater",
+  //     "5,115 mm L x 1,985 mm W x 1,740-1,755 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41205/kia-carnival-right-front-three-quarter8.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Vellfire?",
+  //     "The on-road price of Vellfire in Delhi is ₹ 1.03 Crore. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Vellfire and V-Class?",
+  //     "Vellfire price starts at ₹ 89.89 Lakh ex-showroom and It comes with 2494 cc engine. Whereas V-Class price starts at ₹ 71.10 Lakh ex-showroom and It comes with 2143 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Toyota Vellfire?",
+  //     "The Toyota Vellfire mileage is 16.35 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -223,18 +258,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Hilux",
-      "Rs.18.00 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
-      "Land Cruiser",
-      "Rs.1.50 Cr*",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hilux/8445/1622783707227/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Hilux",
+  //     "Rs.18.00 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser/8448/1623313668941/front-left-side-47.jpg?tr=w-456",
+  //     "Land Cruiser",
+  //     "Rs.1.50 Cr*",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

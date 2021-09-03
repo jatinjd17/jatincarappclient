@@ -33,170 +33,205 @@ import { TCiaz } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 8.51 Lakh";
-  const TopPic = Ciaz;
-  const CarName = "Maruti Ciaz";
-  const OnlyName = "Ciaz";
-  const ThumPic = TCiaz;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 8.51 Lakh onwards",
-    "20.04 to 20.65 kmpl",
-    "1462 cc",
-    "Manual",
-    "Petrol",
-    "5 Seater",
-    "4,490 mm L x 1,730 mm W x 1,485 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-    "Driver frontal airbag, Front passenger frontal airbag",
-    "Door Ajar Warning.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["Sigma", "1462 cc, Manual, Petrol, 20.65 kmpl", "Rs.7.51 Lakh*"],
-    varient2: ["Delta", "1462 cc, Manual, Petrol, 20.65 kmpl", "Rs.8.57 Lakh*"],
-    varient3: ["Zeta", "1462 cc, Manual, Petrol, 20.65 kmpl", "Rs.9.32 Lakh*"],
-    varient4: [
-      "Alpha 1.5",
-      "1462 cc, Manual, Petrol, 20.65 kmpl",
-      "Rs.9.86 Lakh*",
-    ],
-    varient5: [
-      "Delta 1.5 AT",
-      "1462 cc, Atomatic (Torque Converter), Petrol, 20.65 kmpl",
-      "Rs.9.88 Lakh*",
-    ],
-    varient6: [
-      "S 1.5 MT",
-      "1462 cc, Manual, Petrol, 20.65 kmpl",
-      "Rs.10.00 Lakh*",
-    ],
-    varient7: [
-      "Zeta 1.5 AT",
-      "1462 cc, Atomatic (Torque Converter), Petrol, 20.65 kmpl",
-      "Rs.10.63 Lakh*",
-    ],
-    varient8: [
-      "Alpha 1.5 AT",
-      "1462 cc, Atomatic (Torque Converter), Petrol, 20.65 kmpl",
-      "Rs.11.26 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1462 cc)", "Manual", "20.65 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: The Ciaz’s prices have been increased by up to Rs 17,000. Maruti Ciaz Price: Maruti retails the sedan from Rs 8.52 lakh to Rs 11.50 lakh (ex-showroom Delhi). Maruti Ciaz Variants: It is offered in four trims: Sigma, Delta, Zeta, and Alpha. Maruti Ciaz Powertrain: The Ciaz is powered by a 1.5-litre petrol mild-hybrid powertrain (105PS/138Nm), coupled with a 5-speed manual or a 4-speed torque converter. Maruti Ciaz Features: The Ciaz comes with auto LED headlamps, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, auto climate control, passive keyless entry system with push-button, leather upholstery, and cruise control. Maruti Ciaz Safety: It gets dual front airbags, ABS with EBD, ISOFIX child seat anchors, and rear parking sensors as standard. Maruti Ciaz Rivals: Maruti’s compact sedan fights it out with the Honda City, Hyundai Verna, Toyota Yaris, Skoda Rapid, and Volkswagen Vento.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Very spacious cabin",
-      "Price undercuts competition ",
-      "Fuel efficient engines",
-    ],
-    cons: [
-      "Slow shifting 4-speed auto box",
-      "Bouncy high speed ride quality",
-      "Engine could do with more pep",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Nexa Blue", "bg-blue-600"],
-    color2: ["Premium Silver Metallic", "bg-gray-400"],
-    color3: ["Pearl Snow White", "bg-white"],
-    color4: ["Pearl Metallic Dignity Brown", "bg-brown-600"],
-    color5: ["Magma Grey", "bg-gray-800"],
-    color6: ["Pearl Midnight Black", "bg-black-800"],
-    color7: ["Pearl Sanria Red", "bg-red-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "Rs.9.28 Lakh Onwards",
-      "17.7 - 25.0 kmpl",
-      "998 cc - 1497 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,440 mm L x 1,729 mm W x 1,475 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/7729/1616055133475/front-left-side-47.jpg?tr=w-456",
-    ],
-    comparisioncar2: [
-      "₹11.16 Lakh onwards",
-      "17.8 - 24.1 kmpl",
-      "1498 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,549 mm L x 1,748 mm W x 1,489 mm H",
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/7899/1594802649685/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Ciaz?",
-      "The on-road price of Ciaz in Delhi starts at ‎₹ 9.52 Lakh and goes upto ‎₹ 13.25 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Ciaz and City?",
-      "Ciaz price starts at ₹ 8.51 Lakh ex-showroom and It comes with 1462 cc engine. Whereas City price starts at ₹ 9.33 Lakh ex-showroom and It comes with 1497 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is price of Ciaz top model?",
-      "Top model of Ciaz is Alpha 1.5 AT and the ex-showroom for Ciaz Alpha 1.5 AT is ₹ 11.49 Lakh.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 8.51 Lakh";
+  // const TopPic = Ciaz;
+  // const CarName = "Maruti Ciaz";
+  // const OnlyName = "Ciaz";
+  // const ThumPic = TCiaz;
+
+  // const KeySpecification = [
+  //   "₹ 8.51 Lakh onwards",
+  //   "20.04 to 20.65 kmpl",
+  //   "1462 cc",
+  //   "Manual",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "4,490 mm L x 1,730 mm W x 1,485 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  //   "Driver frontal airbag, Front passenger frontal airbag",
+  //   "Door Ajar Warning.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["Sigma", "1462 cc, Manual, Petrol, 20.65 kmpl", "Rs.7.51 Lakh*"],
+  //   varient2: ["Delta", "1462 cc, Manual, Petrol, 20.65 kmpl", "Rs.8.57 Lakh*"],
+  //   varient3: ["Zeta", "1462 cc, Manual, Petrol, 20.65 kmpl", "Rs.9.32 Lakh*"],
+  //   varient4: [
+  //     "Alpha 1.5",
+  //     "1462 cc, Manual, Petrol, 20.65 kmpl",
+  //     "Rs.9.86 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "Delta 1.5 AT",
+  //     "1462 cc, Atomatic (Torque Converter), Petrol, 20.65 kmpl",
+  //     "Rs.9.88 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "S 1.5 MT",
+  //     "1462 cc, Manual, Petrol, 20.65 kmpl",
+  //     "Rs.10.00 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "Zeta 1.5 AT",
+  //     "1462 cc, Atomatic (Torque Converter), Petrol, 20.65 kmpl",
+  //     "Rs.10.63 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "Alpha 1.5 AT",
+  //     "1462 cc, Atomatic (Torque Converter), Petrol, 20.65 kmpl",
+  //     "Rs.11.26 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1462 cc)", "Manual", "20.65 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: The Ciaz’s prices have been increased by up to Rs 17,000. Maruti Ciaz Price: Maruti retails the sedan from Rs 8.52 lakh to Rs 11.50 lakh (ex-showroom Delhi). Maruti Ciaz Variants: It is offered in four trims: Sigma, Delta, Zeta, and Alpha. Maruti Ciaz Powertrain: The Ciaz is powered by a 1.5-litre petrol mild-hybrid powertrain (105PS/138Nm), coupled with a 5-speed manual or a 4-speed torque converter. Maruti Ciaz Features: The Ciaz comes with auto LED headlamps, a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, auto climate control, passive keyless entry system with push-button, leather upholstery, and cruise control. Maruti Ciaz Safety: It gets dual front airbags, ABS with EBD, ISOFIX child seat anchors, and rear parking sensors as standard. Maruti Ciaz Rivals: Maruti’s compact sedan fights it out with the Honda City, Hyundai Verna, Toyota Yaris, Skoda Rapid, and Volkswagen Vento.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Very spacious cabin",
+  //     "Price undercuts competition ",
+  //     "Fuel efficient engines",
+  //   ],
+  //   cons: [
+  //     "Slow shifting 4-speed auto box",
+  //     "Bouncy high speed ride quality",
+  //     "Engine could do with more pep",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Nexa Blue", "bg-blue-600"],
+  //   color2: ["Premium Silver Metallic", "bg-gray-400"],
+  //   color3: ["Pearl Snow White", "bg-white"],
+  //   color4: ["Pearl Metallic Dignity Brown", "bg-brown-600"],
+  //   color5: ["Magma Grey", "bg-gray-800"],
+  //   color6: ["Pearl Midnight Black", "bg-black-800"],
+  //   color7: ["Pearl Sanria Red", "bg-red-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "Rs.9.28 Lakh Onwards",
+  //     "17.7 - 25.0 kmpl",
+  //     "998 cc - 1497 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,440 mm L x 1,729 mm W x 1,475 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/7729/1616055133475/front-left-side-47.jpg?tr=w-456",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹11.16 Lakh onwards",
+  //     "17.8 - 24.1 kmpl",
+  //     "1498 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,549 mm L x 1,748 mm W x 1,489 mm H",
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/7899/1594802649685/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Ciaz?",
+  //     "The on-road price of Ciaz in Delhi starts at ‎₹ 9.52 Lakh and goes upto ‎₹ 13.25 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Ciaz and City?",
+  //     "Ciaz price starts at ₹ 8.51 Lakh ex-showroom and It comes with 1462 cc engine. Whereas City price starts at ₹ 9.33 Lakh ex-showroom and It comes with 1497 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is price of Ciaz top model?",
+  //     "Top model of Ciaz is Alpha 1.5 AT and the ex-showroom for Ciaz Alpha 1.5 AT is ₹ 11.49 Lakh.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -244,23 +279,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

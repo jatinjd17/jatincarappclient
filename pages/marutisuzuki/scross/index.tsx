@@ -32,152 +32,187 @@ import { TScross } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 8.39 Lakh onwards";
-  const TopPic = Scross;
-  const CarName = "Maruti Scross";
-  const OnlyName = "Scross";
-  const ThumPic = TScross;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 8.39 Lakh onwards",
-    "18.43 to 18.55 kmpl",
-    "1462 cc",
-    "Manual and Automatic",
-    "Petrol & CNG",
-    "5 Seater",
-    "4,300 mm L x 1,785 mm W x 1,590-1,595 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = ["Driver Airbag", "Seat Belts", "Speed Alert"];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["Sigma", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.7.78 Lakh*"],
-    varient2: ["Delta", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.8.53 Lakh*"],
-    varient3: ["Zeta", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.9.36 Lakh*"],
-    varient4: [
-      "Delta AT",
-      "1462 cc, Manual, Automatic Torque Converter, 18.55 kmpl",
-      "Rs.9.47 Lakh*",
-    ],
-    varient5: ["Alpha", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.9.73 Lakh*"],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient6: [
-      "Zeta AT",
-      "1462 cc, Automatic Torque Converter, Petrol, 18.55 kmpl",
-      "Rs.9.88 Lakh*",
-    ],
-    varient7: [
-      "Alpha AT",
-      "1462 cc, Automatic Torque Converter, Petrol, 18.55 kmpl",
-      "Rs.10.56 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientDiesel = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const VarientCNG = {};
+  const Mileage = joy.Mileage;
 
-  const Mileage = {
-    mileage1: ["Petrol (1462 cc)", "Manual", "18.55 kmpl"],
-    mileage2: ["CNG (1462 cc)", "Manual", "26.2 km/kg"],
-  };
+  const LatestUpdate = joy.LatestUpdate;
 
-  const LatestUpdate = [
-    "Maruti S-Cross Price: Maruti retails the S-Cross between Rs 8.39 lakh and Rs 12.39 lakh (ex-showroom Delhi). Maruti S-Cross Variants: The S-Cross is sold in four trims: Sigma, Delta, Zeta, and Alpha. Maruti S-Cross Powertrain: The crossover is equipped with the 1.5-litre petrol engine (105PS and 138Nm) offered on the facelifted Vitara Brezza with mild-hybrid tech, paired to either a 5-speed manual or a 4-speed AT. Maruti is offering the mild-hybrid tech with both manual and automatic variants of the S-Cross. Maruti S-Cross Features: Its equipment list includes rain-sensing wipers, cruise control, LED projector headlamps and 16-inch alloy wheels. The only change is the introduction of Maruti’s latest 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay. However, it continues to miss out on connected car tech, unlike the Hyundai Creta and Kia Seltos. Maruti S-Cross Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Maruti S-Cross Rivals: It rivals the Kia Seltos, Hyundai Creta, Renault Duster, Nissan Kicks, Mahindra Scorpio, Skoda Kushaq, and Volkswagen Taigun.",
-  ];
+  const ProsCons = joy.ProsCons;
 
-  const ProsCons = {
-    pros: [
-      "Comfortable ride quality",
-      "Spacious cabin",
-      "Cheaper than competition",
-    ],
-    cons: [
-      "Interior quality could have been better",
-      "Competition offers more features",
-      "Engine should have offered more punch",
-    ],
-  };
+  const Colorss = joy.Colorss;
 
-  const Colorss = {
-    color1: ["Nexa Blue", "bg-blue-600"],
-    color2: ["Premium Silver", "bg-gray-400"],
-    color3: ["Pearl Arctic White", "bg-white"],
-    color4: ["Granite Grey", "bg-gray-600"],
-    color5: ["Caffeine Brown", "bg-black-800"],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 10.15 Lakh Onwards",
-      "17 to 21 kmpl",
-      "1353 to 1497 cc",
-      "Manual, Automatic",
-      "Petrol & Diesel",
-      "5 Seater",
-      "4,300 mm L x 1,790 mm W x 1,620-1,635 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41564/hyundai-creta-right-front-three-quarter9.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 10.51 Lakh Onwards",
-      "15.78 to 17.88 kmpl",
-      "999 to 1498 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "5 Seater",
-      "4,225 mm L x 1,760 mm W x 1,612 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44549/kushaq-exterior-right-front-three-quarter-52.jpeg?q=85",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "1 Airbags",
-      "",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of S-Cross?",
-      "The on-road price of S-Cross in Delhi starts at ‎₹ 9.42 Lakh and goes upto ‎₹ 14.31 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between S-Cross and Vitara Brezza?",
-      "S-Cross price starts at ₹ 8.39 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Vitara Brezza price starts at ₹ 7.51 Lakh ex-showroom and It comes with 1462 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Maruti Suzuki S-Cross?",
-      "The Maruti Suzuki S-Cross mileage is 18.43 - 18.55 kmpl.",
-    ],
-  };
+  const articles = joy.articles;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 8.39 Lakh onwards";
+  // const TopPic = Scross;
+  // const CarName = "Maruti Scross";
+  // const OnlyName = "Scross";
+  // const ThumPic = TScross;
+
+  // const KeySpecification = [
+  //   "₹ 8.39 Lakh onwards",
+  //   "18.43 to 18.55 kmpl",
+  //   "1462 cc",
+  //   "Manual and Automatic",
+  //   "Petrol & CNG",
+  //   "5 Seater",
+  //   "4,300 mm L x 1,785 mm W x 1,590-1,595 mm H",
+  // ];
+
+  // const SafetyFeatures = ["Driver Airbag", "Seat Belts", "Speed Alert"];
+
+  // const VarientPetrol = {
+  //   varient1: ["Sigma", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.7.78 Lakh*"],
+  //   varient2: ["Delta", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.8.53 Lakh*"],
+  //   varient3: ["Zeta", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.9.36 Lakh*"],
+  //   varient4: [
+  //     "Delta AT",
+  //     "1462 cc, Manual, Automatic Torque Converter, 18.55 kmpl",
+  //     "Rs.9.47 Lakh*",
+  //   ],
+  //   varient5: ["Alpha", "1462 cc, Manual, Petrol, 18.55 kmpl", "Rs.9.73 Lakh*"],
+
+  //   varient6: [
+  //     "Zeta AT",
+  //     "1462 cc, Automatic Torque Converter, Petrol, 18.55 kmpl",
+  //     "Rs.9.88 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "Alpha AT",
+  //     "1462 cc, Automatic Torque Converter, Petrol, 18.55 kmpl",
+  //     "Rs.10.56 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1462 cc)", "Manual", "18.55 kmpl"],
+  //   mileage2: ["CNG (1462 cc)", "Manual", "26.2 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Maruti S-Cross Price: Maruti retails the S-Cross between Rs 8.39 lakh and Rs 12.39 lakh (ex-showroom Delhi). Maruti S-Cross Variants: The S-Cross is sold in four trims: Sigma, Delta, Zeta, and Alpha. Maruti S-Cross Powertrain: The crossover is equipped with the 1.5-litre petrol engine (105PS and 138Nm) offered on the facelifted Vitara Brezza with mild-hybrid tech, paired to either a 5-speed manual or a 4-speed AT. Maruti is offering the mild-hybrid tech with both manual and automatic variants of the S-Cross. Maruti S-Cross Features: Its equipment list includes rain-sensing wipers, cruise control, LED projector headlamps and 16-inch alloy wheels. The only change is the introduction of Maruti’s latest 7-inch touchscreen infotainment system with Android Auto and Apple CarPlay. However, it continues to miss out on connected car tech, unlike the Hyundai Creta and Kia Seltos. Maruti S-Cross Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Maruti S-Cross Rivals: It rivals the Kia Seltos, Hyundai Creta, Renault Duster, Nissan Kicks, Mahindra Scorpio, Skoda Kushaq, and Volkswagen Taigun.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Comfortable ride quality",
+  //     "Spacious cabin",
+  //     "Cheaper than competition",
+  //   ],
+  //   cons: [
+  //     "Interior quality could have been better",
+  //     "Competition offers more features",
+  //     "Engine should have offered more punch",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Nexa Blue", "bg-blue-600"],
+  //   color2: ["Premium Silver", "bg-gray-400"],
+  //   color3: ["Pearl Arctic White", "bg-white"],
+  //   color4: ["Granite Grey", "bg-gray-600"],
+  //   color5: ["Caffeine Brown", "bg-black-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 10.15 Lakh Onwards",
+  //     "17 to 21 kmpl",
+  //     "1353 to 1497 cc",
+  //     "Manual, Automatic",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "4,300 mm L x 1,790 mm W x 1,620-1,635 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41564/hyundai-creta-right-front-three-quarter9.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 10.51 Lakh Onwards",
+  //     "15.78 to 17.88 kmpl",
+  //     "999 to 1498 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,225 mm L x 1,760 mm W x 1,612 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/44549/kushaq-exterior-right-front-three-quarter-52.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "1 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of S-Cross?",
+  //     "The on-road price of S-Cross in Delhi starts at ‎₹ 9.42 Lakh and goes upto ‎₹ 14.31 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between S-Cross and Vitara Brezza?",
+  //     "S-Cross price starts at ₹ 8.39 Lakh ex-showroom and It comes with 1462 cc engine. Whereas Vitara Brezza price starts at ₹ 7.51 Lakh ex-showroom and It comes with 1462 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Maruti Suzuki S-Cross?",
+  //     "The Maruti Suzuki S-Cross mileage is 18.43 - 18.55 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -235,23 +270,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

@@ -32,142 +32,177 @@ import { TTiguan } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Volkswagen";
-  const CarPrice = "₹ 34.19 Lakh";
-  const TopPic = Tiguan;
-  const CarName = "Volkswagen Tiguan";
-  const OnlyName = "Tiguan";
-  const ThumPic = TTiguan;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ ₹ 34.19 Lakh onwards",
-    "10.87 kmpl",
-    "1984 cc",
-    "Automatic (Dual Clutch)",
-    "Petrol",
-    "7 Seater",
-    "4701 mm L x 1839 mm W x 1674 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "7 Airbags",
-    "Ventilated Front Disc Brakes",
-    "Central Locking",
-    "high mounted third Brake Light",
-    "Height Adjustable Front head restraints",
-    "Electronic anti-theft Immobiliser",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "2.0 TSI",
-      "1984 cc, Automatic, Petrol, 10.87 kmpl",
-      "₹ 34.19 Lakh",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Volkswagen has increased the price of the Tiguan Allspace SUV. Volkswagen Tiguan Allspace Variant and Price: It is available only in a single fully-loaded variant priced at Rs 33.24 lakh (ex-showroom India). Volkswagen Tiguan Allspace Seating Capacity: Volkswagen offers the SUV in a 7-seater layout. Volkswagen Tiguan Allspace Powertrain: The 7-seater Tiguan comes with a 2.0-litre turbo-petrol engine that develops 190PS and 320Nm. This unit comes paired to a 7-speed DSG transmission option. Volkswagen offers the Tiguan Allspace with all-wheel drive (AWD). Volkswagen Tiguan Allspace Features: Features on offer include a digital driver’s display, connected car tech, a panoramic sunroof, three-zone climate control, and powered front seats. Volkswagen Tiguan Allspace Safety: The Tiguan Allspace gets seven airbags, electronic stability control (ESC), and hill descent control. Volkswagen Tiguan Allspace Rivals: It goes up against the likes of the Ford Endeavour, Toyota Fortuner, Mahindra Alturas G4, Isuzu MU-X and the upcoming Skoda Kodiaq Petrol.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: ["Build quality", "Driving pleasure", "Loaded with features"],
-    cons: [
-      "Expensive",
-      "Third-row isn’t roomy",
-      "Fantastic 2.0L diesel not offered ",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Pyrite Silver", "bg-blue-600"],
-    color2: ["Pure White", "bg-gray-400"],
-    color3: ["Ruby Red Metallic", "bg-white"],
-    color4: ["Deep Black Pearl", "bg-red-600"],
-    color5: ["Petroleum Blue", "bg-gray-800"],
-    color6: ["Platinum Grey Metallic", "bg-gray-800"],
-    color7: ["Habanero Orange Metallic", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 33.00 Lakh onwards",
-      "16.25 kmpl",
-      "1968 cc",
-      "Automatic",
-      "Diesel",
-      "5 Seater",
-      "length of 4700, width of 1882 and a height of 1680",
-      "https://imgd.aeplcdn.com/664x374/cw/ec/24294/Skoda-Kodiaq-Right-Front-Three-Quarter-108846.jpg?v=201711021421&q=85",
-    ],
-    comparisioncar2: [
-      "₹ 21.35 Lakh onwards",
-      "17.85 kmpl",
-      "1498 cc",
-      "Automatic",
-      "Petrol",
-      "5 Seater",
-      "4,234 mm L x 1,819 mm W x 1,573 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/55747/t-roc-exterior-right-front-three-quarter-3.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Tiguan AllSpace?",
-      "The on-road price of Tiguan AllSpace in Delhi is ₹ 39.9 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Tiguan AllSpace and T-Roc?",
-      "Tiguan AllSpace price starts at ₹ 34.19 Lakh ex-showroom and It comes with 1984 cc engine. Whereas T-Roc price starts at ₹ 21.35 Lakh ex-showroom and It comes with 1498 cc engine.",
-    ],
-    question3: [
-      "What is the mileage of Volkswagen Tiguan AllSpace?",
-      "The Volkswagen Tiguan AllSpace mileage is 10.87 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Volkswagen";
+  // const CarPrice = "₹ 34.19 Lakh";
+  // const TopPic = Tiguan;
+  // const CarName = "Volkswagen Tiguan";
+  // const OnlyName = "Tiguan";
+  // const ThumPic = TTiguan;
+
+  // const KeySpecification = [
+  //   "₹ ₹ 34.19 Lakh onwards",
+  //   "10.87 kmpl",
+  //   "1984 cc",
+  //   "Automatic (Dual Clutch)",
+  //   "Petrol",
+  //   "7 Seater",
+  //   "4701 mm L x 1839 mm W x 1674 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "7 Airbags",
+  //   "Ventilated Front Disc Brakes",
+  //   "Central Locking",
+  //   "high mounted third Brake Light",
+  //   "Height Adjustable Front head restraints",
+  //   "Electronic anti-theft Immobiliser",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "2.0 TSI",
+  //     "1984 cc, Automatic, Petrol, 10.87 kmpl",
+  //     "₹ 34.19 Lakh",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "21.01 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Volkswagen has increased the price of the Tiguan Allspace SUV. Volkswagen Tiguan Allspace Variant and Price: It is available only in a single fully-loaded variant priced at Rs 33.24 lakh (ex-showroom India). Volkswagen Tiguan Allspace Seating Capacity: Volkswagen offers the SUV in a 7-seater layout. Volkswagen Tiguan Allspace Powertrain: The 7-seater Tiguan comes with a 2.0-litre turbo-petrol engine that develops 190PS and 320Nm. This unit comes paired to a 7-speed DSG transmission option. Volkswagen offers the Tiguan Allspace with all-wheel drive (AWD). Volkswagen Tiguan Allspace Features: Features on offer include a digital driver’s display, connected car tech, a panoramic sunroof, three-zone climate control, and powered front seats. Volkswagen Tiguan Allspace Safety: The Tiguan Allspace gets seven airbags, electronic stability control (ESC), and hill descent control. Volkswagen Tiguan Allspace Rivals: It goes up against the likes of the Ford Endeavour, Toyota Fortuner, Mahindra Alturas G4, Isuzu MU-X and the upcoming Skoda Kodiaq Petrol.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: ["Build quality", "Driving pleasure", "Loaded with features"],
+  //   cons: [
+  //     "Expensive",
+  //     "Third-row isn’t roomy",
+  //     "Fantastic 2.0L diesel not offered ",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Pyrite Silver", "bg-blue-600"],
+  //   color2: ["Pure White", "bg-gray-400"],
+  //   color3: ["Ruby Red Metallic", "bg-white"],
+  //   color4: ["Deep Black Pearl", "bg-red-600"],
+  //   color5: ["Petroleum Blue", "bg-gray-800"],
+  //   color6: ["Platinum Grey Metallic", "bg-gray-800"],
+  //   color7: ["Habanero Orange Metallic", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 33.00 Lakh onwards",
+  //     "16.25 kmpl",
+  //     "1968 cc",
+  //     "Automatic",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "length of 4700, width of 1882 and a height of 1680",
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/24294/Skoda-Kodiaq-Right-Front-Three-Quarter-108846.jpg?v=201711021421&q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 21.35 Lakh onwards",
+  //     "17.85 kmpl",
+  //     "1498 cc",
+  //     "Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "4,234 mm L x 1,819 mm W x 1,573 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/55747/t-roc-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Tiguan AllSpace?",
+  //     "The on-road price of Tiguan AllSpace in Delhi is ₹ 39.9 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Tiguan AllSpace and T-Roc?",
+  //     "Tiguan AllSpace price starts at ₹ 34.19 Lakh ex-showroom and It comes with 1984 cc engine. Whereas T-Roc price starts at ₹ 21.35 Lakh ex-showroom and It comes with 1498 cc engine.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Volkswagen Tiguan AllSpace?",
+  //     "The Volkswagen Tiguan AllSpace mileage is 10.87 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -215,18 +250,18 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Taigun",
-      "₹ 10.00 - 16.00 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
-      "Tiguan",
-      "₹ 28.00 - 32.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45057/taigun-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Taigun",
+  //     "₹ 10.00 - 16.00 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-4.jpeg?q=85",
+  //     "Tiguan",
+  //     "₹ 28.00 - 32.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

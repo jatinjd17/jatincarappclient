@@ -33,6 +33,17 @@ import Compare from "../../../Components/compare";
 import { Amaze } from "../../../CarPicsUrl/CarPics";
 import Meta from "../../../Components/metaSEO";
 import { TAmaze } from "../../../CarPicsUrl/Thumbnails";
+import {
+  AmazeBasicInfoCard,
+  City4BasicInfoCard,
+  CityBasicInfoCard,
+  JazzBasicInfoCard,
+  WRVBasicInfoCard,
+} from "../../../AllCarBasicInfo/honda";
+import { DzireBasicInfoCard } from "../../../AllCarBasicInfo/marutisuzuki";
+import { AuraBasicInfoCard } from "../../../AllCarBasicInfo/hyundai";
+import { VentoBasicInfoCard } from "../../../AllCarBasicInfo/volkswagen";
+import { RapidBasicInfoCard } from "../../../AllCarBasicInfo/skoda";
 
 const DynamicSimilarCar = dynamic(
   () => import("../../../Components/SpecificCar/SimilarCars"),
@@ -42,325 +53,375 @@ const DynamicSimilarCar = dynamic(
 );
 
 function Homee({ joy }) {
-  const ThumPic = TAmaze;
-  const PopularCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-      "Harrier",
-      "₹ 14.30 Lakh Onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-      "Hector",
-      "₹ 13.18 Lakh onwards0",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
-      "Creta",
-      "Rs.10.16 Lakh onwards",
-    ],
-    car4: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
-      "Creta",
-      "Rs.10.16 Lakh onwards",
-    ],
-    car5: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
-      "Creta",
-      "Rs.10.16 Lakh onwards",
-    ],
-    car6: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
-      "Creta",
-      "Rs.10.16 Lakh onwards",
-    ],
-    car: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
-      "Creta",
-      "Rs.10.16 Lakh onwards",
-    ],
-  };
-  const CompanyName = "Honda";
-  const CarPrice = "₹ 6.34 Lakh";
-  const TopPic = Amaze;
-  const CarName = "Honda Amaze";
-  const OnlyName = "Amaze";
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 6.34 Lakh onwards",
-    "18.3 to 24.7 kmpl",
-    "1199 to 1498 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol & Diesel",
-    "5 Seater",
-    "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "E MT. S. MT/CVT. V. MT/CVT. VX. MT/CVT.",
-    "Advanced Compatibility Engineering (ACE) Body Structure.",
-    "Driver Seat i-SRS Airbag System.",
-    "Passenger Seat SRS Airbag System.",
-    "Dr & As Seat Pretensioner with Load Limiter.",
-    "ISOFIX Child Seat Anchorage.",
-    "Anti-Lock Braking System (ABS) with EBD.",
-    "Engine Immobilizer.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "E Petrol",
-      "1199 cc, Manual, Petrol, 18.6 kmpl",
-      "Rs.6.32 Lakh*",
-    ],
-    varient2: [
-      "S Petrol",
-      "1199 cc, Manual, Petrol, 18.6 kmpl",
-      "Rs.7.10 Lakh*",
-    ],
-    varient3: [
-      "V Petrol",
-      "1199 cc, Manual AMT, Petrol, 18.6 kmpl",
-      "Rs.7.70 Lakh*",
-    ],
-    varient4: [
-      "S CVT Petrol",
-      "1199 cc, Automatic, Petrol, 18.3 kmpl",
-      "Rs.8.00 Lakh*",
-    ],
-    varient5: [
-      "VX Petrol",
-      "1199 cc, Manual, Petrol, 18.6 kmpl",
-      "Rs.8.18 Lakh*",
-    ],
-    varient6: [
-      "V CVT Petrol",
-      "1199 cc, Automatic, Petrol, 18.3 kmpl",
-      "Rs.8.60 Lakh*",
-    ],
+  const VarientPetrol = joy.VarientPetrol;
 
-    varient7: [
-      "VX CVT Petrol",
-      "1199 cc, Automatic, Petrol, 18.3 kmpl",
-      "Rs.9.01 Lakh*",
-    ],
-  };
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientDiesel = {
-    varient1: [
-      "E Diesel",
-      "1498 cc, Manual, Diesel, 24.7 kmpl",
-      "Rs.8.66 Lakh*",
-    ],
+  const VarientCNG = joy.VarientCNG;
 
-    varient2: [
-      "S Diesel",
-      "1498 cc, Manual, Diesel, 24.7 kmpl",
-      "Rs.9.20 Lakh*",
-    ],
-    varient3: [
-      "V Diesel",
-      "1498 cc, Manual, Diesel, 24.7 kmpl",
-      "Rs.9.80 Lakh*",
-    ],
-    varient4: [
-      "S CVT Diesel",
-      "1498 cc, Automatic, Diesel, 21.0 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
-    varient5: [
-      "VX Diesel",
-      "1498 cc, Manual, Diesel, 24.7 kmpl",
-      "Rs.10.21 Lakh*",
-    ],
-    varient6: [
-      "V CVT Diesel",
-      "1498 cc, Automatic, Diesel, 21.0 kmpl",
-      "Rs.10.60 Lakh*",
-    ],
-    varient7: [
-      "VX CVT Diesel",
-      "1498 cc, Automatic, Diesel, 21.0 kmpl",
-      "Rs.11.11 Lakh*",
-    ],
-  };
+  const Mileage = joy.Mileage;
 
-  const VarientCNG = {};
+  const LatestUpdate = joy.LatestUpdate;
 
-  const Mileage = {
-    mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const LatestUpdate = [
-    "Latest Update: Honda has commenced bookings for the facelifted Amaze. Honda Amaze Price: The sub-4m sedan is priced from Rs 6.32 lakh to Rs 11.11 lakh (ex-showroom Delhi). Honda Amaze Variants: Honda offers the Amaze in four trims: E, S, V, and VX. Honda Amaze Engine and Transmission: The Amaze is equipped with two engine options: a 1.2-litre petrol (90PS/110Nm) and a 1.5-litre diesel (100PS/200Nm). Both are paired to a standard 5-speed manual transmission, along with the option of a CVT. The diesel CVT, however, produces slightly less power and torque (80PS/160Nm). Honda’s claimed fuel efficiency figures for each engine and gearbox combo are listed below: Petrol MT- 18.6kmpl Petrol CVT- 18.3kmpl Diesel MT- 24.7kmpl Diesel CVT- 21kmpl Honda Amaze Features: Honda has equipped it with a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, cruise control, a rear parking camera, and passive keyless entry with push-button engine start-stop. Honda Amaze Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Honda Amaze Rivals: It competes with the Ford Aspire, Hyundai Aura, Tata Tigor, and the Maruti Suzuki Dzire.",
-  ];
+  const Colorss = joy.Colorss;
 
-  const ProsCons = {
-    pros: [
-      "Comfortable ride over all surfaces, noiseless suspension even over broken roads",
-      "Improved overall interior space with increased storage spaces, including 1-litre bottle holders on all doors",
-      "Diesel-CVT is smooth, efficient and well suited for the city",
-    ],
-    cons: [
-      "Missing feature list - automatic headlamps, automatic wipers, projector headlamps",
-      "Fit and finish issues, cost cutting is evident",
-      "Rear headroom is at a premium, fixed headrests not comfortable",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const Colorss = {
-    color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
-    color2: ["Lunar Silver Metallic", "bg-gray-400"],
-    color3: ["Modern Steel Metallic", "bg-white"],
-    color4: ["Golden Brown Metallic", "bg-brown-600"],
-    color5: ["Radiant Red", "bg-gray-800"],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 5.98 Lakh onwards",
-      "23.26 to 24.12 kmpl",
-      "1197 cc",
-      "Manual & Automatic",
-      "Petrol",
-      "5 Seater",
-      "3,995 mm L x 1,735 mm W x 1,515 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 6.00 Lakh onwards",
-      "20 to 28 kmpl",
-      "998 to 1197 cc",
-      "Manual & Automatic AMT",
-      "Petrol & Diesel",
-      "5 Seater",
-      "3,995 mm L x 1,680 mm W x 1,520 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
-
-  const faqs = {
-    question1: [
-      "What is the on road price of Amaze?",
-      "The on-road price of Amaze in Delhi starts at ‎₹ 7.11 Lakh and goes upto ‎₹ 13.13 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Amaze and Aura?",
-      "Amaze price starts at ₹ 6.34 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Aura price starts at ₹ 6.00 Lakh ex-showroom and It comes with 1197 cc engine",
-    ],
-    question3: [
-      "What is the mileage of Honda Amaze?",
-      "The Honda Amaze mileage is 18.3 - 24.7 kmpl.",
-    ],
-  };
-
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
 
   const SimilarCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
-      "Dzire",
-      "₹ 5.98 Lakh Onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
-      "Aura",
-      "₹ 6.00 Lakh onwards0",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
-      "Vento",
-      "10.00 Lakh onwards",
-    ],
-    car4: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Rapid/7920/1608614333184/front-left-side-47.jpg?tr=w-456",
-      "Rapid",
-      "₹ 7.79 Lakh onwards",
-    ],
+    car1: DzireBasicInfoCard,
+    car2: AuraBasicInfoCard,
+    car3: VentoBasicInfoCard,
+    car4: RapidBasicInfoCard,
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Amaze",
-      "₹ 6.34 Lakh onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
-      "City",
-      "₹ 11.19 Lakh onwards",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
-      "WRV",
-      "₹ 8.90 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
-      "Jazz",
-      "₹ 7.75 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
-      "City 4th Gen",
-      "₹ 9.33 Lakh onwards",
-    ],
+    car1: AmazeBasicInfoCard,
+    car2: CityBasicInfoCard,
+    car3: WRVBasicInfoCard,
+    car4: JazzBasicInfoCard,
+    car5: City4BasicInfoCard,
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
-      "Amaze Facelift 2021",
-      "₹ 6.35 - 10.10 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
-      "New Gen Jazz",
-      "₹ 8.00 - 12.00 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
-      "HRV",
-      "₹ 12.00 - 16.00 Lakh",
-    ],
-  };
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const ThumPic = TAmaze;
+  // const PopularCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //     "Harrier",
+  //     "₹ 14.30 Lakh Onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
+  //     "Hector",
+  //     "₹ 13.18 Lakh onwards0",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+  //     "Creta",
+  //     "Rs.10.16 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+  //     "Creta",
+  //     "Rs.10.16 Lakh onwards",
+  //   ],
+  //   car5: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+  //     "Creta",
+  //     "Rs.10.16 Lakh onwards",
+  //   ],
+  //   car6: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+  //     "Creta",
+  //     "Rs.10.16 Lakh onwards",
+  //   ],
+  //   car: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/6775/1584360708758/front-left-side-47.jpg?tr=w-456",
+  //     "Creta",
+  //     "Rs.10.16 Lakh onwards",
+  //   ],
+  // };
+  // const CompanyName = "Honda";
+  // const CarPrice = "₹ 6.34 Lakh";
+  // const TopPic = Amaze;
+  // const CarName = "Honda Amaze";
+  // const OnlyName = "Amaze";
+
+  // const KeySpecification = [
+  //   "₹ 6.34 Lakh onwards",
+  //   "18.3 to 24.7 kmpl",
+  //   "1199 to 1498 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol & Diesel",
+  //   "5 Seater",
+  //   "3,995 mm L x 1,695 mm W x 1,498-1,501 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "E MT. S. MT/CVT. V. MT/CVT. VX. MT/CVT.",
+  //   "Advanced Compatibility Engineering (ACE) Body Structure.",
+  //   "Driver Seat i-SRS Airbag System.",
+  //   "Passenger Seat SRS Airbag System.",
+  //   "Dr & As Seat Pretensioner with Load Limiter.",
+  //   "ISOFIX Child Seat Anchorage.",
+  //   "Anti-Lock Braking System (ABS) with EBD.",
+  //   "Engine Immobilizer.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "E Petrol",
+  //     "1199 cc, Manual, Petrol, 18.6 kmpl",
+  //     "Rs.6.32 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "S Petrol",
+  //     "1199 cc, Manual, Petrol, 18.6 kmpl",
+  //     "Rs.7.10 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "V Petrol",
+  //     "1199 cc, Manual AMT, Petrol, 18.6 kmpl",
+  //     "Rs.7.70 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "S CVT Petrol",
+  //     "1199 cc, Automatic, Petrol, 18.3 kmpl",
+  //     "Rs.8.00 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "VX Petrol",
+  //     "1199 cc, Manual, Petrol, 18.6 kmpl",
+  //     "Rs.8.18 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "V CVT Petrol",
+  //     "1199 cc, Automatic, Petrol, 18.3 kmpl",
+  //     "Rs.8.60 Lakh*",
+  //   ],
+
+  //   varient7: [
+  //     "VX CVT Petrol",
+  //     "1199 cc, Automatic, Petrol, 18.3 kmpl",
+  //     "Rs.9.01 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {
+  //   varient1: [
+  //     "E Diesel",
+  //     "1498 cc, Manual, Diesel, 24.7 kmpl",
+  //     "Rs.8.66 Lakh*",
+  //   ],
+
+  //   varient2: [
+  //     "S Diesel",
+  //     "1498 cc, Manual, Diesel, 24.7 kmpl",
+  //     "Rs.9.20 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "V Diesel",
+  //     "1498 cc, Manual, Diesel, 24.7 kmpl",
+  //     "Rs.9.80 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "S CVT Diesel",
+  //     "1498 cc, Automatic, Diesel, 21.0 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "VX Diesel",
+  //     "1498 cc, Manual, Diesel, 24.7 kmpl",
+  //     "Rs.10.21 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "V CVT Diesel",
+  //     "1498 cc, Automatic, Diesel, 21.0 kmpl",
+  //     "Rs.10.60 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "VX CVT Diesel",
+  //     "1498 cc, Automatic, Diesel, 21.0 kmpl",
+  //     "Rs.11.11 Lakh*",
+  //   ],
+  // };
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (1197 cc)", "Manual", "23.26 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Honda has commenced bookings for the facelifted Amaze. Honda Amaze Price: The sub-4m sedan is priced from Rs 6.32 lakh to Rs 11.11 lakh (ex-showroom Delhi). Honda Amaze Variants: Honda offers the Amaze in four trims: E, S, V, and VX. Honda Amaze Engine and Transmission: The Amaze is equipped with two engine options: a 1.2-litre petrol (90PS/110Nm) and a 1.5-litre diesel (100PS/200Nm). Both are paired to a standard 5-speed manual transmission, along with the option of a CVT. The diesel CVT, however, produces slightly less power and torque (80PS/160Nm). Honda’s claimed fuel efficiency figures for each engine and gearbox combo are listed below: Petrol MT- 18.6kmpl Petrol CVT- 18.3kmpl Diesel MT- 24.7kmpl Diesel CVT- 21kmpl Honda Amaze Features: Honda has equipped it with a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto, cruise control, a rear parking camera, and passive keyless entry with push-button engine start-stop. Honda Amaze Safety: Standard safety features include dual front airbags, ABS with EBD, and rear parking sensors. Honda Amaze Rivals: It competes with the Ford Aspire, Hyundai Aura, Tata Tigor, and the Maruti Suzuki Dzire.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Comfortable ride over all surfaces, noiseless suspension even over broken roads",
+  //     "Improved overall interior space with increased storage spaces, including 1-litre bottle holders on all doors",
+  //     "Diesel-CVT is smooth, efficient and well suited for the city",
+  //   ],
+  //   cons: [
+  //     "Missing feature list - automatic headlamps, automatic wipers, projector headlamps",
+  //     "Fit and finish issues, cost cutting is evident",
+  //     "Rear headroom is at a premium, fixed headrests not comfortable",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["PLATINUM WHITE PEARL", "bg-blue-600"],
+  //   color2: ["Lunar Silver Metallic", "bg-gray-400"],
+  //   color3: ["Modern Steel Metallic", "bg-white"],
+  //   color4: ["Golden Brown Metallic", "bg-brown-600"],
+  //   color5: ["Radiant Red", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 5.98 Lakh onwards",
+  //     "23.26 to 24.12 kmpl",
+  //     "1197 cc",
+  //     "Manual & Automatic",
+  //     "Petrol",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,735 mm W x 1,515 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 6.00 Lakh onwards",
+  //     "20 to 28 kmpl",
+  //     "998 to 1197 cc",
+  //     "Manual & Automatic AMT",
+  //     "Petrol & Diesel",
+  //     "5 Seater",
+  //     "3,995 mm L x 1,680 mm W x 1,520 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Amaze?",
+  //     "The on-road price of Amaze in Delhi starts at ‎₹ 7.11 Lakh and goes upto ‎₹ 13.13 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Amaze and Aura?",
+  //     "Amaze price starts at ₹ 6.34 Lakh ex-showroom and It comes with 1199 cc engine. Whereas Aura price starts at ₹ 6.00 Lakh ex-showroom and It comes with 1197 cc engine",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Honda Amaze?",
+  //     "The Honda Amaze mileage is 18.3 - 24.7 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
+
+  // const SimilarCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/marutisuzuki-dzire-right-front-three-quarter8.jpeg?q=85",
+  //     "Dzire",
+  //     "₹ 5.98 Lakh Onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/41652/aura-exterior-right-front-three-quarter-54.jpeg?q=85",
+  //     "Aura",
+  //     "₹ 6.00 Lakh onwards0",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/26563/Volkswagen-Vento-Right-Front-Three-Quarter-169094.jpg?wm=0&q=85",
+  //     "Vento",
+  //     "10.00 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Rapid/7920/1608614333184/front-left-side-47.jpg?tr=w-456",
+  //     "Rapid",
+  //     "₹ 7.79 Lakh onwards",
+  //   ],
+  // };
+
+  // const ThatBrandCars = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/33276/amaze-exterior-right-front-three-quarter-2.jpeg?q=85",
+  //     "Amaze",
+  //     "₹ 6.34 Lakh onwards",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40535/all-new-city-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City",
+  //     "₹ 11.19 Lakh onwards",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45732/wr-v-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "WRV",
+  //     "₹ 8.90 Lakh onwards",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/46891/jazz-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "Jazz",
+  //     "₹ 7.75 Lakh onwards",
+  //   ],
+  //   car5: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/26755/city-4th-generation-exterior-right-front-three-quarter.jpeg?q=85",
+  //     "City 4th Gen",
+  //     "₹ 9.33 Lakh onwards",
+  //   ],
+  // };
+
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-front-view-2.jpeg?isig=0&q=85",
+  //     "Amaze Facelift 2021",
+  //     "₹ 6.35 - 10.10 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/43195/Honda-New-Jazz-Exterior-176189.jpg?wm=1&q=85",
+  //     "New Gen Jazz",
+  //     "₹ 8.00 - 12.00 Lakh",
+  //   ],
+  //   car4: [
+  //     "https://imgd.aeplcdn.com/664x374/cw/ec/39751/Honda-HRV-Exterior-169828.jpg?wm=0&q=85",
+  //     "HRV",
+  //     "₹ 12.00 - 16.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

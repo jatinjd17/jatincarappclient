@@ -33,181 +33,216 @@ import { TCelerioX } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 5.12 Lakh";
-  const TopPic = CelerioX;
-  const CarName = "Maruti Suzuki Celerio X";
-  const OnlyName = "Celerio X";
-  const ThumPic = TCelerioX;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 5.12 Lakh onwards",
-    "21.63 kmpl",
-    "998 cc",
-    "Manual & AMT",
-    "Petrol",
-    "4 Seater",
-    "3,695 mm L x 1,600 mm W x 1,560 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["Vxi", "998 cc, Manual, Petrol, 21.63 kmpl", "Rs.5.12 Lakh*"],
-    varient2: [
-      "VXi (O)",
-      "998 cc, Manual, Petrol, 21.63 kmpl",
-      "Rs.5.21 Lakh*",
-    ],
-    varient3: ["ZXI", "998 cc, Manual, Petrol, 21.63 kmpl", "Rs.5.39 Lakh*"],
-    varient4: [
-      "VXI AMT",
-      "998 cc, Manual, Petrol, 21.63 kmpl",
-      "Rs.5.62 Lakh*",
-    ],
-    varient5: [
-      "VXI (O) AMT",
-      "998 cc, Manual, Petrol, 21.63 kmpl",
-      "Rs.5.71 Lakh*",
-    ],
-    varient6: [
-      "ZXI (Opt)",
-      "998 cc, Manual, Petrol, 21.63 kmpl",
-      "Rs.5.80 Lakh*",
-    ],
-    varient7: [
-      "ZXI AMT",
-      "998 cc, Manual, Petrol, 21.63 kmpl",
-      "Rs.5.89 Lakh*",
-    ],
-    varient8: [
-      "ZXI (O) AMT",
-      "998 cc, Manual, Petrol, 21.63 kmpl",
-      "Rs.5.92 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {
-    varient1: [
-      "VXI CNG",
-      "998 cc, Manual, Petrol, 30.47 km/kg",
-      "Rs.5.95 Lakh*",
-    ],
-    varient2: [
-      "VXI (O) CNG",
-      "998 cc, Manual, Petrol, 30.47 km/kg",
-      "Rs.6.01 Lakh*",
-    ],
-  };
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (998 cc)", "Manual", "21.63 kmpl"],
-    mileage2: ["CNG (998 cc)", "Manual", "30.47 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Latest Update: Maruti has hiked the prices of the Celerio X uniformly by Rs 12,000. Maruti Celerio X Price: The Celerio X is priced from Rs 5.11 lakh to Rs 5.91 lakh (ex-showroom Delhi). Maruti Celerio X Variants: It is available in two trims: VXi and ZXi. Maruti Celerio X Powertrain: Maruti has equipped the Celerio X with the same 1.0-litre petrol engine (as the regular Celerio) developing 69PS and 90Nm. It is mated to a 5-speed manual transmission with an optional AMT. The claimed mileage is 21.63kmpl with either gearbox. Maruti Celerio X Features: Features include keyless entry, height-adjustable driver seat, manual AC, and steering-mounted audio control. Maruti Celerio X Safety: Standard safety features include a driver-side airbag, ABS, and rear parking sensors. Maruti Celerio X Rivals: The Celerio X's only direct rival is the Tata Tiago NRG. It also competes with the same rivals as the Celerio, including the Tata Tiago, Datsun GO, Maruti Wagon R and Ignis, and Hyundai Santro.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "Optional AMT across variants. Easy to drive in the congested city.",
-      "Safety features such as ABS (Anti Lock Braking System) and Airbags available as an option across the range.",
-      "Healthy in-cabin space despite the compact proportions.",
-    ],
-    cons: [
-      "Build quality could have been better; doors shut with a clang - feel slightly flimsy.",
-      "Jerky shifts on the AMT. Not as smooth as a conventional automatic.",
-      "Petrol engine best suited to the city; feels underpowered on the highway.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Torque Blue", "bg-blue-600"],
-    color2: ["Paprika Orange", "bg-orange-500"],
-    color3: ["Arctic White", "bg-white"],
-    color4: ["Caffeine Brown", "bg-brown-600"],
-    color5: ["Glistening Grey", "bg-gray-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 3.32 Lakh onwards",
-      "25 kmpl",
-      "799 to 1000 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
-      "https://i.ibb.co/C63SXxn/Kwid.jpg",
-    ],
-    comparisioncar2: [
-      "₹ 3.80 Lakh onwards",
-      "22 kmpl",
-      "799 to 999 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
-      "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://images.carandbike.com/car-images/gallery/large/maruti-suzuki/alto-800/interior/dashboard.webp?v=2020-10-24",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the mileage?",
-      "As for the claimed fuel efficiency, the Maruti Suzuki Alto 800 base Petrol returns 24.70 Kmpl, whereas its base Petrol+CNG counterpart gives 31.39 Kmpl.",
-    ],
-    question2: [
-      "What is the Seating capacity?",
-      "Maruti Suzuki Alto 800 has a seating capacity of 5 people.",
-    ],
-    question3: [
-      "What are the Top variants?",
-      "Maruti Suzuki Alto 800 comes with total 8 variants. LXI, VXI, Standard are the most popular ones.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 5.12 Lakh";
+  // const TopPic = CelerioX;
+  // const CarName = "Maruti Suzuki Celerio X";
+  // const OnlyName = "Celerio X";
+  // const ThumPic = TCelerioX;
+
+  // const KeySpecification = [
+  //   "₹ 5.12 Lakh onwards",
+  //   "21.63 kmpl",
+  //   "998 cc",
+  //   "Manual & AMT",
+  //   "Petrol",
+  //   "4 Seater",
+  //   "3,695 mm L x 1,600 mm W x 1,560 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["Vxi", "998 cc, Manual, Petrol, 21.63 kmpl", "Rs.5.12 Lakh*"],
+  //   varient2: [
+  //     "VXi (O)",
+  //     "998 cc, Manual, Petrol, 21.63 kmpl",
+  //     "Rs.5.21 Lakh*",
+  //   ],
+  //   varient3: ["ZXI", "998 cc, Manual, Petrol, 21.63 kmpl", "Rs.5.39 Lakh*"],
+  //   varient4: [
+  //     "VXI AMT",
+  //     "998 cc, Manual, Petrol, 21.63 kmpl",
+  //     "Rs.5.62 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "VXI (O) AMT",
+  //     "998 cc, Manual, Petrol, 21.63 kmpl",
+  //     "Rs.5.71 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "ZXI (Opt)",
+  //     "998 cc, Manual, Petrol, 21.63 kmpl",
+  //     "Rs.5.80 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "ZXI AMT",
+  //     "998 cc, Manual, Petrol, 21.63 kmpl",
+  //     "Rs.5.89 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "ZXI (O) AMT",
+  //     "998 cc, Manual, Petrol, 21.63 kmpl",
+  //     "Rs.5.92 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {
+  //   varient1: [
+  //     "VXI CNG",
+  //     "998 cc, Manual, Petrol, 30.47 km/kg",
+  //     "Rs.5.95 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "VXI (O) CNG",
+  //     "998 cc, Manual, Petrol, 30.47 km/kg",
+  //     "Rs.6.01 Lakh*",
+  //   ],
+  // };
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (998 cc)", "Manual", "21.63 kmpl"],
+  //   mileage2: ["CNG (998 cc)", "Manual", "30.47 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Latest Update: Maruti has hiked the prices of the Celerio X uniformly by Rs 12,000. Maruti Celerio X Price: The Celerio X is priced from Rs 5.11 lakh to Rs 5.91 lakh (ex-showroom Delhi). Maruti Celerio X Variants: It is available in two trims: VXi and ZXi. Maruti Celerio X Powertrain: Maruti has equipped the Celerio X with the same 1.0-litre petrol engine (as the regular Celerio) developing 69PS and 90Nm. It is mated to a 5-speed manual transmission with an optional AMT. The claimed mileage is 21.63kmpl with either gearbox. Maruti Celerio X Features: Features include keyless entry, height-adjustable driver seat, manual AC, and steering-mounted audio control. Maruti Celerio X Safety: Standard safety features include a driver-side airbag, ABS, and rear parking sensors. Maruti Celerio X Rivals: The Celerio X's only direct rival is the Tata Tiago NRG. It also competes with the same rivals as the Celerio, including the Tata Tiago, Datsun GO, Maruti Wagon R and Ignis, and Hyundai Santro.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "Optional AMT across variants. Easy to drive in the congested city.",
+  //     "Safety features such as ABS (Anti Lock Braking System) and Airbags available as an option across the range.",
+  //     "Healthy in-cabin space despite the compact proportions.",
+  //   ],
+  //   cons: [
+  //     "Build quality could have been better; doors shut with a clang - feel slightly flimsy.",
+  //     "Jerky shifts on the AMT. Not as smooth as a conventional automatic.",
+  //     "Petrol engine best suited to the city; feels underpowered on the highway.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Torque Blue", "bg-blue-600"],
+  //   color2: ["Paprika Orange", "bg-orange-500"],
+  //   color3: ["Arctic White", "bg-white"],
+  //   color4: ["Caffeine Brown", "bg-brown-600"],
+  //   color5: ["Glistening Grey", "bg-gray-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 3.32 Lakh onwards",
+  //     "25 kmpl",
+  //     "799 to 1000 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
+  //     "https://i.ibb.co/C63SXxn/Kwid.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 3.80 Lakh onwards",
+  //     "22 kmpl",
+  //     "799 to 999 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
+  //     "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://images.carandbike.com/car-images/gallery/large/maruti-suzuki/alto-800/interior/dashboard.webp?v=2020-10-24",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the mileage?",
+  //     "As for the claimed fuel efficiency, the Maruti Suzuki Alto 800 base Petrol returns 24.70 Kmpl, whereas its base Petrol+CNG counterpart gives 31.39 Kmpl.",
+  //   ],
+  //   question2: [
+  //     "What is the Seating capacity?",
+  //     "Maruti Suzuki Alto 800 has a seating capacity of 5 people.",
+  //   ],
+  //   question3: [
+  //     "What are the Top variants?",
+  //     "Maruti Suzuki Alto 800 comes with total 8 variants. LXI, VXI, Standard are the most popular ones.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -265,23 +300,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

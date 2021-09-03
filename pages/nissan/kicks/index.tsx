@@ -32,179 +32,214 @@ import { TKicks } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "Nissan";
-  const CarPrice = "₹ 9.50 Lakh";
-  const TopPic = Kicks;
-  const CarName = "Nissan Kicks";
-  const OnlyName = "Kicks";
-  const ThumPic = TKicks;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 9.50 Lakh onwards",
-    "13.9 to 15.8 kmpl",
-    "1330 to 1498 cc",
-    "Manual & Automatic (CVT)",
-    "Petrol",
-    "4 Seater",
-    "4,384 mm L x 1,813 mm W x 1,669 mm H",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Automatic Emergency Braking with Pedestrian Detection. Kicks looks out for what's ahead and for people crossing in front of you.",
-    "Rear Automatic Braking. Save your bumper.",
-    "Rear Cross Traffic Alert.",
-    "Blind Spot Warning.",
-    "Lane Departure Warning.",
-    "High Beam Assist.",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: [
-      "1.5 XL",
-      "1498 cc, Manual, Petrol, 14.23 kmpl",
-      "Rs.9.49 Lakh*",
-    ],
-    varient2: [
-      "1.5 XV",
-      "1498 cc, Manual, Petrol, 14.23 kmpl",
-      "Rs.9.99 Lakh*",
-    ],
-    varient3: [
-      "1.3 Turbo XV",
-      "3799 cc, Manual, Petrol, 14.23 kmpl",
-      "Rs.12.09 Lakh*",
-    ],
-    varient4: [
-      "1.3 Turbo XV Pre",
-      "3799 cc, Manual, Petrol, 14.23 kmpl",
-      "Rs.12.99 Lakh*",
-    ],
-    varient5: [
-      "1.3 Turbo XV CVT",
-      "3799 cc, Automatic, Petrol, 14.23 kmpl",
-      "Rs.13.94 Lakh*",
-    ],
-    varient6: [
-      "1.3 Turbo XV Pre Option",
-      "3799 cc, Manual, Petrol, 14.23 kmpl",
-      "Rs.13.99 Lakh*",
-    ],
-    varient7: [
-      "1.3 Turbo XV Pre Option DT",
-      "3799 cc, Manual, Petrol, 14.23 kmpl",
-      "Rs.14.19 Lakh*",
-    ],
-    varient8: [
-      "1.3 Turbo XV Pre CVT",
-      "3799 cc, Automatic, Petrol, 14.23 kmpl",
-      "Rs.14.64 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {};
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (3799 cc)", "Automatic (Dual Clutch)", "14.23 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "Nissan Kicks Price: Nissan has priced the Kicks from Rs 9.49 lakh to Rs 14.14 lakh (ex-showroom). Nissan Kicks Variants: The Kicks is available in three broad variants: XL, XV, and XV Premium. Nissan Kicks Seating Capacity: It comes in a 5-seater layout. Nissan Kicks Powertrains: Nissan offers the Kicks with two petrol engines: a 1.5-litre naturally aspirated unit (106PS/142Nm) mated to a 5-speed MT or a 1.3-litre turbo-petrol engine (156PS/254Nm) paired to either a 6-speed MT or CVT. Nissan Kicks Features: The Kicks is equipped with cruise control, auto AC, an 8-inch touchscreen with Apple CarPlay and Android Auto, and push-button start/stop. Nissan Kicks Safety: Safety features on offer include up to four airbags, ABS with EBD, and electronic stability control. Nissan Kicks Rivals: It locks horns with the Hyundai Creta, Kia Seltos, Renault Duster, Maruti Suzuki S-Cross, Skoda Kushaq and Volkswagen Taigun. If you are looking for a more rugged SUV, you can check out the Mahindra Scorpio.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: ["Quirky styling", "Loaded with features", "Pliant ride quality"],
-    cons: [
-      "Scarce dealer network.",
-      "Lacks smart storage options.",
-      "Slightly heavier clutch.",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Pearl White", "bg-white-600"],
-    color2: ["Blade Silver", "bg-gray-800"],
-    color3: ["Bronze Grey", "bg-gray-700"],
-    color4: ["Deep Blue Pearl", "bg-blue-300"],
-    color5: ["Night Shade", "bg-black-800"],
-    color6: ["Fire Red", "bg-red-800"],
-    color7: ["SPearl White/Onyx Black", "bg-white-800"],
-    color8: ["Bronze Grey/Amber Orange", "bg-red-200"],
-    color9: ["Fire Red/Onyx Black", "bg-red-800"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 14.30 Lakh Onwards",
-      "14.63 to 16.35 kmpl",
-      "1956 cc",
-      "Manual & Automatic (Torque Converter)",
-      "Diesel",
-      "5 Seater",
-      "4,598 mm L x 1,894 mm W x 1,706 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
-    ],
-    comparisioncar2: [
-      "₹ 13.63 Lakh onwards",
-      "16.6 kmpl",
-      "1451 to 1956 cc",
-      "Manual & Automatic",
-      "Petrol & Diesel",
-      "6-7 Seater",
-      "4,720 mm L x 1,835 mm W x 1,760 mm H",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the on road price of Kicks?",
-      "The on-road price of Kicks in Delhi starts at ‎₹ 10.65 Lakh and goes upto ‎₹ 16.84 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-    ],
-    question2: [
-      "Which car is better between Kicks and Duster?",
-      "Kicks price starts at ₹ 9.50 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Duster price starts at ₹ 9.84 Lakh ex-showroom and It comes with 1498 cc engine. Compare the two models to identify the best car for you.",
-    ],
-    question3: [
-      "What is the mileage of Nissan Kicks?",
-      "The Nissan Kicks mileage is 13.9 - 15.8 kmpl.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "Nissan";
+  // const CarPrice = "₹ 9.50 Lakh";
+  // const TopPic = Kicks;
+  // const CarName = "Nissan Kicks";
+  // const OnlyName = "Kicks";
+  // const ThumPic = TKicks;
+
+  // const KeySpecification = [
+  //   "₹ 9.50 Lakh onwards",
+  //   "13.9 to 15.8 kmpl",
+  //   "1330 to 1498 cc",
+  //   "Manual & Automatic (CVT)",
+  //   "Petrol",
+  //   "4 Seater",
+  //   "4,384 mm L x 1,813 mm W x 1,669 mm H",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Automatic Emergency Braking with Pedestrian Detection. Kicks looks out for what's ahead and for people crossing in front of you.",
+  //   "Rear Automatic Braking. Save your bumper.",
+  //   "Rear Cross Traffic Alert.",
+  //   "Blind Spot Warning.",
+  //   "Lane Departure Warning.",
+  //   "High Beam Assist.",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: [
+  //     "1.5 XL",
+  //     "1498 cc, Manual, Petrol, 14.23 kmpl",
+  //     "Rs.9.49 Lakh*",
+  //   ],
+  //   varient2: [
+  //     "1.5 XV",
+  //     "1498 cc, Manual, Petrol, 14.23 kmpl",
+  //     "Rs.9.99 Lakh*",
+  //   ],
+  //   varient3: [
+  //     "1.3 Turbo XV",
+  //     "3799 cc, Manual, Petrol, 14.23 kmpl",
+  //     "Rs.12.09 Lakh*",
+  //   ],
+  //   varient4: [
+  //     "1.3 Turbo XV Pre",
+  //     "3799 cc, Manual, Petrol, 14.23 kmpl",
+  //     "Rs.12.99 Lakh*",
+  //   ],
+  //   varient5: [
+  //     "1.3 Turbo XV CVT",
+  //     "3799 cc, Automatic, Petrol, 14.23 kmpl",
+  //     "Rs.13.94 Lakh*",
+  //   ],
+  //   varient6: [
+  //     "1.3 Turbo XV Pre Option",
+  //     "3799 cc, Manual, Petrol, 14.23 kmpl",
+  //     "Rs.13.99 Lakh*",
+  //   ],
+  //   varient7: [
+  //     "1.3 Turbo XV Pre Option DT",
+  //     "3799 cc, Manual, Petrol, 14.23 kmpl",
+  //     "Rs.14.19 Lakh*",
+  //   ],
+  //   varient8: [
+  //     "1.3 Turbo XV Pre CVT",
+  //     "3799 cc, Automatic, Petrol, 14.23 kmpl",
+  //     "Rs.14.64 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {};
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (3799 cc)", "Automatic (Dual Clutch)", "14.23 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "Nissan Kicks Price: Nissan has priced the Kicks from Rs 9.49 lakh to Rs 14.14 lakh (ex-showroom). Nissan Kicks Variants: The Kicks is available in three broad variants: XL, XV, and XV Premium. Nissan Kicks Seating Capacity: It comes in a 5-seater layout. Nissan Kicks Powertrains: Nissan offers the Kicks with two petrol engines: a 1.5-litre naturally aspirated unit (106PS/142Nm) mated to a 5-speed MT or a 1.3-litre turbo-petrol engine (156PS/254Nm) paired to either a 6-speed MT or CVT. Nissan Kicks Features: The Kicks is equipped with cruise control, auto AC, an 8-inch touchscreen with Apple CarPlay and Android Auto, and push-button start/stop. Nissan Kicks Safety: Safety features on offer include up to four airbags, ABS with EBD, and electronic stability control. Nissan Kicks Rivals: It locks horns with the Hyundai Creta, Kia Seltos, Renault Duster, Maruti Suzuki S-Cross, Skoda Kushaq and Volkswagen Taigun. If you are looking for a more rugged SUV, you can check out the Mahindra Scorpio.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: ["Quirky styling", "Loaded with features", "Pliant ride quality"],
+  //   cons: [
+  //     "Scarce dealer network.",
+  //     "Lacks smart storage options.",
+  //     "Slightly heavier clutch.",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Pearl White", "bg-white-600"],
+  //   color2: ["Blade Silver", "bg-gray-800"],
+  //   color3: ["Bronze Grey", "bg-gray-700"],
+  //   color4: ["Deep Blue Pearl", "bg-blue-300"],
+  //   color5: ["Night Shade", "bg-black-800"],
+  //   color6: ["Fire Red", "bg-red-800"],
+  //   color7: ["SPearl White/Onyx Black", "bg-white-800"],
+  //   color8: ["Bronze Grey/Amber Orange", "bg-red-200"],
+  //   color9: ["Fire Red/Onyx Black", "bg-red-800"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 14.30 Lakh Onwards",
+  //     "14.63 to 16.35 kmpl",
+  //     "1956 cc",
+  //     "Manual & Automatic (Torque Converter)",
+  //     "Diesel",
+  //     "5 Seater",
+  //     "4,598 mm L x 1,894 mm W x 1,706 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/32958/tata-harrier-right-front-three-quarter58.jpeg?q=85",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 13.63 Lakh onwards",
+  //     "16.6 kmpl",
+  //     "1451 to 1956 cc",
+  //     "Manual & Automatic",
+  //     "Petrol & Diesel",
+  //     "6-7 Seater",
+  //     "4,720 mm L x 1,835 mm W x 1,760 mm H",
+  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the on road price of Kicks?",
+  //     "The on-road price of Kicks in Delhi starts at ‎₹ 10.65 Lakh and goes upto ‎₹ 16.84 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
+  //   ],
+  //   question2: [
+  //     "Which car is better between Kicks and Duster?",
+  //     "Kicks price starts at ₹ 9.50 Lakh ex-showroom and It comes with 1498 cc engine. Whereas Duster price starts at ₹ 9.84 Lakh ex-showroom and It comes with 1498 cc engine. Compare the two models to identify the best car for you.",
+  //   ],
+  //   question3: [
+  //     "What is the mileage of Nissan Kicks?",
+  //     "The Nissan Kicks mileage is 13.9 - 15.8 kmpl.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -237,23 +272,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-X-Trail/3718/1568357284267/front-left-side-47.jpg?tr=w-456",
-      "Nissan X-Trail",
-      "Rs.22.60 Lakh*",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Sunny-2020/6887/1555329555708/front-left-side-47.jpg?tr=w-456",
-      "Nissan Sunny 2021",
-      "Rs.8.50 Lakh*",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Leaf/1351/1550722575097/front-left-side-47.jpg?tr=w-456",
-      "Nissan Leaf",
-      "Rs.30.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-X-Trail/3718/1568357284267/front-left-side-47.jpg?tr=w-456",
+  //     "Nissan X-Trail",
+  //     "Rs.22.60 Lakh*",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Sunny-2020/6887/1555329555708/front-left-side-47.jpg?tr=w-456",
+  //     "Nissan Sunny 2021",
+  //     "Rs.8.50 Lakh*",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-Leaf/1351/1550722575097/front-left-side-47.jpg?tr=w-456",
+  //     "Nissan Leaf",
+  //     "Rs.30.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;

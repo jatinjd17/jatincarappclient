@@ -33,164 +33,199 @@ import Head from "next/head";
 import Meta from "../../../Components/metaSEO";
 
 function Homee({ joy }) {
-  const CompanyName = "MarutiSuzuki";
-  const CarPrice = "₹ 4.16 Lakh";
-  const TopPic = Alto;
-  const CarName = "Maruti Alto 800";
-  const OnlyName = "Alto 800";
-  const ThumPic = TAlto;
+  const CompanyName = joy.CarInfo.CompanyName;
+  const CarPrice = joy.CarInfo.Price[0];
+  const TopPic = joy.CarInfo.TopPic[0];
+  const CarName = joy.CarInfo.CarName;
+  const OnlyName = joy.CarInfo.OnlyName[0];
+  const ThumPic = joy.CarInfo.ThumPic;
 
-  const KeySpecification = [
-    "₹ 3 Lakh onwards",
-    "22.05 kmpl",
-    "796 cc",
-    "Manual",
-    "Petrol",
-    "5 Seater",
-    "1515 mm (width) 3445 mm (length) 1475 mm (height)",
-  ];
+  const KeySpecification = joy.KeySpecification;
 
-  const SafetyFeatures = [
-    "Seat Belt Warning",
-    "Anti-Lock Braking System",
-    "2 Airbags",
-    "EBD",
-    "Speed Alert",
-  ];
+  const SafetyFeatures = joy.SafetyFeatures;
 
-  const VarientPetrol = {
-    varient1: ["STD", "796  cc, Manual, Petrol, 22.05 kmpl", "Rs.3.00 Lakh*"],
-    varient2: [
-      "STD (O)",
-      "796  cc, Manual, Petrol, 22.05 kmpl",
-      "Rs.3.05 Lakh*",
-    ],
-    varient3: ["LXI", "796  cc, Manual, Petrol, 22.05 kmpl", "Rs.3.76 Lakh*"],
-    varient4: [
-      "LXI (O)",
-      "796  cc, Manual, Petrol, 22.05 kmpl",
-      "Rs.3.81 Lakh*",
-    ],
-    varient5: ["VXI", "796  cc, Manual, Petrol, 22.05 kmpl", "Rs.4.02 Lakh*"],
-    varient6: [
-      "VXI Plus",
-      "796  cc, Manual, Petrol, 22.05 kmpl",
-      "Rs.4.16 Lakh*",
-    ],
-  };
+  const VarientPetrol = joy.VarientPetrol;
 
-  const VarientDiesel = {};
+  const VarientDiesel = joy.VarientDiesel;
 
-  const VarientCNG = {
-    varient1: ["LXI CNG", "796 cc, Manual, CNG, 31.59 km/kg", "Rs.4.66 Lakh*"],
-    varient2: [
-      "LXI(O) CNG",
-      "796 cc, Manual, CNG, 31.59 km/kg",
-      "Rs.4.71 Lakh*",
-    ],
-  };
+  const VarientCNG = joy.VarientCNG;
 
-  const Mileage = {
-    mileage1: ["Petrol (796 cc)", "Manual", "22.05 kmpl"],
-    mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  };
+  const Mileage = joy.Mileage;
 
-  const LatestUpdate = [
-    "The Maruti Alto 800 has 1 Petrol Engine and 1 CNG Engine on offer. The Petrol engine is 796 cc while the CNG engine is 796 cc . It is available with the Manual transmission. Depending upon the variant and fuel type the Alto 800 has a mileage of 22.05 kmpl to 31.59 km/kg. The Alto 800 is a 4 seater and has length of 3445mm, width of 1515 and a wheelbase of 2360mm.",
-  ];
+  const LatestUpdate = joy.LatestUpdate;
 
-  const ProsCons = {
-    pros: [
-      "The Alto 800 remains the champion of the segment",
-      "Offers more features for a great price",
-      "Engine and gearshifts are responsive",
-    ],
-    cons: [
-      "Constraint of space for rear seat passengers",
-      "Ride and Handling could have been better",
-      "Lacks features like a touchscreen infotainment system",
-    ],
-  };
+  const ProsCons = joy.ProsCons;
 
-  const Colorss = {
-    color1: ["Cerulean Blue", "bg-blue-600"],
-    color2: ["SIlky Silver", "bg-gray-400"],
-    color3: ["Superior White", "bg-white"],
-    color4: ["Uptown Red", "bg-red-600"],
-    color5: ["Granite Gray", "bg-gray-800"],
-    color6: ["Mojito Green", "bg-green-500"],
-  };
+  const Colorss = joy.Colorss;
 
-  const ComparisionCar = {
-    comparisioncar1: [
-      "₹ 3.32 Lakh onwards",
-      "25 kmpl",
-      "799 to 1000 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
-      "https://i.ibb.co/C63SXxn/Kwid.jpg",
-    ],
-    comparisioncar2: [
-      "₹ 3.80 Lakh onwards",
-      "22 kmpl",
-      "799 to 999 cc",
-      "Manual, Automatic",
-      "Petrol",
-      "4 Seater",
-      "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
-      "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
-    ],
-  };
+  const ComparisionCar = joy.ComparisionCar;
 
-  const HighlightedFeatures = {
-    feature1: [
-      "https://images.carandbike.com/car-images/gallery/large/maruti-suzuki/alto-800/interior/dashboard.webp?v=2020-10-24",
-      "Stylish Interiors",
-      "",
-    ],
-    feature2: [
-      "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-      "Rear Door Child Lock",
-      "",
-    ],
-    feature3: [
-      "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-      "2 Airbags",
-      "",
-    ],
-  };
+  const HighlightedFeatures = joy.HighlightedFeatures;
 
-  const faqs = {
-    question1: [
-      "What is the mileage?",
-      "As for the claimed fuel efficiency, the Maruti Suzuki Alto 800 base Petrol returns 24.70 Kmpl, whereas its base Petrol+CNG counterpart gives 31.39 Kmpl.",
-    ],
-    question2: [
-      "What is the Seating capacity?",
-      "Maruti Suzuki Alto 800 has a seating capacity of 5 people.",
-    ],
-    question3: [
-      "What are the Top variants?",
-      "Maruti Suzuki Alto 800 comes with total 8 variants. LXI, VXI, Standard are the most popular ones.",
-    ],
-  };
+  const faqs = joy.faqs;
 
-  const articles = {
-    article1: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article2: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-    article3: [
-      "/kushaq.png",
-      "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-    ],
-  };
+  const articles = joy.articles;
+
+  const UpcommingCarBrand = joy.UpcommingCarBrand;
+
+  // const CompanyName = "MarutiSuzuki";
+  // const CarPrice = "₹ 4.16 Lakh";
+  // const TopPic = Alto;
+  // const CarName = "Maruti Alto 800";
+  // const OnlyName = "Alto 800";
+  // const ThumPic = TAlto;
+
+  // const KeySpecification = [
+  //   "₹ 3 Lakh onwards",
+  //   "22.05 kmpl",
+  //   "796 cc",
+  //   "Manual",
+  //   "Petrol",
+  //   "5 Seater",
+  //   "1515 mm (width) 3445 mm (length) 1475 mm (height)",
+  // ];
+
+  // const SafetyFeatures = [
+  //   "Seat Belt Warning",
+  //   "Anti-Lock Braking System",
+  //   "2 Airbags",
+  //   "EBD",
+  //   "Speed Alert",
+  // ];
+
+  // const VarientPetrol = {
+  //   varient1: ["STD", "796  cc, Manual, Petrol, 22.05 kmpl", "Rs.3.00 Lakh*"],
+  //   varient2: [
+  //     "STD (O)",
+  //     "796  cc, Manual, Petrol, 22.05 kmpl",
+  //     "Rs.3.05 Lakh*",
+  //   ],
+  //   varient3: ["LXI", "796  cc, Manual, Petrol, 22.05 kmpl", "Rs.3.76 Lakh*"],
+  //   varient4: [
+  //     "LXI (O)",
+  //     "796  cc, Manual, Petrol, 22.05 kmpl",
+  //     "Rs.3.81 Lakh*",
+  //   ],
+  //   varient5: ["VXI", "796  cc, Manual, Petrol, 22.05 kmpl", "Rs.4.02 Lakh*"],
+  //   varient6: [
+  //     "VXI Plus",
+  //     "796  cc, Manual, Petrol, 22.05 kmpl",
+  //     "Rs.4.16 Lakh*",
+  //   ],
+  // };
+
+  // const VarientDiesel = {};
+
+  // const VarientCNG = {
+  //   varient1: ["LXI CNG", "796 cc, Manual, CNG, 31.59 km/kg", "Rs.4.66 Lakh*"],
+  //   varient2: [
+  //     "LXI(O) CNG",
+  //     "796 cc, Manual, CNG, 31.59 km/kg",
+  //     "Rs.4.71 Lakh*",
+  //   ],
+  // };
+
+  // const Mileage = {
+  //   mileage1: ["Petrol (796 cc)", "Manual", "22.05 kmpl"],
+  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
+  // };
+
+  // const LatestUpdate = [
+  //   "The Maruti Alto 800 has 1 Petrol Engine and 1 CNG Engine on offer. The Petrol engine is 796 cc while the CNG engine is 796 cc . It is available with the Manual transmission. Depending upon the variant and fuel type the Alto 800 has a mileage of 22.05 kmpl to 31.59 km/kg. The Alto 800 is a 4 seater and has length of 3445mm, width of 1515 and a wheelbase of 2360mm.",
+  // ];
+
+  // const ProsCons = {
+  //   pros: [
+  //     "The Alto 800 remains the champion of the segment",
+  //     "Offers more features for a great price",
+  //     "Engine and gearshifts are responsive",
+  //   ],
+  //   cons: [
+  //     "Constraint of space for rear seat passengers",
+  //     "Ride and Handling could have been better",
+  //     "Lacks features like a touchscreen infotainment system",
+  //   ],
+  // };
+
+  // const Colorss = {
+  //   color1: ["Cerulean Blue", "bg-blue-600"],
+  //   color2: ["SIlky Silver", "bg-gray-400"],
+  //   color3: ["Superior White", "bg-white"],
+  //   color4: ["Uptown Red", "bg-red-600"],
+  //   color5: ["Granite Gray", "bg-gray-800"],
+  //   color6: ["Mojito Green", "bg-green-500"],
+  // };
+
+  // const ComparisionCar = {
+  //   comparisioncar1: [
+  //     "₹ 3.32 Lakh onwards",
+  //     "25 kmpl",
+  //     "799 to 1000 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3731mm-L 1579mm-W 1490mm-H mm 2422mm-WheelBase",
+  //     "https://i.ibb.co/C63SXxn/Kwid.jpg",
+  //   ],
+  //   comparisioncar2: [
+  //     "₹ 3.80 Lakh onwards",
+  //     "22 kmpl",
+  //     "799 to 999 cc",
+  //     "Manual, Automatic",
+  //     "Petrol",
+  //     "4 Seater",
+  //     "3435mm-L 1574mm-W 1546mm-H mm 2348mm-WB",
+  //     "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
+  //   ],
+  // };
+
+  // const HighlightedFeatures = {
+  //   feature1: [
+  //     "https://images.carandbike.com/car-images/gallery/large/maruti-suzuki/alto-800/interior/dashboard.webp?v=2020-10-24",
+  //     "Stylish Interiors",
+  //     "",
+  //   ],
+  //   feature2: [
+  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
+  //     "Rear Door Child Lock",
+  //     "",
+  //   ],
+  //   feature3: [
+  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
+  //     "2 Airbags",
+  //     "",
+  //   ],
+  // };
+
+  // const faqs = {
+  //   question1: [
+  //     "What is the mileage?",
+  //     "As for the claimed fuel efficiency, the Maruti Suzuki Alto 800 base Petrol returns 24.70 Kmpl, whereas its base Petrol+CNG counterpart gives 31.39 Kmpl.",
+  //   ],
+  //   question2: [
+  //     "What is the Seating capacity?",
+  //     "Maruti Suzuki Alto 800 has a seating capacity of 5 people.",
+  //   ],
+  //   question3: [
+  //     "What are the Top variants?",
+  //     "Maruti Suzuki Alto 800 comes with total 8 variants. LXI, VXI, Standard are the most popular ones.",
+  //   ],
+  // };
+
+  // const articles = {
+  //   article1: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article2: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  //   article3: [
+  //     "/kushaq.png",
+  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
+  //   ],
+  // };
 
   const SimilarCars = {
     car1: [
@@ -248,23 +283,23 @@ function Homee({ joy }) {
     ],
   };
 
-  const UpcommingCarBrand = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
-      "Celario 2021",
-      "Rs.4.50 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Maruti Solio",
-      "Rs.6.00 Lakh",
-    ],
-    car3: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
-      "Alto 2021",
-      "Rs.3.00 Lakh",
-    ],
-  };
+  // const UpcommingCarBrand = {
+  //   car1: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio-2021/8454/Maruti-Celerio-2021-/1623741753799/front-left-side-47.jpg?tr=w-456",
+  //     "Celario 2021",
+  //     "Rs.4.50 Lakh",
+  //   ],
+  //   car2: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Solio/6317/1558342716659/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+  //     "Maruti Solio",
+  //     "Rs.6.00 Lakh",
+  //   ],
+  //   car3: [
+  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-2021/8020/1600235578537/front-left-side-47.jpg?tr=w-456",
+  //     "Alto 2021",
+  //     "Rs.3.00 Lakh",
+  //   ],
+  // };
 
   const ReadMore = ({ children }) => {
     const text = children;
