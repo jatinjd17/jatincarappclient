@@ -30,6 +30,12 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Gloster } from "../../../CarPicsUrl/CarPics";
 import { TGloster } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  HectorBasicInfoCard,
+  HectorPlusBasicInfoCard,
+  GlosterBasicInfoCard,
+  ZSEVBasicInfoCard,
+} from "../../../AllCarBasicInfo/mg";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -248,21 +254,10 @@ function Homee({ joy }) {
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/52565/hector-exterior-right-front-three-quarter-3.jpeg?q=85",
-      "Hector",
-      "₹ 13.18 Lakh onwards",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45184/hector-plus-exterior-right-front-three-quarter-7.jpeg?q=85",
-      "Hector Plus",
-      "₹ 13.63 Lakh onwards",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/39348/zs-ev-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "ZS EV",
-      "₹ 21.00 Lakh onwards",
-    ],
+    car1: HectorBasicInfoCard,
+    car2: HectorPlusBasicInfoCard,
+    car3: GlosterBasicInfoCard,
+    car4: ZSEVBasicInfoCard,
   };
 
   // const UpcommingCarBrand = {

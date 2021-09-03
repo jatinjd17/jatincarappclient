@@ -35,27 +35,43 @@ import {
   TWaganr,
   TXL6,
 } from "../../CarPicsUrl/Thumbnails";
+import {
+  AltoBasicInfoCard,
+  BalenoBasicInfoCard,
+  BrezzaBasicInfoCard,
+  CelerioBasicInfoCard,
+  CelerioXBasicInfoCard,
+  CiazBasicInfoCard,
+  DzireBasicInfoCard,
+  EecoBasicInfoCard,
+  ErtigaBasicInfoCard,
+  IgnisBasicInfoCard,
+  ScrossBasicInfoCard,
+  SpressoBasicInfoCard,
+  SwiftBasicInfoCard,
+  WaganRBasicInfoCard,
+  XL6BasicInfoCard,
+} from "../../AllCarBasicInfo/marutisuzuki";
 
 function IndexMaruti() {
   const CompanyName = "MarutiSuzuki";
 
   const ThatBrandCars = {
-    car1: [TSpresso, "S-presso", "₹ 3.77 Lakh onwards"],
-    car2: [TCelerio, "Celerio", "₹4.66 Lakhs onwards"],
-    car3: [TWaganr, "WaganR", "₹ 4.79 Lakh onwards"],
-    car4: [TSwift, "Swift", " ₹ 5.81 Lakh onwards"],
-    car5: [TBaleno, "Baleno", " ₹ 5.97 Lakh onwards"],
-    car6: [TErtiga, "Ertiga", " ₹ 7.78 Lakh onwards"],
-    car7: [TBrezza, "Brezza", " ₹ 7.51 Lakh onwards"],
-    car8: [TAlto, "Alto", " ₹ 3.00 Lakh onwards"],
-
-    car9: [TDzire, "Dzire", " ₹ 5.98 Lakh onwards"],
-    car10: [TXL6, "XL6", " ₹ 9.92 Lakh onwards"],
-    car11: [TIgnis, "Ignis", " ₹ 4.95 Lakh onwards"],
-    car12: [TEeco, "Eeco", " ₹ 4.08 Lakh onwards"],
-    car13: [TCiaz, "Ciaz", " ₹ 8.51 Lakh onwards"],
-    car14: [TScross, "SCross", " ₹ 8.39 Lakh onwards"],
-    car15: [TCelerioX, "CelerioX", " ₹ 5.12 Lakh onwards"],
+    car1: SpressoBasicInfoCard,
+    car2: CelerioBasicInfoCard,
+    car3: WaganRBasicInfoCard,
+    car4: SwiftBasicInfoCard,
+    car5: BalenoBasicInfoCard,
+    car6: ErtigaBasicInfoCard,
+    car7: BrezzaBasicInfoCard,
+    car8: AltoBasicInfoCard,
+    car9: DzireBasicInfoCard,
+    car10: XL6BasicInfoCard,
+    car11: IgnisBasicInfoCard,
+    car12: EecoBasicInfoCard,
+    car13: CiazBasicInfoCard,
+    car14: ScrossBasicInfoCard,
+    car15: CelerioXBasicInfoCard,
   };
 
   return (

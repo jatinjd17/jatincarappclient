@@ -30,6 +30,12 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Octavia } from "../../../CarPicsUrl/CarPics";
 import { TOctavia } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  RapidBasicInfoCard,
+  OctaviaBasicInfoCard,
+  SuperbBasicInfoCard,
+  KushaqBasicInfoCard,
+} from "../../../AllCarBasicInfo/skoda";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -230,26 +236,10 @@ function Homee({ joy }) {
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/47562/skoda-rapid-tsi-right-front-three-quarter0.jpeg?q=85",
-      "Rapid",
-      "₹ 7.80 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/40371/octavia-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Octavia",
-      "₹ 26.01 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/39039/superb-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "Superb",
-      "₹ 32.02 Lakh",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44549/kushaq-exterior-right-front-three-quarter-52.jpeg?q=85",
-      "Kushaq",
-      "₹ 10.51 Lakh",
-    ],
+    car1: RapidBasicInfoCard,
+    car2: OctaviaBasicInfoCard,
+    car3: SuperbBasicInfoCard,
+    car4: KushaqBasicInfoCard,
   };
 
   // const UpcommingCarBrand = {

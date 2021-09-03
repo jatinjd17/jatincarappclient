@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  GTRBasicInfoCard,
+  KicksBasicInfoCard,
+  MagniteBasicInfoCard,
+} from "../../AllCarBasicInfo/nissan";
 import { GTR, Kicks, Magnite } from "../../CarPicsUrl/CarPics";
 import { TGTR, TKicks, TMagnite } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
@@ -6,9 +11,9 @@ import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllC
 function IndexNissa() {
   const CompanyName = "Nissan";
   const ThatBrandCars = {
-    car1: [TMagnite, "Magnite", "Rs.5.59 Lakh*"],
-    car2: [TKicks, "Kicks", "Rs.9.50 Lakh*"],
-    car3: [TGTR, "GTR", "₹ 2.12 Crore"],
+    car1: MagniteBasicInfoCard,
+    car2: KicksBasicInfoCard,
+    car3: GTRBasicInfoCard,
   };
   return (
     <div>

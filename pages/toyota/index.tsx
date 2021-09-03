@@ -1,5 +1,14 @@
 import React from "react";
 import {
+  CamryBasicInfoCard,
+  FortunerBasicInfoCard,
+  GlanzaBasicInfoCard,
+  InnovaBasicInfoCard,
+  UrbanCruiserBasicInfoCard,
+  VellfireBasicInfoCard,
+  YarisBasicInfoCard,
+} from "../../AllCarBasicInfo/toyota";
+import {
   Camry,
   Fortuner,
   Glanza,
@@ -23,13 +32,13 @@ function IndexToyota() {
   const CompanyName = "Toyota";
 
   const ThatBrandCars = {
-    car1: [TInnova, "Innova", "₹ 16.82 Lakh onwards"],
-    car2: [TFortuner, "Fortuner", "₹ 30.36 Lakh onwards"],
-    car3: [TUrbanCruiser, "Urban Cruiser", "₹ 8.63 Lakh onwards"],
-    car4: [TGlanza, "Glanza", "₹ 7.34 Lakh onwards"],
-    car5: [TYaris, "Yaris", "₹ 9.17 Lakh onwards"],
-    car6: [TVellfire, "Vellfire", "₹ 89.89 Lakh onwards"],
-    car7: [TCamry, "Camry", "₹ 40.61 Lakh onwards"],
+    car1: InnovaBasicInfoCard,
+    car2: FortunerBasicInfoCard,
+    car3: UrbanCruiserBasicInfoCard,
+    car4: GlanzaBasicInfoCard,
+    car5: YarisBasicInfoCard,
+    car6: VellfireBasicInfoCard,
+    car7: CamryBasicInfoCard,
   };
 
   return (

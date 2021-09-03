@@ -31,6 +31,23 @@ import { Eeco } from "../../../CarPicsUrl/CarPics";
 import Head from "next/head";
 import { TEeco } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  SpressoBasicInfoCard,
+  CelerioBasicInfoCard,
+  WaganRBasicInfoCard,
+  SwiftBasicInfoCard,
+  BalenoBasicInfoCard,
+  ErtigaBasicInfoCard,
+  BrezzaBasicInfoCard,
+  AltoBasicInfoCard,
+  DzireBasicInfoCard,
+  XL6BasicInfoCard,
+  IgnisBasicInfoCard,
+  EecoBasicInfoCard,
+  CiazBasicInfoCard,
+  ScrossBasicInfoCard,
+  CelerioXBasicInfoCard,
+} from "../../../AllCarBasicInfo/marutisuzuki";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -242,26 +259,21 @@ function Homee({ joy }) {
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201911/0G6A5935_1.png?LkCz.7ZUenqnJF.SOBjEMulD..iElUYe&size=770:433",
-      "S-presso",
-      "₹ 3.77 Lakh onwards",
-    ],
-    car2: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbWFsSvTTFc7n__WfN3PJOWp9iBEqMvmFzg&usqp=CAU",
-      "Celario",
-      "₹4.66 Lakhs onwards",
-    ],
-    car3: [
-      "https://www.shivamautozone.com/wp-content/uploads/2019/01/SUPERIOR-WHITE.png",
-      "Wagon R",
-      "₹ 4.79 Lakh onwards",
-    ],
-    car4: [
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/8378/1614747593719/front-left-side-47.jpg",
-      "Swift",
-      " ₹ 5.81 Lakh onwards",
-    ],
+    car1: SpressoBasicInfoCard,
+    car2: CelerioBasicInfoCard,
+    car3: WaganRBasicInfoCard,
+    car4: SwiftBasicInfoCard,
+    car5: BalenoBasicInfoCard,
+    car6: ErtigaBasicInfoCard,
+    car7: BrezzaBasicInfoCard,
+    car8: AltoBasicInfoCard,
+    car9: DzireBasicInfoCard,
+    car10: XL6BasicInfoCard,
+    car11: IgnisBasicInfoCard,
+    car12: EecoBasicInfoCard,
+    car13: CiazBasicInfoCard,
+    car14: ScrossBasicInfoCard,
+    car15: CelerioXBasicInfoCard,
   };
 
   // const UpcommingCarBrand = {

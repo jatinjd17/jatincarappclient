@@ -1,5 +1,16 @@
 import React from "react";
 import {
+  AlturasBasicInfoCard,
+  BoleroBasicInfoCard,
+  BoleroNeoBasicInfoCard,
+  Kuv100BasicInfoCard,
+  MarazzoBasicInfoCard,
+  ScorpioBasicInfoCard,
+  TharBasicInfoCard,
+  Xuv300BasicInfoCard,
+  Xuv500BasicInfoCard,
+} from "../../AllCarBasicInfo/mahindra";
+import {
   Alturas,
   Bolero,
   BoleroNeo,
@@ -27,15 +38,15 @@ function IndexMahindra() {
   const CompanyName = "Mahindra";
 
   const ThatBrandCars = {
-    car1: [TScorpio, "Scorpio", "₹ 12.66 Lakh onwards"],
-    car2: [TXUV500, "XUV 500", "₹ 14.27 Lakh onwards"],
-    car3: [TBolero, "Bolero", "₹ 8.64 Lakh onwards"],
-    car4: [TAlturas, "Alturas", "₹ 28.77 Lakh onwards"],
-    car5: [TKuv100, "Kuv 100", "₹ 6.10 Lakh onwards"],
-    car6: [TMarazzo, "Marazzo", "₹ 12.30 Lakh onwards"],
-    car7: [TThar, "Thar", "₹ 12.78 Lakh onwards"],
-    car8: [TXUV300, "Xuv 300", "₹ 7.96 Lakh onwards"],
-    car9: [TBoleroNeo, "Bolero Neo", "₹ 8.48 Lakh onwards"],
+    car1: ScorpioBasicInfoCard,
+    car2: Xuv500BasicInfoCard,
+    car3: BoleroBasicInfoCard,
+    car4: AlturasBasicInfoCard,
+    car5: Kuv100BasicInfoCard,
+    car6: MarazzoBasicInfoCard,
+    car7: TharBasicInfoCard,
+    car8: Xuv300BasicInfoCard,
+    car9: BoleroNeoBasicInfoCard,
   };
 
   return (

@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  CarnivalBasicInfoCard,
+  SeltosBasicInfoCard,
+  SonetBasicInfoCard,
+} from "../../AllCarBasicInfo/kia";
 import { Carnival, Seltos, Sonet } from "../../CarPicsUrl/CarPics";
 import { TCarnival, TSeltos, TSonet } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
@@ -7,9 +12,9 @@ function IndexKia() {
   const CompanyName = "Kia";
 
   const ThatBrandCars = {
-    car1: [TSonet, "Sonet", "₹ 6.79 Lakh onwards"],
-    car2: [TSeltos, "Seltos", "₹ 9.96 Lakh onwards"],
-    car3: [TCarnival, "Carnival", "₹ 24.95 Lakh onwards"],
+    car1: SonetBasicInfoCard,
+    car2: SeltosBasicInfoCard,
+    car3: CarnivalBasicInfoCard,
   };
 
   return (

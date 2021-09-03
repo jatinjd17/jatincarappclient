@@ -30,6 +30,11 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Kicks } from "../../../CarPicsUrl/CarPics";
 import { TKicks } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  MagniteBasicInfoCard,
+  KicksBasicInfoCard,
+  GTRBasicInfoCard,
+} from "../../../AllCarBasicInfo/nissan";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -260,16 +265,9 @@ function Homee({ joy }) {
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/cw/ec/20361/Nissan-GTR-Right-Front-Three-Quarter-84895.jpg?v=201711021421&q=85",
-      "GTR",
-      "₹ 2.12 Crore",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Magnite/8127/1608191740345/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Magnite",
-      "Rs.5.59 - 10.00 Lakh*",
-    ],
+    car1: MagniteBasicInfoCard,
+    car2: KicksBasicInfoCard,
+    car3: GTRBasicInfoCard,
   };
 
   // const UpcommingCarBrand = {

@@ -30,6 +30,12 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { Kwid } from "../../../CarPicsUrl/CarPics";
 import { TKwid } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  DusterBasicInfoCard,
+  KigerBasicInfoCard,
+  KwidBasicInfoCard,
+  TriberBasicInfoCard,
+} from "../../../AllCarBasicInfo/renault";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -284,26 +290,10 @@ function Homee({ joy }) {
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/48543/kwid-exterior-right-front-three-quarter-17.jpeg?q=85",
-      "Kwid",
-      "₹ 3.31 Lakh",
-    ],
-    car2: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/39276/triber-exterior-right-front-three-quarter-168563.jpeg?q=85",
-      "Triber",
-      "₹ 5.49 Lakh",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/44407/kiger-exterior-right-front-three-quarter-12.jpeg?q=85",
-      "Kiger",
-      "₹ 5.64 Lakh",
-    ],
-    car4: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Duster/7704/1598257607089/front-left-side-47.jpg?tr=w-456",
-      "Duster",
-      "₹ 9.84 Lakh",
-    ],
+    car1: KwidBasicInfoCard,
+    car2: TriberBasicInfoCard,
+    car3: KigerBasicInfoCard,
+    car4: DusterBasicInfoCard,
   };
 
   // const UpcommingCarBrand = {

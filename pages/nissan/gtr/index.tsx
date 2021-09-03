@@ -30,6 +30,11 @@ import { OneCarAllSpecs } from "../../../actions/allspecsspecificcar";
 import { GTR } from "../../../CarPicsUrl/CarPics";
 import { TGTR } from "../../../CarPicsUrl/Thumbnails";
 import Meta from "../../../Components/metaSEO";
+import {
+  MagniteBasicInfoCard,
+  KicksBasicInfoCard,
+  GTRBasicInfoCard,
+} from "../../../AllCarBasicInfo/nissan";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -234,16 +239,9 @@ function Homee({ joy }) {
   };
 
   const ThatBrandCars = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Kicks/7828/1593410136460/front-left-side-47.jpg?tr=w-456",
-      "Kicks",
-      "Rs.9.49 - 14.64 Lakh",
-    ],
-    car2: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Magnite/8127/1608191740345/front-left-side-47.jpg?imwidth=420&impolicy=resize",
-      "Magnite",
-      "Rs.5.59 - 10.00 Lakh*",
-    ],
+    car1: MagniteBasicInfoCard,
+    car2: KicksBasicInfoCard,
+    car3: GTRBasicInfoCard,
   };
 
   // const UpcommingCarBrand = {
