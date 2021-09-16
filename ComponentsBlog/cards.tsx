@@ -48,7 +48,7 @@ const Card = (card) => {
                 {/* <p className="category-tag popular">Popular</p> */}
                 <img
                   className="p-3"
-                  src={`https://blogserverjatinaugust.herokuapp.com/api/blog/photo/${card.card.slug}`}
+                  src={`http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:4000/api/blog/photo/${card.card.slug}`}
                   alt=""
                 />
               </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "react-image-resizer";
 import Compare from "../compare";
+import { Link } from "react-scroll";
 
 function StartingBox({ CarName, TopPic, CarPrice, OnlyName }) {
   return (
@@ -28,9 +29,11 @@ function StartingBox({ CarName, TopPic, CarPrice, OnlyName }) {
             <div className="text-base text-gray-500">
               Avg. Ex-Showroom price
             </div>
-            <div className="bg-yellow-600 text-white font-bold text-center rounded-md text-2xl mt-7 p-2">
-              Show All Varients
-            </div>
+            <Link to="varients" smooth={true}>
+              <div className="bg-yellow-600 text-white font-bold text-center rounded-md text-2xl mt-7 p-2">
+                Show All Varients
+              </div>
+            </Link>
             <div className="flex flex-row mt-4 text-center text-lg">
               <div className="border-2 m-2 p-1 rounded-lg flex flex-row">
                 <div className="h-7 w-7">

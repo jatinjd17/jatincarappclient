@@ -5,13 +5,20 @@ function SideBar({ isToggleName, handleactive }) {
   return (
     <div>
       <div className=" col-span-1 md:col-span-10 md:hidden   md:mt-16 -mt-12 2xl:fixed md:relative z-10 ">
-        <div className=" pl-5  mb-6 uppercase text-2xl font-bold sm:pl-0 sm:mb-0 text-red-500 md:hidden">
-          IndiaCars&Bikes
-        </div>
+        <Link to="bbb" smooth={true}>
+          <div className=" pl-5  mb-6 uppercase text-2xl font-bold sm:pl-0 sm:mb-0 text-red-500 md:hidden cursor-pointer">
+            {/* IndiaCars&Bikes */}
+
+            <div className="w-36 -mt-2">
+              <img src="/Logoind1.png" />
+            </div>
+          </div>
+        </Link>
+
         <Link to="varients" smooth={true}>
           <div
             onClick={() => handleactive("price")}
-            className={`flex ml-8 sm:ml-3 sm:my-0 sm:p-0 items-center ${
+            className={` cursor-pointer flex ml-8 sm:ml-3 sm:my-0 sm:p-0 items-center ${
               isToggleName("price")
                 ? "text-gray-800 font-bold text-xl"
                 : "text-gray-500"
@@ -33,7 +40,7 @@ function SideBar({ isToggleName, handleactive }) {
         </Link>
         <div
           onClick={() => handleactive("images")}
-          className={`flex ml-8 sm:ml-10 sm:my-0 sm:p-0 items-center ${
+          className={` cursor-pointer flex ml-8 sm:ml-10 sm:my-0 sm:p-0 items-center ${
             isToggleName("images")
               ? "text-gray-800 font-bold text-xl"
               : "text-gray-500"
@@ -55,7 +62,7 @@ function SideBar({ isToggleName, handleactive }) {
         <Link to="specifications" smooth={true}>
           <div
             onClick={() => handleactive("specifications")}
-            className={`flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
+            className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
               isToggleName("specifications")
                 ? "text-gray-800 font-bold text-xl"
                 : "text-gray-500"
@@ -79,7 +86,7 @@ function SideBar({ isToggleName, handleactive }) {
         </Link>
         <div
           onClick={() => handleactive("userreviews")}
-          className={`flex ml-8 sm:ml-24 sm:my-0 sm:p-0 items-center ${
+          className={` cursor-pointer flex ml-8 sm:ml-24 sm:my-0 sm:p-0 items-center ${
             isToggleName("userreviews")
               ? "text-gray-800 font-bold text-xl"
               : "text-gray-500"
@@ -100,7 +107,7 @@ function SideBar({ isToggleName, handleactive }) {
         </div>
         <div
           onClick={() => handleactive("expertreviews")}
-          className={`flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
+          className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
             isToggleName("expertreviews")
               ? "text-gray-800 font-bold text-xl"
               : "text-gray-500"
@@ -124,7 +131,7 @@ function SideBar({ isToggleName, handleactive }) {
         <Link to="varients" smooth={true}>
           <div
             onClick={() => handleactive("varients")}
-            className={`flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
+            className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
               isToggleName("varients")
                 ? "text-gray-800 font-bold text-xl"
                 : "text-gray-500"
@@ -147,7 +154,7 @@ function SideBar({ isToggleName, handleactive }) {
 
         <div
           onClick={() => handleactive("videos")}
-          className={`flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
+          className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
             isToggleName("videos")
               ? "text-gray-800 font-bold text-xl"
               : "text-gray-500"
@@ -168,7 +175,7 @@ function SideBar({ isToggleName, handleactive }) {
         </div>
         <div
           onClick={() => handleactive("brochure")}
-          className={`flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
+          className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
             isToggleName("brochure")
               ? "text-gray-800 font-bold text-xl"
               : "text-gray-500"

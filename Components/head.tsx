@@ -26,22 +26,25 @@ if (typeof window !== "undefined") {
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <div id="bbb">
       <nav className="bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-0 sm:pr-4 sm:pl-2 lg:px-8  ">
           <div className="flex items-center justify-between h-16 ">
             <div className="flex items-center 2xl:ml-16 xl:ml-16 md:ml-0">
               <div className="flex-shrink-0 2xl:hidden md:block cursor-pointer">
                 <div onClick={() => Router.push("/")}>
-                  <img
+                  <div className="w-24 -mt-2">
+                    <img src="/Logoind1.png" />
+                  </div>
+                  {/* <img
                     className="h-8 w-8"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
-                  />
+                  /> */}
                 </div>
               </div>
 
-              <div className="2xl:hidden md:block ml-12">
+              <div className="2xl:hidden md:block ml-0">
                 <Link href="/Blog/blogs/Allblogs">
                   <div className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
                     <p>Blogs</p>
