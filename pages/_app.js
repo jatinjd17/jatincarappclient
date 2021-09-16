@@ -6,10 +6,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <meta
-          httpEquiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        ></meta> */}
       </Head>
       <link
         rel="stylesheet"

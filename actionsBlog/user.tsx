@@ -4,7 +4,7 @@ export const SignUp = (formdata: any) => {
   console.log(formdata);
 
   return fetch(
-    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/signup",
+    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:443/api/signup",
     {
       method: "POST",
       headers: {
@@ -24,7 +24,7 @@ export const SignUp = (formdata: any) => {
 
 export const SignIn = (data: any) => {
   return fetch(
-    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/signin",
+    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:443/api/signin",
     {
       method: "POST",
       headers: {
@@ -43,7 +43,7 @@ export const SignOut = (next: any) => {
   removeLocalStorage("user");
   next();
   return fetch(
-    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/signout",
+    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:443/api/signout",
     {
       method: "GET",
       headers: {
@@ -61,7 +61,7 @@ export const SignOut = (next: any) => {
 
 export const fetchSpecificUser = (name: any) => {
   return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/user/${name}`,
+    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:443/api/user/${name}`,
     {
       method: "GET",
       headers: {

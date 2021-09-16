@@ -1,6 +1,6 @@
 export const fetchAllTags = () => {
   return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/tag`,
+    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:443/tag`,
     {
       method: "GET",
       headers: {
