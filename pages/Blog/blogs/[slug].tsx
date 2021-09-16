@@ -5,6 +5,7 @@ import renderHTML from "react-render-html";
 import moment from "moment";
 import Header from "../../../ComponentsBlog/header";
 import Nav from "../../../Components/head";
+import { BlogsProduction } from "../../../actions/ApiCarsBlogs";
 
 const SpecificBlog = ({ blog }) => {
   console.log(blog);
@@ -22,7 +23,7 @@ const SpecificBlog = ({ blog }) => {
                 <section>
                   <div className="row" style={{ marginTop: "20px" }}>
                     <img
-                      src={`https://blogsjatin.herokuapp.com/api/blog/photo/${blog.slug}`}
+                      src={`${BlogsProduction}/api/blog/photo/${blog.slug}`}
                       alt={blog.title}
                       className=""
                     />

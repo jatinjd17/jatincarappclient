@@ -2,6 +2,7 @@ import Link from "next/link";
 import Router from "next/router";
 import React from "react";
 import renderHTML from "react-render-html";
+import { BlogsProduction } from "../actions/ApiCarsBlogs";
 // import "../styles/style.module.scss";
 // import './style.css';
 // import '../dist/css/style.module.css';
@@ -48,7 +49,7 @@ const Card = (card) => {
                 {/* <p className="category-tag popular">Popular</p> */}
                 <img
                   className="p-3"
-                  src={`https://blogsjatin.herokuapp.com/api/blog/photo/${card.card.slug}`}
+                  src={`${BlogsProduction}/api/blog/photo/${card.card.slug}`}
                   alt=""
                 />
               </div>

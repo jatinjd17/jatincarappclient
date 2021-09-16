@@ -1,9 +1,10 @@
 import cookie from "js-cookie";
+import { BlogsProduction } from "../actions/ApiCarsBlogs";
 
 export const SignUp = (formdata: any) => {
   console.log(formdata);
 
-  return fetch("https://blogsjatin.herokuapp.com/api/signup", {
+  return fetch(`${BlogsProduction}/api/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -20,7 +21,7 @@ export const SignUp = (formdata: any) => {
 };
 
 export const SignIn = (data: any) => {
-  return fetch("https://blogsjatin.herokuapp.com/api/signin", {
+  return fetch(`${BlogsProduction}/api/signin`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -36,7 +37,7 @@ export const SignOut = (next: any) => {
   removeCookie("token");
   removeLocalStorage("user");
   next();
-  return fetch("https://blogsjatin.herokuapp.com/api/signout", {
+  return fetch(`${BlogsProduction}/api/signout`, {
     method: "GET",
     headers: {
       Accept: "applicaion/json",
@@ -51,7 +52,7 @@ export const SignOut = (next: any) => {
 };
 
 export const fetchSpecificUser = (name: any) => {
-  return fetch(`https://blogsjatin.herokuapp.com/api/user/${name}`, {
+  return fetch(`${BlogsProduction}/api/user/${name}`, {
     method: "GET",
     headers: {
       Accept: "applicaion/json",

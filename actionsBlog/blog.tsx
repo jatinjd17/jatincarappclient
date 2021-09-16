@@ -1,5 +1,7 @@
+import { BlogsProduction } from "../actions/ApiCarsBlogs";
+
 export const createblog = (formdata: any, token: any) => {
-  return fetch("https://blogsjatin.herokuapp.com/api/blog", {
+  return fetch(`${BlogsProduction}/api/blog`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -16,7 +18,7 @@ export const createblog = (formdata: any, token: any) => {
 };
 
 export const getallblogs = () => {
-  return fetch(`https://blogsjatin.herokuapp.com/api/blogs`, {
+  return fetch(`${BlogsProduction}/api/blogs`, {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -30,7 +32,7 @@ export const getallblogs = () => {
 };
 
 export const getallblogsBySpecificCATID = (catId: any) => {
-  return fetch(`https://blogsjatin.herokuapp.com/api/category/${catId}`, {
+  return fetch(`${BlogsProduction}/api/category/${catId}`, {
     method: "GET",
     headers: {
       Accept: "applicaion/json",
@@ -44,7 +46,7 @@ export const getallblogsBySpecificCATID = (catId: any) => {
 };
 
 export const getallblogsBySpecificTagID = (tagId: any) => {
-  return fetch(`https://blogsjatin.herokuapp.com/api/tag/${tagId}`, {
+  return fetch(`${BlogsProduction}/api/tag/${tagId}`, {
     method: "GET",
     headers: {
       Accept: "applicaion/json",
@@ -58,7 +60,7 @@ export const getallblogsBySpecificTagID = (tagId: any) => {
 };
 
 export const fetchSpecificPost = (slug: any) => {
-  return fetch(`https://blogsjatin.herokuapp.com/api/blog/${slug}`, {
+  return fetch(`${BlogsProduction}/api/blog/${slug}`, {
     method: "GET",
     headers: {
       Accept: "applicaion/json",

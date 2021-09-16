@@ -1,5 +1,7 @@
+import { BlogsProduction } from "../actions/ApiCarsBlogs";
+
 export const fetchAllTags = () => {
-  return fetch(`https://blogsjatin.herokuapp.com/tag`, {
+  return fetch(`${BlogsProduction}/tag`, {
     method: "GET",
     headers: {
       Accept: "applicaion/json",
