@@ -22,7 +22,7 @@
     "components/paymentStripe/paypal.js",
     "Components/SpecificCar/Mileage.tsx",
     "pages/marutisuzuki/alto/index.tsx",
-    "pages/_app.js"
+    "pages/_app.tsx"
   ],
   "exclude": ["node_modules"]
 }

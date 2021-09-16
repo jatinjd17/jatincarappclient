@@ -5,6 +5,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="block-all-mixed-content"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <link
