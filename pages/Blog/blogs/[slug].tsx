@@ -22,7 +22,7 @@ const SpecificBlog = ({ blog }) => {
                 <section>
                   <div className="row" style={{ marginTop: "20px" }}>
                     <img
-                      src={`http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:443/api/blog/photo/${blog.slug}`}
+                      src={`https://blogsjatin.herokuapp.com/api/blog/photo/${blog.slug}`}
                       alt={blog.title}
                       className=""
                     />

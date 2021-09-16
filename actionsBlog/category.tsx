@@ -1,13 +1,10 @@
 export const fetchAllCategories = () => {
-  return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:443/api/category`,
-    {
-      method: "GET",
-      headers: {
-        Accept: "applicaion/json",
-      },
-    }
-  )
+  return fetch(`https://blogsjatin.herokuapp.com/api/category`, {
+    method: "GET",
+    headers: {
+      Accept: "applicaion/json",
+    },
+  })
     .then((data) => {
       // console.log(data);
       return data.json();

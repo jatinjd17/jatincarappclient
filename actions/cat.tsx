@@ -12,23 +12,13 @@ export const getOneBlog = async (slug) => {
   // const new123 = AspireDataBase;
   const sss = slug.split("vs");
   if (sss.length === 2) {
-    const rrr = await axios.get(
-      `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:5000/${sss[0]}`
-    );
-    const r22 = await axios.get(
-      `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:5000/${sss[1]}`
-    );
+    const rrr = await axios.get(`https://carsjatin.herokuapp.com/${sss[0]}`);
+    const r22 = await axios.get(`https://carsjatin.herokuapp.com/${sss[1]}`);
     return { Car1: rrr.data, Car2: r22.data };
   } else if (sss.length === 3) {
-    const rrr = await axios.get(
-      `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:5000/${sss[0]}`
-    );
-    const r22 = await axios.get(
-      `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:5000/${sss[1]}`
-    );
-    const r33 = await axios.get(
-      `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:5000/${sss[2]}`
-    );
+    const rrr = await axios.get(`https://carsjatin.herokuapp.com/${sss[0]}`);
+    const r22 = await axios.get(`https://carsjatin.herokuapp.com/${sss[1]}`);
+    const r33 = await axios.get(`https://carsjatin.herokuapp.com/${sss[2]}`);
     return { Car1: rrr.data, Car2: r22.data, Car3: r33.data };
   } else return "no comparision";
 };
