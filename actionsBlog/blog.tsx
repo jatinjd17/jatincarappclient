@@ -1,6 +1,6 @@
 export const createblog = (formdata: any, token: any) => {
   return fetch(
-    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:4000/api/blog",
+    "http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/blog",
     {
       method: "POST",
       headers: {
@@ -20,11 +20,11 @@ export const createblog = (formdata: any, token: any) => {
 
 export const getallblogs = () => {
   return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:4000/api/blogs`,
+    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/blogs`,
     {
       method: "GET",
       headers: {
-        Accept: "applicaion/json",
+        Accept: "application/json",
       },
     }
   )
@@ -37,7 +37,7 @@ export const getallblogs = () => {
 
 export const getallblogsBySpecificCATID = (catId: any) => {
   return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:4000/api/category/${catId}`,
+    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/category/${catId}`,
     {
       method: "GET",
       headers: {
@@ -54,7 +54,7 @@ export const getallblogsBySpecificCATID = (catId: any) => {
 
 export const getallblogsBySpecificTagID = (tagId: any) => {
   return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:4000/api/tag/${tagId}`,
+    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/tag/${tagId}`,
     {
       method: "GET",
       headers: {
@@ -71,7 +71,7 @@ export const getallblogsBySpecificTagID = (tagId: any) => {
 
 export const fetchSpecificPost = (slug: any) => {
   return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:4000/api/blog/${slug}`,
+    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/blog/${slug}`,
     {
       method: "GET",
       headers: {

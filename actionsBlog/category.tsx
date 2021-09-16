@@ -1,6 +1,6 @@
 export const fetchAllCategories = () => {
   return fetch(
-    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com:4000/api/category`,
+    `http://ec2-13-233-105-98.ap-south-1.compute.amazonaws.com/api/category`,
     {
       method: "GET",
       headers: {
