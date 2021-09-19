@@ -1,7 +1,7 @@
 import { BlogsProduction } from "../actions/ApiCarsBlogs";
 
 export const fetchAllTags = () => {
-  return fetch(`${BlogsProduction}/tag`, {
+  return fetch(`${BlogsProduction}/api/tag`, {
     method: "GET",
     headers: {
       Accept: "applicaion/json",
