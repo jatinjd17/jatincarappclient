@@ -8,6 +8,7 @@ import {
   TWRV,
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexHonda() {
   const CompanyName = "Honda";
@@ -22,6 +23,7 @@ function IndexHonda() {
 
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

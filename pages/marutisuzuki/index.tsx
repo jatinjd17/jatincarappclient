@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 import {
   Alto,
   Baleno,
@@ -76,10 +77,13 @@ function IndexMaruti() {
 
   return (
     <div>
-      <BrandMainPageAllCars
-        CompanyName={CompanyName}
-        ThatBrandCars={ThatBrandCars}
-      />
+      <Nav />
+      <div>
+        <BrandMainPageAllCars
+          CompanyName={CompanyName}
+          ThatBrandCars={ThatBrandCars}
+        />
+      </div>
     </div>
   );
 }

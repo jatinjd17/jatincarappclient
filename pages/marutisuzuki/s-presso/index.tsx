@@ -9,7 +9,7 @@ import Footer from "../../../Components/footer";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
 
-import Nav from "../../../Components/head";
+import Nav from "../../../Components/headforspecificcar";
 import SpecificSpecs from "../../../Components/specificspec";
 import StartingBox from "../../../Components/SpecificCar/StartingBox";
 import KeySpecSafetyFeatures from "../../../Components/SpecificCar/KeySpecSafetyFeatures";

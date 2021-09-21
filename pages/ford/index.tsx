@@ -14,6 +14,7 @@ import {
   TFreestyle,
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexFord() {
   const CompanyName = "Ford";
@@ -27,6 +28,7 @@ function IndexFord() {
   };
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

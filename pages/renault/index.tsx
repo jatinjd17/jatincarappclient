@@ -8,6 +8,7 @@ import {
 import { Duster, Kiger, Kwid, Triber } from "../../CarPicsUrl/CarPics";
 import { TDuster, TKiger, TKwid, TTriber } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexRenault() {
   const CompanyName = "Renault";
@@ -20,6 +21,7 @@ function IndexRenault() {
   };
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

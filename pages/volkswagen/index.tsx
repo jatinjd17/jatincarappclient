@@ -9,6 +9,7 @@ import { Polo, Tiguan, Troc, Vento } from "../../CarPicsUrl/CarPics";
 import { TPolo, TTiguan, TTroc, TVento } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
 import MoreCars from "../../Components/SpecificCar/MoreCars";
+import Nav from "../../Components/head";
 
 function IndexVolkswagen() {
   const CompanyName = "Volkswagen";
@@ -20,6 +21,7 @@ function IndexVolkswagen() {
   };
   return (
     <div>
+      <Nav />
       <div className="">
         <BrandMainPageAllCars
           CompanyName={CompanyName}

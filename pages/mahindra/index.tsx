@@ -33,6 +33,7 @@ import {
   TXUV500,
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexMahindra() {
   const CompanyName = "Mahindra";
@@ -51,6 +52,7 @@ function IndexMahindra() {
 
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

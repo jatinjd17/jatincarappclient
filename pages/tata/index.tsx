@@ -33,6 +33,7 @@ import {
   TTigorEV,
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexTata() {
   const CompanyName = "Tata";
@@ -51,6 +52,7 @@ function IndexTata() {
 
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

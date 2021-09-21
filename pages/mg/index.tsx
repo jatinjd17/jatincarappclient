@@ -13,6 +13,7 @@ import {
   TZSEV,
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexMG() {
   const CompanyName = "MG";
@@ -26,6 +27,7 @@ function IndexMG() {
 
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

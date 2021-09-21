@@ -9,8 +9,11 @@ function SideBar({ isToggleName, handleactive }) {
           <div className=" pl-5  mb-6 uppercase text-2xl font-bold sm:pl-0 sm:mb-0 text-red-500 md:hidden cursor-pointer">
             {/* IndiaCars&Bikes */}
 
-            <div className="w-36 -mt-2">
-              <img src="/Logoind1.png" />
+            <div className="w-36 -mt-3 ">
+              <img
+                className="rounded-xl h-14"
+                src="https://i.ibb.co/xsTLZNw/logo333.png"
+              />
             </div>
           </div>
         </Link>

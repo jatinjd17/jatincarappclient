@@ -31,7 +31,7 @@ function Nav() {
         <div className="max-w-7xl mx-auto px-4 sm:px-0 sm:pr-4 sm:pl-2 lg:px-8  ">
           <div className="flex items-center justify-between h-16 ">
             <div className="flex items-center 2xl:ml-16 xl:ml-16 md:ml-0">
-              <div className="flex-shrink-0 2xl:block md:block cursor-pointer">
+              <div className="flex-shrink-0 2xl:hidden md:block cursor-pointer">
                 <div onClick={() => Router.push("/")}>
                   <div className="w-max">
                     <img

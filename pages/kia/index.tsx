@@ -7,6 +7,7 @@ import {
 import { Carnival, Seltos, Sonet } from "../../CarPicsUrl/CarPics";
 import { TCarnival, TSeltos, TSonet } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexKia() {
   const CompanyName = "Kia";
@@ -19,6 +20,7 @@ function IndexKia() {
 
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

@@ -7,6 +7,7 @@ import {
 import { GTR, Kicks, Magnite } from "../../CarPicsUrl/CarPics";
 import { TGTR, TKicks, TMagnite } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexNissa() {
   const CompanyName = "Nissan";
@@ -17,6 +18,7 @@ function IndexNissa() {
   };
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}

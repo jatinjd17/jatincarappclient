@@ -13,6 +13,7 @@ import {
   TSuperb,
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
+import Nav from "../../Components/head";
 
 function IndexSkoda() {
   const CompanyName = "Skoda";
@@ -26,6 +27,7 @@ function IndexSkoda() {
 
   return (
     <div>
+      <Nav />
       <div>
         <BrandMainPageAllCars
           CompanyName={CompanyName}
