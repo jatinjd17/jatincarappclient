@@ -49,9 +49,13 @@ function SimilarCarss({ SimilarCars }) {
           <div className="m-8 sm:m-3 border-2 shadow-lg">
             {/* sm:m-1 sm:mt-5 */}
             <Link href="/maruti/xl6">
-              <div className="grid grid-cols-1 bg-gray-200">
+              <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                 <div>
-                  <img className="w-72" src={SimilarCars.car1[0]} alt="nnn" />
+                  <img
+                    className="object-cover w-full h-36 sm:h-24"
+                    src={SimilarCars.car1[0]}
+                    alt="nnn"
+                  />
                 </div>
                 <div className="text-center text-xl font-bold">
                   {SimilarCars.car1[1]}
@@ -67,9 +71,13 @@ function SimilarCarss({ SimilarCars }) {
           </div>
           <div className="m-8 sm:m-3 border-2 shadow-lg">
             <Link href="/maruti/xl6">
-              <div className="grid grid-cols-1 bg-gray-200">
+              <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                 <div>
-                  <img className="w-72" src={SimilarCars.car2[0]} alt="nnn" />
+                  <img
+                    className="object-cover w-full h-36 sm:h-24"
+                    src={SimilarCars.car2[0]}
+                    alt="nnn"
+                  />
                 </div>
                 <div className="text-center text-xl font-bold">
                   {SimilarCars.car2[1]}
@@ -86,9 +94,13 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car3 ? (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img className="w-72" src={SimilarCars.car3[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-36 sm:h-24"
+                      src={SimilarCars.car3[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {SimilarCars.car3[1]}
@@ -111,9 +123,13 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car4 ? (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img className="w-72" src={SimilarCars.car4[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-36 sm:h-24"
+                      src={SimilarCars.car4[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {SimilarCars.car4[1]}
@@ -136,9 +152,13 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car5 ? (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img className="w-72" src={SimilarCars.car5[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-36 sm:h-24"
+                      src={SimilarCars.car5[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {SimilarCars.car5[1]}
@@ -161,9 +181,13 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car6 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img className="w-72" src={SimilarCars.car6[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-36 sm:h-24"
+                      src={SimilarCars.car6[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {SimilarCars.car6[1]}
@@ -186,9 +210,13 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car7 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img className="w-72" src={SimilarCars.car7[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-36 sm:h-24"
+                      src={SimilarCars.car7[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {SimilarCars.car7[1]}
@@ -210,9 +238,13 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car8 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img className="w-72" src={SimilarCars.car8[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-36 sm:h-24"
+                      src={SimilarCars.car8[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {SimilarCars.car8[1]}
@@ -234,9 +266,13 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car9 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img className="w-72" src={SimilarCars.car9[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-36 sm:h-24"
+                      src={SimilarCars.car9[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {SimilarCars.car9[1]}
@@ -258,10 +294,10 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car10 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-36 sm:h-24"
                       src={SimilarCars.car10[0]}
                       alt="nnn"
                     />
@@ -286,10 +322,10 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car11 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-36 sm:h-24"
                       src={SimilarCars.car11[0]}
                       alt="nnn"
                     />
@@ -314,10 +350,10 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car12 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-36 sm:h-24"
                       src={SimilarCars.car12[0]}
                       alt="nnn"
                     />
@@ -342,10 +378,10 @@ function SimilarCarss({ SimilarCars }) {
           {SimilarCars.car13 && (
             <div className="m-8 sm:m-3 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-36 sm:h-24"
                       src={SimilarCars.car13[0]}
                       alt="nnn"
                     />

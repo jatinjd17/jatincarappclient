@@ -24,21 +24,25 @@ function PopularCarsFrontPage({ PopularCars }) {
   };
   return (
     <div>
-      <div className="mx-52 md:mx-2">
+      <div className="mx-28 md:mx-2">
         <Carousel responsive={responsive}>
           <div className="m-8  border-2 shadow-lg">
             {/* sm:m-1 sm:mt-5 */}
             <Link href="/maruti/xl6">
-              <div className="grid grid-cols-1 bg-gray-200">
+              <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                 <div>
-                  <img src={PopularCars.car1[0]} alt="nnn" />
+                  <img
+                    className="object-cover w-full h-28"
+                    src={PopularCars.car1[0]}
+                    alt="nnn"
+                  />
                 </div>
                 <div className="text-center text-xl font-bold">
                   {PopularCars.car1[1]}
                 </div>
                 <div className="flex flex-row">
                   <div className="text-md font-bold">{PopularCars.car1[2]}</div>
-                  <div className="text-md text-gray-500 ml-2 mt-0">Onwards</div>
+                  {/* <div className="text-md text-gray-500 ml-2 mt-0">Onwards</div> */}
                 </div>
 
                 <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
@@ -47,16 +51,20 @@ function PopularCarsFrontPage({ PopularCars }) {
           </div>
           <div className="m-8  border-2 shadow-lg">
             <Link href="/maruti/xl6">
-              <div className="grid grid-cols-1 bg-gray-200">
+              <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                 <div>
-                  <img src={PopularCars.car2[0]} alt="nnn" />
+                  <img
+                    className="object-cover w-full h-28"
+                    src={PopularCars.car2[0]}
+                    alt="nnn"
+                  />
                 </div>
                 <div className="text-center text-xl font-bold">
                   {PopularCars.car2[1]}
                 </div>
                 <div className="flex flex-row">
                   <div className="text-md font-bold">{PopularCars.car2[2]}</div>
-                  <div className="text-md text-gray-500 ml-2 mt-0">Onwards</div>
+                  {/* <div className="text-md text-gray-500 ml-2 mt-0">Onwards</div> */}
                 </div>
 
                 <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
@@ -66,9 +74,13 @@ function PopularCarsFrontPage({ PopularCars }) {
           {PopularCars.car3 ? (
             <div className="m-8  border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img src={PopularCars.car3[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-28"
+                      src={PopularCars.car3[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {PopularCars.car3[1]}
@@ -77,9 +89,9 @@ function PopularCarsFrontPage({ PopularCars }) {
                     <div className="text-md font-bold">
                       {PopularCars.car3[2]}
                     </div>
-                    <div className="text-md text-gray-500 ml-2 mt-0">
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
                       Onwards
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
@@ -91,9 +103,13 @@ function PopularCarsFrontPage({ PopularCars }) {
           {PopularCars.car4 ? (
             <div className="m-8 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img src={PopularCars.car4[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-28"
+                      src={PopularCars.car4[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {PopularCars.car4[1]}
@@ -102,9 +118,9 @@ function PopularCarsFrontPage({ PopularCars }) {
                     <div className="text-md font-bold">
                       {PopularCars.car4[2]}
                     </div>
-                    <div className="text-md text-gray-500 ml-2 mt-0">
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
                       Onwards
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
@@ -116,9 +132,13 @@ function PopularCarsFrontPage({ PopularCars }) {
           {PopularCars.car5 ? (
             <div className="m-8 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img src={PopularCars.car5[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-28"
+                      src={PopularCars.car5[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {PopularCars.car5[1]}
@@ -127,9 +147,9 @@ function PopularCarsFrontPage({ PopularCars }) {
                     <div className="text-md font-bold">
                       {PopularCars.car5[2]}
                     </div>
-                    <div className="text-md text-gray-500 ml-2 mt-0">
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
                       Onwards
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
@@ -141,9 +161,13 @@ function PopularCarsFrontPage({ PopularCars }) {
           {PopularCars.car6 ? (
             <div className="m-8 border-2 shadow-lg">
               <Link href="/maruti/xl6">
-                <div className="grid grid-cols-1 bg-gray-200">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
-                    <img src={PopularCars.car6[0]} alt="nnn" />
+                    <img
+                      className="object-cover w-full h-28"
+                      src={PopularCars.car6[0]}
+                      alt="nnn"
+                    />
                   </div>
                   <div className="text-center text-xl font-bold">
                     {PopularCars.car6[1]}
@@ -152,9 +176,9 @@ function PopularCarsFrontPage({ PopularCars }) {
                     <div className="text-md font-bold">
                       {PopularCars.car6[2]}
                     </div>
-                    <div className="text-md text-gray-500 ml-2 mt-0">
+                    {/* <div className="text-md text-gray-500 ml-2 mt-0">
                       Onwards
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="text-xs mt-1">Avg. Ex-Showroom price</div>

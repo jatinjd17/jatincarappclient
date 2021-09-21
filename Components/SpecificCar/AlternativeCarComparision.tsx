@@ -60,7 +60,10 @@ function AlternativeCarComparision({
             <div className="grid grid-cols-2 md:grid-cols-1 mr-40 md:mr-2 sm:mr-1">
               <div className="flex flex-col border-r-2 md:border-r-0 ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={TopPic} />
+                  <img
+                    className="object-contain w-full h-52 sm:h-24"
+                    src={TopPic}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center mb-1">
                   {KeySpecification[0]}
@@ -102,7 +105,10 @@ function AlternativeCarComparision({
               </div>
               <div className="flex flex-col ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+                  <img
+                    className="object-contain w-full h-52 sm:h-24"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center mb-1">
                   {ComparisionCar.comparisioncar1[0]}
@@ -147,7 +153,10 @@ function AlternativeCarComparision({
             <div className="grid grid-cols-2 md:grid-cols-1 mr-40 md:mr-2 sm:mr-1">
               <div className="flex flex-col border-r-2 md:border-r-0 ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={TopPic} />
+                  <img
+                    className="object-contain w-full h-52 sm:h-24"
+                    src={TopPic}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center mb-1">
                   {KeySpecification[0]}
@@ -189,7 +198,10 @@ function AlternativeCarComparision({
               </div>
               <div className="flex flex-col ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar2[7]} />
+                  <img
+                    className="object-contain w-full h-52 sm:h-24"
+                    src={ComparisionCar.comparisioncar2[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center mb-1">
                   {ComparisionCar.comparisioncar2[0]}

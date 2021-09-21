@@ -35,11 +35,11 @@ function Varients({
                         {VarientPetrol.varient1[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : (
                   <div className="text-lg text-center">
@@ -62,11 +62,11 @@ function Varients({
                       </div>
                     </div>
 
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient3 ? (
@@ -84,11 +84,11 @@ function Varients({
                         {VarientPetrol.varient3[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient4 ? (
@@ -106,11 +106,11 @@ function Varients({
                         {VarientPetrol.varient4[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient5 ? (
@@ -128,11 +128,11 @@ function Varients({
                         {VarientPetrol.varient5[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient6 ? (
@@ -150,11 +150,11 @@ function Varients({
                         {VarientPetrol.varient6[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient7 ? (
@@ -172,11 +172,11 @@ function Varients({
                         {VarientPetrol.varient7[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient8 ? (
@@ -194,11 +194,11 @@ function Varients({
                         {VarientPetrol.varient8[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient9 ? (
@@ -216,11 +216,11 @@ function Varients({
                         {VarientPetrol.varient9[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient10 ? (
@@ -238,11 +238,11 @@ function Varients({
                         {VarientPetrol.varient10[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient11 ? (
@@ -260,11 +260,11 @@ function Varients({
                         {VarientPetrol.varient11[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient12 ? (
@@ -282,11 +282,11 @@ function Varients({
                         {VarientPetrol.varient12[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient13 ? (
@@ -304,11 +304,11 @@ function Varients({
                         {VarientPetrol.varient13[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient14 ? (
@@ -326,11 +326,11 @@ function Varients({
                         {VarientPetrol.varient14[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient15 ? (
@@ -348,11 +348,11 @@ function Varients({
                         {VarientPetrol.varient15[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient16 ? (
@@ -370,11 +370,11 @@ function Varients({
                         {VarientPetrol.varient16[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient17 ? (
@@ -392,11 +392,11 @@ function Varients({
                         {VarientPetrol.varient17[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient18 ? (
@@ -414,11 +414,11 @@ function Varients({
                         {VarientPetrol.varient18[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient19 ? (
@@ -436,11 +436,11 @@ function Varients({
                         {VarientPetrol.varient19[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient20 ? (
@@ -458,11 +458,11 @@ function Varients({
                         {VarientPetrol.varient20[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient21 ? (
@@ -480,11 +480,11 @@ function Varients({
                         {VarientPetrol.varient21[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient22 ? (
@@ -502,11 +502,11 @@ function Varients({
                         {VarientPetrol.varient22[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient23 ? (
@@ -524,11 +524,11 @@ function Varients({
                         {VarientPetrol.varient23[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient24 ? (
@@ -546,11 +546,11 @@ function Varients({
                         {VarientPetrol.varient24[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient25 ? (
@@ -568,11 +568,11 @@ function Varients({
                         {VarientPetrol.varient25[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientPetrol.varient26 ? (
@@ -590,11 +590,11 @@ function Varients({
                         {VarientPetrol.varient26[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
               </div>
@@ -621,11 +621,11 @@ function Varients({
                         {VarientDiesel.varient1[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : (
                   <div className="text-lg text-center">No Diesel Varient</div>
@@ -646,11 +646,11 @@ function Varients({
                       </div>
                     </div>
 
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient3 ? (
@@ -668,11 +668,11 @@ function Varients({
                         {VarientDiesel.varient3[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient4 ? (
@@ -690,11 +690,11 @@ function Varients({
                         {VarientDiesel.varient4[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient5 ? (
@@ -712,11 +712,11 @@ function Varients({
                         {VarientDiesel.varient5[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient6 ? (
@@ -734,11 +734,11 @@ function Varients({
                         {VarientDiesel.varient6[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient7 ? (
@@ -756,11 +756,11 @@ function Varients({
                         {VarientDiesel.varient7[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient8 ? (
@@ -778,11 +778,11 @@ function Varients({
                         {VarientDiesel.varient8[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient9 ? (
@@ -800,11 +800,11 @@ function Varients({
                         {VarientDiesel.varient9[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient10 ? (
@@ -822,11 +822,11 @@ function Varients({
                         {VarientDiesel.varient10[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient11 ? (
@@ -844,11 +844,11 @@ function Varients({
                         {VarientDiesel.varient11[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient12 ? (
@@ -866,11 +866,11 @@ function Varients({
                         {VarientDiesel.varient12[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient13 ? (
@@ -888,11 +888,11 @@ function Varients({
                         {VarientDiesel.varient13[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient14 ? (
@@ -910,11 +910,11 @@ function Varients({
                         {VarientDiesel.varient14[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient15 ? (
@@ -932,11 +932,11 @@ function Varients({
                         {VarientDiesel.varient15[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient16 ? (
@@ -954,11 +954,11 @@ function Varients({
                         {VarientDiesel.varient16[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient17 ? (
@@ -976,11 +976,11 @@ function Varients({
                         {VarientDiesel.varient17[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient18 ? (
@@ -998,11 +998,11 @@ function Varients({
                         {VarientDiesel.varient18[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient19 ? (
@@ -1020,11 +1020,11 @@ function Varients({
                         {VarientDiesel.varient19[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient20 ? (
@@ -1042,11 +1042,11 @@ function Varients({
                         {VarientDiesel.varient20[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient21 ? (
@@ -1064,11 +1064,11 @@ function Varients({
                         {VarientDiesel.varient21[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient22 ? (
@@ -1086,11 +1086,11 @@ function Varients({
                         {VarientDiesel.varient22[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient23 ? (
@@ -1108,11 +1108,11 @@ function Varients({
                         {VarientDiesel.varient23[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient24 ? (
@@ -1130,11 +1130,11 @@ function Varients({
                         {VarientDiesel.varient24[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient25 ? (
@@ -1152,11 +1152,11 @@ function Varients({
                         {VarientDiesel.varient25[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient26 ? (
@@ -1174,11 +1174,11 @@ function Varients({
                         {VarientDiesel.varient26[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient27 ? (
@@ -1196,11 +1196,11 @@ function Varients({
                         {VarientDiesel.varient27[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientDiesel.varient28 ? (
@@ -1218,11 +1218,11 @@ function Varients({
                         {VarientDiesel.varient28[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
               </div>
@@ -1247,11 +1247,11 @@ function Varients({
                         {VarientCNG.varient1[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : (
                   <div className="text-lg text-center">
@@ -1274,11 +1274,11 @@ function Varients({
                       </div>
                     </div>
 
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientCNG.varient3 ? (
@@ -1296,11 +1296,11 @@ function Varients({
                         {VarientCNG.varient3[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
                 {VarientCNG.varient4 ? (
@@ -1318,11 +1318,11 @@ function Varients({
                         {VarientCNG.varient4[2]}
                       </div>
                     </div>
-                    <div className="text-center col-span-2 mt-1">
+                    {/* <div className="text-center col-span-2 mt-1">
                       <div className="bg-yellow-500 p-2 rounded-md hover:bg-yellow-200">
                         <SpecificSpecs specs={SpecificationsFeatures} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 ) : null}
               </div>

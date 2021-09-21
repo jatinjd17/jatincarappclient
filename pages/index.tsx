@@ -73,34 +73,6 @@ export default function Home() {
         </div> */}
       </div>
 
-      {/* <div className="2xl:hidden sm:block sm:w-full py-12 bg-gray-600">
-        <div className="  w-full z-30 ">
-          <div className="text-center">
-            <div className="">
-              <input
-                className="p-5 rounded-l-lg"
-                type="text"
-                placeholder="Search"
-              />
-              <button className="bg-gray-200 p-5 rounded-r-lg shadow-2xl">
-                Go
-              </button>
-            </div>
-            <div></div>
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div>
-        <div className=" w-full -mt-32 relative">
-          <img
-            className=" filter blur-sm  z-0"
-            src="https://c.wallhere.com/photos/84/6f/ultra_wide_car-24084.png!d"
-            alt="img"
-          ></img>
-          <b className="absolute">SSSSSSSSSSss</b>
-        </div>
-      </div> */}
       <div className="mx-56 xl:mx-40 md:mx-24 sm:mx-4">
         <Head>
           <title>Create Next App</title>

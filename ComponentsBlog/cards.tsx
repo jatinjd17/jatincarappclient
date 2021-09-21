@@ -40,7 +40,7 @@ const Card = (card) => {
     return (
       <body>
         <div
-          className="w-96 sm:w-80 border-2 shadow-2xl m-6 sm:m-2 sm:ml-4"
+          className="w-96 sm:w-80 border-2 shadow-md m-6 sm:m-2 sm:ml-4 hover:shadow-2xl cursor-pointer overflow-x-auto"
           // onClick={Router.push(`/blogs/${card.card.slug}`)}
         >
           <Link href={`/Blog/blogs/${card.card.slug}`}>

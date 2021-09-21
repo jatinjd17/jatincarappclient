@@ -78,9 +78,12 @@ function PopularAlternativeCarComparision() {
               <span className=" border-2 rounded-full p-1">VS</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-1 mr-8 md:mr-2 sm:mr-1">
-              <div className="flex flex-col border-r-2 md:border-r-0 ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+              <div className="flex flex-col border-r-2 pr-1 md:border-r-0 ">
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -102,7 +105,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>
@@ -136,8 +141,11 @@ function PopularAlternativeCarComparision() {
                 </div>
               </div>
               <div className="flex flex-col ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -159,7 +167,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>
@@ -193,9 +203,12 @@ function PopularAlternativeCarComparision() {
               <span className=" border-2 rounded-full p-1">VS</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-1 mr-8 md:mr-2 sm:mr-1">
-              <div className="flex flex-col border-r-2 md:border-r-0 ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+              <div className="flex flex-col border-r-2 pr-1 md:border-r-0 ">
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -217,7 +230,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>
@@ -251,8 +266,11 @@ function PopularAlternativeCarComparision() {
                 </div>
               </div>
               <div className="flex flex-col ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -274,7 +292,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>
@@ -308,9 +328,12 @@ function PopularAlternativeCarComparision() {
               <span className=" border-2 rounded-full p-1">VS</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-1 mr-8 md:mr-2 sm:mr-1">
-              <div className="flex flex-col border-r-2 md:border-r-0 ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+              <div className="flex flex-col border-r-2 pr-1 md:border-r-0 ">
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -332,7 +355,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>
@@ -366,8 +391,11 @@ function PopularAlternativeCarComparision() {
                 </div>
               </div>
               <div className="flex flex-col ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -389,7 +417,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>
@@ -423,9 +453,12 @@ function PopularAlternativeCarComparision() {
               <span className=" border-2 rounded-full p-1">VS</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-1 mr-4 md:mr-2 sm:mr-1">
-              <div className="flex flex-col border-r-2 md:border-r-0 ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+              <div className="flex flex-col border-r-2 pr-1 md:border-r-0 ">
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -447,7 +480,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>
@@ -481,8 +516,11 @@ function PopularAlternativeCarComparision() {
                 </div>
               </div>
               <div className="flex flex-col ">
-                <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
-                  <img src={ComparisionCar.comparisioncar1[7]} />
+                <div className="w-max h-auto  self-center md:h-auto">
+                  <img
+                    className="object-cover w-60 h-28"
+                    src={ComparisionCar.comparisioncar1[7]}
+                  />
                 </div>
                 <div className="text-2xl font-bold text-center">
                   {ComparisionCar.comparisioncar1[8]}
@@ -504,7 +542,9 @@ function PopularAlternativeCarComparision() {
                     </div>
                   </div>
                   <div className="flex flex-col border-2">
-                    <div className="text-base font-bold mb-1">Transmission</div>
+                    <div className="text-sm font-bold mb-1 mt-0.5 overflow-x-hidden">
+                      Transmission
+                    </div>
                     <div className="text-xs">
                       {ComparisionCar.comparisioncar1[3]}
                     </div>

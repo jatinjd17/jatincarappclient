@@ -11,7 +11,11 @@ function UpcommingCars({ CompanyName, UpcommingCarBrand }) {
           <div className="grid grid-cols-3 mr-40 md:mr-2 ml-60 md:ml-2 sm:ml-1 sm:mr-0 bg-gray-200 p-2 gap-4">
             <div className="text-center bg-gray-400 pb-3">
               <div>
-                <img src={UpcommingCarBrand.car1[0]} alt="nnn" />
+                <img
+                  className="object-cover w-full h-56 sm:h-24"
+                  src={UpcommingCarBrand.car1[0]}
+                  alt="nnn"
+                />
               </div>
               <div className="text-center text-xl font-bold">
                 {UpcommingCarBrand.car1[1]}
@@ -25,7 +29,11 @@ function UpcommingCars({ CompanyName, UpcommingCarBrand }) {
             </div>
             <div className="text-center bg-gray-400 pb-3">
               <div>
-                <img src={UpcommingCarBrand.car2[0]} alt="nnn" />
+                <img
+                  className="object-cover w-full h-56 sm:h-24"
+                  src={UpcommingCarBrand.car2[0]}
+                  alt="nnn"
+                />
               </div>
               <div className="text-center text-xl font-bold">
                 {UpcommingCarBrand.car2[1]}
@@ -40,7 +48,11 @@ function UpcommingCars({ CompanyName, UpcommingCarBrand }) {
             {UpcommingCarBrand.car3 ? (
               <div className="text-center bg-gray-400 pb-3">
                 <div>
-                  <img src={UpcommingCarBrand.car3[0]} alt="nnn" />
+                  <img
+                    className="object-cover w-full h-56 sm:h-24"
+                    src={UpcommingCarBrand.car3[0]}
+                    alt="nnn"
+                  />
                 </div>
                 <div className="text-center text-xl font-bold">
                   {UpcommingCarBrand.car3[1]}
