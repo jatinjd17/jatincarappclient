@@ -5,7 +5,7 @@ import { ChevronUpIcon } from "@heroicons/react/solid";
 function AllSPecifications({ SpecificationsFeatures }) {
   return (
     <div>
-      <div className="text-2xl font-bold mt-6 mb-3">
+      <div id="specifications" className="text-2xl font-bold mt-6 mb-3">
         Specifications & Features
       </div>
       <div>

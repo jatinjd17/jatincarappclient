@@ -473,7 +473,7 @@ function Homee({ joy }) {
             CarPrice={CarPrice}
           />
 
-          <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
+          <div className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
               KeySpecification={KeySpecification}
               SafetyFeatures={SafetyFeatures}

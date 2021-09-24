@@ -59,7 +59,11 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
             >
               <div className="grid grid-cols-1 bg-gray-200 ">
                 <div className="">
-                  <img className="w-72" src={ThatBrandCars.car1[0]} alt="nnn" />
+                  <img
+                    className="object-cover w-full h-40 sm:h-24"
+                    src={ThatBrandCars.car1[0]}
+                    alt="nnn"
+                  />
                 </div>
                 <div className="text-center text-xl font-bold">
                   {ThatBrandCars.car1[1]}
@@ -85,7 +89,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car2[0]}
                       alt="nnn"
                     />
@@ -118,7 +122,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car3[0]}
                       alt="nnn"
                     />
@@ -151,7 +155,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car4[0]}
                       alt="nnn"
                     />
@@ -184,7 +188,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car5[0]}
                       alt="nnn"
                     />
@@ -217,7 +221,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car6[0]}
                       alt="nnn"
                     />
@@ -250,7 +254,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car7[0]}
                       alt="nnn"
                     />
@@ -283,7 +287,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car8[0]}
                       alt="nnn"
                     />
@@ -316,7 +320,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car9[0]}
                       alt="nnn"
                     />
@@ -349,7 +353,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car10[0]}
                       alt="nnn"
                     />
@@ -382,7 +386,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car11[0]}
                       alt="nnn"
                     />
@@ -415,7 +419,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car12[0]}
                       alt="nnn"
                     />
@@ -448,7 +452,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car13[0]}
                       alt="nnn"
                     />
@@ -481,7 +485,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car14[0]}
                       alt="nnn"
                     />
@@ -513,7 +517,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car15[0]}
                       alt="nnn"
                     />
@@ -545,7 +549,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car16[0]}
                       alt="nnn"
                     />
@@ -577,7 +581,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car17[0]}
                       alt="nnn"
                     />
@@ -609,7 +613,7 @@ function BrandMainPageAllCars({ CompanyName, ThatBrandCars }) {
                 <div className="grid grid-cols-1 bg-gray-200 ">
                   <div>
                     <img
-                      className="w-72"
+                      className="object-cover w-full h-40 sm:h-24"
                       src={ThatBrandCars.car18[0]}
                       alt="nnn"
                     />

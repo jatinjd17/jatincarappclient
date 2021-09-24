@@ -302,6 +302,16 @@ export default function Home() {
                   <div className="text-center">BMW</div>
                 </div>
               </Link>
+              <Link href="/tvs">
+                <div className="flex flex-col border-2 shadow-md hover:shadow-2xl">
+                  <img
+                    className="mt-4"
+                    src="https://bd.gaadicdn.com/pwa/img/brandLogo_168x84/tvs.png"
+                    alt="img"
+                  />
+                  <div className="text-center">TVS</div>
+                </div>
+              </Link>
             </div>
             <div>
               <div className="font-bold text-3xl text-center mb-4 mt-6">

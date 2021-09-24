@@ -41,7 +41,7 @@ function SideBar({ isToggleName, handleactive }) {
             </span>
           </div>
         </Link>
-        <div
+        {/* <div
           onClick={() => handleactive("images")}
           className={` cursor-pointer flex ml-8 sm:ml-10 sm:my-0 sm:p-0 items-center ${
             isToggleName("images")
@@ -61,7 +61,7 @@ function SideBar({ isToggleName, handleactive }) {
               {"I"}
             </span>
           </span>
-        </div>
+        </div> */}
         <Link to="specifications" smooth={true}>
           <div
             onClick={() => handleactive("specifications")}
@@ -87,7 +87,7 @@ function SideBar({ isToggleName, handleactive }) {
             </span>
           </div>
         </Link>
-        <div
+        {/* <div
           onClick={() => handleactive("userreviews")}
           className={` cursor-pointer flex ml-8 sm:ml-24 sm:my-0 sm:p-0 items-center ${
             isToggleName("userreviews")
@@ -107,8 +107,8 @@ function SideBar({ isToggleName, handleactive }) {
               {"I"}
             </span>
           </span>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           onClick={() => handleactive("expertreviews")}
           className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
             isToggleName("expertreviews")
@@ -130,7 +130,7 @@ function SideBar({ isToggleName, handleactive }) {
               {"I"}
             </span>
           </span>
-        </div>
+        </div> */}
         <Link to="varients" smooth={true}>
           <div
             onClick={() => handleactive("varients")}
@@ -155,7 +155,7 @@ function SideBar({ isToggleName, handleactive }) {
           </div>
         </Link>
 
-        <div
+        {/* <div
           onClick={() => handleactive("videos")}
           className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
             isToggleName("videos")
@@ -175,8 +175,8 @@ function SideBar({ isToggleName, handleactive }) {
               {"I"}
             </span>
           </span>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           onClick={() => handleactive("brochure")}
           className={` cursor-pointer flex ml-8 sm:ml-16 sm:my-0 sm:p-0 items-center ${
             isToggleName("brochure")
@@ -196,7 +196,7 @@ function SideBar({ isToggleName, handleactive }) {
               {"I"}
             </span>
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
