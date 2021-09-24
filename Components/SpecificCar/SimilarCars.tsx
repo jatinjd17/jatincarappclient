@@ -62,17 +62,17 @@ function SimilarCarss({ SimilarCars }) {
             {/* <Link
               href={`${ClientProduction}/${
                 SimilarCars.car1[3]
-              }/${SimilarCars.car1[1].toLowerCase()}`}
+              }/${SimilarCars.car1[1].toLowerCase().replace(/ /g, "")}`}
             > */}
             <div
               onClick={() =>
                 Router.push(
                   `${ClientProduction}/${
                     SimilarCars.car1[3]
-                  }/${SimilarCars.car1[1].toLowerCase()}`
+                  }/${SimilarCars.car1[1].toLowerCase().replace(/ /g, "")}`
                 )
               }
-              className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl"
+              className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer"
             >
               <div>
                 <img
@@ -98,9 +98,9 @@ function SimilarCarss({ SimilarCars }) {
             <Link
               href={`${ClientProduction}/${
                 SimilarCars.car2[3]
-              }/${SimilarCars.car2[1].toLowerCase()}`}
+              }/${SimilarCars.car2[1].toLowerCase().replace(/ /g, "")}`}
             >
-              <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+              <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                 <div>
                   <img
                     className="object-cover w-full h-36 sm:h-24"
@@ -125,9 +125,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car3[3]
-                }/${SimilarCars.car3[1].toLowerCase()}`}
+                }/${SimilarCars.car3[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -158,9 +158,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car4[3]
-                }/${SimilarCars.car4[1].toLowerCase()}`}
+                }/${SimilarCars.car4[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -191,9 +191,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car5[3]
-                }/${SimilarCars.car5[1].toLowerCase()}`}
+                }/${SimilarCars.car5[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -224,9 +224,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car6[3]
-                }/${SimilarCars.car6[1].toLowerCase()}`}
+                }/${SimilarCars.car6[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -257,9 +257,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car7[3]
-                }/${SimilarCars.car7[1].toLowerCase()}`}
+                }/${SimilarCars.car7[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -289,9 +289,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car8[3]
-                }/${SimilarCars.car8[1].toLowerCase()}`}
+                }/${SimilarCars.car8[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -321,9 +321,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car9[3]
-                }/${SimilarCars.car9[1].toLowerCase()}`}
+                }/${SimilarCars.car9[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -353,9 +353,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car10[3]
-                }/${SimilarCars.car10[1].toLowerCase()}`}
+                }/${SimilarCars.car10[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -385,9 +385,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car11[3]
-                }/${SimilarCars.car11[1].toLowerCase()}`}
+                }/${SimilarCars.car11[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -417,9 +417,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car12[3]
-                }/${SimilarCars.car12[1].toLowerCase()}`}
+                }/${SimilarCars.car12[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -449,9 +449,9 @@ function SimilarCarss({ SimilarCars }) {
               <Link
                 href={`${ClientProduction}/${
                   SimilarCars.car13[3]
-                }/${SimilarCars.car13[1].toLowerCase()}`}
+                }/${SimilarCars.car13[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"

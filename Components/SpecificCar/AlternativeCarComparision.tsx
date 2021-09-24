@@ -61,7 +61,7 @@ function AlternativeCarComparision({
               <div className="flex flex-col border-r-2 md:border-r-0 ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
                   <img
-                    className="object-contain w-full h-52 sm:h-24"
+                    className="object-contain w-full h-44 sm:h-24"
                     src={TopPic}
                   />
                 </div>
@@ -106,7 +106,7 @@ function AlternativeCarComparision({
               <div className="flex flex-col ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
                   <img
-                    className="object-contain w-full h-52 sm:h-24"
+                    className="object-contain w-full h-44 sm:h-24"
                     src={ComparisionCar.comparisioncar1[7]}
                   />
                 </div>
@@ -154,7 +154,7 @@ function AlternativeCarComparision({
               <div className="flex flex-col border-r-2 md:border-r-0 ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
                   <img
-                    className="object-contain w-full h-52 sm:h-24"
+                    className="object-contain w-full h-44 sm:h-24"
                     src={TopPic}
                   />
                 </div>
@@ -199,7 +199,7 @@ function AlternativeCarComparision({
               <div className="flex flex-col ">
                 <div className="w-80 h-auto self-center lg:w-auto lg:h-30 md:w-80 md:h-auto">
                   <img
-                    className="object-contain w-full h-52 sm:h-24"
+                    className="object-contain w-full h-44 sm:h-24"
                     src={ComparisionCar.comparisioncar2[7]}
                   />
                 </div>

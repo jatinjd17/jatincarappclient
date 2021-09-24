@@ -56,9 +56,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
               <Link
                 href={`${ClientProduction}/${
                   ThatBrandCars.car1[3]
-                }/${ThatBrandCars.car1[1].toLowerCase()}`}
+                }/${ThatBrandCars.car1[1].toLowerCase().replace(/ /g, "")}`}
               >
-                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                   <div>
                     <img
                       className="object-cover w-full h-36 sm:h-24"
@@ -87,9 +87,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car2[3]
-                  }/${ThatBrandCars.car2[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car2[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -120,9 +120,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car3[3]
-                  }/${ThatBrandCars.car3[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car3[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -153,9 +153,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car4[3]
-                  }/${ThatBrandCars.car4[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car4[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -185,9 +185,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car5[3]
-                  }/${ThatBrandCars.car5[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car5[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -217,9 +217,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car6[3]
-                  }/${ThatBrandCars.car6[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car6[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -249,9 +249,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car7[3]
-                  }/${ThatBrandCars.car7[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car7[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -281,9 +281,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car8[3]
-                  }/${ThatBrandCars.car8[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car8[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -313,9 +313,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car9[3]
-                  }/${ThatBrandCars.car9[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car9[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -345,9 +345,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car10[3]
-                  }/${ThatBrandCars.car10[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car10[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -377,9 +377,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car11[3]
-                  }/${ThatBrandCars.car11[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car11[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -409,9 +409,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car12[3]
-                  }/${ThatBrandCars.car12[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car12[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -441,9 +441,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car13[3]
-                  }/${ThatBrandCars.car13[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car13[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -473,9 +473,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car14[3]
-                  }/${ThatBrandCars.car14[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car14[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -505,9 +505,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car15[3]
-                  }/${ThatBrandCars.car15[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car15[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -537,9 +537,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car16[3]
-                  }/${ThatBrandCars.car16[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car16[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -569,9 +569,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car17[3]
-                  }/${ThatBrandCars.car17[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car17[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -601,9 +601,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car18[3]
-                  }/${ThatBrandCars.car18[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car18[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -633,9 +633,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car19[3]
-                  }/${ThatBrandCars.car19[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car19[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
@@ -665,9 +665,9 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
                 <Link
                   href={`${ClientProduction}/${
                     ThatBrandCars.car20[3]
-                  }/${ThatBrandCars.car20[1].toLowerCase()}`}
+                  }/${ThatBrandCars.car20[1].toLowerCase().replace(/ /g, "")}`}
                 >
-                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
+                  <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl cursor-pointer">
                     <div>
                       <img
                         className="object-cover w-full h-36 sm:h-24"
