@@ -1,4 +1,5 @@
 import React from "react";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 function KeySpecSafetyFeatures({ KeySpecification, SafetyFeatures, OnlyName }) {
   return (
@@ -73,9 +74,27 @@ function KeySpecSafetyFeatures({ KeySpecification, SafetyFeatures, OnlyName }) {
           </div>
           <div>
             <div className=" bg-gray-200 mx-3 sm:mx-0  p-7 rounded-xl">
-              <div className="mb-6">{SafetyFeatures[0]}</div>
-              <div className="mb-6">{SafetyFeatures[1]}</div>
-              <div className="mb-6">{SafetyFeatures[2]}</div>
+              <div className="mb-6">
+                <FiberManualRecordIcon
+                  className="mb-0.5 mr-2"
+                  style={{ fontSize: 10 }}
+                />
+                {SafetyFeatures[0]}
+              </div>
+              <div className="mb-6">
+                <FiberManualRecordIcon
+                  className="mb-0.5 mr-2"
+                  style={{ fontSize: 10 }}
+                />
+                {SafetyFeatures[1]}
+              </div>
+              <div className="mb-6">
+                <FiberManualRecordIcon
+                  className="mb-0.5 mr-2"
+                  style={{ fontSize: 10 }}
+                />
+                {SafetyFeatures[2]}
+              </div>
             </div>
           </div>
         </div>

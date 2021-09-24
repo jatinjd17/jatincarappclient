@@ -224,6 +224,7 @@ function Homee({ joy }) {
       "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Yodha-Pickup/7624/1609147376028/front-left-side-47.jpg?tr=w-456",
       "Yodha",
       "Rs.6.94 - 7.49 Lakh*",
+      "tata",
     ],
     car2: [
       "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/8430/1620644941293/front-left-side-47.jpg?tr=w-456",
@@ -378,7 +379,7 @@ function Homee({ joy }) {
             CarPrice={CarPrice}
           />
 
-          <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
+          <div className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
               KeySpecification={KeySpecification}
               SafetyFeatures={SafetyFeatures}
@@ -388,9 +389,11 @@ function Homee({ joy }) {
             <div>
               <div className="grid grid-cols-10 mt-6 md:grid-cols-5 sm:mr-1"></div>
             </div>
-            <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1">
-              Show All Specifications
-            </div>
+            <Link to="specifications" smooth={true}>
+              <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1 cursor-pointer">
+                Show All Specifications
+              </div>
+            </Link>
 
             <Varients
               SpecificationsFeatures={joy}
@@ -409,24 +412,19 @@ function Homee({ joy }) {
             </div>
             <div>
               <ProsACons ProsCons={ProsCons} />
-
               <ColorCar OnlyName={OnlyName} Colorss={Colorss} />
               <AllSPecifications SpecificationsFeatures={joy} />
-
               <AlternativeCarComparision
                 TopPic={TopPic}
                 KeySpecification={KeySpecification}
                 ComparisionCar={ComparisionCar}
               />
-
-              <SomeHighlightedFeatures
+              {/* <SomeHighlightedFeatures
                 OnlyName={OnlyName}
                 HighlightedFeatures={HighlightedFeatures}
-              />
-
+              /> */}
               <Faqs OnlyName={OnlyName} faqs={faqs} />
-
-              <LatestArticles OnlyName={OnlyName} articles={articles} />
+              {/* <LatestArticles OnlyName={OnlyName} articles={articles} /> */}
             </div>
             <div className="text-3xl font-bold mt-12">Similar Cars</div>
           </div>

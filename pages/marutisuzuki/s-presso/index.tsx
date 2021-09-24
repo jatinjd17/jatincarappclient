@@ -67,6 +67,11 @@ import {
   ScrossBasicInfoCard,
   CelerioXBasicInfoCard,
 } from "../../../AllCarBasicInfo/marutisuzuki";
+import {
+  NiosBasicInfoCard,
+  SantroBasicInfoCard,
+} from "../../../AllCarBasicInfo/hyundai";
+import { KwidBasicInfoCard } from "../../../AllCarBasicInfo/renault";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -319,16 +324,16 @@ function Homee({ joy }) {
   // };
 
   const SimilarCars = {
-    car1: [TKwid, "Renault Kwid", "₹ 3.32 Lakh onwards"],
-    // car2: [
-    //   "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
-    //   "Datsun redi-go",
-    //   "₹ 3.80 Lakh onwards0",
-    // ],
-    car2: [TSpresso, "S-presso", "₹ 3.77 Lakh onwards"],
-    car3: [TCelerio, "Celario", "₹4.66 Lakhs onwards"],
-    car4: [TNios, "i10 Nios", "₹5.24 lakhs onwards"],
-    car5: [TSantro, "Santro", "₹ 4.74 Lakh onwards"],
+    car1: KwidBasicInfoCard,
+    car2: [
+      "https://i.ibb.co/ZdN0MWM/Datsun-Redi-GO.jpg",
+      "Datsun redi-go",
+      "₹ 3.80 Lakh onwards0",
+    ],
+    car3: SpressoBasicInfoCard,
+    car4: CelerioBasicInfoCard,
+    car5: NiosBasicInfoCard,
+    car6: SantroBasicInfoCard,
   };
 
   const ThatBrandCars = {
@@ -470,7 +475,7 @@ function Homee({ joy }) {
             CarPrice={CarPrice}
           />
 
-          <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
+          <div className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
               KeySpecification={KeySpecification}
               SafetyFeatures={SafetyFeatures}
@@ -480,9 +485,11 @@ function Homee({ joy }) {
             <div>
               <div className="grid grid-cols-10 mt-6 md:grid-cols-5 sm:mr-1"></div>
             </div>
-            <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1">
-              Show All Specifications
-            </div>
+            <Link to="specifications" smooth={true}>
+              <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1 cursor-pointer">
+                Show All Specifications
+              </div>
+            </Link>
 
             <Varients
               SpecificationsFeatures={joy}
@@ -501,24 +508,19 @@ function Homee({ joy }) {
             </div>
             <div>
               <ProsACons ProsCons={ProsCons} />
-
               <ColorCar OnlyName={OnlyName} Colorss={Colorss} />
               <AllSPecifications SpecificationsFeatures={joy} />
-
               <AlternativeCarComparision
                 TopPic={TSpresso}
                 KeySpecification={KeySpecification}
                 ComparisionCar={ComparisionCar}
               />
-
-              <SomeHighlightedFeatures
+              {/* <SomeHighlightedFeatures
                 OnlyName={OnlyName}
                 HighlightedFeatures={HighlightedFeatures}
-              />
-
+              /> */}
               <Faqs OnlyName={OnlyName} faqs={faqs} />
-
-              <LatestArticles OnlyName={OnlyName} articles={articles} />
+              {/* <LatestArticles OnlyName={OnlyName} articles={articles} /> */}
             </div>
             <div className="text-3xl font-bold mt-12">Similar Cars</div>
           </div>

@@ -1,6 +1,8 @@
 import React from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import Link from "next/link";
 import Carousel from "react-multi-carousel";
+import { ClientProduction } from "../../actions/ApiCarsBlogs";
 
 function MoreCars({ CompanyName, ThatBrandCars }) {
   const responsive = {
@@ -51,7 +53,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
         <div className="mr-20 ml-60 md:mx-2">
           <Carousel responsive={responsive}>
             <div className="m-8 sm:m-3 border-2 shadow-lg">
-              <Link href="/maruti/xl6">
+              <Link
+                href={`${ClientProduction}/${
+                  ThatBrandCars.car1[3]
+                }/${ThatBrandCars.car1[1].toLowerCase()}`}
+              >
                 <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                   <div>
                     <img
@@ -78,7 +84,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             </div>
             {ThatBrandCars.car2 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car2[3]
+                  }/${ThatBrandCars.car2[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -107,7 +117,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
 
             {ThatBrandCars.car3 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car3[3]
+                  }/${ThatBrandCars.car3[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -136,7 +150,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
 
             {ThatBrandCars.car4 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car4[3]
+                  }/${ThatBrandCars.car4[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -164,7 +182,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car5 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car5[3]
+                  }/${ThatBrandCars.car5[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -192,7 +214,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car6 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car6[3]
+                  }/${ThatBrandCars.car6[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -220,7 +246,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car7 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car7[3]
+                  }/${ThatBrandCars.car7[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -248,7 +278,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car8 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car8[3]
+                  }/${ThatBrandCars.car8[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -276,7 +310,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car9 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car9[3]
+                  }/${ThatBrandCars.car9[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -304,7 +342,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car10 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car10[3]
+                  }/${ThatBrandCars.car10[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -332,7 +374,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car11 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car11[3]
+                  }/${ThatBrandCars.car11[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -360,7 +406,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car12 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car12[3]
+                  }/${ThatBrandCars.car12[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -388,7 +438,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car13 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car13[3]
+                  }/${ThatBrandCars.car13[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -416,7 +470,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car14 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car14[3]
+                  }/${ThatBrandCars.car14[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -444,7 +502,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car15 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car15[3]
+                  }/${ThatBrandCars.car15[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -472,7 +534,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car16 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car16[3]
+                  }/${ThatBrandCars.car16[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -500,7 +566,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car17 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car17[3]
+                  }/${ThatBrandCars.car17[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -528,7 +598,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car18 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car18[3]
+                  }/${ThatBrandCars.car18[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -556,7 +630,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car19 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car19[3]
+                  }/${ThatBrandCars.car19[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img
@@ -584,7 +662,11 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
             ) : null}
             {ThatBrandCars.car20 ? (
               <div className="m-8 sm:m-3 border-2 shadow-lg">
-                <Link href="/maruti/xl6">
+                <Link
+                  href={`${ClientProduction}/${
+                    ThatBrandCars.car20[3]
+                  }/${ThatBrandCars.car20[1].toLowerCase()}`}
+                >
                   <div className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl">
                     <div>
                       <img

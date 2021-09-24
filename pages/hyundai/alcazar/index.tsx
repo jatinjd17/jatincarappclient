@@ -47,251 +47,6 @@ import {
 } from "../../../AllCarBasicInfo/hyundai";
 
 function Homee({ joy }) {
-  // const CompanyName = "Hyundai";
-  // const CarPrice = "₹ 16.30 Lakh";
-  // const TopPic = alcazer;
-  // const CarName = "Hyundai Alcazar";
-  // const OnlyName = "Alcazar";
-  // const ThumPic = TAlcazar;
-
-  // const KeySpecification = [
-  //   "₹ 16.30 Lakh onwards",
-  //   "14.2 to 20.4 kmpl",
-  //   "1493 to 1999 cc",
-  //   "Manual & Automatic (Torque Converter)",
-  //   "Petrol & Diesel",
-  //   "6-7 Seater",
-  //   "4,500 mm L x 1,790 mm W x 1,675 mm H",
-  // ];
-
-  // const SafetyFeatures = [
-  //   "all-around disc brakes",
-  //   "6 airbags",
-  //   "ABS",
-  //   "EBD",
-  //   "ESC",
-  //   "HSA",
-  //   "TMPS",
-  //   "auto-dimming IRVM",
-  //   "rear defogger and wiper",
-  //   "rear parking sensors",
-  //   "rear parking camera",
-  //   "ISOFIX child seat anchors.",
-  // ];
-
-  // const VarientPetrol = {
-  //   varient1: [
-  //     "Prestige 7-Seater",
-  //     "1999 cc, Manual, Petrol, 14.5 kmpl",
-  //     "	Rs.16.30 Lakh*",
-  //   ],
-  //   varient2: [
-  //     "Prestige",
-  //     "1999 cc, Manual, Petrol, 14.5 kmpl",
-  //     "Rs.16.45 Lakh*",
-  //   ],
-  //   varient3: [
-  //     "Prestige AT",
-  //     "1999 cc, Automatic, Petrol, 14.2 kmpl",
-  //     "Rs.17.93 Lakh*",
-  //   ],
-  //   varient4: [
-  //     "Platinum 7-Seater",
-  //     "1999 cc, Manual, Petrol, 14.5 kmpl",
-  //     "Rs.18.22 Lakh*",
-  //   ],
-
-  //   varient5: [
-  //     "Signature",
-  //     "1999 cc, Manual, Petrol, 14.5 kmpl",
-  //     "Rs.18.70 Lakh*",
-  //   ],
-  //   varient6: [
-  //     "Signature Dual Tone",
-  //     "1999 cc, Manual, Petrol, 14.5 kmpl",
-  //     "Rs.18.85 Lakh*",
-  //   ],
-  //   varient7: [
-  //     "Platinum AT",
-  //     "1999 cc, Automatic, Petrol, 14.2 kmpl",
-  //     "Rs.19.55 Lakh*",
-  //   ],
-  //   varient8: [
-  //     "Signature AT",
-  //     "1999 cc, Automatic, Petrol, 14.2 kmpl",
-  //     "Rs.19.84 Lakh*",
-  //   ],
-
-  //   varient9: [
-  //     "Signature Dual Tone AT",
-  //     "1999 cc, Automatic, Petrol, 14.2 kmpl",
-  //     "Rs.19.99 Lakh*",
-  //   ],
-  // };
-
-  // const VarientDiesel = {
-  //   varient1: [
-  //     "Prestige 7-Seater Diesel",
-  //     "1999 cc, Manual, Diesel, 20.4 kmpl",
-  //     "Rs.16.53 Lakh*",
-  //   ],
-
-  //   varient2: [
-  //     "Prestige Diesel",
-  //     "1956 cc, Manual, Diesel, 20.4 kmpl",
-  //     "Rs.16.68 Lakh*",
-  //   ],
-
-  //   varient3: [
-  //     "Prestige 7-Seater Diesel AT",
-  //     "1999 cc, Automatic, Diesel, 18.1 kmpl",
-  //     "Rs.18.01 Lakh*",
-  //   ],
-
-  //   varient4: [
-  //     "Platinum 7-Seater Diesel",
-  //     "1956 cc, Manual, Diesel, 20.4 kmpl",
-  //     "Rs.18.45 Lakh*",
-  //   ],
-
-  //   varient5: [
-  //     "Signature Diesel",
-  //     "1956 cc, Manual, Diesel, 20.4 kmpl",
-  //     "Rs.18.93 Lakh*",
-  //   ],
-
-  //   varient6: [
-  //     "Signature Dual Tone Diesel",
-  //     "1999 cc, Manual, Diesel, 20.4 kmpl",
-  //     "Rs.19.08 Lakh*",
-  //   ],
-
-  //   varient7: [
-  //     "Platinum Diesel AT",
-  //     "1956 cc, Automatic, Diesel, 18.1 kmpl",
-  //     "Rs.19.78 Lakh*",
-  //   ],
-
-  //   varient8: [
-  //     "Signature Diesel AT",
-  //     "1956 cc, Automatic, Diesel, 18.1 kmpl",
-  //     "Rs.19.99 Lakh*",
-  //   ],
-
-  //   varient9: [
-  //     "Signature Dual Tone Diesel AT",
-  //     "1956 cc, Automatic, Diesel, 18.1 kmpl",
-  //     "Rs.20.14 Lakh*",
-  //   ],
-  // };
-
-  // const VarientCNG = {};
-
-  // const Mileage = {
-  //   mileage1: ["Diesel (1956 cc)", "Automatic", "20.65 kmpl"],
-  //   mileage2: ["CNG (796 cc)", "Manual", "31.59 km/kg"],
-  // };
-
-  // const LatestUpdate = [
-  //   "Latest Update: Hyundai has launched the Alcazar in India. Hyundai Alcazar Price: The SUV is priced from Rs 16.30 lakh to Rs 19.99 lakh (introductory ex-showroom). Hyundai Alcazar Variants: It is offered in eight variants: Prestige, Prestige (O), Platinum, Platinum (O), Signature, Signature (O), Signature Dual Tone, and Signature (O) Dual Tone. Hyundai Alcazar Seating Capacity: Hyundai’s three-row SUV comes in both 6 and 7-seater layouts. Hyundai Alcazar Powertrains: The Alcazar is equipped with two engines: a 2.0-litre petrol and a 1.5-litre diesel. The petrol engine is an uprated version of the Elantra and Tucson’s, producing 159PS and 191Nm here. The diesel is the same as the Creta, making 115PS and 250Nm. Both engines come with 6-speed manual and automatic transmissions. The Alcazar gets three drive modes (Eco, City, and Sport) and as many traction modes (snow, sand, and mud). Hyundai Alcazar Features: It features a 10.25-inch digital instrument cluster, a 10.25-inch touchscreen system, auto climate control, wireless charging, and cruise control. Hyundai has also provided the SUV with ventilated front seats, a 360-degree camera, a voice-controlled panoramic sunroof, and Hyundai’s BlueLink connected car tech. Hyundai Alcazar Safety: Safety kit includes up to six airbags, electronic stability control, and front and rear parking sensors. Hyundai Alcazar Rivals: The Alcazar goes up against the MG Hector Plus, Mahindra XUV500, Tata Safari, and the Mahindra XUV700.",
-  // ];
-
-  // const ProsCons = {
-  //   pros: [
-  //     "A 6/7-seater with city-friendly proportions. Feels just as easy as the Creta to drive in everyday conditions",
-  //     "Captain seat option will be appreciated by chauffeur-driven owners",
-  //     "Usable boot space even when fully-loaded",
-  //     "Ride quality is well suited to Indian roads",
-  //   ],
-  //   cons: [
-  //     "Third-row seat is usable but not ideal for adults. Best suited for kids or adults over short journeys",
-  //     "No 7-seater petrol automatic, 7-seater diesel automatic limited to the base variant",
-  //     "Doesn’t have the same road presence as price rivals like the Tata Safari, MG Hector Plus, and XUV500",
-  //   ],
-  // };
-
-  // const Colorss = {
-  //   color1: ["Typhoon Silver", "bg-red-800"],
-  //   color2: ["Phantom Black", "bg-gray-900"],
-  //   color3: ["Taiga Brown", "bg-gray-600"],
-  //   color4: ["Polar White Dual Tone", "bg-white"],
-  //   color5: ["Starry Night", "bg-blue-800"],
-  //   color6: ["Titan Grey Dual Tone", "bg-red-400"],
-  //   color7: ["Polar White", "bg-red-400"],
-  //   color8: ["Titan Grey", "bg-red-400"],
-  // };
-
-  // const ComparisionCar = {
-  //   comparisioncar1: [
-  //     "₹ 13.63 Lakh onwards",
-  //     "16.6 kmpl",
-  //     "1451 to 1956 cc",
-  //     "Manual, Automatic (Dual Clutch)",
-  //     "Petrol, Diesel & Hybrid (Electric + Petrol)",
-  //     "6-7 Seater",
-  //     "4,720 mm L x 1,835 mm W x 1,760 mm H",
-  //     "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Hector-Plus/7909/1594206680276/front-left-side-47.jpg?tr=w-456",
-  //   ],
-  //   comparisioncar2: [
-  //     "₹ 14.99 Lakh onwards",
-  //     "14.08 to 16.14 kmpl",
-  //     "1956 cc",
-  //     "Manual & Automatic (Torque Converter)",
-  //     "Diesel",
-  //     "7 Seater",
-  //     "4,661 mm L x 1,894 mm W x 1,786 mm H",
-  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/40027/safari-exterior-right-front-three-quarter-2.jpeg?q=85",
-  //   ],
-  // };
-
-  // const HighlightedFeatures = {
-  //   feature1: [
-  //     "https://stimg.cardekho.com/images/carinteriorimages/930x620/Maruti/Baleno/6778/1615985207322/interior-image-209.jpg?imwidth=480",
-  //     "Stylish Interiors",
-  //     "",
-  //   ],
-  //   feature2: [
-  //     "https://image.shutterstock.com/image-photo/car-door-lock-knob-children-260nw-1514746379.jpg",
-  //     "Rear Door Child Lock",
-  //     "",
-  //   ],
-  //   feature3: [
-  //     "https://stimg.cardekho.com/images/carinteriorimages/630x420/Maruti/Alto-800/7075/1594805410865/airbags-94.jpg?tr=w-360",
-  //     "6 Airbags",
-  //     "",
-  //   ],
-  // };
-
-  // const faqs = {
-  //   question1: [
-  //     "What is the on road price of Alcazar?",
-  //     "The on-road price of Alcazar in Delhi starts at ‎₹ 19.02 Lakh and goes upto ‎₹ 23.92 Lakh. The on road price is made up of ex-showroom price, RTO registration, road tax and insurance amount.",
-  //   ],
-  //   question2: [
-  //     "Which car is better between Alcazar and Safari?",
-  //     "Alcazar price starts at ₹ 16.30 Lakh ex-showroom and It comes with 1999 cc engine. Whereas Safari price starts at ₹ 14.99 Lakh ex-showroom and It comes with 1956 cc engine.",
-  //   ],
-  //   question3: [
-  //     "What is the mileage of Hyundai Alcazar?",
-  //     "The Hyundai Alcazar mileage is 14.2 - 20.4 kmpl.",
-  //   ],
-  // };
-
-  // const articles = {
-  //   article1: [
-  //     "/kushaq.png",
-  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-  //   ],
-  //   article2: [
-  //     "/kushaq.png",
-  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-  //   ],
-  //   article3: [
-  //     "/kushaq.png",
-  //     "Rath Yatra 2021: About 60 Skoda Kushaq SUVs To Be Delivered In Ahmedabad",
-  //   ],
-  // };
-
   const CompanyName = joy.CarInfo.CompanyName;
   const CarPrice = joy.CarInfo.Price[0];
   const TopPic = joy.CarInfo.TopPic[0];
@@ -346,29 +101,6 @@ function Homee({ joy }) {
     car10: KonaBasicInfoCard,
     car11: TucsonBasicInfoCard,
   };
-
-  // const UpcommingCarBrand = {
-  //   car1: [
-  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/100121/exterior-right-front-three-quarter.jpeg?isig=0&q=85",
-  //     "i20 N Line",
-  //     "₹ 11.00 - 13.00 Lakh",
-  //   ],
-  //   car2: [
-  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/51891/ax1-micro-suv-exterior-left-front-three-quarter.jpeg?q=85",
-  //     "AX1 micro-SUV",
-  //     "₹ 4.00 - 7.00 Lakh",
-  //   ],
-  //   car3: [
-  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/49892/new-kona-exterior-front-view.jpeg?q=85",
-  //     "New Kona",
-  //     "₹ 23.00 - 25.00 Lakh",
-  //   ],
-  //   car4: [
-  //     "https://imgd.aeplcdn.com/664x374/n/cw/ec/47331/hyundai-new-elantra-left-side-view0.jpeg?q=85",
-  //     "New Elantra",
-  //     "₹ 16.00 - 20.00 Lakh",
-  //   ],
-  // };
 
   const ReadMore = ({ children }) => {
     const text = children;
@@ -483,9 +215,11 @@ function Homee({ joy }) {
             <div>
               <div className="grid grid-cols-10 mt-6 md:grid-cols-5 sm:mr-1"></div>
             </div>
-            <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1">
-              Show All Specifications
-            </div>
+            <Link to="specifications" smooth={true}>
+              <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1 cursor-pointer">
+                Show All Specifications
+              </div>
+            </Link>
 
             <Varients
               SpecificationsFeatures={joy}
@@ -504,24 +238,19 @@ function Homee({ joy }) {
             </div>
             <div>
               <ProsACons ProsCons={ProsCons} />
-
               <ColorCar OnlyName={OnlyName} Colorss={Colorss} />
               <AllSPecifications SpecificationsFeatures={joy} />
-
               <AlternativeCarComparision
                 TopPic={TopPic}
                 KeySpecification={KeySpecification}
                 ComparisionCar={ComparisionCar}
               />
-
-              <SomeHighlightedFeatures
+              {/* <SomeHighlightedFeatures
                 OnlyName={OnlyName}
                 HighlightedFeatures={HighlightedFeatures}
-              />
-
+              /> */}
               <Faqs OnlyName={OnlyName} faqs={faqs} />
-
-              <LatestArticles OnlyName={OnlyName} articles={articles} />
+              {/* <LatestArticles OnlyName={OnlyName} articles={articles} /> */}
             </div>
             <div className="text-3xl font-bold mt-12">Similar Cars</div>
           </div>

@@ -1,347 +1,347 @@
 [
   {
-    "link": "http://localhost:3000/ford/aspire",
+    "link": "https://jatincarappclient.vercel.app/ford/aspire",
     "title": "Ford Aspire"
   },
   {
-    "link": "http://localhost:3000/ford/ecosport",
+    "link": "https://jatincarappclient.vercel.app/ford/ecosport",
     "title": "Ford Ecosport"
   },
   {
-    "link": "http://localhost:3000/ford/endeavour",
+    "link": "https://jatincarappclient.vercel.app/ford/endeavour",
     "title": "Ford Endeavour"
   },
   {
-    "link": "http://localhost:3000/ford/figo",
+    "link": "https://jatincarappclient.vercel.app/ford/figo",
     "title": "Ford Figo"
   },
   {
-    "link": "http://localhost:3000/ford/freestyle",
+    "link": "https://jatincarappclient.vercel.app/ford/freestyle",
     "title": "Ford Freestyle"
   },
   {
-    "link": "http://localhost:3000/honda/amaze",
+    "link": "https://jatincarappclient.vercel.app/honda/amaze",
     "title": "Honda Amaze"
   },
   {
-    "link": "http://localhost:3000/honda/city",
+    "link": "https://jatincarappclient.vercel.app/honda/city",
     "title": "Honda City"
   },
   {
-    "link": "http://localhost:3000/honda/city4",
+    "link": "https://jatincarappclient.vercel.app/honda/city4",
     "title": "Honda City 4th Gen"
   },
   {
-    "link": "http://localhost:3000/honda/jazz",
+    "link": "https://jatincarappclient.vercel.app/honda/jazz",
     "title": "Honda Jazz"
   },
 
   {
-    "link": "http://localhost:3000/honda/wrv",
+    "link": "https://jatincarappclient.vercel.app/honda/wrv",
     "title": "Honda WRV"
   },
   {
-    "link": "http://localhost:3000/hyundai/alcazar",
+    "link": "https://jatincarappclient.vercel.app/hyundai/alcazar",
     "title": "Hyundai Alcazar"
   },
   {
-    "link": "http://localhost:3000/hyundai/aura",
+    "link": "https://jatincarappclient.vercel.app/hyundai/aura",
     "title": "Hyundai Aura"
   },
   {
-    "link": "http://localhost:3000/hyundai/creta",
+    "link": "https://jatincarappclient.vercel.app/hyundai/creta",
     "title": "Hyundai Creta"
   },
   {
-    "link": "http://localhost:3000/hyundai/elantra",
+    "link": "https://jatincarappclient.vercel.app/hyundai/elantra",
     "title": "Hyundai Elantra"
   },
   {
-    "link": "http://localhost:3000/hyundai/i10nios",
+    "link": "https://jatincarappclient.vercel.app/hyundai/i10nios",
     "title": "Hyundai i10"
   },
   {
-    "link": "http://localhost:3000/hyundai/i20",
+    "link": "https://jatincarappclient.vercel.app/hyundai/i20",
     "title": "Hyundai i20"
   },
   {
-    "link": "http://localhost:3000/hyundai/konaelectric",
+    "link": "https://jatincarappclient.vercel.app/hyundai/konaelectric",
     "title": "Hyundai Kona EV"
   },
   {
-    "link": "http://localhost:3000/hyundai/santro",
+    "link": "https://jatincarappclient.vercel.app/hyundai/santro",
     "title": "Hyundai Santro"
   },
   {
-    "link": "http://localhost:3000/hyundai/tucson",
+    "link": "https://jatincarappclient.vercel.app/hyundai/tucson",
     "title": "Hyundai Tucson"
   },
   {
-    "link": "http://localhost:3000/hyundai/venue",
+    "link": "https://jatincarappclient.vercel.app/hyundai/venue",
     "title": "Hyundai Venue"
   },
   {
-    "link": "http://localhost:3000/hyundai/verna",
+    "link": "https://jatincarappclient.vercel.app/hyundai/verna",
     "title": "Hyundai Verna"
   },
   {
-    "link": "http://localhost:3000/hyundai/xcent",
+    "link": "https://jatincarappclient.vercel.app/hyundai/xcent",
     "title": "Hyundai Xcent"
   },
   {
-    "link": "http://localhost:3000/kia/carnival",
+    "link": "https://jatincarappclient.vercel.app/kia/carnival",
     "title": "Kia Carnival"
   },
   {
-    "link": "http://localhost:3000/kia/sonet",
+    "link": "https://jatincarappclient.vercel.app/kia/sonet",
     "title": "Kia Sonet"
   },
   {
-    "link": "http://localhost:3000/kia/seltos",
+    "link": "https://jatincarappclient.vercel.app/kia/seltos",
     "title": "Kia Seltos"
   },
   {
-    "link": "http://localhost:3000/mahindra/alturas",
+    "link": "https://jatincarappclient.vercel.app/mahindra/alturas",
     "title": "Mahindra Alturas"
   },
   {
-    "link": "http://localhost:3000/mahindra/bolero",
+    "link": "https://jatincarappclient.vercel.app/mahindra/bolero",
     "title": "Mahindra Bolero"
   },
   {
-    "link": "http://localhost:3000/mahindra/boleroneo",
+    "link": "https://jatincarappclient.vercel.app/mahindra/boleroneo",
     "title": "Mahindra BoleroNeo"
   },
   {
-    "link": "http://localhost:3000/mahindra/boleropickup",
+    "link": "https://jatincarappclient.vercel.app/mahindra/boleropickup",
     "title": "Mahindra BoleroPickup"
   },
   {
-    "link": "http://localhost:3000/mahindra/kuv100",
+    "link": "https://jatincarappclient.vercel.app/mahindra/kuv100",
     "title": "Mahindra Kuv100"
   },
   {
-    "link": "http://localhost:3000/mahindra/marazzo",
+    "link": "https://jatincarappclient.vercel.app/mahindra/marazzo",
     "title": "Mahindra Marazzo"
   },
   {
-    "link": "http://localhost:3000/mahindra/scorpio",
+    "link": "https://jatincarappclient.vercel.app/mahindra/scorpio",
     "title": "Mahindra Scorpio"
   },
   {
-    "link": "http://localhost:3000/mahindra/thar",
+    "link": "https://jatincarappclient.vercel.app/mahindra/thar",
     "title": "Mahindra Thar"
   },
   {
-    "link": "http://localhost:3000/mahindra/veritoev",
+    "link": "https://jatincarappclient.vercel.app/mahindra/veritoev",
     "title": "Mahindra Verito EV"
   },
   {
-    "link": "http://localhost:3000/mahindra/xuv300",
+    "link": "https://jatincarappclient.vercel.app/mahindra/xuv300",
     "title": "Mahindra Xuv300"
   },
   {
-    "link": "http://localhost:3000/mahindra/xuv500",
+    "link": "https://jatincarappclient.vercel.app/mahindra/xuv500",
     "title": "Mahindra Xuv500"
   },
   {
-    "link": "http://localhost:3000/maruti/alto",
-    "title": "Maruti Alto"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/alto",
+    "title": "MarutiSuzuki Alto"
   },
   {
-    "link": "http://localhost:3000/maruti/baleno",
-    "title": "Maruti Baleno"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/baleno",
+    "title": "MarutiSuzuki Baleno"
   },
   {
-    "link": "http://localhost:3000/maruti/brezza",
-    "title": "Maruti Brezza"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/brezza",
+    "title": "MarutiSuzuki Brezza"
   },
   {
-    "link": "http://localhost:3000/maruti/celerio",
-    "title": "Maruti Celerio"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/celerio",
+    "title": "MarutiSuzuki Celerio"
   },
   {
-    "link": "http://localhost:3000/maruti/ciaz",
-    "title": "Maruti Ciaz"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/ciaz",
+    "title": "MarutiSuzuki Ciaz"
   },
   {
-    "link": "http://localhost:3000/maruti/dzire",
-    "title": "Maruti Dzire"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/dzire",
+    "title": "MarutiSuzuki Dzire"
   },
   {
-    "link": "http://localhost:3000/maruti/dziretour",
-    "title": "Maruti DzireTour"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/dziretour",
+    "title": "MarutiSuzuki DzireTour"
   },
   {
-    "link": "http://localhost:3000/maruti/eco",
-    "title": "Maruti Eco"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/eco",
+    "title": "MarutiSuzuki Eco"
   },
   {
-    "link": "http://localhost:3000/maruti/ertiga",
-    "title": "Maruti Ertiga"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/ertiga",
+    "title": "MarutiSuzuki Ertiga"
   },
   {
-    "link": "http://localhost:3000/maruti/ignis",
-    "title": "Maruti Ignis"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/ignis",
+    "title": "MarutiSuzuki Ignis"
   },
   {
-    "link": "http://localhost:3000/maruti/s-presso",
-    "title": "Maruti Spresso"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/s-presso",
+    "title": "MarutiSuzuki Spresso"
   },
   {
-    "link": "http://localhost:3000/maruti/scross",
-    "title": "Maruti Scross"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/scross",
+    "title": "MarutiSuzuki Scross"
   },
   {
-    "link": "http://localhost:3000/maruti/swift",
-    "title": "Maruti Swift"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/swift",
+    "title": "MarutiSuzuki Swift"
   },
   {
-    "link": "http://localhost:3000/maruti/waganr",
-    "title": "Maruti WaganR"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/waganr",
+    "title": "MarutiSuzuki WaganR"
   },
   {
-    "link": "http://localhost:3000/maruti/xl6",
-    "title": "Maruti XL6"
+    "link": "https://jatincarappclient.vercel.app/marutisuzuki/xl6",
+    "title": "MarutiSuzuki XL6"
   },
   {
-    "link": "http://localhost:3000/mg/gloster",
+    "link": "https://jatincarappclient.vercel.app/mg/gloster",
     "title": "MG Gloster"
   },
   {
-    "link": "http://localhost:3000/mg/hector",
+    "link": "https://jatincarappclient.vercel.app/mg/hector",
     "title": "MG Hector"
   },
   {
-    "link": "http://localhost:3000/mg/hectorplus",
+    "link": "https://jatincarappclient.vercel.app/mg/hectorplus",
     "title": "MG HectorPlus"
   },
   {
-    "link": "http://localhost:3000/mg/zsev",
+    "link": "https://jatincarappclient.vercel.app/mg/zsev",
     "title": "MG ZSEV"
   },
   {
-    "link": "http://localhost:3000/nissan/gtr",
+    "link": "https://jatincarappclient.vercel.app/nissan/gtr",
     "title": "Nissan GTR"
   },
   {
-    "link": "http://localhost:3000/nissan/kicks",
+    "link": "https://jatincarappclient.vercel.app/nissan/kicks",
     "title": "Nissan Kicks"
   },
   {
-    "link": "http://localhost:3000/nissan/magnite",
+    "link": "https://jatincarappclient.vercel.app/nissan/magnite",
     "title": "Nissan Magnite"
   },
   {
-    "link": "http://localhost:3000/renault/duster",
+    "link": "https://jatincarappclient.vercel.app/renault/duster",
     "title": "Renault Duster"
   },
   {
-    "link": "http://localhost:3000/renault/kiger",
+    "link": "https://jatincarappclient.vercel.app/renault/kiger",
     "title": "Renault Kiger"
   },
   {
-    "link": "http://localhost:3000/renault/kwid",
+    "link": "https://jatincarappclient.vercel.app/renault/kwid",
     "title": "Renault Kwid"
   },
   {
-    "link": "http://localhost:3000/renault/triber",
+    "link": "https://jatincarappclient.vercel.app/renault/triber",
     "title": "Renault Triber"
   },
   {
-    "link": "http://localhost:3000/skoda/kushaq",
+    "link": "https://jatincarappclient.vercel.app/skoda/kushaq",
     "title": "Skoda Kushaq"
   },
   {
-    "link": "http://localhost:3000/skoda/octavia",
+    "link": "https://jatincarappclient.vercel.app/skoda/octavia",
     "title": "Skoda Octavia"
   },
   {
-    "link": "http://localhost:3000/skoda/rapid",
+    "link": "https://jatincarappclient.vercel.app/skoda/rapid",
     "title": "Skoda Rapid"
   },
   {
-    "link": "http://localhost:3000/skoda/superb",
+    "link": "https://jatincarappclient.vercel.app/skoda/superb",
     "title": "Skoda Superb"
   },
   {
-    "link": "http://localhost:3000/tata/altroz",
+    "link": "https://jatincarappclient.vercel.app/tata/altroz",
     "title": "Tata Altroz"
   },
   {
-    "link": "http://localhost:3000/tata/harrier",
+    "link": "https://jatincarappclient.vercel.app/tata/harrier",
     "title": "Tata Harrier"
   },
   {
-    "link": "http://localhost:3000/tata/nexon",
+    "link": "https://jatincarappclient.vercel.app/tata/nexon",
     "title": "Tata Nexon"
   },
   {
-    "link": "http://localhost:3000/tata/nexonev",
+    "link": "https://jatincarappclient.vercel.app/tata/nexonev",
     "title": "Tata NexonEV"
   },
   {
-    "link": "http://localhost:3000/tata/safari",
+    "link": "https://jatincarappclient.vercel.app/tata/safari",
     "title": "Tata Safari"
   },
   {
-    "link": "http://localhost:3000/tata/tiago",
+    "link": "https://jatincarappclient.vercel.app/tata/tiago",
     "title": "Tata Tiago"
   },
   {
-    "link": "http://localhost:3000/tata/tigor",
+    "link": "https://jatincarappclient.vercel.app/tata/tigor",
     "title": "Tata Tigor"
   },
   {
-    "link": "http://localhost:3000/tata/tigorev",
+    "link": "https://jatincarappclient.vercel.app/tata/tigorev",
     "title": "Tata TigorEV"
   },
   {
-    "link": "http://localhost:3000/tata/yodha",
+    "link": "https://jatincarappclient.vercel.app/tata/yodha",
     "title": "Tata Yodha"
   },
   {
-    "link": "http://localhost:3000/toyota/camry",
+    "link": "https://jatincarappclient.vercel.app/toyota/camry",
     "title": "Toyota Camry"
   },
   {
-    "link": "http://localhost:3000/toyota/fortuner",
+    "link": "https://jatincarappclient.vercel.app/toyota/fortuner",
     "title": "Toyota Fortuner"
   },
   {
-    "link": "http://localhost:3000/toyota/glanza",
+    "link": "https://jatincarappclient.vercel.app/toyota/glanza",
     "title": "Toyota Glanza"
   },
   {
-    "link": "http://localhost:3000/toyota/innova",
+    "link": "https://jatincarappclient.vercel.app/toyota/innova",
     "title": "Toyota Innova"
   },
   {
-    "link": "http://localhost:3000/toyota/urbancruiser",
+    "link": "https://jatincarappclient.vercel.app/toyota/urbancruiser",
     "title": "Toyota UrbanCruiser"
   },
   {
-    "link": "http://localhost:3000/toyota/vellfire",
+    "link": "https://jatincarappclient.vercel.app/toyota/vellfire",
     "title": "Toyota Vellfire"
   },
   {
-    "link": "http://localhost:3000/toyota/yaris",
+    "link": "https://jatincarappclient.vercel.app/toyota/yaris",
     "title": "Toyota Yaris"
   },
   {
-    "link": "http://localhost:3000/volkswagen/polo",
+    "link": "https://jatincarappclient.vercel.app/volkswagen/polo",
     "title": "Volkswagen Polo"
   },
   {
-    "link": "http://localhost:3000/volkswagen/t-roc",
+    "link": "https://jatincarappclient.vercel.app/volkswagen/t-roc",
     "title": "Volkswagen T-Roc"
   },
   {
-    "link": "http://localhost:3000/volkswagen/tiguanallspace",
+    "link": "https://jatincarappclient.vercel.app/volkswagen/tiguanallspace",
     "title": "Volkswagen Tiguan"
   },
   {
-    "link": "http://localhost:3000/volkswagen/vento",
+    "link": "https://jatincarappclient.vercel.app/volkswagen/vento",
     "title": "Volkswagen Vento"
   }
 ]

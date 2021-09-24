@@ -37,19 +37,21 @@ function StartingBox({ CarName, TopPic, CarPrice, OnlyName }) {
               </Link>
             </div>
             <div className="flex flex-row mt-4 text-center text-lg">
-              <div className="border-2 m-2 p-1 rounded-lg flex flex-row">
-                <div className="h-7 w-7">
-                  <img src="https://img.icons8.com/material-outlined/24/000000/invert-colors.png" />
+              <Link to="coloor" smooth={true}>
+                <div className="border-2 m-2 p-1 rounded-lg flex flex-row cursor-pointer">
+                  <div className="h-7 w-7">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/invert-colors.png" />
+                  </div>
+                  <div>Colors</div>
                 </div>
-                <div>Colors</div>
-              </div>
-              <div className="border-2 m-2 p-1 rounded-lg flex flex-row">
+              </Link>
+              <div className="border-2 m-2 p-1 rounded-lg flex flex-row cursor-not-allowed">
                 <div>
                   <img src="https://img.icons8.com/material-outlined/24/000000/images-folder.png" />
                 </div>
                 <div>Images</div>
               </div>
-              <div className="border-2 m-2 p-1 rounded-lg flex flex-row">
+              <div className="border-2 m-2 p-1 rounded-lg flex flex-row cursor-not-allowed">
                 <div className="h-6 w-6">
                   <img src="https://img.icons8.com/ios/50/000000/video.png" />
                 </div>

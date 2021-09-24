@@ -252,7 +252,7 @@ export default function Home() {
                   <div className="text-center">Skoda</div>
                 </div>
               </Link>
-              <Link href="/jeep">
+              {/* <Link href="/jeep">
                 <div className="flex flex-col border-2 shadow-md hover:shadow-2xl">
                   <img
                     className="mt-4"
@@ -311,7 +311,7 @@ export default function Home() {
                   />
                   <div className="text-center">TVS</div>
                 </div>
-              </Link>
+              </Link> */}
             </div>
             <div>
               <div className="font-bold text-3xl text-center mb-4 mt-6">

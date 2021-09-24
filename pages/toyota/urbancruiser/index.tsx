@@ -39,6 +39,11 @@ import {
   VellfireBasicInfoCard,
   CamryBasicInfoCard,
 } from "../../../AllCarBasicInfo/toyota";
+import { VenueBasicInfoCard } from "../../../AllCarBasicInfo/hyundai";
+import { SonetBasicInfoCard } from "../../../AllCarBasicInfo/kia";
+import { Xuv300BasicInfoCard } from "../../../AllCarBasicInfo/mahindra";
+import { BrezzaBasicInfoCard } from "../../../AllCarBasicInfo/marutisuzuki";
+import { MagniteBasicInfoCard } from "../../../AllCarBasicInfo/nissan";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -237,36 +242,12 @@ function Homee({ joy }) {
   // };
 
   const SimilarCars = {
-    car1: [
-      "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Venue/7931/1626089251600/front-left-side-47.jpg",
-      "Venue",
-      "₹ 6.92 Lakh Onwards",
-    ],
-    car2: [
-      "https://img.etimg.com/thumb/msid-77905386,width-640,resizemode-4,imgsize-480363/electric-sunroof.jpg",
-      "Nexon",
-      "₹ 7.20 Lakh onwards0",
-    ],
-    car3: [
-      "https://media.zigcdn.com/media/model/2020/Feb/front-1-4-left-190291530_600x400.jpg",
-      "Brezza",
-      "₹ 7.51 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41523/sonet-exterior-right-front-three-quarter-110.jpeg?q=85",
-      "Sonet",
-      "₹ 6.79 Lakh onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/26918/xuv300-exterior-right-front-three-quarter-148706.jpeg?q=85",
-      "XUV300",
-      "₹ 7.96 Lakh onwards",
-    ],
-    car6: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/45795/magnite-exterior-right-front-three-quarter-3.jpeg?q=85",
-      "Magnite",
-      "₹ 5.59 Lakh onwards",
-    ],
+    car1: VenueBasicInfoCard,
+    car2: BrezzaBasicInfoCard,
+    car3: UrbanCruiserBasicInfoCard,
+    car4: SonetBasicInfoCard,
+    car5: Xuv300BasicInfoCard,
+    car6: MagniteBasicInfoCard,
   };
 
   const ThatBrandCars = {
@@ -395,7 +376,7 @@ function Homee({ joy }) {
             CarPrice={CarPrice}
           />
 
-          <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
+          <div className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
               KeySpecification={KeySpecification}
               SafetyFeatures={SafetyFeatures}
@@ -405,9 +386,11 @@ function Homee({ joy }) {
             <div>
               <div className="grid grid-cols-10 mt-6 md:grid-cols-5 sm:mr-1"></div>
             </div>
-            <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1">
-              Show All Specifications
-            </div>
+            <Link to="specifications" smooth={true}>
+              <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1 cursor-pointer">
+                Show All Specifications
+              </div>
+            </Link>
 
             <Varients
               SpecificationsFeatures={joy}
@@ -426,24 +409,19 @@ function Homee({ joy }) {
             </div>
             <div>
               <ProsACons ProsCons={ProsCons} />
-
               <ColorCar OnlyName={OnlyName} Colorss={Colorss} />
               <AllSPecifications SpecificationsFeatures={joy} />
-
               <AlternativeCarComparision
                 TopPic={TopPic}
                 KeySpecification={KeySpecification}
                 ComparisionCar={ComparisionCar}
               />
-
-              <SomeHighlightedFeatures
+              {/* <SomeHighlightedFeatures
                 OnlyName={OnlyName}
                 HighlightedFeatures={HighlightedFeatures}
-              />
-
+              /> */}
               <Faqs OnlyName={OnlyName} faqs={faqs} />
-
-              <LatestArticles OnlyName={OnlyName} articles={articles} />
+              {/* <LatestArticles OnlyName={OnlyName} articles={articles} /> */}
             </div>
             <div className="text-3xl font-bold mt-12">Similar Cars</div>
           </div>

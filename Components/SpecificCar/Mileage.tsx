@@ -3,7 +3,7 @@ import React from "react";
 function Mileage({ OnlyName, Mileage }) {
   return (
     <div>
-      <div className="mt-10">
+      <div id="mileagee" className="mt-10">
         <div className="text-2xl font-bold mb-3">{OnlyName} Mileage</div>
         <div className="grid grid-cols-2 md:grid-cols-1 md:mr-2 sm:mr-1">
           <div className="grid grid-cols-3 grid-rows-3">

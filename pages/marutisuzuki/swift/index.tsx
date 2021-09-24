@@ -47,6 +47,13 @@ import {
   ScrossBasicInfoCard,
   CelerioXBasicInfoCard,
 } from "../../../AllCarBasicInfo/marutisuzuki";
+import { GlanzaBasicInfoCard } from "../../../AllCarBasicInfo/toyota";
+import {
+  i20BasicInfoCard,
+  NiosBasicInfoCard,
+  SantroBasicInfoCard,
+} from "../../../AllCarBasicInfo/hyundai";
+import { AltrozBasicInfoCard } from "../../../AllCarBasicInfo/tata";
 
 function Homee({ joy }) {
   const CompanyName = joy.CarInfo.CompanyName;
@@ -255,36 +262,12 @@ function Homee({ joy }) {
   // };
 
   const SimilarCars = {
-    car1: [
-      "https://live.staticflickr.com/7840/45954179625_28f5d35cbf_b.jpg",
-      "Baleno",
-      " ₹ 5.97 Lakh onwards",
-    ],
-    car2: [
-      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20190606121831_Toyota-Glanza-silver.jpg&h=795&w=1200&c=0",
-      "Toyota Glanza",
-      "₹ 7.34 Lakh onwards0",
-    ],
-    car3: [
-      "https://imgd.aeplcdn.com/1200x900/n/cw/ec/40530/i20-exterior-right-front-three-quarter-5.jpeg?q=85",
-      "Hyundai i20",
-      "₹ 6.91 Lakh onwards",
-    ],
-    car4: [
-      "https://imgd.aeplcdn.com/0x0/n/cw/ec/32597/tata-altroz-right-front-three-quarter20.jpeg",
-      "Altroz",
-      "₹5.80 Lakhs onwards",
-    ],
-    car5: [
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
-      "i10 Nios",
-      "₹5.24 lakhs onwards",
-    ],
-    car6: [
-      "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7460/1596180579378/front-left-side-47.jpg",
-      "Santro",
-      "₹ 4.74 Lakh onwards",
-    ],
+    car1: BalenoBasicInfoCard,
+    car2: GlanzaBasicInfoCard,
+    car3: i20BasicInfoCard,
+    car4: AltrozBasicInfoCard,
+    car5: NiosBasicInfoCard,
+    car6: SantroBasicInfoCard,
   };
 
   const ThatBrandCars = {
@@ -426,7 +409,7 @@ function Homee({ joy }) {
             CarPrice={CarPrice}
           />
 
-          <div id="specifications" className="ml-24 sm:ml-1 sm:mr-1 mt-10">
+          <div className="ml-24 sm:ml-1 sm:mr-1 mt-10">
             <KeySpecSafetyFeatures
               KeySpecification={KeySpecification}
               SafetyFeatures={SafetyFeatures}
@@ -436,9 +419,11 @@ function Homee({ joy }) {
             <div>
               <div className="grid grid-cols-10 mt-6 md:grid-cols-5 sm:mr-1"></div>
             </div>
-            <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1">
-              Show All Specifications
-            </div>
+            <Link to="specifications" smooth={true}>
+              <div className="text-3xl bg-red-500 w-96 md:w-auto text-white rounded-md text-center font-bold p-3 hover:bg-red-200 mt-10 sm:mr-1 cursor-pointer">
+                Show All Specifications
+              </div>
+            </Link>
 
             <Varients
               SpecificationsFeatures={joy}
@@ -457,24 +442,19 @@ function Homee({ joy }) {
             </div>
             <div>
               <ProsACons ProsCons={ProsCons} />
-
               <ColorCar OnlyName={OnlyName} Colorss={Colorss} />
               <AllSPecifications SpecificationsFeatures={joy} />
-
               <AlternativeCarComparision
                 TopPic={TopPic}
                 KeySpecification={KeySpecification}
                 ComparisionCar={ComparisionCar}
               />
-
-              <SomeHighlightedFeatures
+              {/* <SomeHighlightedFeatures
                 OnlyName={OnlyName}
                 HighlightedFeatures={HighlightedFeatures}
-              />
-
+              /> */}
               <Faqs OnlyName={OnlyName} faqs={faqs} />
-
-              <LatestArticles OnlyName={OnlyName} articles={articles} />
+              {/* <LatestArticles OnlyName={OnlyName} articles={articles} /> */}
             </div>
             <div className="text-3xl font-bold mt-12">Similar Cars</div>
           </div>

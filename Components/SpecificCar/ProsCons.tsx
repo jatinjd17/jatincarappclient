@@ -4,7 +4,9 @@ import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 function ProsAndCons({ ProsCons }) {
   return (
     <div>
-      <div className="text-2xl font-bold mt-6 mb-3">Pros And Cons</div>
+      <div id="proconn" className="text-2xl font-bold mt-6 mb-3">
+        Pros And Cons
+      </div>
       <div className="grid grid-cols-2 mr-40 md:mr-2 sm:mr-1 text-center gap-5 sm:gap-1">
         <div className="bg-green-200 rounded-xl">
           <div className="mt-1 text-lg font-bold text-green-800">Pros</div>
