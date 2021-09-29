@@ -1,33 +1,26 @@
 import Head from "next/head";
 import { ClientProduction } from "../actions/ApiCarsBlogs";
-const Meta = ({
+const MetaBlog = ({
   CompanyName,
   OnlyName,
   LatestUpdate,
   ImageUrl,
   LinkCarName,
+  Titlee,
 }) => (
   <Head>
-    <title>
-      {CompanyName} | {OnlyName}
-    </title>
+    <title>{Titlee}</title>
     <meta name="description" content={LatestUpdate} />
     <link
       rel="canonical"
-      href={`${ClientProduction}/${CompanyName.toLowerCase()}/${LinkCarName.toLowerCase().replace(
-        / /g,
-        ""
-      )}`}
+      href={`${ClientProduction}/Blog/blogs/${LinkCarName}`}
     />
-    <meta property="og:title" content={`${CompanyName} | ${OnlyName}`} />
+    <meta property="og:title" content={`${Titlee}`} />
     <meta property="og:description" content={LatestUpdate} />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content={`${ClientProduction}/${CompanyName.toLowerCase()}/${LinkCarName.toLowerCase().replace(
-        / /g,
-        ""
-      )}`}
+      content={`${ClientProduction}/Blog/blogs/${LinkCarName}`}
     />
     <meta property="og:site_name" content={`${CompanyName}`} />
 
@@ -37,4 +30,4 @@ const Meta = ({
     <meta property="fb:app_id" content={`32423423`} />
   </Head>
 );
-export default Meta;
+export default MetaBlog;

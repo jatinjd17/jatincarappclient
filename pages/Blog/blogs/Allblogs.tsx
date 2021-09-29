@@ -10,13 +10,16 @@ const AllBlogs = ({ blogs }) => {
   console.log(blogs);
 
   const getAllBlogsHome = (blogs) => {
-    return blogs.map((b, i) => {
-      return (
-        <div key={i}>
-          <Card card={b} />
-        </div>
-      );
-    });
+    return blogs
+      .slice(0)
+      .reverse()
+      .map((b, i) => {
+        return (
+          <div key={i}>
+            <Card card={b} />
+          </div>
+        );
+      });
   };
 
   return (

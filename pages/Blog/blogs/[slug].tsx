@@ -6,6 +6,7 @@ import moment from "moment";
 import Header from "../../../ComponentsBlog/header";
 import Nav from "../../../Components/head";
 import { BlogsProduction } from "../../../actions/ApiCarsBlogs";
+import MetaBlog from "../../../Components/metaSEOBlog";
 
 const SpecificBlog = ({ blog }) => {
   console.log(blog);
@@ -13,6 +14,15 @@ const SpecificBlog = ({ blog }) => {
   return (
     <React.Fragment>
       {/* <Header /> */}
+
+      <MetaBlog
+        CompanyName="jdjdjdjd"
+        OnlyName="onlynameeee"
+        LatestUpdate={blog.excerpt}
+        ImageUrl={`${BlogsProduction}/api/blog/photo/${blog.slug}`}
+        LinkCarName={blog.slug}
+        Titlee={blog.mtitle}
+      />
       <Nav />
       <main>
         <div className="grid grid-cols-10">
