@@ -33,7 +33,7 @@ function AllSPecifications({ SpecificationsFeatures }) {
 
       <div className=" sticky top-0 z-50">
         <div className=" grid grid-cols-2 mr-40 md:mr-0 gap-3 bg-white shadow-2xl">
-          <div className="flex flex-row w-72 md:w-40 h-20 ml-52 xl:ml-32 sm:ml-0 border-2 p-2 sm:p-1 bg-gray-200 overflow-auto">
+          <div className="flex flex-row w-72 md:w-40 h-20 ml-52 xl:ml-32 sm:ml-6 border-2 p-2 sm:p-1 bg-gray-200 overflow-auto">
             <div className="h-auto w-24 md:w-20">
               <img src={SpecificationsFeatures.Car1.CarInfo.TopPic[0]} />
             </div>
@@ -46,7 +46,7 @@ function AllSPecifications({ SpecificationsFeatures }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-row w-72 md:w-40 h-20 ml-52 xl:ml-32 sm:ml-0 border-2 p-2 bg-gray-200 overflow-auto">
+          <div className="flex flex-row w-72 md:w-40 h-20 ml-52 xl:ml-32 sm:ml-3 border-2 p-2 bg-gray-200 overflow-auto">
             <div className="h-auto w-24 md:w-20">
               <img src={SpecificationsFeatures.Car2.CarInfo.TopPic[0]} />
             </div>
