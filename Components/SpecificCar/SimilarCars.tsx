@@ -48,7 +48,7 @@ function SimilarCarss({ SimilarCars }) {
   };
   return (
     <div>
-      <div id="similar" className="mr-20 ml-60 md:mx-2">
+      <div id="similar" className="mr-20 ml-60 md:mx-2 sm:mb-4">
         <Carousel responsive={responsive}>
           <div className="m-8 sm:m-3 border-2 shadow-lg">
             {/* sm:m-1 sm:mt-5 */}

@@ -36,7 +36,7 @@ function Nav() {
                   <div className="w-max">
                     <img
                       className="rounded-xl 2xl:w-28 md:w-20"
-                      src="https://i.ibb.co/xsTLZNw/logo333.png"
+                      src="https://i.ibb.co/svwxMr0/logo3331632814713.jpg"
                     />
                   </div>
                   {/* <img

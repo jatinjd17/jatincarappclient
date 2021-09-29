@@ -7,7 +7,7 @@ function UpcommingCars({ CompanyName, UpcommingCarBrand }) {
         <div className="ml-60 md:ml-36 sm:ml-1 text-2xl font-bold">
           Upcomming {CompanyName} Cars
         </div>
-        <div className="mt-6">
+        <div className="mt-6 sm:mt-3">
           <div className="grid grid-cols-3 mr-40 md:mr-2 ml-60 md:ml-2 sm:ml-1 sm:mr-0 bg-gray-200 p-2 gap-4">
             <div className="text-center bg-gray-400 pb-3">
               <div>

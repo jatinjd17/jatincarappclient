@@ -69,31 +69,31 @@ function AlternativeCarComparision({
                   {KeySpecification[0]}
                 </div>
                 <div className="grid grid-cols-3 grid-rows-2 text-center shadow-lg mr-1">
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Engine</div>
-                    <div>{KeySpecification[2]}</div>
+                    <div className="text-sm">{KeySpecification[2]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Mileage</div>
-                    <div>{KeySpecification[1]}</div>
+                    <div className="text-sm">{KeySpecification[1]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-lg font-bold mb-1">Transmission</div>
-                    <div>{KeySpecification[3]}</div>
+                    <div className="text-sm">{KeySpecification[3]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Fuel Type</div>
-                    <div>{KeySpecification[4]}</div>
+                    <div className="text-sm">{KeySpecification[4]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Dimension</div>
-                    <div>{KeySpecification[6]}</div>
+                    <div className="text-sm">{KeySpecification[6]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">
                       Seating Capacity
                     </div>
-                    <div>{KeySpecification[5]}</div>
+                    <div className="text-sm">{KeySpecification[5]}</div>
                   </div>
                 </div>
 
@@ -114,33 +114,43 @@ function AlternativeCarComparision({
                   {ComparisionCar.comparisioncar1[0]}
                 </div>
                 <div className="grid grid-cols-3 grid-rows-2 text-center shadow-lg ml-1">
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Engine</div>
-                    <div>{ComparisionCar.comparisioncar1[2]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar1[2]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Mileage</div>
-                    <div>{ComparisionCar.comparisioncar1[1]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar1[1]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-lg font-bold mb-1">Transmission</div>
-                    <div>{ComparisionCar.comparisioncar1[3]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar1[3]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Fuel Type</div>
-                    <div>{ComparisionCar.comparisioncar1[4]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar1[4]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Dimension</div>
                     <div className="text-sm m-0.5">
                       {ComparisionCar.comparisioncar1[6]}
                     </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">
                       Seating Capacity
                     </div>
-                    <div>{ComparisionCar.comparisioncar1[5]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar1[5]}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -162,31 +172,31 @@ function AlternativeCarComparision({
                   {KeySpecification[0]}
                 </div>
                 <div className="grid grid-cols-3 grid-rows-2 text-center shadow-lg mr-1">
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Engine</div>
-                    <div>{KeySpecification[2]}</div>
+                    <div className="text-sm">{KeySpecification[2]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Mileage</div>
-                    <div>{KeySpecification[1]}</div>
+                    <div className="text-sm">{KeySpecification[1]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-lg font-bold mb-1">Transmission</div>
-                    <div>{KeySpecification[3]}</div>
+                    <div className="text-sm">{KeySpecification[3]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Fuel Type</div>
-                    <div>{KeySpecification[4]}</div>
+                    <div className="text-sm">{KeySpecification[4]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Dimension</div>
-                    <div>{KeySpecification[6]}</div>
+                    <div className="text-sm">{KeySpecification[6]}</div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">
                       Seating Capacity
                     </div>
-                    <div>{KeySpecification[5]}</div>
+                    <div className="text-sm">{KeySpecification[5]}</div>
                   </div>
                 </div>
 
@@ -207,33 +217,43 @@ function AlternativeCarComparision({
                   {ComparisionCar.comparisioncar2[0]}
                 </div>
                 <div className="grid grid-cols-3 grid-rows-2 text-center shadow-lg ml-1">
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Engine</div>
-                    <div>{ComparisionCar.comparisioncar2[2]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar2[2]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Mileage</div>
-                    <div>{ComparisionCar.comparisioncar2[1]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar2[1]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-lg font-bold mb-1">Transmission</div>
-                    <div>{ComparisionCar.comparisioncar2[3]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar2[3]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Fuel Type</div>
-                    <div>{ComparisionCar.comparisioncar2[4]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar2[4]}
+                    </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">Dimension</div>
                     <div className="text-sm m-0.5">
                       {ComparisionCar.comparisioncar2[6]}
                     </div>
                   </div>
-                  <div className="flex flex-col border-2">
+                  <div className="flex flex-col border-2 h-32 sm:h-max xl:h-max">
                     <div className="text-xl font-bold mb-1">
                       Seating Capacity
                     </div>
-                    <div>{ComparisionCar.comparisioncar2[5]}</div>
+                    <div className="text-sm">
+                      {ComparisionCar.comparisioncar2[5]}
+                    </div>
                   </div>
                 </div>
               </div>

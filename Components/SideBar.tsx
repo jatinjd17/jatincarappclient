@@ -18,7 +18,7 @@ function SideBar({ isToggleName, handleactive }) {
           <div className="w-36 -mt-3 ">
             <img
               className="rounded-xl h-14"
-              src="https://i.ibb.co/xsTLZNw/logo333.png"
+              src="https://i.ibb.co/svwxMr0/logo3331632814713.jpg"
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ function MobileSideBar({ handleactive, isToggleName }) {
               Price
             </div>
           </Link>
-          <Link to="varients" smooth={true}>
+          <Link to="comparee" smooth={true}>
             <div
               onClick={() => handleactive("images")}
               className={`mx-3 mb-3 pt-2 pb-3 ${
@@ -27,7 +27,7 @@ function MobileSideBar({ handleactive, isToggleName }) {
                   : ""
               }`}
             >
-              Images
+              Compare
             </div>
           </Link>
           <Link to="specifications" smooth={true}>
@@ -45,28 +45,28 @@ function MobileSideBar({ handleactive, isToggleName }) {
           <Link to="varients" smooth={true}>
             <div
               onClick={() => handleactive("userreviews")}
-              className={`mx-3 mb-3  pb-1 ${
+              className={`mx-3 mb-3 pt-2 pb-3 ${
                 isToggleName("userreviews")
                   ? "border-b-4 border-blue-500 text-blue-700 font-bold"
                   : ""
               }`}
             >
-              User Reviews
+              Varients
             </div>
           </Link>
-          <Link to="varients" smooth={true}>
+          <Link to="proconn" smooth={true}>
             <div
               onClick={() => handleactive("expertreviews")}
-              className={`mx-3 mb-3  pb-1 ${
+              className={`mx-3 mb-3 pt-2 pb-3 ${
                 isToggleName("expertreviews")
                   ? "border-b-4 border-blue-500 text-blue-700 font-bold"
                   : ""
               }`}
             >
-              Expert Reviews
+              Pros/Cons
             </div>
           </Link>
-          <Link to="varients" smooth={true}>
+          <Link to="mileagee" smooth={true}>
             <div
               onClick={() => handleactive("varients")}
               className={`mx-3 mb-3  pt-2 pb-3 ${
@@ -75,10 +75,10 @@ function MobileSideBar({ handleactive, isToggleName }) {
                   : ""
               }`}
             >
-              Varients
+              Mileage
             </div>
           </Link>
-          <Link to="varients" smooth={true}>
+          <Link to="coloor" smooth={true}>
             <div
               onClick={() => handleactive("videos")}
               className={`mx-3 mb-3 pt-2 pb-3 ${
@@ -87,10 +87,10 @@ function MobileSideBar({ handleactive, isToggleName }) {
                   : ""
               }`}
             >
-              Videos
+              Colors
             </div>
           </Link>
-          <Link to="varients" smooth={true}>
+          <Link to="similar" smooth={true}>
             <div
               onClick={() => handleactive("brochure")}
               className={`mx-3 mb-3 pt-2 pb-3 ${
@@ -99,7 +99,7 @@ function MobileSideBar({ handleactive, isToggleName }) {
                   : ""
               }`}
             >
-              Brochure
+              Similar_Cars
             </div>
           </Link>
         </div>

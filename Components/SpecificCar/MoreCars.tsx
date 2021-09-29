@@ -46,7 +46,7 @@ function MoreCars({ CompanyName, ThatBrandCars }) {
   };
   return (
     <div>
-      <div>
+      <div className="sm:mb-4">
         <div className="ml-60 sm:ml-1 md:ml-36 text-2xl font-bold">
           More {CompanyName} Cars
         </div>
