@@ -30,40 +30,39 @@ function PopularCarsFrontPage({ PopularCars }) {
         <Carousel responsive={responsive}>
           <div className="m-8  border-2 shadow-lg cursor-pointer">
             {/* sm:m-1 sm:mt-5 */}
-            {/* <Link
+            <Link
               href={`${ClientProduction}/${
-                PopularCars.car2[3]
-              }/${PopularCars.car2[1].toLowerCase().replace(/ /g, "")}`}
-            > */}
-
-            <div
-              onClick={() =>
-                Router.push(
-                  `${ClientProduction}/${
-                    PopularCars.car1[3]
-                  }/${PopularCars.car1[1].toLowerCase().replace(/ /g, "")}`
-                )
-              }
-              className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl"
+                PopularCars.car1[3]
+              }/${PopularCars.car1[1].toLowerCase().replace(/ /g, "")}`}
             >
-              <div>
-                <img
-                  className="object-cover w-full h-28 sm:h-40"
-                  src={PopularCars.car1[0]}
-                  alt="nnn"
-                />
-              </div>
-              <div className="text-center text-xl font-bold">
-                {PopularCars.car1[1]}
-              </div>
-              <div className="flex flex-row">
-                <div className="text-md font-bold">{PopularCars.car1[2]}</div>
-                {/* <div className="text-md text-gray-500 ml-2 mt-0">Onwards</div> */}
-              </div>
+              <div
+                // onClick={() =>
+                //   Router.push(
+                //     `${ClientProduction}/${
+                //       PopularCars.car1[3]
+                //     }/${PopularCars.car1[1].toLowerCase().replace(/ /g, "")}`
+                //   )
+                // }
+                className="grid grid-cols-1 bg-gray-200 hover:shadow-2xl"
+              >
+                <div>
+                  <img
+                    className="object-cover w-full h-28 sm:h-40"
+                    src={PopularCars.car1[0]}
+                    alt="nnn"
+                  />
+                </div>
+                <div className="text-center text-xl font-bold">
+                  {PopularCars.car1[1]}
+                </div>
+                <div className="flex flex-row">
+                  <div className="text-md font-bold">{PopularCars.car1[2]}</div>
+                  {/* <div className="text-md text-gray-500 ml-2 mt-0">Onwards</div> */}
+                </div>
 
-              <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
-            </div>
-            {/* </Link> */}
+                <div className="text-xs mt-1">Avg. Ex-Showroom price</div>
+              </div>
+            </Link>
           </div>
           <div className="m-8  border-2 shadow-lg cursor-pointer">
             <div
