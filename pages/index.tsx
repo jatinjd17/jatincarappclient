@@ -105,7 +105,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/maruti.jpg"
+                      src="https://i.ibb.co/bN8hq9y/maruti.jpg"
                       alt="img"
                     />
                     <div className="text-center">Maruti</div>
@@ -117,7 +117,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/hyundai.jpg"
+                      src="https://i.ibb.co/7K1hs4K/hyundai.jpg"
                       alt="img"
                     />
                     <div className="text-center">Hyundai</div>
@@ -129,7 +129,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/honda.jpg"
+                      src="https://i.ibb.co/4TMw9f8/honda.jpg"
                       alt="img"
                     />
                     <div className="text-center">Honda</div>
@@ -141,7 +141,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/tata.jpg"
+                      src="https://i.ibb.co/wpjgBSJ/tata.jpg"
                       alt="img"
                     />
                     <div className="text-center">Tata</div>
@@ -153,7 +153,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/mahindra.jpg"
+                      src="https://i.ibb.co/cTPX02s/mahindra.jpg"
                       alt="img"
                     />
                     <div className="text-center">Mahindra</div>
@@ -166,7 +166,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/renault.jpg"
+                      src="https://i.ibb.co/BZt2M56/renault.jpg"
                       alt="img"
                     />
                     <div className="text-center">Renault</div>
@@ -179,7 +179,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/ford.jpg"
+                      src="https://i.ibb.co/QXp464G/ford.jpg"
                       alt="img"
                     />
                     <div className="text-center">Ford</div>
@@ -191,7 +191,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/nissan.jpg"
+                      src="https://i.ibb.co/CWYYXp2/nissan.jpg"
                       alt="img"
                     />
                     <div className="text-center">Nissan</div>
@@ -213,7 +213,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/toyota.jpg"
+                      src="https://i.ibb.co/NKNL9nX/toyota.jpg"
                       alt="img"
                     />
                     <div className="text-center">Toyota</div>
@@ -225,7 +225,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/mg.jpg"
+                      src="https://i.ibb.co/Dkb5qsc/mg.jpg"
                       alt="img"
                     />
                     <div className="text-center">MG</div>
@@ -237,7 +237,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/kia.jpg"
+                      src="https://i.ibb.co/ZNwR5BV/kia.jpg"
                       alt="img"
                     />
                     <div className="text-center">Kia</div>
@@ -249,7 +249,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/volkswagen.jpg"
+                      src="https://i.ibb.co/n62gtSc/volkswagen.jpg"
                       alt="img"
                     />
                     <div className="text-center">Volkswagen</div>
@@ -261,7 +261,7 @@ export default function Home() {
                   <div className="flex flex-col border-2 shadow-md hover:shadow-2xl cursor-pointer">
                     <img
                       className="mt-4"
-                      src="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/skoda.jpg"
+                      src="https://i.ibb.co/PFK2zJj/skoda.jpg"
                       alt="img"
                     />
                     <div className="text-center">Skoda</div>

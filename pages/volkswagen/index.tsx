@@ -26,7 +26,7 @@ function IndexVolkswagen() {
         CompanyName={CompanyName}
         OnlyName="All Cars"
         LatestUpdate="List of All Volkswagen Cars"
-        ImageUrl="https://stimg.cardekho.com/pwa/img/brandLogo_168x84/volkswagen.jpg"
+        ImageUrl="https://i.ibb.co/n62gtSc/volkswagen.jpg"
         LinkCarName=""
       />
       <Nav />
