@@ -26,7 +26,7 @@ function IndexVolkswagen() {
         CompanyName={CompanyName}
         OnlyName="All Cars"
         LatestUpdate="List of All Volkswagen Cars"
-        ImageUrl={"https://i.ibb.co/n62gtSc/volkswagen.jpg"}
+        ImageUrl={TPolo}
         LinkCarName=""
       />
       <Nav />
