@@ -53,6 +53,7 @@ import {
   WaganRBasicInfoCard,
   XL6BasicInfoCard,
 } from "../../AllCarBasicInfo/marutisuzuki";
+import Meta from "../../Components/metaSEO";
 
 function IndexMaruti() {
   const CompanyName = "MarutiSuzuki";
@@ -77,6 +78,13 @@ function IndexMaruti() {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName="All Cars"
+        LatestUpdate="List of All MarutiSuzuki Cars"
+        ImageUrl="https://i.ibb.co/bN8hq9y/maruti.jpg"
+        LinkCarName=""
+      />
       <Nav />
       <div>
         <BrandMainPageAllCars

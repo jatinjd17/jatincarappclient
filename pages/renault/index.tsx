@@ -9,6 +9,7 @@ import { Duster, Kiger, Kwid, Triber } from "../../CarPicsUrl/CarPics";
 import { TDuster, TKiger, TKwid, TTriber } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
 import Nav from "../../Components/head";
+import Meta from "../../Components/metaSEO";
 
 function IndexRenault() {
   const CompanyName = "Renault";
@@ -21,6 +22,13 @@ function IndexRenault() {
   };
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName="All Cars"
+        LatestUpdate="List of All Renault Cars"
+        ImageUrl="https://i.ibb.co/BZt2M56/renault.jpg"
+        LinkCarName=""
+      />
       <Nav />
       <div>
         <BrandMainPageAllCars

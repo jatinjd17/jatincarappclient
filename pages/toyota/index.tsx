@@ -28,6 +28,7 @@ import {
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
 import Nav from "../../Components/head";
+import Meta from "../../Components/metaSEO";
 
 function IndexToyota() {
   const CompanyName = "Toyota";
@@ -44,6 +45,13 @@ function IndexToyota() {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName="All Cars"
+        LatestUpdate="List of All Toyota Cars"
+        ImageUrl="https://i.ibb.co/NKNL9nX/toyota.jpg"
+        LinkCarName=""
+      />
       <Nav />
       <div>
         <BrandMainPageAllCars

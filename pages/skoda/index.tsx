@@ -14,6 +14,7 @@ import {
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
 import Nav from "../../Components/head";
+import Meta from "../../Components/metaSEO";
 
 function IndexSkoda() {
   const CompanyName = "Skoda";
@@ -27,6 +28,13 @@ function IndexSkoda() {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName="All Cars"
+        LatestUpdate="List of All Skoda Cars"
+        ImageUrl="https://i.ibb.co/PFK2zJj/skoda.jpg"
+        LinkCarName=""
+      />
       <Nav />
       <div>
         <BrandMainPageAllCars

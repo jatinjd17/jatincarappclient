@@ -15,6 +15,7 @@ import {
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
 import Nav from "../../Components/head";
+import Meta from "../../Components/metaSEO";
 
 function IndexFord() {
   const CompanyName = "Ford";
@@ -28,6 +29,13 @@ function IndexFord() {
   };
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName="All Cars"
+        LatestUpdate="List of All Ford Cars"
+        ImageUrl="https://i.ibb.co/QXp464G/ford.jpg"
+        LinkCarName=""
+      />
       <Nav />
       <div>
         <BrandMainPageAllCars

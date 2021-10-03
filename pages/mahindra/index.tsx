@@ -34,6 +34,7 @@ import {
 } from "../../CarPicsUrl/Thumbnails";
 import BrandMainPageAllCars from "../../Components/SpecificCar/BrandMainPageAllCars";
 import Nav from "../../Components/head";
+import Meta from "../../Components/metaSEO";
 
 function IndexMahindra() {
   const CompanyName = "Mahindra";
@@ -52,6 +53,13 @@ function IndexMahindra() {
 
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName="All Cars"
+        LatestUpdate="List of All Mahindra Cars"
+        ImageUrl="https://i.ibb.co/cTPX02s/mahindra.jpg"
+        LinkCarName=""
+      />
       <Nav />
       <div>
         <BrandMainPageAllCars

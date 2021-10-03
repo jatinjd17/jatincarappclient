@@ -40,6 +40,7 @@ import {
   KonaBasicInfoCard,
   TucsonBasicInfoCard,
 } from "../../AllCarBasicInfo/hyundai";
+import Meta from "../../Components/metaSEO";
 
 function IndexHyundai() {
   const CompanyName = "Hyundai";
@@ -58,6 +59,13 @@ function IndexHyundai() {
   };
   return (
     <div>
+      <Meta
+        CompanyName={CompanyName}
+        OnlyName="All Cars"
+        LatestUpdate="List of All Hyundai Cars"
+        ImageUrl="https://i.ibb.co/7K1hs4K/hyundai.jpg"
+        LinkCarName=""
+      />
       <Nav />
       <div>
         <BrandMainPageAllCars
