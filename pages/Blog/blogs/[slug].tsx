@@ -63,13 +63,15 @@ const SpecificBlog = ({ blog }) => {
                 </section>
               </div>
 
-              <div className="container">
+              <div className="">{renderHTML(blog.body)}</div>
+
+              {/* <div className="container">
                 <section>
                   <div className=" text-sm text-gray-500">
                     {renderHTML(blog.body)}
                   </div>
                 </section>
-              </div>
+              </div> */}
 
               <div className="container">
                 <h4 className="text-center pt-5 pb-5 h2">Related blogs</h4>
