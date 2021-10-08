@@ -47,7 +47,7 @@ function PopularCarsFrontPage({ PopularCars }) {
             >
               <div>
                 <img
-                  className="object-cover w-full h-28 sm:h-40"
+                  className="object-cover w-full h-36 sm:h-40"
                   src={PopularCars.car1[0]}
                   alt="nnn"
                 />
@@ -77,7 +77,7 @@ function PopularCarsFrontPage({ PopularCars }) {
             >
               <div>
                 <img
-                  className="object-cover w-full h-28 sm:h-40"
+                  className="object-cover w-full h-36 sm:h-40"
                   src={PopularCars.car2[0]}
                   alt="nnn"
                 />
@@ -107,7 +107,7 @@ function PopularCarsFrontPage({ PopularCars }) {
               >
                 <div>
                   <img
-                    className="object-cover w-full h-28 sm:h-40"
+                    className="object-cover w-full h-36 sm:h-40"
                     src={PopularCars.car3[0]}
                     alt="nnn"
                   />
@@ -141,7 +141,7 @@ function PopularCarsFrontPage({ PopularCars }) {
               >
                 <div>
                   <img
-                    className="object-cover w-full h-28 sm:h-40"
+                    className="object-cover w-full h-36 sm:h-40"
                     src={PopularCars.car4[0]}
                     alt="nnn"
                   />
@@ -175,7 +175,7 @@ function PopularCarsFrontPage({ PopularCars }) {
               >
                 <div>
                   <img
-                    className="object-cover w-full h-28 sm:h-40"
+                    className="object-cover w-full h-36 sm:h-40"
                     src={PopularCars.car5[0]}
                     alt="nnn"
                   />
@@ -209,7 +209,7 @@ function PopularCarsFrontPage({ PopularCars }) {
               >
                 <div>
                   <img
-                    className="object-cover w-full h-28 sm:h-40"
+                    className="object-cover w-full h-36 sm:h-40"
                     src={PopularCars.car6[0]}
                     alt="nnn"
                   />
